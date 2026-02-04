@@ -1,0 +1,30 @@
+{
+  "lastUpdated": null,
+  "categories": [
+    {
+      "id": "diagnosis",
+      "title": "Diagnosis",
+      "summary": "Pending sync",
+      "articles": []
+    },
+    {
+      "id": "treatment",
+      "title": "Treatment",
+      "summary": "Pending sync",
+      "articles": []
+    },
+    {
+      "id": "prevention",
+      "title": "Prevention",
+      "summary": "Pending sync",
+      "articles": []
+    }
+  ],
+  "sources": [
+    {
+      "name": "PubMed (NIH)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/",
+      "description": "Peer-reviewed biomedical literature"
+    }
+  ]
+}

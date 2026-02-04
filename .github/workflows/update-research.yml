@@ -1,0 +1,31 @@
+name: Weekly research refresh
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 9 * * 1" # Mondays at 09:00 UTC
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+          run_install: true
+      - name: Refresh research feed
+        run: pnpm run fetch
+      - name: Validate schema
+        run: pnpm run validate:data
+      - name: Commit updated data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          file_pattern: data/research.json public/data/research.json
+          commit_message: "chore: refresh schizophrenia research feed"

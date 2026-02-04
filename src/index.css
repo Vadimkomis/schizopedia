@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-gradient-to-b from-rose-50 via-white to-indigo-50 text-slate-900 antialiased;
+  background-image: radial-gradient(
+      circle at 20% -10%,
+      rgba(248, 113, 113, 0.25),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(96, 165, 250, 0.18),
+      transparent 45%
+    ),
+    linear-gradient(180deg, #fffdf8 0%, #fef6f8 40%, #edf2ff 100%);
+  min-height: 100vh;
+}
+
+.dark body {
+  @apply bg-slate-950 text-slate-100 antialiased;
+  background-image: radial-gradient(
+      circle at top,
+      rgba(59, 130, 246, 0.15),
+      transparent 55%
+    ),
+    linear-gradient(180deg, #020617 0%, #020617 65%, #05031a 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      rgba(15, 23, 42, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.08) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(circle at 50% 0%, black, transparent 70%);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.dark .grid-overlay {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  opacity: 0.25;
+}
+
+.glow-card {
+  position: relative;
+  isolation: isolate;
+}
+
+.glow-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(248, 113, 113, 0.6),
+    rgba(14, 165, 233, 0.6),
+    rgba(79, 70, 229, 0.35)
+  );
+  -webkit-mask:
+    linear-gradient(#000, #000) content-box,
+    linear-gradient(#000, #000);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.75;
+}
+
+.dark .glow-card::before {
+  background: linear-gradient(
+    135deg,
+    rgba(14, 165, 233, 0.5),
+    rgba(217, 70, 239, 0.5),
+    rgba(14, 116, 144, 0.25)
+  );
+}
+
+.glow-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at 30% 20%,
+    rgba(251, 113, 133, 0.35),
+    transparent 55%
+  );
+  filter: blur(35px);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.dark .glow-card::after {
+  background: radial-gradient(
+    circle at 30% 20%,
+    rgba(59, 130, 246, 0.35),
+    transparent 55%
+  );
+}
