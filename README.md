@@ -1,1 +1,1 @@
-# -schizopedia
+# schizopedia
