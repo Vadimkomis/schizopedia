@@ -8,6 +8,7 @@ const DATA_PATH = path.join(ROOT, "data", "research.json");
 const PUBLIC_DATA_PATH = path.join(ROOT, "public", "data", "research.json");
 const PUBMED_BASE = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils";
 const RETMAX = Number.parseInt(process.env.RETMAX ?? "5", 10);
+const API_KEY = process.env.NCBI_API_KEY?.trim();
 
 const categories = [
   {
@@ -53,6 +54,9 @@ async function fetchJson(url) {
 
 function buildPubMedUrl(endpoint, params) {
   const searchParams = new URLSearchParams(params);
+  if (API_KEY) {
+    searchParams.set("api_key", API_KEY);
+  }
   return `${PUBMED_BASE}/${endpoint}?${searchParams.toString()}`;
 }
 

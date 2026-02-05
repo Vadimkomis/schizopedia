@@ -1,30 +1,106 @@
 {
-  "lastUpdated": null,
+  "lastUpdated": "2026-02-05T14:35:13.995Z",
   "categories": [
     {
       "id": "diagnosis",
       "title": "Diagnosis",
-      "summary": "Pending sync",
-      "articles": []
+      "summary": "Early warning signs, imaging, biomarkers, and screening protocols.",
+      "articles": [
+        {
+          "id": "40229794",
+          "title": "Classification of schizophrenia spectrum disorder using machine learning and functional connectivity: reconsidering the clinical application.",
+          "journal": "BMC psychiatry",
+          "published": "2025 Apr 14",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40229794/",
+          "authors": [
+            "Li C",
+            "Chen J",
+            "Dong M",
+            "Yan H",
+            "Chen F"
+          ],
+          "snippet": "doi: 10.1186/s12888-025-06817-0"
+        },
+        {
+          "id": "40165149",
+          "title": "Abnormalities in cognitive-related functional connectivity can be used to identify patients with schizophrenia and individuals in clinical high-risk.",
+          "journal": "BMC psychiatry",
+          "published": "2025 Mar 31",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40165149/",
+          "authors": [
+            "Ou Y",
+            "Chen Z",
+            "Wang Y",
+            "Li H",
+            "Liu F"
+          ],
+          "snippet": "doi: 10.1186/s12888-025-06747-x"
+        },
+        {
+          "id": "36939345",
+          "title": "Exploring Digital Biomarkers of Illness Activity in Mood Episodes: Hypotheses Generating and Model Development Study.",
+          "journal": "JMIR mHealth and uHealth",
+          "published": "2023 May 4",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36939345/",
+          "authors": [
+            "Anmella G",
+            "Corponi F",
+            "Li BM",
+            "Mas A",
+            "Sanabra M"
+          ],
+          "snippet": "doi: 10.2196/45405"
+        },
+        {
+          "id": "35236254",
+          "title": "Classification of Low and High Schizotypy Levels via Evaluation of Brain Connectivity.",
+          "journal": "International journal of neural systems",
+          "published": "2022 Apr",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35236254/",
+          "authors": [
+            "Zandbagleh A",
+            "Mirzakuchaki S",
+            "Daliri MR",
+            "Premkumar P",
+            "Sanei S"
+          ],
+          "snippet": "doi: 10.1142/S0129065722500137"
+        },
+        {
+          "id": "30768396",
+          "title": "Structural Brain Alterations in Youth With Psychosis and Bipolar Spectrum Symptoms.",
+          "journal": "Journal of the American Academy of Child and Adolescent Psychiatry",
+          "published": "2019 Nov",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30768396/",
+          "authors": [
+            "Jalbrzikowski M",
+            "Freedman D",
+            "Hegarty CE",
+            "Mennigen E",
+            "Karlsgodt KH"
+          ],
+          "snippet": "doi: 10.1016/j.jaac.2018.11.012"
+        }
+      ]
     },
     {
       "id": "treatment",
       "title": "Treatment",
-      "summary": "Pending sync",
+      "summary": "Medication advances, psychosocial interventions, and digital therapies.",
       "articles": []
     },
     {
       "id": "prevention",
       "title": "Prevention",
-      "summary": "Pending sync",
+      "summary": "Risk reduction strategies, prodromal support, and community programs.",
       "articles": []
     }
   ],
   "sources": [
     {
-      "name": "PubMed (NIH)",
+      "name": "PubMed",
       "url": "https://pubmed.ncbi.nlm.nih.gov/",
-      "description": "Peer-reviewed biomedical literature"
+      "description": "Search provided by the National Library of Medicine (NIH)."
     }
   ]
 }
