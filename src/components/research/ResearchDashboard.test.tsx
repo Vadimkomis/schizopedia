@@ -1,5 +1,6 @@
 import React from "react";
-import { render, screen, within } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { describe, it, expect } from "vitest";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import type { ResearchPayload } from "@/lib/types";
@@ -59,7 +60,7 @@ const mockPayload: ResearchPayload = {
 };
 
 describe("ResearchDashboard", () => {
-  it("renders hero heading and article content", () => {
+  it("renders hero heading and first tab content", () => {
     renderWithTheme(
       <ResearchDashboard data={mockPayload} loading={false} error={null} />,
     );
@@ -88,24 +89,41 @@ describe("ResearchDashboard", () => {
     expect(screen.getByText("Network request failed")).toBeVisible();
   });
 
-  it("renders all 3 categories", () => {
+  it("renders tab triggers for all 3 categories", () => {
     renderWithTheme(
       <ResearchDashboard data={mockPayload} loading={false} error={null} />,
     );
 
-    expect(screen.getByText("Diagnosis")).toBeVisible();
-    expect(screen.getByText("Treatment")).toBeVisible();
-    expect(screen.getByText("Prevention")).toBeVisible();
+    expect(screen.getByRole("tab", { name: "Diagnosis" })).toBeVisible();
+    expect(screen.getByRole("tab", { name: "Treatment" })).toBeVisible();
+    expect(screen.getByRole("tab", { name: "Prevention" })).toBeVisible();
   });
 
-  it("shows empty state for categories without articles", () => {
+  it("shows first category by default, others hidden", () => {
     renderWithTheme(
       <ResearchDashboard data={mockPayload} loading={false} error={null} />,
     );
 
-    expect(
-      screen.getByText(/No articles found yet/i),
-    ).toBeVisible();
+    expect(screen.getByText("Prodromal biomarkers update")).toBeVisible();
+
+    const diagnosisTab = screen.getByRole("tab", { name: "Diagnosis" });
+    expect(diagnosisTab).toHaveAttribute("aria-selected", "true");
+
+    const treatmentTab = screen.getByRole("tab", { name: "Treatment" });
+    expect(treatmentTab).toHaveAttribute("aria-selected", "false");
+  });
+
+  it("switches tab content when clicking a different tab", async () => {
+    const user = userEvent.setup();
+    renderWithTheme(
+      <ResearchDashboard data={mockPayload} loading={false} error={null} />,
+    );
+
+    expect(screen.getByText("Prodromal biomarkers update")).toBeVisible();
+
+    await user.click(screen.getByRole("tab", { name: "Treatment" }));
+
+    expect(screen.getByText("Antipsychotic efficacy study")).toBeVisible();
   });
 
   it("renders sources panel", () => {
@@ -123,9 +141,9 @@ describe("ResearchDashboard", () => {
       <ResearchDashboard data={null} loading={false} error={null} />,
     );
 
-    expect(screen.getByText("Diagnosis")).toBeVisible();
-    expect(screen.getByText("Treatment")).toBeVisible();
-    expect(screen.getByText("Prevention")).toBeVisible();
+    expect(screen.getByRole("tab", { name: "Diagnosis" })).toBeVisible();
+    expect(screen.getByRole("tab", { name: "Treatment" })).toBeVisible();
+    expect(screen.getByRole("tab", { name: "Prevention" })).toBeVisible();
   });
 
   it("article links have correct target and rel attributes", () => {

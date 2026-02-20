@@ -53,7 +53,7 @@ export function CategoryCard({
         {loading && !hasArticles ? (
           <SkeletonList />
         ) : hasArticles ? (
-          <ScrollArea className="h-[360px] pr-2">
+          <ScrollArea className="max-h-[60vh] pr-2">
             <ol className="space-y-4">
               {category.articles.map((article) => (
                 <ArticleCard key={article.id} article={article} />

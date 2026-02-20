@@ -16,7 +16,7 @@
 | Feature | Status | Description |
 |---------|--------|-------------|
 | Hero panel | completed | Displays site heading, description, and live stat pills (last refresh, article count, category count) |
-| Category cards | completed | Each research category renders as a card with article list and scroll area |
+| Tabbed categories | completed | Diagnosis, Treatment, and Prevention as switchable tabs (Radix UI), each with scrollable content |
 | Article cards | completed | Each article shows title, journal/authors/date meta, abstract snippet, and PubMed link |
 | Loading skeletons | completed | Pulse-animated placeholders while data loads |
 | Sources panel | completed | Footer section showing data sources with visit links |

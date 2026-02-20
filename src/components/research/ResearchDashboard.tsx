@@ -1,6 +1,12 @@
 import { formatDateTime } from "@/lib/format";
 import type { ResearchPayload } from "@/lib/types";
 import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+  TabsContent,
+} from "@/components/ui/tabs";
+import {
   FALLBACK_CATEGORIES,
   CATEGORY_ACCENTS,
   DEFAULT_ACCENT,
@@ -55,21 +61,26 @@ export function ResearchDashboard({
           </p>
         )}
 
-        <section
-          id="research-categories"
-          aria-busy={loading}
-          aria-live="polite"
-          className="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
-        >
-          {categories.map((category, index) => (
-            <CategoryCard
-              key={category.id}
-              category={category}
-              accent={CATEGORY_ACCENTS[category.id] ?? DEFAULT_ACCENT}
-              index={index}
-              loading={loading}
-            />
-          ))}
+        <section id="research-categories" aria-busy={loading} aria-live="polite">
+          <Tabs defaultValue={categories[0]?.id ?? "diagnosis"}>
+            <TabsList>
+              {categories.map((category) => (
+                <TabsTrigger key={category.id} value={category.id}>
+                  {category.title}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+            {categories.map((category, index) => (
+              <TabsContent key={category.id} value={category.id}>
+                <CategoryCard
+                  category={category}
+                  accent={CATEGORY_ACCENTS[category.id] ?? DEFAULT_ACCENT}
+                  index={index}
+                  loading={loading}
+                />
+              </TabsContent>
+            ))}
+          </Tabs>
         </section>
 
         <SourcesPanel sources={sources} />
