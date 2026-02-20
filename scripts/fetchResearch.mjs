@@ -15,25 +15,25 @@ const categories = [
     id: "diagnosis",
     title: "Diagnosis",
     summary:
-      "Early warning signs, imaging, biomarkers, and screening protocols.",
+      "How schizophrenia is identified — from early warning signs to brain imaging and screening tools.",
     query:
-      "schizophrenia diagnosis early+identification imaging biomarkers screening",
+      "schizophrenia[Title] AND (diagnosis OR early detection OR biomarkers OR screening)",
   },
   {
     id: "treatment",
     title: "Treatment",
     summary:
-      "Medication advances, psychosocial interventions, and digital therapies.",
+      "Current and emerging treatments — including medications, therapy, and newer approaches.",
     query:
-      "schizophrenia treatment pharmacological psychosocial \"digital therapy\"",
+      "schizophrenia[Title] AND (treatment OR antipsychotic OR psychotherapy OR intervention)",
   },
   {
     id: "prevention",
     title: "Prevention",
     summary:
-      "Risk reduction strategies, prodromal support, and community programs.",
+      "Research on reducing risk and catching early signs before a full episode develops.",
     query:
-      "schizophrenia prevention prodromal intervention risk+reduction resilience",
+      "schizophrenia[Title] AND (prevention OR prodromal OR early intervention OR risk reduction)",
   },
 ];
 
@@ -52,12 +52,67 @@ async function fetchJson(url) {
   return response.json();
 }
 
+async function fetchText(url) {
+  const response = await fetch(url, {
+    headers: {
+      "User-Agent": "schizopedia/1.0 (contact: data-maintainer@example.com)",
+    },
+  });
+  if (!response.ok) {
+    const text = await response.text();
+    throw new Error(`Request failed (${response.status}): ${text}`);
+  }
+  return response.text();
+}
+
 function buildPubMedUrl(endpoint, params) {
   const searchParams = new URLSearchParams(params);
   if (API_KEY) {
     searchParams.set("api_key", API_KEY);
   }
   return `${PUBMED_BASE}/${endpoint}?${searchParams.toString()}`;
+}
+
+async function fetchAbstracts(ids) {
+  if (!ids.length) return {};
+
+  const url = buildPubMedUrl("efetch.fcgi", {
+    db: "pubmed",
+    rettype: "abstract",
+    retmode: "xml",
+    id: ids.join(","),
+  });
+
+  const xml = await fetchText(url);
+  const abstracts = {};
+
+  // Parse <AbstractText> blocks from XML.
+  // Each article is in a <PubmedArticle> containing <PMID> and <AbstractText>.
+  const articleBlocks = xml.split("<PubmedArticle>");
+  for (const block of articleBlocks) {
+    const pmidMatch = block.match(/<PMID[^>]*>(\d+)<\/PMID>/);
+    if (!pmidMatch) continue;
+
+    const pmid = pmidMatch[1];
+
+    // Collect all <AbstractText> sections (some abstracts have labeled sections)
+    const abstractParts = [];
+    const abstractRegex = /<AbstractText[^>]*>([\s\S]*?)<\/AbstractText>/g;
+    let match;
+    while ((match = abstractRegex.exec(block)) !== null) {
+      abstractParts.push(match[1].replace(/<[^>]+>/g, "").trim());
+    }
+
+    if (abstractParts.length > 0) {
+      const fullAbstract = abstractParts.join(" ");
+      abstracts[pmid] =
+        fullAbstract.length > 250
+          ? `${fullAbstract.slice(0, 247)}...`
+          : fullAbstract;
+    }
+  }
+
+  return abstracts;
 }
 
 async function fetchPubMedArticles(query) {
@@ -87,6 +142,10 @@ async function fetchPubMedArticles(query) {
   const summaryJson = await fetchJson(summaryUrl);
   const result = summaryJson?.result ?? {};
 
+  // Fetch real abstracts via efetch
+  await wait(350);
+  const abstracts = await fetchAbstracts(ids);
+
   return ids
     .map((id) => result[id])
     .filter(Boolean)
@@ -98,9 +157,7 @@ async function fetchPubMedArticles(query) {
       url: `https://pubmed.ncbi.nlm.nih.gov/${article.uid}/`,
       authors: (article.authors ?? []).map((author) => author.name).slice(0, 5),
       snippet:
-        article.elocationid ??
-        article.sortfirstauthor ??
-        `PubMed ID: ${article.uid}`,
+        abstracts[article.uid] ?? "View full article on PubMed",
     }));
 }
 
@@ -113,7 +170,7 @@ async function buildPayload() {
         name: "PubMed",
         url: "https://pubmed.ncbi.nlm.nih.gov/",
         description:
-          "Search provided by the National Library of Medicine (NIH).",
+          "The National Institutes of Health's free database of medical research.",
       },
     ],
   };
@@ -150,14 +207,14 @@ async function main() {
       0,
     );
     console.log(
-      `Saved ${payload.categories.reduce(
-        (acc, category) => acc + category.articles.length,
-        0,
-      )} articles to ${path.relative(ROOT, DATA_PATH)} and ${path.relative(
+      `Saved ${total} articles to ${path.relative(ROOT, DATA_PATH)} and ${path.relative(
         ROOT,
         PUBLIC_DATA_PATH,
       )}`,
     );
+    for (const cat of payload.categories) {
+      console.log(`  ${cat.title}: ${cat.articles.length} articles`);
+    }
   } catch (error) {
     console.error("Failed to refresh research feed");
     console.error(error);

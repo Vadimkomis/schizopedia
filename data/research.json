@@ -1,106 +1,254 @@
 {
-  "lastUpdated": "2026-02-05T14:35:13.995Z",
+  "lastUpdated": "2026-02-20T19:35:57.480Z",
   "categories": [
     {
       "id": "diagnosis",
       "title": "Diagnosis",
-      "summary": "Early warning signs, imaging, biomarkers, and screening protocols.",
+      "summary": "How schizophrenia is identified — from early warning signs to brain imaging and screening tools.",
       "articles": [
         {
-          "id": "40229794",
-          "title": "Classification of schizophrenia spectrum disorder using machine learning and functional connectivity: reconsidering the clinical application.",
-          "journal": "BMC psychiatry",
-          "published": "2025 Apr 14",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40229794/",
+          "id": "41717560",
+          "title": "Comparing metabolic syndrome parameters, oxidative stress, cellular metabolism, and gene polymorphism between people with schizophrenia and healthy controls.",
+          "journal": "Frontiers in psychiatry",
+          "published": "2026",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41717560/",
           "authors": [
-            "Li C",
-            "Chen J",
-            "Dong M",
-            "Yan H",
-            "Chen F"
+            "Malik K",
+            "Runtuk KS",
+            "Amir N",
+            "Nasrun MW",
+            "Sadikin M"
           ],
-          "snippet": "doi: 10.1186/s12888-025-06817-0"
+          "snippet": "Patients with schizophrenia have an increased risk of metabolic syndrome and cardiovascular disease, even in the absence of antipsychotic treatment. Oxidative stress, mitochondrial dysfunction, and genetic polymorphisms of the GCLC gene may contri..."
         },
         {
-          "id": "40165149",
-          "title": "Abnormalities in cognitive-related functional connectivity can be used to identify patients with schizophrenia and individuals in clinical high-risk.",
-          "journal": "BMC psychiatry",
-          "published": "2025 Mar 31",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40165149/",
+          "id": "41716513",
+          "title": "Exploring the potential of tubulin-associated unit protein as a biomarker for schizophrenia.",
+          "journal": "BioImpacts : BI",
+          "published": "2025",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41716513/",
           "authors": [
-            "Ou Y",
-            "Chen Z",
-            "Wang Y",
-            "Li H",
-            "Liu F"
+            "Shafiee-Kandjani AR",
+            "Bazzaz Haghighat Talab A",
+            "Farhang S",
+            "Shanehbandi D",
+            "Asadi M"
           ],
-          "snippet": "doi: 10.1186/s12888-025-06747-x"
+          "snippet": "Schizophrenia is a chronic and debilitating psychiatric disease characterized by various causes and symptoms. The tau protein is recognized as a biomarker that plays a crucial role in neurocognitive and neurodegenerative diseases. Given the presen..."
         },
         {
-          "id": "36939345",
-          "title": "Exploring Digital Biomarkers of Illness Activity in Mood Episodes: Hypotheses Generating and Model Development Study.",
-          "journal": "JMIR mHealth and uHealth",
-          "published": "2023 May 4",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36939345/",
+          "id": "41714875",
+          "title": "Deep Learning-Based Structural Brain Age Estimation in Bipolar Disorder and Schizophrenia: A Single-Site Pilot Study.",
+          "journal": "Human brain mapping",
+          "published": "2026 Feb 15",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41714875/",
           "authors": [
-            "Anmella G",
-            "Corponi F",
-            "Li BM",
-            "Mas A",
-            "Sanabra M"
+            "Weerasekera A",
+            "Zhou S",
+            "Wang C",
+            "Qiu Z",
+            "Stein A"
           ],
-          "snippet": "doi: 10.2196/45405"
+          "snippet": "Accelerated brain aging has been implicated in severe mental illnesses, particularly schizophrenia (SZ) and bipolar disorder (BD). Brain-PAD, derived from structural MRI, offers a promising biomarker of neurobiological aging, but its developmental..."
         },
         {
-          "id": "35236254",
-          "title": "Classification of Low and High Schizotypy Levels via Evaluation of Brain Connectivity.",
-          "journal": "International journal of neural systems",
-          "published": "2022 Apr",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/35236254/",
+          "id": "41714609",
+          "title": "A transcriptomic dimension of neuronal and immune gene programs within the subgenual anterior cingulate cortex in schizophrenia.",
+          "journal": "Translational psychiatry",
+          "published": "2026 Feb 19",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41714609/",
           "authors": [
-            "Zandbagleh A",
-            "Mirzakuchaki S",
-            "Daliri MR",
-            "Premkumar P",
-            "Sanei S"
+            "Smith RL",
+            "Mihalik A",
+            "Akula N",
+            "Auluck PK",
+            "Marenco S"
           ],
-          "snippet": "doi: 10.1142/S0129065722500137"
+          "snippet": "Many psychiatric disorders are heritable, but the molecular consequences of genetic risk remain difficult to resolve, in part due to environmental confounds and the complexity of transcriptomic data. This challenge impedes therapeutic development,..."
         },
         {
-          "id": "30768396",
-          "title": "Structural Brain Alterations in Youth With Psychosis and Bipolar Spectrum Symptoms.",
-          "journal": "Journal of the American Academy of Child and Adolescent Psychiatry",
-          "published": "2019 Nov",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30768396/",
+          "id": "41713307",
+          "title": "Association of toxic heavy metal mixture exposure with schizophrenia risk: Potential role of carbon metabolic dysregulation.",
+          "journal": "Ecotoxicology and environmental safety",
+          "published": "2026 Feb 18",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41713307/",
           "authors": [
-            "Jalbrzikowski M",
-            "Freedman D",
-            "Hegarty CE",
-            "Mennigen E",
-            "Karlsgodt KH"
+            "Lv M",
+            "Huang Y",
+            "Yan X",
+            "Lan W",
+            "Zhong Z"
           ],
-          "snippet": "doi: 10.1016/j.jaac.2018.11.012"
+          "snippet": "The mechanisms underlying the contribution of toxic heavy metals to the risk of schizophrenia (SCZ) are not fully understood. This study aims to uncover molecular signatures of toxic heavy metal exposure via transcriptomics and metabolomics, and f..."
         }
       ]
     },
     {
       "id": "treatment",
       "title": "Treatment",
-      "summary": "Medication advances, psychosocial interventions, and digital therapies.",
-      "articles": []
+      "summary": "Current and emerging treatments — including medications, therapy, and newer approaches.",
+      "articles": [
+        {
+          "id": "41717560",
+          "title": "Comparing metabolic syndrome parameters, oxidative stress, cellular metabolism, and gene polymorphism between people with schizophrenia and healthy controls.",
+          "journal": "Frontiers in psychiatry",
+          "published": "2026",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41717560/",
+          "authors": [
+            "Malik K",
+            "Runtuk KS",
+            "Amir N",
+            "Nasrun MW",
+            "Sadikin M"
+          ],
+          "snippet": "Patients with schizophrenia have an increased risk of metabolic syndrome and cardiovascular disease, even in the absence of antipsychotic treatment. Oxidative stress, mitochondrial dysfunction, and genetic polymorphisms of the GCLC gene may contri..."
+        },
+        {
+          "id": "41716513",
+          "title": "Exploring the potential of tubulin-associated unit protein as a biomarker for schizophrenia.",
+          "journal": "BioImpacts : BI",
+          "published": "2025",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41716513/",
+          "authors": [
+            "Shafiee-Kandjani AR",
+            "Bazzaz Haghighat Talab A",
+            "Farhang S",
+            "Shanehbandi D",
+            "Asadi M"
+          ],
+          "snippet": "Schizophrenia is a chronic and debilitating psychiatric disease characterized by various causes and symptoms. The tau protein is recognized as a biomarker that plays a crucial role in neurocognitive and neurodegenerative diseases. Given the presen..."
+        },
+        {
+          "id": "41714875",
+          "title": "Deep Learning-Based Structural Brain Age Estimation in Bipolar Disorder and Schizophrenia: A Single-Site Pilot Study.",
+          "journal": "Human brain mapping",
+          "published": "2026 Feb 15",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41714875/",
+          "authors": [
+            "Weerasekera A",
+            "Zhou S",
+            "Wang C",
+            "Qiu Z",
+            "Stein A"
+          ],
+          "snippet": "Accelerated brain aging has been implicated in severe mental illnesses, particularly schizophrenia (SZ) and bipolar disorder (BD). Brain-PAD, derived from structural MRI, offers a promising biomarker of neurobiological aging, but its developmental..."
+        },
+        {
+          "id": "41714609",
+          "title": "A transcriptomic dimension of neuronal and immune gene programs within the subgenual anterior cingulate cortex in schizophrenia.",
+          "journal": "Translational psychiatry",
+          "published": "2026 Feb 19",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41714609/",
+          "authors": [
+            "Smith RL",
+            "Mihalik A",
+            "Akula N",
+            "Auluck PK",
+            "Marenco S"
+          ],
+          "snippet": "Many psychiatric disorders are heritable, but the molecular consequences of genetic risk remain difficult to resolve, in part due to environmental confounds and the complexity of transcriptomic data. This challenge impedes therapeutic development,..."
+        },
+        {
+          "id": "41713671",
+          "title": "Neuronal lipidome in schizophrenia and metabolic syndrome: Potential interventions.",
+          "journal": "Progress in neuro-psychopharmacology & biological psychiatry",
+          "published": "2026 Feb 17",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41713671/",
+          "authors": [
+            "Sfera A",
+            "Turturica E",
+            "Turturica D",
+            "Ciuperca I",
+            "Ikhimiukor D"
+          ],
+          "snippet": "Life is dependent on the separation of various body compartments from each other and the environment. The permeability of biological barriers, including the enhanced barriers of the gastrointestinal and blood-brain, depends on the integrity of cel..."
+        }
+      ]
     },
     {
       "id": "prevention",
       "title": "Prevention",
-      "summary": "Risk reduction strategies, prodromal support, and community programs.",
-      "articles": []
+      "summary": "Research on reducing risk and catching early signs before a full episode develops.",
+      "articles": [
+        {
+          "id": "41713307",
+          "title": "Association of toxic heavy metal mixture exposure with schizophrenia risk: Potential role of carbon metabolic dysregulation.",
+          "journal": "Ecotoxicology and environmental safety",
+          "published": "2026 Feb 18",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41713307/",
+          "authors": [
+            "Lv M",
+            "Huang Y",
+            "Yan X",
+            "Lan W",
+            "Zhong Z"
+          ],
+          "snippet": "The mechanisms underlying the contribution of toxic heavy metals to the risk of schizophrenia (SCZ) are not fully understood. This study aims to uncover molecular signatures of toxic heavy metal exposure via transcriptomics and metabolomics, and f..."
+        },
+        {
+          "id": "41708484",
+          "title": "Emotion Processing in Schizophrenia: Insights From a Brain Imaging Study Comparing Patients, Siblings, and Healthy Controls.",
+          "journal": "Human brain mapping",
+          "published": "2026 Feb 15",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41708484/",
+          "authors": [
+            "Fiorito AM",
+            "Kheireddine A",
+            "Han H",
+            "Morel-Prieur C",
+            "Oriol N"
+          ],
+          "snippet": "Abnormal facial emotion recognition has been proposed as a potential endophenotype for schizophrenia, as both patients with schizophrenia and their healthy relatives show difficulties in recognizing negative facial emotions. In psychiatric disorde..."
+        },
+        {
+          "id": "41707276",
+          "title": "Addressing the clinical gap in first-episode schizophrenia: Beyond the \"early use paradox\" of long-acting injectable antipsychotics.",
+          "journal": "Asian journal of psychiatry",
+          "published": "2026 Feb 13",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41707276/",
+          "authors": [
+            "Oguchi Y"
+          ],
+          "snippet": "View full article on PubMed"
+        },
+        {
+          "id": "41704843",
+          "title": "Phenome-Wide Associations of Polygenic Scores for Schizophrenia and Major Depression in 100,000 Chinese Adults.",
+          "journal": "Biological psychiatry global open science",
+          "published": "2026 Mar",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41704843/",
+          "authors": [
+            "Wang B",
+            "Morris S",
+            "Fry H",
+            "Iona A",
+            "Clarke J"
+          ],
+          "snippet": "China faces significant mental health challenges, with unique associations between mental disorders and other traits observed in its population. Based on summary statistics of existing genome-wide association studies in East Asian ancestry (EAS) a..."
+        },
+        {
+          "id": "41702881",
+          "title": "Alteration pattern of serum albumin levels in schizophrenia from first episode through remission to relapse: a longitudinal study.",
+          "journal": "Translational psychiatry",
+          "published": "2026 Feb 17",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41702881/",
+          "authors": [
+            "Zhao Y",
+            "Luo H",
+            "Gao S",
+            "Tang Y",
+            "Guo Y"
+          ],
+          "snippet": "Serum albumin, a reverse acute-phase protein, tends to decrease in response to acute clinical conditions. We hypothesized that albumin levels would exhibit state-dependent dynamics, with distinct patterns between acute episodes and remission state..."
+        }
+      ]
     }
   ],
   "sources": [
     {
       "name": "PubMed",
       "url": "https://pubmed.ncbi.nlm.nih.gov/",
-      "description": "Search provided by the National Library of Medicine (NIH)."
+      "description": "The National Institutes of Health's free database of medical research."
     }
   ]
 }
