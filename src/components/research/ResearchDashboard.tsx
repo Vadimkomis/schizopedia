@@ -1,11 +1,6 @@
 import { formatDateTime } from "@/lib/format";
 import type { ResearchPayload } from "@/lib/types";
-import {
-  Tabs,
-  TabsList,
-  TabsTrigger,
-  TabsContent,
-} from "@/components/ui/tabs";
+import { Tabs, TabsContent } from "@/components/ui/tabs";
 import {
   FALLBACK_CATEGORIES,
   CATEGORY_ACCENTS,
@@ -48,28 +43,21 @@ export function ResearchDashboard({
           Skip to research categories
         </a>
 
-        <HeroPanel
-          lastUpdated={formatDateTime(data?.lastUpdated)}
-          totalArticles={totalArticles ?? 0}
-          categoryCount={data?.categories?.length ?? FALLBACK_CATEGORIES.length}
-          sourceLabel={sources.map((source) => source.name).join(", ")}
-        />
+        <Tabs defaultValue={categories[0]?.id ?? "diagnosis"}>
+          <HeroPanel
+            lastUpdated={formatDateTime(data?.lastUpdated)}
+            totalArticles={totalArticles ?? 0}
+            sourceLabel={sources.map((source) => source.name).join(", ")}
+            categories={categories}
+          />
 
-        {error && (
-          <p className="rounded-2xl border border-red-200 bg-red-50 px-6 py-4 text-sm text-red-700 dark:border-red-500/30 dark:bg-red-500/10 dark:text-red-100">
-            {error}
-          </p>
-        )}
+          {error && (
+            <p className="mt-10 rounded-2xl border border-red-200 bg-red-50 px-6 py-4 text-sm text-red-700 dark:border-red-500/30 dark:bg-red-500/10 dark:text-red-100">
+              {error}
+            </p>
+          )}
 
-        <section id="research-categories" aria-busy={loading} aria-live="polite">
-          <Tabs defaultValue={categories[0]?.id ?? "diagnosis"}>
-            <TabsList>
-              {categories.map((category) => (
-                <TabsTrigger key={category.id} value={category.id}>
-                  {category.title}
-                </TabsTrigger>
-              ))}
-            </TabsList>
+          <section id="research-categories" aria-busy={loading} aria-live="polite">
             {categories.map((category, index) => (
               <TabsContent key={category.id} value={category.id}>
                 <CategoryCard
@@ -80,8 +68,8 @@ export function ResearchDashboard({
                 />
               </TabsContent>
             ))}
-          </Tabs>
-        </section>
+          </section>
+        </Tabs>
 
         <SourcesPanel sources={sources} />
       </div>

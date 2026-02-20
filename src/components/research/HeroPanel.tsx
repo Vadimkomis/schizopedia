@@ -1,16 +1,18 @@
 import { Badge } from "@/components/ui/badge";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
+import { TabsList, TabsTrigger } from "@/components/ui/tabs";
+import type { ResearchCategory } from "@/lib/types";
 
 export function HeroPanel({
   lastUpdated,
   totalArticles,
-  categoryCount,
   sourceLabel,
+  categories,
 }: {
   lastUpdated: string;
   totalArticles: number;
-  categoryCount: number;
   sourceLabel: string;
+  categories: ResearchCategory[];
 }) {
   return (
     <section className="glow-card rounded-[32px] border border-white bg-gradient-to-br from-white via-[#f5f8fc] to-white p-6 text-slate-900 shadow-[0_30px_60px_rgba(15,23,42,0.08)] dark:border-white/10 dark:from-[#0d1420] dark:via-[#0a0f18] dark:to-[#05070d] dark:text-white sm:p-10">
@@ -37,12 +39,18 @@ export function HeroPanel({
             are sourced from PubMed, a trusted medical research database.
           </p>
         </div>
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2">
           <StatPill label="Last refresh" value={lastUpdated} />
           <StatPill label="Articles" value={totalArticles || "0"} />
-          <StatPill label="Categories" value={`${categoryCount}`} />
         </div>
       </div>
+      <TabsList className="mt-8">
+        {categories.map((category) => (
+          <TabsTrigger key={category.id} value={category.id}>
+            {category.title}
+          </TabsTrigger>
+        ))}
+      </TabsList>
     </section>
   );
 }

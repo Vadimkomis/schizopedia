@@ -2,7 +2,14 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
+import { Tabs } from "@/components/ui/tabs";
 import { HeroPanel } from "./HeroPanel";
+
+const categories = [
+  { id: "diagnosis", title: "Diagnosis", summary: "s", articles: [] },
+  { id: "treatment", title: "Treatment", summary: "s", articles: [] },
+  { id: "prevention", title: "Prevention", summary: "s", articles: [] },
+];
 
 const renderWithTheme = (ui: React.ReactElement) =>
   render(<ThemeProvider>{ui}</ThemeProvider>);
@@ -10,12 +17,14 @@ const renderWithTheme = (ui: React.ReactElement) =>
 describe("HeroPanel", () => {
   it("renders heading and description", () => {
     renderWithTheme(
-      <HeroPanel
-        lastUpdated="January 1, 2024"
-        totalArticles={15}
-        categoryCount={3}
-        sourceLabel="PubMed (NIH)"
-      />,
+      <Tabs defaultValue="diagnosis">
+        <HeroPanel
+          lastUpdated="January 1, 2024"
+          totalArticles={15}
+          sourceLabel="PubMed (NIH)"
+          categories={categories}
+        />
+      </Tabs>,
     );
 
     expect(
@@ -28,40 +37,47 @@ describe("HeroPanel", () => {
 
   it("renders stat pills with correct values", () => {
     renderWithTheme(
-      <HeroPanel
-        lastUpdated="January 1, 2024"
-        totalArticles={15}
-        categoryCount={3}
-        sourceLabel="PubMed (NIH)"
-      />,
+      <Tabs defaultValue="diagnosis">
+        <HeroPanel
+          lastUpdated="January 1, 2024"
+          totalArticles={15}
+          sourceLabel="PubMed (NIH)"
+          categories={categories}
+        />
+      </Tabs>,
     );
 
     expect(screen.getByText("January 1, 2024")).toBeVisible();
     expect(screen.getByText("15")).toBeVisible();
-    expect(screen.getByText("3")).toBeVisible();
   });
 
-  it("renders 'Research Directory' badge", () => {
+  it("renders tab triggers for all categories", () => {
     renderWithTheme(
-      <HeroPanel
-        lastUpdated="Pending"
-        totalArticles={0}
-        categoryCount={3}
-        sourceLabel="PubMed"
-      />,
+      <Tabs defaultValue="diagnosis">
+        <HeroPanel
+          lastUpdated="Pending"
+          totalArticles={0}
+          sourceLabel="PubMed"
+          categories={categories}
+        />
+      </Tabs>,
     );
 
-    expect(screen.getByText("Research Directory")).toBeVisible();
+    expect(screen.getByRole("tab", { name: "Diagnosis" })).toBeVisible();
+    expect(screen.getByRole("tab", { name: "Treatment" })).toBeVisible();
+    expect(screen.getByRole("tab", { name: "Prevention" })).toBeVisible();
   });
 
   it("shows 0 when no articles", () => {
     renderWithTheme(
-      <HeroPanel
-        lastUpdated="Pending"
-        totalArticles={0}
-        categoryCount={3}
-        sourceLabel="PubMed"
-      />,
+      <Tabs defaultValue="diagnosis">
+        <HeroPanel
+          lastUpdated="Pending"
+          totalArticles={0}
+          sourceLabel="PubMed"
+          categories={categories}
+        />
+      </Tabs>,
     );
 
     expect(screen.getByText("0")).toBeVisible();
