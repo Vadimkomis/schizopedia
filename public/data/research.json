@@ -1,11 +1,68 @@
 {
-  "lastUpdated": "2026-02-20T19:35:57.480Z",
+  "lastUpdated": "2026-02-23T09:14:38.549Z",
   "categories": [
     {
       "id": "diagnosis",
       "title": "Diagnosis",
       "summary": "How schizophrenia is identified — from early warning signs to brain imaging and screening tools.",
       "articles": [
+        {
+          "id": "41724750",
+          "title": "Phase 2b Trial of the PDE10A Inhibitor MK-8189 in People With an Acute Episode of Schizophrenia.",
+          "journal": "Journal of clinical psychopharmacology",
+          "published": "2026 Feb 23",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41724750/",
+          "authors": [
+            "Mukai Y",
+            "Kost J",
+            "Snow-Adami L",
+            "Reed J",
+            "Taylor T"
+          ],
+          "snippet": "PDE10A inhibition represents a potential mechanism for treating schizophrenia. A 12-mg dose of the PDE10A inhibitor MK-8189 showed initial evidence of efficacy for improving schizophrenia symptoms after 4 weeks. We performed a follow-up study eval..."
+        },
+        {
+          "id": "41724396",
+          "title": "Differentiating bipolar disorder and schizophrenia using sleep EEG power and coherence features: A machine learning approach based on polysomnography.",
+          "journal": "Journal of affective disorders",
+          "published": "2026 Feb 20",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41724396/",
+          "authors": [
+            "Zhong Y",
+            "Xu CJ",
+            "Gao YJ",
+            "Ma HY",
+            "Liu YK"
+          ],
+          "snippet": "Differentiating between bipolar disorder (BD) and schizophrenia (SZ) is challenging due to overlapping clinical symptoms and shared genetic risks, resulting in frequent misdiagnoses and ineffective treatments. This study investigates whether overn..."
+        },
+        {
+          "id": "41721300",
+          "title": "Diagnosis-specific associations of plasma NGAL in drug-naïve schizophrenia and major depressive disorder: an exploratory cross-sectional study.",
+          "journal": "BMC psychiatry",
+          "published": "2026 Feb 20",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41721300/",
+          "authors": [
+            "Zhou B",
+            "Sun X",
+            "Wang X",
+            "Zhang X",
+            "Su Q"
+          ],
+          "snippet": "View full article on PubMed"
+        },
+        {
+          "id": "41721179",
+          "title": "The Relationship of Childhood Trauma and Spiritual Well-Being with Dysfunctional Thoughts in Individuals with Schizophrenia or Bipolar Disorder in Türkiye.",
+          "journal": "Journal of religion and health",
+          "published": "2026 Feb 20",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41721179/",
+          "authors": [
+            "Yanık D",
+            "Ayhan F"
+          ],
+          "snippet": "This study aimed to examine the relationships of childhood trauma and spiritual well-being with dysfunctional thoughts in individuals diagnosed with schizophrenia or bipolar disorder. This descriptive and cross-sectional study included 39 individu..."
+        },
         {
           "id": "41717560",
           "title": "Comparing metabolic syndrome parameters, oxidative stress, cellular metabolism, and gene polymorphism between people with schizophrenia and healthy controls.",
@@ -20,66 +77,6 @@
             "Sadikin M"
           ],
           "snippet": "Patients with schizophrenia have an increased risk of metabolic syndrome and cardiovascular disease, even in the absence of antipsychotic treatment. Oxidative stress, mitochondrial dysfunction, and genetic polymorphisms of the GCLC gene may contri..."
-        },
-        {
-          "id": "41716513",
-          "title": "Exploring the potential of tubulin-associated unit protein as a biomarker for schizophrenia.",
-          "journal": "BioImpacts : BI",
-          "published": "2025",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41716513/",
-          "authors": [
-            "Shafiee-Kandjani AR",
-            "Bazzaz Haghighat Talab A",
-            "Farhang S",
-            "Shanehbandi D",
-            "Asadi M"
-          ],
-          "snippet": "Schizophrenia is a chronic and debilitating psychiatric disease characterized by various causes and symptoms. The tau protein is recognized as a biomarker that plays a crucial role in neurocognitive and neurodegenerative diseases. Given the presen..."
-        },
-        {
-          "id": "41714875",
-          "title": "Deep Learning-Based Structural Brain Age Estimation in Bipolar Disorder and Schizophrenia: A Single-Site Pilot Study.",
-          "journal": "Human brain mapping",
-          "published": "2026 Feb 15",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41714875/",
-          "authors": [
-            "Weerasekera A",
-            "Zhou S",
-            "Wang C",
-            "Qiu Z",
-            "Stein A"
-          ],
-          "snippet": "Accelerated brain aging has been implicated in severe mental illnesses, particularly schizophrenia (SZ) and bipolar disorder (BD). Brain-PAD, derived from structural MRI, offers a promising biomarker of neurobiological aging, but its developmental..."
-        },
-        {
-          "id": "41714609",
-          "title": "A transcriptomic dimension of neuronal and immune gene programs within the subgenual anterior cingulate cortex in schizophrenia.",
-          "journal": "Translational psychiatry",
-          "published": "2026 Feb 19",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41714609/",
-          "authors": [
-            "Smith RL",
-            "Mihalik A",
-            "Akula N",
-            "Auluck PK",
-            "Marenco S"
-          ],
-          "snippet": "Many psychiatric disorders are heritable, but the molecular consequences of genetic risk remain difficult to resolve, in part due to environmental confounds and the complexity of transcriptomic data. This challenge impedes therapeutic development,..."
-        },
-        {
-          "id": "41713307",
-          "title": "Association of toxic heavy metal mixture exposure with schizophrenia risk: Potential role of carbon metabolic dysregulation.",
-          "journal": "Ecotoxicology and environmental safety",
-          "published": "2026 Feb 18",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41713307/",
-          "authors": [
-            "Lv M",
-            "Huang Y",
-            "Yan X",
-            "Lan W",
-            "Zhong Z"
-          ],
-          "snippet": "The mechanisms underlying the contribution of toxic heavy metals to the risk of schizophrenia (SCZ) are not fully understood. This study aims to uncover molecular signatures of toxic heavy metal exposure via transcriptomics and metabolomics, and f..."
         }
       ]
     },
@@ -89,79 +86,75 @@
       "summary": "Current and emerging treatments — including medications, therapy, and newer approaches.",
       "articles": [
         {
-          "id": "41717560",
-          "title": "Comparing metabolic syndrome parameters, oxidative stress, cellular metabolism, and gene polymorphism between people with schizophrenia and healthy controls.",
-          "journal": "Frontiers in psychiatry",
-          "published": "2026",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41717560/",
+          "id": "41724750",
+          "title": "Phase 2b Trial of the PDE10A Inhibitor MK-8189 in People With an Acute Episode of Schizophrenia.",
+          "journal": "Journal of clinical psychopharmacology",
+          "published": "2026 Feb 23",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41724750/",
           "authors": [
-            "Malik K",
-            "Runtuk KS",
-            "Amir N",
-            "Nasrun MW",
-            "Sadikin M"
+            "Mukai Y",
+            "Kost J",
+            "Snow-Adami L",
+            "Reed J",
+            "Taylor T"
           ],
-          "snippet": "Patients with schizophrenia have an increased risk of metabolic syndrome and cardiovascular disease, even in the absence of antipsychotic treatment. Oxidative stress, mitochondrial dysfunction, and genetic polymorphisms of the GCLC gene may contri..."
+          "snippet": "PDE10A inhibition represents a potential mechanism for treating schizophrenia. A 12-mg dose of the PDE10A inhibitor MK-8189 showed initial evidence of efficacy for improving schizophrenia symptoms after 4 weeks. We performed a follow-up study eval..."
         },
         {
-          "id": "41716513",
-          "title": "Exploring the potential of tubulin-associated unit protein as a biomarker for schizophrenia.",
-          "journal": "BioImpacts : BI",
-          "published": "2025",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41716513/",
+          "id": "41724396",
+          "title": "Differentiating bipolar disorder and schizophrenia using sleep EEG power and coherence features: A machine learning approach based on polysomnography.",
+          "journal": "Journal of affective disorders",
+          "published": "2026 Feb 20",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41724396/",
           "authors": [
-            "Shafiee-Kandjani AR",
-            "Bazzaz Haghighat Talab A",
-            "Farhang S",
-            "Shanehbandi D",
-            "Asadi M"
+            "Zhong Y",
+            "Xu CJ",
+            "Gao YJ",
+            "Ma HY",
+            "Liu YK"
           ],
-          "snippet": "Schizophrenia is a chronic and debilitating psychiatric disease characterized by various causes and symptoms. The tau protein is recognized as a biomarker that plays a crucial role in neurocognitive and neurodegenerative diseases. Given the presen..."
+          "snippet": "Differentiating between bipolar disorder (BD) and schizophrenia (SZ) is challenging due to overlapping clinical symptoms and shared genetic risks, resulting in frequent misdiagnoses and ineffective treatments. This study investigates whether overn..."
         },
         {
-          "id": "41714875",
-          "title": "Deep Learning-Based Structural Brain Age Estimation in Bipolar Disorder and Schizophrenia: A Single-Site Pilot Study.",
-          "journal": "Human brain mapping",
-          "published": "2026 Feb 15",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41714875/",
+          "id": "41722358",
+          "title": "Untangling violent behavior in schizophrenia: The role of formal thought disorder and cognitive dysfunction.",
+          "journal": "Asian journal of psychiatry",
+          "published": "2026 Feb 13",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41722358/",
           "authors": [
-            "Weerasekera A",
-            "Zhou S",
-            "Wang C",
-            "Qiu Z",
-            "Stein A"
+            "Bolu G",
+            "Sahin EK",
+            "Ugurlu M",
+            "Kamis GZ"
           ],
-          "snippet": "Accelerated brain aging has been implicated in severe mental illnesses, particularly schizophrenia (SZ) and bipolar disorder (BD). Brain-PAD, derived from structural MRI, offers a promising biomarker of neurobiological aging, but its developmental..."
+          "snippet": "Violent offending in schizophrenia has been linked to psychopathology, cognitive dysfunction, and formal thought disorder; however, their combined contribution remains unclear. This study examined the relationships between formal thought disorder,..."
         },
         {
-          "id": "41714609",
-          "title": "A transcriptomic dimension of neuronal and immune gene programs within the subgenual anterior cingulate cortex in schizophrenia.",
-          "journal": "Translational psychiatry",
-          "published": "2026 Feb 19",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41714609/",
+          "id": "41721264",
+          "title": "Prevalence and risk profiles of metabolic abnormalities (PRIMA): a large-scale, multicenter cross-sectional study among inpatients with schizophrenia in China.",
+          "journal": "BMC psychiatry",
+          "published": "2026 Feb 20",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41721264/",
           "authors": [
-            "Smith RL",
-            "Mihalik A",
-            "Akula N",
-            "Auluck PK",
-            "Marenco S"
+            "Liao X",
+            "Zheng L",
+            "Li H",
+            "Lu X",
+            "Mao X"
           ],
-          "snippet": "Many psychiatric disorders are heritable, but the molecular consequences of genetic risk remain difficult to resolve, in part due to environmental confounds and the complexity of transcriptomic data. This challenge impedes therapeutic development,..."
+          "snippet": "View full article on PubMed"
         },
         {
-          "id": "41713671",
-          "title": "Neuronal lipidome in schizophrenia and metabolic syndrome: Potential interventions.",
-          "journal": "Progress in neuro-psychopharmacology & biological psychiatry",
-          "published": "2026 Feb 17",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41713671/",
+          "id": "41721179",
+          "title": "The Relationship of Childhood Trauma and Spiritual Well-Being with Dysfunctional Thoughts in Individuals with Schizophrenia or Bipolar Disorder in Türkiye.",
+          "journal": "Journal of religion and health",
+          "published": "2026 Feb 20",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41721179/",
           "authors": [
-            "Sfera A",
-            "Turturica E",
-            "Turturica D",
-            "Ciuperca I",
-            "Ikhimiukor D"
+            "Yanık D",
+            "Ayhan F"
           ],
-          "snippet": "Life is dependent on the separation of various body compartments from each other and the environment. The permeability of biological barriers, including the enhanced barriers of the gastrointestinal and blood-brain, depends on the integrity of cel..."
+          "snippet": "This study aimed to examine the relationships of childhood trauma and spiritual well-being with dysfunctional thoughts in individuals diagnosed with schizophrenia or bipolar disorder. This descriptive and cross-sectional study included 39 individu..."
         }
       ]
     },
