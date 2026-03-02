@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-23T09:14:38.549Z",
+  "lastUpdated": "2026-03-02T09:12:05.574Z",
   "categories": [
     {
       "id": "diagnosis",
@@ -7,76 +7,78 @@
       "summary": "How schizophrenia is identified — from early warning signs to brain imaging and screening tools.",
       "articles": [
         {
-          "id": "41724750",
-          "title": "Phase 2b Trial of the PDE10A Inhibitor MK-8189 in People With an Acute Episode of Schizophrenia.",
-          "journal": "Journal of clinical psychopharmacology",
+          "id": "41763745",
+          "title": "Comparative efficacy and tolerability of antidopaminergic and muscarinic antipsychotics for acute schizophrenia: a network meta-analysis of randomised controlled trials indexed in international English and Chinese databases.",
+          "journal": "Lancet (London, England)",
+          "published": "2026 Feb 28",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41763745/",
+          "authors": [
+            "Schneider-Thoma J",
+            "Zhu Y",
+            "Qin M",
+            "Dong Y",
+            "Guan S"
+          ],
+          "snippet": "Antipsychotic drugs are the established treatment for acute schizophrenia but differ in receptor-binding profiles. In 2024, a new-in-class muscarinic receptor agonist (xanomeline-trospium) was licenced, acting upstream of antidopaminergic agents, ..."
+        },
+        {
+          "id": "41763188",
+          "title": "Could peripheral immunological markers discriminate schizophrenia and schizoaffective disorders from bipolar disorder?",
+          "journal": "Journal of psychiatric research",
+          "published": "2026 Feb 24",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41763188/",
+          "authors": [
+            "Jeannin J",
+            "Romeo B",
+            "Lestra V",
+            "Martelli C",
+            "Amirouche A"
+          ],
+          "snippet": "Schizoaffective disorder (SZ-AFF) is a controversial diagnostic at the interface between bipolar disorder (BD) and schizophrenia (SZ). Immunological profiles should discriminate these disorders notably during an acute phase. The objective of this ..."
+        },
+        {
+          "id": "41762521",
+          "title": "Educational spillover effect within a cluster: Impact of guideline education for schizophrenia and major depressive disorder on psychiatrists' treatment behavior in a real-world multicenter study.",
+          "journal": "Asian journal of psychiatry",
           "published": "2026 Feb 23",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41724750/",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41762521/",
           "authors": [
-            "Mukai Y",
-            "Kost J",
-            "Snow-Adami L",
-            "Reed J",
-            "Taylor T"
+            "Horinouchi T",
+            "Arai Y",
+            "Hasegawa N",
+            "Muraoka H",
+            "Yamamuro K"
           ],
-          "snippet": "PDE10A inhibition represents a potential mechanism for treating schizophrenia. A 12-mg dose of the PDE10A inhibitor MK-8189 showed initial evidence of efficacy for improving schizophrenia symptoms after 4 weeks. We performed a follow-up study eval..."
+          "snippet": "Educational interventions can influence not only individuals who directly receive them but also nonparticipating individuals within the same cluster. This study examined whether an educational spillover effect within a cluster occurs during real-w..."
         },
         {
-          "id": "41724396",
-          "title": "Differentiating bipolar disorder and schizophrenia using sleep EEG power and coherence features: A machine learning approach based on polysomnography.",
-          "journal": "Journal of affective disorders",
-          "published": "2026 Feb 20",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41724396/",
-          "authors": [
-            "Zhong Y",
-            "Xu CJ",
-            "Gao YJ",
-            "Ma HY",
-            "Liu YK"
-          ],
-          "snippet": "Differentiating between bipolar disorder (BD) and schizophrenia (SZ) is challenging due to overlapping clinical symptoms and shared genetic risks, resulting in frequent misdiagnoses and ineffective treatments. This study investigates whether overn..."
-        },
-        {
-          "id": "41721300",
-          "title": "Diagnosis-specific associations of plasma NGAL in drug-naïve schizophrenia and major depressive disorder: an exploratory cross-sectional study.",
-          "journal": "BMC psychiatry",
-          "published": "2026 Feb 20",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41721300/",
-          "authors": [
-            "Zhou B",
-            "Sun X",
-            "Wang X",
-            "Zhang X",
-            "Su Q"
-          ],
-          "snippet": "View full article on PubMed"
-        },
-        {
-          "id": "41721179",
-          "title": "The Relationship of Childhood Trauma and Spiritual Well-Being with Dysfunctional Thoughts in Individuals with Schizophrenia or Bipolar Disorder in Türkiye.",
-          "journal": "Journal of religion and health",
-          "published": "2026 Feb 20",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41721179/",
-          "authors": [
-            "Yanık D",
-            "Ayhan F"
-          ],
-          "snippet": "This study aimed to examine the relationships of childhood trauma and spiritual well-being with dysfunctional thoughts in individuals diagnosed with schizophrenia or bipolar disorder. This descriptive and cross-sectional study included 39 individu..."
-        },
-        {
-          "id": "41717560",
-          "title": "Comparing metabolic syndrome parameters, oxidative stress, cellular metabolism, and gene polymorphism between people with schizophrenia and healthy controls.",
-          "journal": "Frontiers in psychiatry",
+          "id": "41758794",
+          "title": "A conversational agent as a virtual therapist for patients diagnosed with schizophrenia: A preliminary study.",
+          "journal": "PloS one",
           "published": "2026",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41717560/",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41758794/",
           "authors": [
-            "Malik K",
-            "Runtuk KS",
-            "Amir N",
-            "Nasrun MW",
-            "Sadikin M"
+            "Stefaniak I",
+            "Gabor-Siatkowska K",
+            "Kozłowski M",
+            "Janicki A"
           ],
-          "snippet": "Patients with schizophrenia have an increased risk of metabolic syndrome and cardiovascular disease, even in the absence of antipsychotic treatment. Oxidative stress, mitochondrial dysfunction, and genetic polymorphisms of the GCLC gene may contri..."
+          "snippet": "Schizophrenia is a complex mental disorder characterized by disturbances in thinking, emotions, and behavior. Emotional dysregulation is a significant clinical issue. Recent years have seen growing interest in the use of conversational agents in m..."
+        },
+        {
+          "id": "41758485",
+          "title": "Preparing an Intervention to Increase Engagement with the 988 Suicide and Crisis Lifeline Resource among Community Mental Health Consumers with Schizophrenia Spectrum Disorders.",
+          "journal": "Community mental health journal",
+          "published": "2026 Feb 27",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41758485/",
+          "authors": [
+            "Bornheimer LA",
+            "Lapidos A",
+            "Brdar NM",
+            "Kelter AN",
+            "Song J"
+          ],
+          "snippet": "Suicide rates are high among individuals with schizophrenia spectrum disorders (SSDs) and community mental health (CMH) settings have potential to play a critical role in suicide prevention efforts. Crisis lines, such as the 988 Lifeline, are foun..."
         }
       ]
     },
@@ -86,75 +88,71 @@
       "summary": "Current and emerging treatments — including medications, therapy, and newer approaches.",
       "articles": [
         {
-          "id": "41724750",
-          "title": "Phase 2b Trial of the PDE10A Inhibitor MK-8189 in People With an Acute Episode of Schizophrenia.",
-          "journal": "Journal of clinical psychopharmacology",
-          "published": "2026 Feb 23",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41724750/",
+          "id": "41765434",
+          "title": "[Exploring the therapeutic potential of PPARα in schizophrenia].",
+          "journal": "Nihon yakurigaku zasshi. Folia pharmacologica Japonica",
+          "published": "2026",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41765434/",
           "authors": [
-            "Mukai Y",
-            "Kost J",
-            "Snow-Adami L",
-            "Reed J",
-            "Taylor T"
+            "Maekawa M",
+            "Kimura K",
+            "Fu J",
+            "Kirikae H",
+            "Wang H"
           ],
-          "snippet": "PDE10A inhibition represents a potential mechanism for treating schizophrenia. A 12-mg dose of the PDE10A inhibitor MK-8189 showed initial evidence of efficacy for improving schizophrenia symptoms after 4 weeks. We performed a follow-up study eval..."
+          "snippet": "Peroxisome proliferator-activated receptor &#x3b1; (PPAR&#x3b1;) is a nuclear receptor that regulates lipid metabolism and inflammatory responses. Recent studies have revealed that PPAR&#x3b1; also plays an important role in maintaining neuronal h..."
         },
         {
-          "id": "41724396",
-          "title": "Differentiating bipolar disorder and schizophrenia using sleep EEG power and coherence features: A machine learning approach based on polysomnography.",
-          "journal": "Journal of affective disorders",
-          "published": "2026 Feb 20",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41724396/",
+          "id": "41764912",
+          "title": "Letter to the Editor: Comment regarding \"A comparative study of medication adherence in schizophrenia patients receiving clozapine and other antipsychotics\".",
+          "journal": "Psychiatry research",
+          "published": "2026 Feb 26",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41764912/",
           "authors": [
-            "Zhong Y",
-            "Xu CJ",
-            "Gao YJ",
-            "Ma HY",
-            "Liu YK"
-          ],
-          "snippet": "Differentiating between bipolar disorder (BD) and schizophrenia (SZ) is challenging due to overlapping clinical symptoms and shared genetic risks, resulting in frequent misdiagnoses and ineffective treatments. This study investigates whether overn..."
-        },
-        {
-          "id": "41722358",
-          "title": "Untangling violent behavior in schizophrenia: The role of formal thought disorder and cognitive dysfunction.",
-          "journal": "Asian journal of psychiatry",
-          "published": "2026 Feb 13",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41722358/",
-          "authors": [
-            "Bolu G",
-            "Sahin EK",
-            "Ugurlu M",
-            "Kamis GZ"
-          ],
-          "snippet": "Violent offending in schizophrenia has been linked to psychopathology, cognitive dysfunction, and formal thought disorder; however, their combined contribution remains unclear. This study examined the relationships between formal thought disorder,..."
-        },
-        {
-          "id": "41721264",
-          "title": "Prevalence and risk profiles of metabolic abnormalities (PRIMA): a large-scale, multicenter cross-sectional study among inpatients with schizophrenia in China.",
-          "journal": "BMC psychiatry",
-          "published": "2026 Feb 20",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41721264/",
-          "authors": [
-            "Liao X",
-            "Zheng L",
-            "Li H",
-            "Lu X",
-            "Mao X"
+            "Shizukawa K"
           ],
           "snippet": "View full article on PubMed"
         },
         {
-          "id": "41721179",
-          "title": "The Relationship of Childhood Trauma and Spiritual Well-Being with Dysfunctional Thoughts in Individuals with Schizophrenia or Bipolar Disorder in Türkiye.",
-          "journal": "Journal of religion and health",
-          "published": "2026 Feb 20",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41721179/",
+          "id": "41764057",
+          "title": "Targeted Therapeutic Intervention for Problematic Alcohol Use, Comorbid Depressive Disorder, and Schizophrenia: Response to Lawford and Norrie.",
+          "journal": "The American journal of psychiatry",
+          "published": "2026 Mar 1",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41764057/",
           "authors": [
-            "Yanık D",
-            "Ayhan F"
+            "Myung W",
+            "Ahn Y",
+            "Kim J",
+            "Won HH"
           ],
-          "snippet": "This study aimed to examine the relationships of childhood trauma and spiritual well-being with dysfunctional thoughts in individuals diagnosed with schizophrenia or bipolar disorder. This descriptive and cross-sectional study included 39 individu..."
+          "snippet": "View full article on PubMed"
+        },
+        {
+          "id": "41763745",
+          "title": "Comparative efficacy and tolerability of antidopaminergic and muscarinic antipsychotics for acute schizophrenia: a network meta-analysis of randomised controlled trials indexed in international English and Chinese databases.",
+          "journal": "Lancet (London, England)",
+          "published": "2026 Feb 28",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41763745/",
+          "authors": [
+            "Schneider-Thoma J",
+            "Zhu Y",
+            "Qin M",
+            "Dong Y",
+            "Guan S"
+          ],
+          "snippet": "Antipsychotic drugs are the established treatment for acute schizophrenia but differ in receptor-binding profiles. In 2024, a new-in-class muscarinic receptor agonist (xanomeline-trospium) was licenced, acting upstream of antidopaminergic agents, ..."
+        },
+        {
+          "id": "41763730",
+          "title": "Antipsychotic medicines for schizophrenia: time to move forward.",
+          "journal": "Lancet (London, England)",
+          "published": "2026 Feb 28",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41763730/",
+          "authors": [
+            "Barbui C",
+            "Ostuzzi G"
+          ],
+          "snippet": "View full article on PubMed"
         }
       ]
     },
@@ -164,75 +162,76 @@
       "summary": "Research on reducing risk and catching early signs before a full episode develops.",
       "articles": [
         {
-          "id": "41713307",
-          "title": "Association of toxic heavy metal mixture exposure with schizophrenia risk: Potential role of carbon metabolic dysregulation.",
-          "journal": "Ecotoxicology and environmental safety",
-          "published": "2026 Feb 18",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41713307/",
+          "id": "41765640",
+          "title": "[Schizophrenia, the clinical triggers of possible acts of hetero-violence].",
+          "journal": "Soins. Psychiatrie",
+          "published": "2026 Mar-Apr",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41765640/",
           "authors": [
-            "Lv M",
-            "Huang Y",
-            "Yan X",
-            "Lan W",
-            "Zhong Z"
+            "Brulin-Solignac D",
+            "Bouchard JP"
           ],
-          "snippet": "The mechanisms underlying the contribution of toxic heavy metals to the risk of schizophrenia (SCZ) are not fully understood. This study aims to uncover molecular signatures of toxic heavy metal exposure via transcriptomics and metabolomics, and f..."
+          "snippet": "Episodes of verbal and/or physical violence in schizophrenic subjects are often related to their delusional activity. Among these delusional elements, defensive reactions to experiences of harm, persecution, or hallucinatory commands to commit vio..."
         },
         {
-          "id": "41708484",
-          "title": "Emotion Processing in Schizophrenia: Insights From a Brain Imaging Study Comparing Patients, Siblings, and Healthy Controls.",
-          "journal": "Human brain mapping",
-          "published": "2026 Feb 15",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41708484/",
+          "id": "41763745",
+          "title": "Comparative efficacy and tolerability of antidopaminergic and muscarinic antipsychotics for acute schizophrenia: a network meta-analysis of randomised controlled trials indexed in international English and Chinese databases.",
+          "journal": "Lancet (London, England)",
+          "published": "2026 Feb 28",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41763745/",
           "authors": [
-            "Fiorito AM",
-            "Kheireddine A",
-            "Han H",
-            "Morel-Prieur C",
-            "Oriol N"
+            "Schneider-Thoma J",
+            "Zhu Y",
+            "Qin M",
+            "Dong Y",
+            "Guan S"
           ],
-          "snippet": "Abnormal facial emotion recognition has been proposed as a potential endophenotype for schizophrenia, as both patients with schizophrenia and their healthy relatives show difficulties in recognizing negative facial emotions. In psychiatric disorde..."
+          "snippet": "Antipsychotic drugs are the established treatment for acute schizophrenia but differ in receptor-binding profiles. In 2024, a new-in-class muscarinic receptor agonist (xanomeline-trospium) was licenced, acting upstream of antidopaminergic agents, ..."
         },
         {
-          "id": "41707276",
-          "title": "Addressing the clinical gap in first-episode schizophrenia: Beyond the \"early use paradox\" of long-acting injectable antipsychotics.",
-          "journal": "Asian journal of psychiatry",
-          "published": "2026 Feb 13",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41707276/",
+          "id": "41760651",
+          "title": "Author Correction: Semantic memory disorganization linked to social functioning in patients with schizophrenia.",
+          "journal": "Schizophrenia (Heidelberg, Germany)",
+          "published": "2026 Feb 27",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41760651/",
           "authors": [
-            "Oguchi Y"
+            "Wada A",
+            "Sumiyoshi C",
+            "Yoshimura N",
+            "Hashimoto R",
+            "Matsumoto J"
           ],
           "snippet": "View full article on PubMed"
         },
         {
-          "id": "41704843",
-          "title": "Phenome-Wide Associations of Polygenic Scores for Schizophrenia and Major Depression in 100,000 Chinese Adults.",
-          "journal": "Biological psychiatry global open science",
-          "published": "2026 Mar",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41704843/",
+          "id": "41758485",
+          "title": "Preparing an Intervention to Increase Engagement with the 988 Suicide and Crisis Lifeline Resource among Community Mental Health Consumers with Schizophrenia Spectrum Disorders.",
+          "journal": "Community mental health journal",
+          "published": "2026 Feb 27",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41758485/",
           "authors": [
-            "Wang B",
-            "Morris S",
-            "Fry H",
-            "Iona A",
-            "Clarke J"
+            "Bornheimer LA",
+            "Lapidos A",
+            "Brdar NM",
+            "Kelter AN",
+            "Song J"
           ],
-          "snippet": "China faces significant mental health challenges, with unique associations between mental disorders and other traits observed in its population. Based on summary statistics of existing genome-wide association studies in East Asian ancestry (EAS) a..."
+          "snippet": "Suicide rates are high among individuals with schizophrenia spectrum disorders (SSDs) and community mental health (CMH) settings have potential to play a critical role in suicide prevention efforts. Crisis lines, such as the 988 Lifeline, are foun..."
         },
         {
-          "id": "41702881",
-          "title": "Alteration pattern of serum albumin levels in schizophrenia from first episode through remission to relapse: a longitudinal study.",
-          "journal": "Translational psychiatry",
-          "published": "2026 Feb 17",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41702881/",
+          "id": "41756641",
+          "title": "Longitudinal measurements of inhibitory cognitive performance in patients with schizophrenia and bipolar disorder.",
+          "journal": "Schizophrenia research. Cognition",
+          "published": "2026 Mar",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41756641/",
           "authors": [
-            "Zhao Y",
-            "Luo H",
-            "Gao S",
-            "Tang Y",
-            "Guo Y"
+            "Smyrnis A",
+            "Smyrnis G",
+            "Lazaridi M",
+            "Mantas A",
+            "Karantinos T"
           ],
-          "snippet": "Serum albumin, a reverse acute-phase protein, tends to decrease in response to acute clinical conditions. We hypothesized that albumin levels would exhibit state-dependent dynamics, with distinct patterns between acute episodes and remission state..."
+          "snippet": "Cognitive impairment is a major determinant of functional outcome in psychotic spectrum disorders. Among cognitive domains, motor response inhibition has received limited longitudinal investigation. The present study examined the temporal course o..."
         }
       ]
     }
