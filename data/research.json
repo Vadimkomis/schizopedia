@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-02T09:12:05.574Z",
+  "lastUpdated": "2026-03-09T09:12:03.337Z",
   "categories": [
     {
       "id": "diagnosis",
@@ -7,78 +7,76 @@
       "summary": "How schizophrenia is identified — from early warning signs to brain imaging and screening tools.",
       "articles": [
         {
-          "id": "41763745",
-          "title": "Comparative efficacy and tolerability of antidopaminergic and muscarinic antipsychotics for acute schizophrenia: a network meta-analysis of randomised controlled trials indexed in international English and Chinese databases.",
-          "journal": "Lancet (London, England)",
-          "published": "2026 Feb 28",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41763745/",
-          "authors": [
-            "Schneider-Thoma J",
-            "Zhu Y",
-            "Qin M",
-            "Dong Y",
-            "Guan S"
-          ],
-          "snippet": "Antipsychotic drugs are the established treatment for acute schizophrenia but differ in receptor-binding profiles. In 2024, a new-in-class muscarinic receptor agonist (xanomeline-trospium) was licenced, acting upstream of antidopaminergic agents, ..."
-        },
-        {
-          "id": "41763188",
-          "title": "Could peripheral immunological markers discriminate schizophrenia and schizoaffective disorders from bipolar disorder?",
+          "id": "41795326",
+          "title": "Cannabis use patterns in first episode psychosis and schizophrenia: A scoping review and case series.",
           "journal": "Journal of psychiatric research",
-          "published": "2026 Feb 24",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41763188/",
+          "published": "2026 Mar 2",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41795326/",
           "authors": [
-            "Jeannin J",
-            "Romeo B",
-            "Lestra V",
-            "Martelli C",
-            "Amirouche A"
+            "Jin JW",
+            "Neu NJ",
+            "Satz IB",
+            "Annor J",
+            "ElSayed M"
           ],
-          "snippet": "Schizoaffective disorder (SZ-AFF) is a controversial diagnostic at the interface between bipolar disorder (BD) and schizophrenia (SZ). Immunological profiles should discriminate these disorders notably during an acute phase. The objective of this ..."
+          "snippet": "Cannabis use is associated with psychosis development and symptom relapse in persons with schizophrenia spectrum disorders (SCZ). As U.S. states legalize cannabis and products increase in potency, it is crucial to better understand recent cannabis..."
         },
         {
-          "id": "41762521",
-          "title": "Educational spillover effect within a cluster: Impact of guideline education for schizophrenia and major depressive disorder on psychiatrists' treatment behavior in a real-world multicenter study.",
-          "journal": "Asian journal of psychiatry",
-          "published": "2026 Feb 23",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41762521/",
+          "id": "41794645",
+          "title": "The Incidence of Schizophrenia Across the Lifespan: A Longitudinal Register Study in an Urban Population.",
+          "journal": "The American journal of geriatric psychiatry : official journal of the American Association for Geriatric Psychiatry",
+          "published": "2026 Feb 13",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41794645/",
           "authors": [
-            "Horinouchi T",
-            "Arai Y",
-            "Hasegawa N",
-            "Muraoka H",
-            "Yamamuro K"
+            "Hogerzeil S",
+            "Kok RM",
+            "Hoek HW",
+            "van Hemert AM"
           ],
-          "snippet": "Educational interventions can influence not only individuals who directly receive them but also nonparticipating individuals within the same cluster. This study examined whether an educational spillover effect within a cluster occurs during real-w..."
+          "snippet": "The idea that schizophrenia manifests before age 40 has shaped research and clinical practice. We aimed to estimate the incidence rate (IR) and lifetime morbidity risk (LMR) and age of onset of schizophrenia over a much wider age range. Age- and s..."
         },
         {
-          "id": "41758794",
-          "title": "A conversational agent as a virtual therapist for patients diagnosed with schizophrenia: A preliminary study.",
+          "id": "41792705",
+          "title": "Decreased concentration of transcription factor 21 in patients with chronic schizophrenia is associated with an increased coronary artery calcium score.",
+          "journal": "BMC psychiatry",
+          "published": "2026 Mar 6",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41792705/",
+          "authors": [
+            "Lee TL",
+            "Lu NH",
+            "Hsuan CF",
+            "Tsai IT",
+            "Hsu CC"
+          ],
+          "snippet": "Transcription factor 21 (TCF21) encodes a basic-helix-loop-helix transcription factor that is thought to play a vital role in epicardial progenitor cell development, with these cells differentiating into coronary artery smooth muscle cells and car..."
+        },
+        {
+          "id": "41792413",
+          "title": "Arabic validation of the VAGUS insight into psychosis scale among Lebanese patients with schizophrenia.",
+          "journal": "Scientific reports",
+          "published": "2026 Mar 6",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41792413/",
+          "authors": [
+            "Jalkh C",
+            "Haddad C",
+            "Sacre H",
+            "Khoreich A",
+            "Salameh P"
+          ],
+          "snippet": "Several tools have been developed to assess insight, which can be measured using either clinician-rated or self-reported tools, each with advantages and limitations. The VAGUS Insight into Psychosis clinician-rated (VAGUS-CR) and the VAGUS self-re..."
+        },
+        {
+          "id": "41790805",
+          "title": "An assessment of sensory sensitivity, including certain anhedonia dimensions, in patients with schizophrenia using transcutaneous electrical nerve stimulation.",
           "journal": "PloS one",
           "published": "2026",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41758794/",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41790805/",
           "authors": [
-            "Stefaniak I",
-            "Gabor-Siatkowska K",
-            "Kozłowski M",
-            "Janicki A"
+            "Witkoś J",
+            "Fusińska-Korpik A",
+            "Walczewski K"
           ],
-          "snippet": "Schizophrenia is a complex mental disorder characterized by disturbances in thinking, emotions, and behavior. Emotional dysregulation is a significant clinical issue. Recent years have seen growing interest in the use of conversational agents in m..."
-        },
-        {
-          "id": "41758485",
-          "title": "Preparing an Intervention to Increase Engagement with the 988 Suicide and Crisis Lifeline Resource among Community Mental Health Consumers with Schizophrenia Spectrum Disorders.",
-          "journal": "Community mental health journal",
-          "published": "2026 Feb 27",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41758485/",
-          "authors": [
-            "Bornheimer LA",
-            "Lapidos A",
-            "Brdar NM",
-            "Kelter AN",
-            "Song J"
-          ],
-          "snippet": "Suicide rates are high among individuals with schizophrenia spectrum disorders (SSDs) and community mental health (CMH) settings have potential to play a critical role in suicide prevention efforts. Crisis lines, such as the 988 Lifeline, are foun..."
+          "snippet": "This study addresses a largely unexplored area in schizophrenia: the relationship between affective functioning and sensory perception assessed through objective, quantifiable methods. To the best of the authors' knowledge, this is the first study..."
         }
       ]
     },
@@ -88,71 +86,78 @@
       "summary": "Current and emerging treatments — including medications, therapy, and newer approaches.",
       "articles": [
         {
-          "id": "41765434",
-          "title": "[Exploring the therapeutic potential of PPARα in schizophrenia].",
-          "journal": "Nihon yakurigaku zasshi. Folia pharmacologica Japonica",
-          "published": "2026",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41765434/",
+          "id": "41795326",
+          "title": "Cannabis use patterns in first episode psychosis and schizophrenia: A scoping review and case series.",
+          "journal": "Journal of psychiatric research",
+          "published": "2026 Mar 2",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41795326/",
           "authors": [
-            "Maekawa M",
-            "Kimura K",
-            "Fu J",
-            "Kirikae H",
-            "Wang H"
+            "Jin JW",
+            "Neu NJ",
+            "Satz IB",
+            "Annor J",
+            "ElSayed M"
           ],
-          "snippet": "Peroxisome proliferator-activated receptor &#x3b1; (PPAR&#x3b1;) is a nuclear receptor that regulates lipid metabolism and inflammatory responses. Recent studies have revealed that PPAR&#x3b1; also plays an important role in maintaining neuronal h..."
+          "snippet": "Cannabis use is associated with psychosis development and symptom relapse in persons with schizophrenia spectrum disorders (SCZ). As U.S. states legalize cannabis and products increase in potency, it is crucial to better understand recent cannabis..."
         },
         {
-          "id": "41764912",
-          "title": "Letter to the Editor: Comment regarding \"A comparative study of medication adherence in schizophrenia patients receiving clozapine and other antipsychotics\".",
-          "journal": "Psychiatry research",
-          "published": "2026 Feb 26",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41764912/",
+          "id": "41794645",
+          "title": "The Incidence of Schizophrenia Across the Lifespan: A Longitudinal Register Study in an Urban Population.",
+          "journal": "The American journal of geriatric psychiatry : official journal of the American Association for Geriatric Psychiatry",
+          "published": "2026 Feb 13",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41794645/",
           "authors": [
-            "Shizukawa K"
+            "Hogerzeil S",
+            "Kok RM",
+            "Hoek HW",
+            "van Hemert AM"
           ],
-          "snippet": "View full article on PubMed"
+          "snippet": "The idea that schizophrenia manifests before age 40 has shaped research and clinical practice. We aimed to estimate the incidence rate (IR) and lifetime morbidity risk (LMR) and age of onset of schizophrenia over a much wider age range. Age- and s..."
         },
         {
-          "id": "41764057",
-          "title": "Targeted Therapeutic Intervention for Problematic Alcohol Use, Comorbid Depressive Disorder, and Schizophrenia: Response to Lawford and Norrie.",
-          "journal": "The American journal of psychiatry",
-          "published": "2026 Mar 1",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41764057/",
+          "id": "41793756",
+          "title": "Schizophrenia and disordered sensorimotor control: challenges, mechanisms and opportunities.",
+          "journal": "Brain : a journal of neurology",
+          "published": "2026 Mar 7",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41793756/",
           "authors": [
-            "Myung W",
-            "Ahn Y",
-            "Kim J",
-            "Won HH"
+            "Joseph A",
+            "Adams RA",
+            "Gaughran F",
+            "Howes OD",
+            "Martino D"
           ],
-          "snippet": "View full article on PubMed"
+          "snippet": "Schizophrenia is a common and often disabling neuropsychiatric condition. Whilst sensorimotor abnormalities such as dyskinesia, parkinsonism and motor incoordination are prevalent in schizophrenia, they are often attributed to medication side-effe..."
         },
         {
-          "id": "41763745",
-          "title": "Comparative efficacy and tolerability of antidopaminergic and muscarinic antipsychotics for acute schizophrenia: a network meta-analysis of randomised controlled trials indexed in international English and Chinese databases.",
-          "journal": "Lancet (London, England)",
-          "published": "2026 Feb 28",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41763745/",
+          "id": "41792705",
+          "title": "Decreased concentration of transcription factor 21 in patients with chronic schizophrenia is associated with an increased coronary artery calcium score.",
+          "journal": "BMC psychiatry",
+          "published": "2026 Mar 6",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41792705/",
           "authors": [
-            "Schneider-Thoma J",
-            "Zhu Y",
-            "Qin M",
-            "Dong Y",
-            "Guan S"
+            "Lee TL",
+            "Lu NH",
+            "Hsuan CF",
+            "Tsai IT",
+            "Hsu CC"
           ],
-          "snippet": "Antipsychotic drugs are the established treatment for acute schizophrenia but differ in receptor-binding profiles. In 2024, a new-in-class muscarinic receptor agonist (xanomeline-trospium) was licenced, acting upstream of antidopaminergic agents, ..."
+          "snippet": "Transcription factor 21 (TCF21) encodes a basic-helix-loop-helix transcription factor that is thought to play a vital role in epicardial progenitor cell development, with these cells differentiating into coronary artery smooth muscle cells and car..."
         },
         {
-          "id": "41763730",
-          "title": "Antipsychotic medicines for schizophrenia: time to move forward.",
-          "journal": "Lancet (London, England)",
-          "published": "2026 Feb 28",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41763730/",
+          "id": "41792186",
+          "title": "An ENIGMA Consortium study of the relationship between white matter microstructure and positive and negative symptom severity in patients with schizophrenia.",
+          "journal": "Schizophrenia (Heidelberg, Germany)",
+          "published": "2026 Mar 6",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41792186/",
           "authors": [
-            "Barbui C",
-            "Ostuzzi G"
+            "Warren A",
+            "Holleran L",
+            "Agartz I",
+            "Andreassen OA",
+            "Banaj N"
           ],
-          "snippet": "View full article on PubMed"
+          "snippet": "Symptom severity in schizophrenia has been repeatedly associated with thinner cortical gray matter. While global and regional white matter microstructure alterations in schizophrenia are well-documented, their association with clinical symptom sev..."
         }
       ]
     },
@@ -162,76 +167,75 @@
       "summary": "Research on reducing risk and catching early signs before a full episode develops.",
       "articles": [
         {
-          "id": "41765640",
-          "title": "[Schizophrenia, the clinical triggers of possible acts of hetero-violence].",
-          "journal": "Soins. Psychiatrie",
-          "published": "2026 Mar-Apr",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41765640/",
+          "id": "41790805",
+          "title": "An assessment of sensory sensitivity, including certain anhedonia dimensions, in patients with schizophrenia using transcutaneous electrical nerve stimulation.",
+          "journal": "PloS one",
+          "published": "2026",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41790805/",
           "authors": [
-            "Brulin-Solignac D",
-            "Bouchard JP"
+            "Witkoś J",
+            "Fusińska-Korpik A",
+            "Walczewski K"
           ],
-          "snippet": "Episodes of verbal and/or physical violence in schizophrenic subjects are often related to their delusional activity. Among these delusional elements, defensive reactions to experiences of harm, persecution, or hallucinatory commands to commit vio..."
+          "snippet": "This study addresses a largely unexplored area in schizophrenia: the relationship between affective functioning and sensory perception assessed through objective, quantifiable methods. To the best of the authors' knowledge, this is the first study..."
         },
         {
-          "id": "41763745",
-          "title": "Comparative efficacy and tolerability of antidopaminergic and muscarinic antipsychotics for acute schizophrenia: a network meta-analysis of randomised controlled trials indexed in international English and Chinese databases.",
-          "journal": "Lancet (London, England)",
-          "published": "2026 Feb 28",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41763745/",
+          "id": "41788148",
+          "title": "Efficacy and Mechanisms Underlying MRI-guided High-definition Transcranial Direct Current Stimulation Combined With Computerized Cognitive Remediation Therapy for Improving Cognitive Impairments in Schizophrenia: Study Protocol for a Randomized Controlled Trial.",
+          "journal": "Alpha psychiatry",
+          "published": "2026 Feb",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41788148/",
           "authors": [
-            "Schneider-Thoma J",
-            "Zhu Y",
-            "Qin M",
-            "Dong Y",
-            "Guan S"
+            "Wei Y",
+            "He S",
+            "Luo P",
+            "Liu R",
+            "Su H"
           ],
-          "snippet": "Antipsychotic drugs are the established treatment for acute schizophrenia but differ in receptor-binding profiles. In 2024, a new-in-class muscarinic receptor agonist (xanomeline-trospium) was licenced, acting upstream of antidopaminergic agents, ..."
+          "snippet": "Schizophrenia primarily depends on pharmacotherapy, which has demonstrated limited efficacy in enhancing cognitive impairments. High-definition transcranial direct current stimulation (HD-tDCS) and computerized cognitive remediation therapy (CCRT)..."
         },
         {
-          "id": "41760651",
-          "title": "Author Correction: Semantic memory disorganization linked to social functioning in patients with schizophrenia.",
-          "journal": "Schizophrenia (Heidelberg, Germany)",
-          "published": "2026 Feb 27",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41760651/",
+          "id": "41781000",
+          "title": "[Prefrontal near-infrared spectroscopy characteristics in patients with schizophrenia during verbal fluency tasks and their association with clinical efficacy].",
+          "journal": "Zhonghua yi xue za zhi",
+          "published": "2026 Mar 3",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41781000/",
           "authors": [
-            "Wada A",
-            "Sumiyoshi C",
-            "Yoshimura N",
-            "Hashimoto R",
-            "Matsumoto J"
+            "Wang XJ",
+            "Jiao ZQ",
+            "Cheng L",
+            "Lu YL",
+            "Shao ML"
           ],
-          "snippet": "View full article on PubMed"
+          "snippet": "Objective: To investigate the prefrontal cortex activation characteristics in patients with schizophrenia (SZ) during a verbal fluency task (VFT) using functional near-infrared spectroscopy (fNIRS), and to explore their relationship with treatment..."
         },
         {
-          "id": "41758485",
-          "title": "Preparing an Intervention to Increase Engagement with the 988 Suicide and Crisis Lifeline Resource among Community Mental Health Consumers with Schizophrenia Spectrum Disorders.",
-          "journal": "Community mental health journal",
-          "published": "2026 Feb 27",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41758485/",
+          "id": "41778374",
+          "title": "Clozapine treatment in the early stages of schizophrenia.",
+          "journal": "Current opinion in psychiatry",
+          "published": "2026 Jan 8",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41778374/",
           "authors": [
-            "Bornheimer LA",
-            "Lapidos A",
-            "Brdar NM",
-            "Kelter AN",
-            "Song J"
+            "Davani AJ",
+            "Gallego JA",
+            "Malhotra AK"
           ],
-          "snippet": "Suicide rates are high among individuals with schizophrenia spectrum disorders (SSDs) and community mental health (CMH) settings have potential to play a critical role in suicide prevention efforts. Crisis lines, such as the 988 Lifeline, are foun..."
+          "snippet": "Clozapine is the most effective treatment for antipsychotic nonresponse, yet its use in the early stages of schizophrenia remains substantially delayed. Because the first several years after diagnosis represent a critical window for influencing lo..."
         },
         {
-          "id": "41756641",
-          "title": "Longitudinal measurements of inhibitory cognitive performance in patients with schizophrenia and bipolar disorder.",
-          "journal": "Schizophrenia research. Cognition",
-          "published": "2026 Mar",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41756641/",
+          "id": "41778076",
+          "title": "Effectiveness of adjunctive traditional Chinese medicine in reducing psychiatric rehospitalization in patients with schizophrenia: A nationwide cohort study in Taiwan.",
+          "journal": "Integrative medicine research",
+          "published": "2026 Sep",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41778076/",
           "authors": [
-            "Smyrnis A",
-            "Smyrnis G",
-            "Lazaridi M",
-            "Mantas A",
-            "Karantinos T"
+            "Soong WT",
+            "Chung CH",
+            "Tzeng NS",
+            "Chien WC",
+            "Huang YC"
           ],
-          "snippet": "Cognitive impairment is a major determinant of functional outcome in psychotic spectrum disorders. Among cognitive domains, motor response inhibition has received limited longitudinal investigation. The present study examined the temporal course o..."
+          "snippet": "Schizophrenia is a chronic psychiatric disorder marked by high relapse and rehospitalization rates. Although antipsychotic medications are effective, their adverse effects frequently compromise treatment adherence. Traditional Chinese medicine (TC..."
         }
       ]
     }
