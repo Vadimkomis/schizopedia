@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-09T09:12:03.337Z",
+  "lastUpdated": "2026-03-16T09:18:13.039Z",
   "categories": [
     {
       "id": "diagnosis",
@@ -7,76 +7,74 @@
       "summary": "How schizophrenia is identified — from early warning signs to brain imaging and screening tools.",
       "articles": [
         {
-          "id": "41795326",
-          "title": "Cannabis use patterns in first episode psychosis and schizophrenia: A scoping review and case series.",
-          "journal": "Journal of psychiatric research",
-          "published": "2026 Mar 2",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41795326/",
+          "id": "41831295",
+          "title": "Classification of functional near-infrared spectroscopy (fNIRS) signals in schizophrenia and bipolar disorder using deep learning methods.",
+          "journal": "Psychiatry research",
+          "published": "2026 Mar 10",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41831295/",
           "authors": [
-            "Jin JW",
-            "Neu NJ",
-            "Satz IB",
-            "Annor J",
-            "ElSayed M"
+            "Mou L",
+            "Gong B",
+            "Tan Q",
+            "Wang H",
+            "Zhang X"
           ],
-          "snippet": "Cannabis use is associated with psychosis development and symptom relapse in persons with schizophrenia spectrum disorders (SCZ). As U.S. states legalize cannabis and products increase in potency, it is crucial to better understand recent cannabis..."
+          "snippet": "Schizophrenia (SCZ) and Bipolar Disorder (BD) are prevalent mental disorders. This study uses functional near-infrared spectroscopy (fNIRS) combined with a verbal fluency task (VFT) to examine prefrontal function in SCZ and BD patients, differenti..."
         },
         {
-          "id": "41794645",
-          "title": "The Incidence of Schizophrenia Across the Lifespan: A Longitudinal Register Study in an Urban Population.",
-          "journal": "The American journal of geriatric psychiatry : official journal of the American Association for Geriatric Psychiatry",
-          "published": "2026 Feb 13",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41794645/",
-          "authors": [
-            "Hogerzeil S",
-            "Kok RM",
-            "Hoek HW",
-            "van Hemert AM"
-          ],
-          "snippet": "The idea that schizophrenia manifests before age 40 has shaped research and clinical practice. We aimed to estimate the incidence rate (IR) and lifetime morbidity risk (LMR) and age of onset of schizophrenia over a much wider age range. Age- and s..."
-        },
-        {
-          "id": "41792705",
-          "title": "Decreased concentration of transcription factor 21 in patients with chronic schizophrenia is associated with an increased coronary artery calcium score.",
-          "journal": "BMC psychiatry",
-          "published": "2026 Mar 6",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41792705/",
-          "authors": [
-            "Lee TL",
-            "Lu NH",
-            "Hsuan CF",
-            "Tsai IT",
-            "Hsu CC"
-          ],
-          "snippet": "Transcription factor 21 (TCF21) encodes a basic-helix-loop-helix transcription factor that is thought to play a vital role in epicardial progenitor cell development, with these cells differentiating into coronary artery smooth muscle cells and car..."
-        },
-        {
-          "id": "41792413",
-          "title": "Arabic validation of the VAGUS insight into psychosis scale among Lebanese patients with schizophrenia.",
-          "journal": "Scientific reports",
-          "published": "2026 Mar 6",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41792413/",
-          "authors": [
-            "Jalkh C",
-            "Haddad C",
-            "Sacre H",
-            "Khoreich A",
-            "Salameh P"
-          ],
-          "snippet": "Several tools have been developed to assess insight, which can be measured using either clinician-rated or self-reported tools, each with advantages and limitations. The VAGUS Insight into Psychosis clinician-rated (VAGUS-CR) and the VAGUS self-re..."
-        },
-        {
-          "id": "41790805",
-          "title": "An assessment of sensory sensitivity, including certain anhedonia dimensions, in patients with schizophrenia using transcutaneous electrical nerve stimulation.",
-          "journal": "PloS one",
+          "id": "41830156",
+          "title": "Digital Cognitive-Motor Occupational Training with QEEG Monitoring in Schizophrenia Rehabilitation: An Exploratory Neurofunctional Study.",
+          "journal": "Occupational therapy international",
           "published": "2026",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41790805/",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41830156/",
           "authors": [
-            "Witkoś J",
-            "Fusińska-Korpik A",
-            "Walczewski K"
+            "Khemthong S",
+            "Rueankam M",
+            "Chatthong W"
           ],
-          "snippet": "This study addresses a largely unexplored area in schizophrenia: the relationship between affective functioning and sensory perception assessed through objective, quantifiable methods. To the best of the authors' knowledge, this is the first study..."
+          "snippet": "Current occupational therapy assessments for schizophrenia rely primarily on behavioral observation, with limited access to objective neurofunctional indicators of cognitive-motor engagement. Digital tools combined with neurophysiological monitori..."
+        },
+        {
+          "id": "41827119",
+          "title": "Co-Occurrence of Avoidant/Restrictive Food Intake Disorder (ARFID) and Schizophrenia-Spectrum Disorders: A Comprehensive Review.",
+          "journal": "Journal of clinical medicine",
+          "published": "2026 Feb 24",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41827119/",
+          "authors": [
+            "Anesini MB",
+            "Margoni S",
+            "Moccia L",
+            "Barbonetti S",
+            "Onori L"
+          ],
+          "snippet": "Background/Objectives: Avoidant/restrictive food intake disorder (ARFID) and psychotic disorders are clinically distinct conditions yet occasionally co-occur in ways that complicate assessment and treatment. ARFID is characterised by avoidance of ..."
+        },
+        {
+          "id": "41821995",
+          "title": "Missing the Forest for the Trees: Delayed Diagnosis and Management of Treatment Resistant Schizophrenia.",
+          "journal": "Psychopharmacology bulletin",
+          "published": "2026 Mar 11",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41821995/",
+          "authors": [
+            "Kuriakose I",
+            "Noe G",
+            "Montgomery W",
+            "Munjal S"
+          ],
+          "snippet": "We present a case of a 36-year-old female with schizophrenia, coronary artery disease, and type 2 diabetes who was hospitalized for altered mental status and persistent psychosis. Initial evaluation revealed myocardial infarction, pulmonary emboli..."
+        },
+        {
+          "id": "41821990",
+          "title": "Incidence and Risk Factors of Clozapine-Induced Neutropenia among Patients with Schizophrenia in Taif, Saudi Arabia.",
+          "journal": "Psychopharmacology bulletin",
+          "published": "2026 Mar 11",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41821990/",
+          "authors": [
+            "Altowairqi AS",
+            "Auf A",
+            "Alghamdi SS"
+          ],
+          "snippet": "Clozapine remains the most effective antipsychotic medication for treatment-resistant schizophrenia, but its use is limited by the risk of hematological side effects, particularly neutropenia. The present study aimed to determine the incidence and..."
         }
       ]
     },
@@ -86,78 +84,79 @@
       "summary": "Current and emerging treatments — including medications, therapy, and newer approaches.",
       "articles": [
         {
-          "id": "41795326",
-          "title": "Cannabis use patterns in first episode psychosis and schizophrenia: A scoping review and case series.",
-          "journal": "Journal of psychiatric research",
-          "published": "2026 Mar 2",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41795326/",
+          "id": "41832549",
+          "title": "Anticipating incomplete patient-reported outcomes in schizophrenia: a machine learning approach to predict the occurrence of missing data.",
+          "journal": "Health and quality of life outcomes",
+          "published": "2026 Mar 14",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41832549/",
           "authors": [
-            "Jin JW",
-            "Neu NJ",
-            "Satz IB",
-            "Annor J",
-            "ElSayed M"
+            "Barbalat G",
+            "Plasse J",
+            "Chéreau-Boudet I",
+            "Gouache B",
+            "Legros-Lafarge E"
           ],
-          "snippet": "Cannabis use is associated with psychosis development and symptom relapse in persons with schizophrenia spectrum disorders (SCZ). As U.S. states legalize cannabis and products increase in potency, it is crucial to better understand recent cannabis..."
+          "snippet": "View full article on PubMed"
         },
         {
-          "id": "41794645",
-          "title": "The Incidence of Schizophrenia Across the Lifespan: A Longitudinal Register Study in an Urban Population.",
-          "journal": "The American journal of geriatric psychiatry : official journal of the American Association for Geriatric Psychiatry",
-          "published": "2026 Feb 13",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41794645/",
+          "id": "41831295",
+          "title": "Classification of functional near-infrared spectroscopy (fNIRS) signals in schizophrenia and bipolar disorder using deep learning methods.",
+          "journal": "Psychiatry research",
+          "published": "2026 Mar 10",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41831295/",
           "authors": [
-            "Hogerzeil S",
-            "Kok RM",
-            "Hoek HW",
-            "van Hemert AM"
+            "Mou L",
+            "Gong B",
+            "Tan Q",
+            "Wang H",
+            "Zhang X"
           ],
-          "snippet": "The idea that schizophrenia manifests before age 40 has shaped research and clinical practice. We aimed to estimate the incidence rate (IR) and lifetime morbidity risk (LMR) and age of onset of schizophrenia over a much wider age range. Age- and s..."
+          "snippet": "Schizophrenia (SCZ) and Bipolar Disorder (BD) are prevalent mental disorders. This study uses functional near-infrared spectroscopy (fNIRS) combined with a verbal fluency task (VFT) to examine prefrontal function in SCZ and BD patients, differenti..."
         },
         {
-          "id": "41793756",
-          "title": "Schizophrenia and disordered sensorimotor control: challenges, mechanisms and opportunities.",
-          "journal": "Brain : a journal of neurology",
-          "published": "2026 Mar 7",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41793756/",
+          "id": "41830834",
+          "title": "Case Report: Successful rechallenge with clozapine after clozapine‑induced cardiomyopathy in a patient with treatment‑resistant schizophrenia.",
+          "journal": "Asian journal of psychiatry",
+          "published": "2026 Mar 12",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41830834/",
           "authors": [
-            "Joseph A",
-            "Adams RA",
-            "Gaughran F",
-            "Howes OD",
-            "Martino D"
+            "Ito Y",
+            "Yamamoto N",
+            "Nakagawa T",
+            "Kato R",
+            "Murata M"
           ],
-          "snippet": "Schizophrenia is a common and often disabling neuropsychiatric condition. Whilst sensorimotor abnormalities such as dyskinesia, parkinsonism and motor incoordination are prevalent in schizophrenia, they are often attributed to medication side-effe..."
+          "snippet": "View full article on PubMed"
         },
         {
-          "id": "41792705",
-          "title": "Decreased concentration of transcription factor 21 in patients with chronic schizophrenia is associated with an increased coronary artery calcium score.",
-          "journal": "BMC psychiatry",
-          "published": "2026 Mar 6",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41792705/",
+          "id": "41830808",
+          "title": "Psychedelics for treatment of negative symptoms and depressive symptoms in schizophrenia spectrum disorder: A narrative review.",
+          "journal": "Schizophrenia research",
+          "published": "2026 Mar 13",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41830808/",
           "authors": [
-            "Lee TL",
-            "Lu NH",
-            "Hsuan CF",
-            "Tsai IT",
-            "Hsu CC"
+            "Sabé M",
+            "Grof P",
+            "Sackett NB",
+            "Tai S",
+            "Kryskow P"
           ],
-          "snippet": "Transcription factor 21 (TCF21) encodes a basic-helix-loop-helix transcription factor that is thought to play a vital role in epicardial progenitor cell development, with these cells differentiating into coronary artery smooth muscle cells and car..."
+          "snippet": "Serotonergic psychedelics are re-emerging as therapeutic candidates across psychiatry, particularly for treatment-resistant depression. Their rapid and sustained antidepressant effects, alongside evidence for neuroplastic, dopaminergic, and glutam..."
         },
         {
-          "id": "41792186",
-          "title": "An ENIGMA Consortium study of the relationship between white matter microstructure and positive and negative symptom severity in patients with schizophrenia.",
-          "journal": "Schizophrenia (Heidelberg, Germany)",
-          "published": "2026 Mar 6",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41792186/",
+          "id": "41830575",
+          "title": "Pharmacogenomic-Based GWAS Meta-Analyses Coupled with Genetic and Epigenetic Liability Testing Connects Facial and Emotional Recognition Systems to Spectrum Disorders, Schizophrenia, Depression, and Anxiety.",
+          "journal": "Current pharmaceutical biotechnology",
+          "published": "2026 Mar 9",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41830575/",
           "authors": [
-            "Warren A",
-            "Holleran L",
-            "Agartz I",
-            "Andreassen OA",
-            "Banaj N"
+            "Blum K",
+            "Lewandrowski APL",
+            "Sharafshah A",
+            "Pinhasov A",
+            "Mohankumar K"
           ],
-          "snippet": "Symptom severity in schizophrenia has been repeatedly associated with thinner cortical gray matter. While global and regional white matter microstructure alterations in schizophrenia are well-documented, their association with clinical symptom sev..."
+          "snippet": "Facial and Emotional Recognition Systems are technologies that primarily use AI and machine learning to analyze various inputs like facial expression, speech, and physiological signals, to identify and classify human emotions and link them to a va..."
         }
       ]
     },
@@ -167,75 +166,78 @@
       "summary": "Research on reducing risk and catching early signs before a full episode develops.",
       "articles": [
         {
-          "id": "41790805",
-          "title": "An assessment of sensory sensitivity, including certain anhedonia dimensions, in patients with schizophrenia using transcutaneous electrical nerve stimulation.",
-          "journal": "PloS one",
-          "published": "2026",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41790805/",
+          "id": "41830808",
+          "title": "Psychedelics for treatment of negative symptoms and depressive symptoms in schizophrenia spectrum disorder: A narrative review.",
+          "journal": "Schizophrenia research",
+          "published": "2026 Mar 13",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41830808/",
           "authors": [
-            "Witkoś J",
-            "Fusińska-Korpik A",
-            "Walczewski K"
+            "Sabé M",
+            "Grof P",
+            "Sackett NB",
+            "Tai S",
+            "Kryskow P"
           ],
-          "snippet": "This study addresses a largely unexplored area in schizophrenia: the relationship between affective functioning and sensory perception assessed through objective, quantifiable methods. To the best of the authors' knowledge, this is the first study..."
+          "snippet": "Serotonergic psychedelics are re-emerging as therapeutic candidates across psychiatry, particularly for treatment-resistant depression. Their rapid and sustained antidepressant effects, alongside evidence for neuroplastic, dopaminergic, and glutam..."
         },
         {
-          "id": "41788148",
-          "title": "Efficacy and Mechanisms Underlying MRI-guided High-definition Transcranial Direct Current Stimulation Combined With Computerized Cognitive Remediation Therapy for Improving Cognitive Impairments in Schizophrenia: Study Protocol for a Randomized Controlled Trial.",
-          "journal": "Alpha psychiatry",
-          "published": "2026 Feb",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41788148/",
+          "id": "41823413",
+          "title": "Biosignatures of cognitive basic symptoms mark a distinct neurodevelopmental pathway to schizophrenia.",
+          "journal": "Brain : a journal of neurology",
+          "published": "2026 Mar 13",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41823413/",
+          "authors": [
+            "Koutsouleris N",
+            "Vetter C",
+            "Buciuman M",
+            "Neuner LM",
+            "Weyer C"
+          ],
+          "snippet": "Efforts to predict schizophrenia risk using biological data have been hampered by the heterogeneity of current \"clinical-high-risk\" (CHR-P) criteria, which pool phenomenologically and biologically distinct syndromes under a single label. In partic..."
+        },
+        {
+          "id": "41816533",
+          "title": "Efficacy and mechanisms underlying MRI-guided HD-tDCS combined with aerobic exercise to ameliorate cognitive impairment associated with schizophrenia.",
+          "journal": "Frontiers in psychiatry",
+          "published": "2026",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41816533/",
           "authors": [
             "Wei Y",
-            "He S",
+            "Shen Z",
             "Luo P",
-            "Liu R",
+            "He S",
             "Su H"
           ],
-          "snippet": "Schizophrenia primarily depends on pharmacotherapy, which has demonstrated limited efficacy in enhancing cognitive impairments. High-definition transcranial direct current stimulation (HD-tDCS) and computerized cognitive remediation therapy (CCRT)..."
+          "snippet": "The primary treatment for schizophrenia currently relies on medication. Nevertheless, the efficacy of medication for Cognitive Impairment Associated with Schizophrenia (CIAS) is constrained, and it is also accompanied by side effects. Consequently..."
         },
         {
-          "id": "41781000",
-          "title": "[Prefrontal near-infrared spectroscopy characteristics in patients with schizophrenia during verbal fluency tasks and their association with clinical efficacy].",
-          "journal": "Zhonghua yi xue za zhi",
-          "published": "2026 Mar 3",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41781000/",
+          "id": "41810691",
+          "title": "Prevalence of Oral Pathologies in Patients With Schizophrenia and Bipolar Disorder: A Quantitative Systematic Review.",
+          "journal": "Special care in dentistry : official publication of the American Association of Hospital Dentists, the Academy of Dentistry for the Handicapped, and the American Society for Geriatric Dentistry",
+          "published": "2026 Mar-Apr",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41810691/",
           "authors": [
-            "Wang XJ",
-            "Jiao ZQ",
-            "Cheng L",
-            "Lu YL",
-            "Shao ML"
+            "Ferrada Quiroz V",
+            "Rubio Ortiz A",
+            "Pennacchiotti Vidal G",
+            "Arriagada Vargas C"
           ],
-          "snippet": "Objective: To investigate the prefrontal cortex activation characteristics in patients with schizophrenia (SZ) during a verbal fluency task (VFT) using functional near-infrared spectroscopy (fNIRS), and to explore their relationship with treatment..."
+          "snippet": "Psychiatric disorders such as schizophrenia (SCZ) and bipolar disorder (BD), significantly affect individuals' overall health. Despite their high susceptibility to developing oral diseases, such as dental caries (DC), periodontal disease (PD) and ..."
         },
         {
-          "id": "41778374",
-          "title": "Clozapine treatment in the early stages of schizophrenia.",
-          "journal": "Current opinion in psychiatry",
-          "published": "2026 Jan 8",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41778374/",
+          "id": "41808459",
+          "title": "Chronic schizophrenia with aggravation of psychiatric symptoms after cancer surgery: A case report and mini literature review.",
+          "journal": "Annals of palliative medicine",
+          "published": "2026 Feb 27",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41808459/",
           "authors": [
-            "Davani AJ",
-            "Gallego JA",
-            "Malhotra AK"
+            "Yamaguchi J",
+            "Sadahiro R",
+            "Wada S",
+            "Nishikawa E",
+            "Terada T"
           ],
-          "snippet": "Clozapine is the most effective treatment for antipsychotic nonresponse, yet its use in the early stages of schizophrenia remains substantially delayed. Because the first several years after diagnosis represent a critical window for influencing lo..."
-        },
-        {
-          "id": "41778076",
-          "title": "Effectiveness of adjunctive traditional Chinese medicine in reducing psychiatric rehospitalization in patients with schizophrenia: A nationwide cohort study in Taiwan.",
-          "journal": "Integrative medicine research",
-          "published": "2026 Sep",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41778076/",
-          "authors": [
-            "Soong WT",
-            "Chung CH",
-            "Tzeng NS",
-            "Chien WC",
-            "Huang YC"
-          ],
-          "snippet": "Schizophrenia is a chronic psychiatric disorder marked by high relapse and rehospitalization rates. Although antipsychotic medications are effective, their adverse effects frequently compromise treatment adherence. Traditional Chinese medicine (TC..."
+          "snippet": "Patients with cancer and comorbid psychiatric disorders, including schizophrenia, may experience aggravation of psychiatric symptoms during cancer treatment. Oncology hospitals without dedicated psychiatric wards sometimes face challenges in manag..."
         }
       ]
     }
