@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-16T09:18:13.039Z",
+  "lastUpdated": "2026-03-30T09:25:53.076Z",
   "categories": [
     {
       "id": "diagnosis",
@@ -7,74 +7,78 @@
       "summary": "How schizophrenia is identified — from early warning signs to brain imaging and screening tools.",
       "articles": [
         {
-          "id": "41831295",
-          "title": "Classification of functional near-infrared spectroscopy (fNIRS) signals in schizophrenia and bipolar disorder using deep learning methods.",
-          "journal": "Psychiatry research",
-          "published": "2026 Mar 10",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41831295/",
+          "id": "41904268",
+          "title": "Brain structural abnormalities in treatment-resistant schizophrenia.",
+          "journal": "Molecular psychiatry",
+          "published": "2026 Mar 28",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41904268/",
           "authors": [
-            "Mou L",
-            "Gong B",
-            "Tan Q",
-            "Wang H",
-            "Zhang X"
+            "Etyemez S",
+            "Sivananthan R",
+            "Faria AV",
+            "Iasevoli F",
+            "Pontillo G"
           ],
-          "snippet": "Schizophrenia (SCZ) and Bipolar Disorder (BD) are prevalent mental disorders. This study uses functional near-infrared spectroscopy (fNIRS) combined with a verbal fluency task (VFT) to examine prefrontal function in SCZ and BD patients, differenti..."
+          "snippet": "Treatment-resistant schizophrenia (TRS) poses a considerable challenge in psychiatric care, with approximately 10-60% of patients exhibiting non-responsiveness to antipsychotic medication. While early treatment could improve clinical outcomes, the..."
         },
         {
-          "id": "41830156",
-          "title": "Digital Cognitive-Motor Occupational Training with QEEG Monitoring in Schizophrenia Rehabilitation: An Exploratory Neurofunctional Study.",
-          "journal": "Occupational therapy international",
-          "published": "2026",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41830156/",
+          "id": "41901608",
+          "title": "Can the Posterior Segment Findings of the Eye and Serum Microbiota Metabolites Be a Biomarker in Schizophrenia?",
+          "journal": "Medicina (Kaunas, Lithuania)",
+          "published": "2026 Mar 12",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41901608/",
           "authors": [
-            "Khemthong S",
-            "Rueankam M",
-            "Chatthong W"
+            "Keser S",
+            "Yıldız S",
+            "Aydın S",
+            "Keleş J",
+            "Aksoy A"
           ],
-          "snippet": "Current occupational therapy assessments for schizophrenia rely primarily on behavioral observation, with limited access to objective neurofunctional indicators of cognitive-motor engagement. Digital tools combined with neurophysiological monitori..."
+          "snippet": "Background and Objectives: In many neurodegenerative diseases, the pathological changes occurring in the central nervous system may be reflected in the periphery. The aim of this study was to examine the possible relationship between the retina, c..."
         },
         {
-          "id": "41827119",
-          "title": "Co-Occurrence of Avoidant/Restrictive Food Intake Disorder (ARFID) and Schizophrenia-Spectrum Disorders: A Comprehensive Review.",
-          "journal": "Journal of clinical medicine",
-          "published": "2026 Feb 24",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41827119/",
+          "id": "41899687",
+          "title": "Burden, Incidence, and Spatial Distribution of Schizophrenia in Ecuador (2010-2021): A Nationwide Hospital Discharge Analysis.",
+          "journal": "International journal of environmental research and public health",
+          "published": "2026 Mar 1",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41899687/",
           "authors": [
-            "Anesini MB",
-            "Margoni S",
-            "Moccia L",
-            "Barbonetti S",
-            "Onori L"
+            "Rodríguez-Lorenzana A",
+            "Carrington SJ",
+            "Coral-Almeida M",
+            "Álvarez-Mejía D",
+            "Torres-Tapia M"
           ],
-          "snippet": "Background/Objectives: Avoidant/restrictive food intake disorder (ARFID) and psychotic disorders are clinically distinct conditions yet occasionally co-occur in ways that complicate assessment and treatment. ARFID is characterised by avoidance of ..."
+          "snippet": "Schizophrenia is a chronic mental disorder affecting approximately 1% of the global population and imposing a significant economic and social burden. In Ecuador, comprehensive data on its incidence, burden, and spatial distribution are scarce. Thi..."
         },
         {
-          "id": "41821995",
-          "title": "Missing the Forest for the Trees: Delayed Diagnosis and Management of Treatment Resistant Schizophrenia.",
-          "journal": "Psychopharmacology bulletin",
-          "published": "2026 Mar 11",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41821995/",
+          "id": "41898287",
+          "title": "From Signal to Symptom: EEG Paroxysms and Background Slowing as Potential Biomarkers and Compensatory Failures in Treatment-Resistant Schizophrenia.",
+          "journal": "Biomedicines",
+          "published": "2026 Mar 12",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41898287/",
           "authors": [
-            "Kuriakose I",
-            "Noe G",
-            "Montgomery W",
-            "Munjal S"
+            "Panov G",
+            "Panova P",
+            "Dyulgerova S",
+            "Chakarov I"
           ],
-          "snippet": "We present a case of a 36-year-old female with schizophrenia, coronary artery disease, and type 2 diabetes who was hospitalized for altered mental status and persistent psychosis. Initial evaluation revealed myocardial infarction, pulmonary emboli..."
+          "snippet": "Schizophrenia is a heterogeneous disorder, and treatment-resistant schizophrenia (TRS) affects 20-30% of patients, yet objective biomarkers for its identification remain limited. Routine electroencephalography (EEG) offers a non-invasive window in..."
         },
         {
-          "id": "41821990",
-          "title": "Incidence and Risk Factors of Clozapine-Induced Neutropenia among Patients with Schizophrenia in Taif, Saudi Arabia.",
-          "journal": "Psychopharmacology bulletin",
-          "published": "2026 Mar 11",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41821990/",
+          "id": "41894931",
+          "title": "Sleep-architecture signatures for differential diagnosis of schizophrenia, bipolar, and major depressive disorders: A polysomnography-based multinomial modeling study.",
+          "journal": "Schizophrenia research",
+          "published": "2026 Mar 26",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41894931/",
           "authors": [
-            "Altowairqi AS",
-            "Auf A",
-            "Alghamdi SS"
+            "Pan A",
+            "Yuan K",
+            "Xiu M",
+            "Guan X",
+            "Lang X"
           ],
-          "snippet": "Clozapine remains the most effective antipsychotic medication for treatment-resistant schizophrenia, but its use is limited by the risk of hematological side effects, particularly neutropenia. The present study aimed to determine the incidence and..."
+          "snippet": "Sleep architecture is an essential lifestyle factor influencing health and well-being, and it may offer a trans-diagnostic window to understand the shared pathophysiology across schizophrenia (SCH), bipolar disorder (BD), and major depressive diso..."
         }
       ]
     },
@@ -84,79 +88,79 @@
       "summary": "Current and emerging treatments — including medications, therapy, and newer approaches.",
       "articles": [
         {
-          "id": "41832549",
-          "title": "Anticipating incomplete patient-reported outcomes in schizophrenia: a machine learning approach to predict the occurrence of missing data.",
-          "journal": "Health and quality of life outcomes",
-          "published": "2026 Mar 14",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41832549/",
+          "id": "41906055",
+          "title": "Cognitive and balance dual-task training for middle-aged and older individuals with schizophrenia: a three-arm randomized controlled trial.",
+          "journal": "European archives of psychiatry and clinical neuroscience",
+          "published": "2026 Mar 30",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41906055/",
           "authors": [
-            "Barbalat G",
-            "Plasse J",
-            "Chéreau-Boudet I",
-            "Gouache B",
-            "Legros-Lafarge E"
+            "Chen HY",
+            "Wang LT",
+            "Chang JJ",
+            "Hsu MJ",
+            "Wang PW"
+          ],
+          "snippet": "Individuals with schizophrenia experience premature aging, leading to balance deficits and higher fall risk. Dual-task training integrating balance and cognitive training has emerged as a novel intervention. This study examined the effectiveness o..."
+        },
+        {
+          "id": "41905134",
+          "title": "Selective reinforcement learning deficits in antipsychotic-naïve patients with first-episode schizophrenia-spectrum disorder.",
+          "journal": "European neuropsychopharmacology : the journal of the European College of Neuropsychopharmacology",
+          "published": "2026 Mar 28",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41905134/",
+          "authors": [
+            "Chu RST",
+            "Waltz JA",
+            "Gold JM",
+            "Wo SF",
+            "Wong CF"
+          ],
+          "snippet": "There is a paucity of research examining reinforcement learning (RL) in first-episode schizophrenia-spectrum disorder (FES), particularly among antipsychotic-na&#xef;ve patients. To date, no study has examined \"Go-response bias\" among antipsychoti..."
+        },
+        {
+          "id": "41904841",
+          "title": "Physical exercise as a catalyst for neuroimmune balance in schizophrenia: Targeting the kynurenine pathway in the PsyLetics project.",
+          "journal": "Journal of psychiatric research",
+          "published": "2026 Mar 16",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41904841/",
+          "authors": [
+            "Rißmayer M",
+            "Fischer J",
+            "Hanssen R",
+            "Kretschmer AC",
+            "Blaschke SJ"
+          ],
+          "snippet": "Altered tryptophan-kynurenine metabolism has been associated with schizophrenia. Beyond healthy-control differences, elevated brain kynurenic acid and reduced peripheral metabolites have been linked to symptoms and cognitive deficits. Nonetheless,..."
+        },
+        {
+          "id": "41904268",
+          "title": "Brain structural abnormalities in treatment-resistant schizophrenia.",
+          "journal": "Molecular psychiatry",
+          "published": "2026 Mar 28",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41904268/",
+          "authors": [
+            "Etyemez S",
+            "Sivananthan R",
+            "Faria AV",
+            "Iasevoli F",
+            "Pontillo G"
+          ],
+          "snippet": "Treatment-resistant schizophrenia (TRS) poses a considerable challenge in psychiatric care, with approximately 10-60% of patients exhibiting non-responsiveness to antipsychotic medication. While early treatment could improve clinical outcomes, the..."
+        },
+        {
+          "id": "41902948",
+          "title": "Gender differences in working memory impairment and metabolic characteristics among patients with stable schizophrenia: a cross-sectional study.",
+          "journal": "European archives of psychiatry and clinical neuroscience",
+          "published": "2026 Mar 28",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41902948/",
+          "authors": [
+            "Gu J",
+            "Lei Q",
+            "Liu M",
+            "Wang L",
+            "Wang Z"
           ],
           "snippet": "View full article on PubMed"
-        },
-        {
-          "id": "41831295",
-          "title": "Classification of functional near-infrared spectroscopy (fNIRS) signals in schizophrenia and bipolar disorder using deep learning methods.",
-          "journal": "Psychiatry research",
-          "published": "2026 Mar 10",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41831295/",
-          "authors": [
-            "Mou L",
-            "Gong B",
-            "Tan Q",
-            "Wang H",
-            "Zhang X"
-          ],
-          "snippet": "Schizophrenia (SCZ) and Bipolar Disorder (BD) are prevalent mental disorders. This study uses functional near-infrared spectroscopy (fNIRS) combined with a verbal fluency task (VFT) to examine prefrontal function in SCZ and BD patients, differenti..."
-        },
-        {
-          "id": "41830834",
-          "title": "Case Report: Successful rechallenge with clozapine after clozapine‑induced cardiomyopathy in a patient with treatment‑resistant schizophrenia.",
-          "journal": "Asian journal of psychiatry",
-          "published": "2026 Mar 12",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41830834/",
-          "authors": [
-            "Ito Y",
-            "Yamamoto N",
-            "Nakagawa T",
-            "Kato R",
-            "Murata M"
-          ],
-          "snippet": "View full article on PubMed"
-        },
-        {
-          "id": "41830808",
-          "title": "Psychedelics for treatment of negative symptoms and depressive symptoms in schizophrenia spectrum disorder: A narrative review.",
-          "journal": "Schizophrenia research",
-          "published": "2026 Mar 13",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41830808/",
-          "authors": [
-            "Sabé M",
-            "Grof P",
-            "Sackett NB",
-            "Tai S",
-            "Kryskow P"
-          ],
-          "snippet": "Serotonergic psychedelics are re-emerging as therapeutic candidates across psychiatry, particularly for treatment-resistant depression. Their rapid and sustained antidepressant effects, alongside evidence for neuroplastic, dopaminergic, and glutam..."
-        },
-        {
-          "id": "41830575",
-          "title": "Pharmacogenomic-Based GWAS Meta-Analyses Coupled with Genetic and Epigenetic Liability Testing Connects Facial and Emotional Recognition Systems to Spectrum Disorders, Schizophrenia, Depression, and Anxiety.",
-          "journal": "Current pharmaceutical biotechnology",
-          "published": "2026 Mar 9",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41830575/",
-          "authors": [
-            "Blum K",
-            "Lewandrowski APL",
-            "Sharafshah A",
-            "Pinhasov A",
-            "Mohankumar K"
-          ],
-          "snippet": "Facial and Emotional Recognition Systems are technologies that primarily use AI and machine learning to analyze various inputs like facial expression, speech, and physiological signals, to identify and classify human emotions and link them to a va..."
         }
       ]
     },
@@ -166,78 +170,79 @@
       "summary": "Research on reducing risk and catching early signs before a full episode develops.",
       "articles": [
         {
-          "id": "41830808",
-          "title": "Psychedelics for treatment of negative symptoms and depressive symptoms in schizophrenia spectrum disorder: A narrative review.",
-          "journal": "Schizophrenia research",
-          "published": "2026 Mar 13",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41830808/",
+          "id": "41906055",
+          "title": "Cognitive and balance dual-task training for middle-aged and older individuals with schizophrenia: a three-arm randomized controlled trial.",
+          "journal": "European archives of psychiatry and clinical neuroscience",
+          "published": "2026 Mar 30",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41906055/",
           "authors": [
-            "Sabé M",
-            "Grof P",
-            "Sackett NB",
-            "Tai S",
-            "Kryskow P"
+            "Chen HY",
+            "Wang LT",
+            "Chang JJ",
+            "Hsu MJ",
+            "Wang PW"
           ],
-          "snippet": "Serotonergic psychedelics are re-emerging as therapeutic candidates across psychiatry, particularly for treatment-resistant depression. Their rapid and sustained antidepressant effects, alongside evidence for neuroplastic, dopaminergic, and glutam..."
+          "snippet": "Individuals with schizophrenia experience premature aging, leading to balance deficits and higher fall risk. Dual-task training integrating balance and cognitive training has emerged as a novel intervention. This study examined the effectiveness o..."
         },
         {
-          "id": "41823413",
-          "title": "Biosignatures of cognitive basic symptoms mark a distinct neurodevelopmental pathway to schizophrenia.",
-          "journal": "Brain : a journal of neurology",
-          "published": "2026 Mar 13",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41823413/",
+          "id": "41904841",
+          "title": "Physical exercise as a catalyst for neuroimmune balance in schizophrenia: Targeting the kynurenine pathway in the PsyLetics project.",
+          "journal": "Journal of psychiatric research",
+          "published": "2026 Mar 16",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41904841/",
           "authors": [
-            "Koutsouleris N",
-            "Vetter C",
-            "Buciuman M",
-            "Neuner LM",
-            "Weyer C"
+            "Rißmayer M",
+            "Fischer J",
+            "Hanssen R",
+            "Kretschmer AC",
+            "Blaschke SJ"
           ],
-          "snippet": "Efforts to predict schizophrenia risk using biological data have been hampered by the heterogeneity of current \"clinical-high-risk\" (CHR-P) criteria, which pool phenomenologically and biologically distinct syndromes under a single label. In partic..."
+          "snippet": "Altered tryptophan-kynurenine metabolism has been associated with schizophrenia. Beyond healthy-control differences, elevated brain kynurenic acid and reduced peripheral metabolites have been linked to symptoms and cognitive deficits. Nonetheless,..."
         },
         {
-          "id": "41816533",
-          "title": "Efficacy and mechanisms underlying MRI-guided HD-tDCS combined with aerobic exercise to ameliorate cognitive impairment associated with schizophrenia.",
-          "journal": "Frontiers in psychiatry",
-          "published": "2026",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41816533/",
+          "id": "41904268",
+          "title": "Brain structural abnormalities in treatment-resistant schizophrenia.",
+          "journal": "Molecular psychiatry",
+          "published": "2026 Mar 28",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41904268/",
           "authors": [
-            "Wei Y",
-            "Shen Z",
-            "Luo P",
-            "He S",
-            "Su H"
+            "Etyemez S",
+            "Sivananthan R",
+            "Faria AV",
+            "Iasevoli F",
+            "Pontillo G"
           ],
-          "snippet": "The primary treatment for schizophrenia currently relies on medication. Nevertheless, the efficacy of medication for Cognitive Impairment Associated with Schizophrenia (CIAS) is constrained, and it is also accompanied by side effects. Consequently..."
+          "snippet": "Treatment-resistant schizophrenia (TRS) poses a considerable challenge in psychiatric care, with approximately 10-60% of patients exhibiting non-responsiveness to antipsychotic medication. While early treatment could improve clinical outcomes, the..."
         },
         {
-          "id": "41810691",
-          "title": "Prevalence of Oral Pathologies in Patients With Schizophrenia and Bipolar Disorder: A Quantitative Systematic Review.",
-          "journal": "Special care in dentistry : official publication of the American Association of Hospital Dentists, the Academy of Dentistry for the Handicapped, and the American Society for Geriatric Dentistry",
-          "published": "2026 Mar-Apr",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41810691/",
+          "id": "41902948",
+          "title": "Gender differences in working memory impairment and metabolic characteristics among patients with stable schizophrenia: a cross-sectional study.",
+          "journal": "European archives of psychiatry and clinical neuroscience",
+          "published": "2026 Mar 28",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41902948/",
           "authors": [
-            "Ferrada Quiroz V",
-            "Rubio Ortiz A",
-            "Pennacchiotti Vidal G",
-            "Arriagada Vargas C"
+            "Gu J",
+            "Lei Q",
+            "Liu M",
+            "Wang L",
+            "Wang Z"
           ],
-          "snippet": "Psychiatric disorders such as schizophrenia (SCZ) and bipolar disorder (BD), significantly affect individuals' overall health. Despite their high susceptibility to developing oral diseases, such as dental caries (DC), periodontal disease (PD) and ..."
+          "snippet": "View full article on PubMed"
         },
         {
-          "id": "41808459",
-          "title": "Chronic schizophrenia with aggravation of psychiatric symptoms after cancer surgery: A case report and mini literature review.",
-          "journal": "Annals of palliative medicine",
-          "published": "2026 Feb 27",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41808459/",
+          "id": "41888739",
+          "title": "Assessing demographic and clinical characteristics and healthcare resource utilization of patients with schizophrenia with inadequate response to antipsychotic treatment.",
+          "journal": "BMC psychiatry",
+          "published": "2026 Mar 26",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41888739/",
           "authors": [
-            "Yamaguchi J",
-            "Sadahiro R",
-            "Wada S",
-            "Nishikawa E",
-            "Terada T"
+            "Hejazi A",
+            "Bron M",
+            "Perez-Rodriguez MM",
+            "Attar A",
+            "Burgess MV"
           ],
-          "snippet": "Patients with cancer and comorbid psychiatric disorders, including schizophrenia, may experience aggravation of psychiatric symptoms during cancer treatment. Oncology hospitals without dedicated psychiatric wards sometimes face challenges in manag..."
+          "snippet": "View full article on PubMed"
         }
       ]
     }
