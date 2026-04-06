@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-30T09:25:53.076Z",
+  "lastUpdated": "2026-04-06T09:23:06.225Z",
   "categories": [
     {
       "id": "diagnosis",
@@ -7,78 +7,76 @@
       "summary": "How schizophrenia is identified — from early warning signs to brain imaging and screening tools.",
       "articles": [
         {
-          "id": "41904268",
-          "title": "Brain structural abnormalities in treatment-resistant schizophrenia.",
-          "journal": "Molecular psychiatry",
-          "published": "2026 Mar 28",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41904268/",
+          "id": "41936622",
+          "title": "Childhood socioemotional development and growth mindset preceding schizophrenia: case-control study using prospectively collected data.",
+          "journal": "BJPsych open",
+          "published": "2026 Apr 6",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41936622/",
           "authors": [
-            "Etyemez S",
-            "Sivananthan R",
-            "Faria AV",
-            "Iasevoli F",
-            "Pontillo G"
+            "Vasquez-Nuñez J",
+            "Conejeros J",
+            "Díaz-Dellarrossa C",
+            "Mena C",
+            "Undurraga J"
           ],
-          "snippet": "Treatment-resistant schizophrenia (TRS) poses a considerable challenge in psychiatric care, with approximately 10-60% of patients exhibiting non-responsiveness to antipsychotic medication. While early treatment could improve clinical outcomes, the..."
+          "snippet": "Understanding premorbid socioemotional trajectories in schizophrenia is crucial for early identification and potential primary prevention. Studies in adults with schizophrenia suggest similar socioemotional premorbid difficulties, but are limited ..."
         },
         {
-          "id": "41901608",
-          "title": "Can the Posterior Segment Findings of the Eye and Serum Microbiota Metabolites Be a Biomarker in Schizophrenia?",
-          "journal": "Medicina (Kaunas, Lithuania)",
-          "published": "2026 Mar 12",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41901608/",
+          "id": "41935922",
+          "title": "Oral language acquisition difficulties in patients with early-onset schizophrenia or bipolar disorder.",
+          "journal": "L'Encephale",
+          "published": "2026 Apr 3",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41935922/",
           "authors": [
-            "Keser S",
-            "Yıldız S",
-            "Aydın S",
-            "Keleş J",
-            "Aksoy A"
+            "Khoury E",
+            "Lauferon C",
+            "Cohen A",
+            "Delorme R",
+            "Hamadouche D"
           ],
-          "snippet": "Background and Objectives: In many neurodegenerative diseases, the pathological changes occurring in the central nervous system may be reflected in the periphery. The aim of this study was to examine the possible relationship between the retina, c..."
+          "snippet": "Schizophrenia and bipolar disorder are psychiatric conditions increasingly recognized as involving an underlying neurodevelopmental dimension, particularly in early-onset forms. Among neurodevelopmental disorders, language disorders occupy a centr..."
         },
         {
-          "id": "41899687",
-          "title": "Burden, Incidence, and Spatial Distribution of Schizophrenia in Ecuador (2010-2021): A Nationwide Hospital Discharge Analysis.",
-          "journal": "International journal of environmental research and public health",
-          "published": "2026 Mar 1",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41899687/",
+          "id": "41935040",
+          "title": "Plasma proteome profiling identifies novel biomarkers and predictors for schizophrenia.",
+          "journal": "Translational psychiatry",
+          "published": "2026 Apr 4",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41935040/",
           "authors": [
-            "Rodríguez-Lorenzana A",
-            "Carrington SJ",
-            "Coral-Almeida M",
-            "Álvarez-Mejía D",
-            "Torres-Tapia M"
+            "Wu S",
+            "Guo X",
+            "Jia T",
+            "Sun Z",
+            "Yu G"
           ],
-          "snippet": "Schizophrenia is a chronic mental disorder affecting approximately 1% of the global population and imposing a significant economic and social burden. In Ecuador, comprehensive data on its incidence, burden, and spatial distribution are scarce. Thi..."
+          "snippet": "This study performed a systematic investigation through proteomic and longitudinal follow-up data from the UK Biobank (comprising 70 schizophrenia cases and 36,135 healthy controls) to reveal the association between protein biomarkers and the onse..."
         },
         {
-          "id": "41898287",
-          "title": "From Signal to Symptom: EEG Paroxysms and Background Slowing as Potential Biomarkers and Compensatory Failures in Treatment-Resistant Schizophrenia.",
-          "journal": "Biomedicines",
-          "published": "2026 Mar 12",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41898287/",
+          "id": "41934269",
+          "title": "Use of Z-Scores and Percentages to Assess Structural Brain MRI Findings in Patients With Schizophrenia.",
+          "journal": "International journal of methods in psychiatric research",
+          "published": "2026 Jun",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41934269/",
           "authors": [
-            "Panov G",
-            "Panova P",
-            "Dyulgerova S",
-            "Chakarov I"
+            "Mitkani CA",
+            "Prassopoulos P",
+            "Aletras AH",
+            "Fountoulakis KN"
           ],
-          "snippet": "Schizophrenia is a heterogeneous disorder, and treatment-resistant schizophrenia (TRS) affects 20-30% of patients, yet objective biomarkers for its identification remain limited. Routine electroencephalography (EEG) offers a non-invasive window in..."
+          "snippet": "Schizophrenia is associated with structural brain abnormalities, although findings have been inconsistent. This study aimed to investigate global and regional volumetric measures in patients with schizophrenia using an automated volumetric analysi..."
         },
         {
-          "id": "41894931",
-          "title": "Sleep-architecture signatures for differential diagnosis of schizophrenia, bipolar, and major depressive disorders: A polysomnography-based multinomial modeling study.",
-          "journal": "Schizophrenia research",
-          "published": "2026 Mar 26",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41894931/",
+          "id": "41932132",
+          "title": "\"Comparison of parietal cortex volumes in schizophrenia and schizoaffective disorder\".",
+          "journal": "Psychiatry research. Neuroimaging",
+          "published": "2026 Mar 30",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41932132/",
           "authors": [
-            "Pan A",
-            "Yuan K",
-            "Xiu M",
-            "Guan X",
-            "Lang X"
+            "Kurnaz A",
+            "Unal A",
+            "Erbay MF"
           ],
-          "snippet": "Sleep architecture is an essential lifestyle factor influencing health and well-being, and it may offer a trans-diagnostic window to understand the shared pathophysiology across schizophrenia (SCH), bipolar disorder (BD), and major depressive diso..."
+          "snippet": "Schizophrenia and schizoaffective disorder are closely related psychotic disorders with overlapping clinical features and unclear neurobiological boundaries. In our study, we aimed to compare bilateral parietal cortex volumes among patients diagno..."
         }
       ]
     },
@@ -88,79 +86,77 @@
       "summary": "Current and emerging treatments — including medications, therapy, and newer approaches.",
       "articles": [
         {
-          "id": "41906055",
-          "title": "Cognitive and balance dual-task training for middle-aged and older individuals with schizophrenia: a three-arm randomized controlled trial.",
-          "journal": "European archives of psychiatry and clinical neuroscience",
-          "published": "2026 Mar 30",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41906055/",
+          "id": "41937202",
+          "title": "Hippocampal transcriptome profiling in a 22q11.2 deletion syndrome mouse model: comparison with human schizophrenia.",
+          "journal": "Molecular brain",
+          "published": "2026 Apr 5",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41937202/",
           "authors": [
-            "Chen HY",
-            "Wang LT",
-            "Chang JJ",
-            "Hsu MJ",
-            "Wang PW"
+            "Yonemaru H",
+            "Ozawa T",
+            "Hikida T"
           ],
-          "snippet": "Individuals with schizophrenia experience premature aging, leading to balance deficits and higher fall risk. Dual-task training integrating balance and cognitive training has emerged as a novel intervention. This study examined the effectiveness o..."
+          "snippet": "22q11.2 deletion syndrome (22q11.2DS) confers one of the highest genetic risks for schizophrenia, yet the molecular mechanisms remain incompletely understood. We performed comprehensive RNA sequencing of the dorsal hippocampus in Df1/+ mice, a 22q..."
         },
         {
-          "id": "41905134",
-          "title": "Selective reinforcement learning deficits in antipsychotic-naïve patients with first-episode schizophrenia-spectrum disorder.",
-          "journal": "European neuropsychopharmacology : the journal of the European College of Neuropsychopharmacology",
-          "published": "2026 Mar 28",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41905134/",
+          "id": "41936622",
+          "title": "Childhood socioemotional development and growth mindset preceding schizophrenia: case-control study using prospectively collected data.",
+          "journal": "BJPsych open",
+          "published": "2026 Apr 6",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41936622/",
           "authors": [
-            "Chu RST",
-            "Waltz JA",
-            "Gold JM",
-            "Wo SF",
-            "Wong CF"
+            "Vasquez-Nuñez J",
+            "Conejeros J",
+            "Díaz-Dellarrossa C",
+            "Mena C",
+            "Undurraga J"
           ],
-          "snippet": "There is a paucity of research examining reinforcement learning (RL) in first-episode schizophrenia-spectrum disorder (FES), particularly among antipsychotic-na&#xef;ve patients. To date, no study has examined \"Go-response bias\" among antipsychoti..."
+          "snippet": "Understanding premorbid socioemotional trajectories in schizophrenia is crucial for early identification and potential primary prevention. Studies in adults with schizophrenia suggest similar socioemotional premorbid difficulties, but are limited ..."
         },
         {
-          "id": "41904841",
-          "title": "Physical exercise as a catalyst for neuroimmune balance in schizophrenia: Targeting the kynurenine pathway in the PsyLetics project.",
-          "journal": "Journal of psychiatric research",
-          "published": "2026 Mar 16",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41904841/",
+          "id": "41936157",
+          "title": "Qualitative analysis of long-term clozapine adherence in schizophrenia: An exploratory study.",
+          "journal": "Psychiatry research",
+          "published": "2026 Mar 31",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41936157/",
           "authors": [
-            "Rißmayer M",
-            "Fischer J",
-            "Hanssen R",
-            "Kretschmer AC",
-            "Blaschke SJ"
+            "Daniel DTG",
+            "Choi JJ",
+            "Aluri J",
+            "McCaulley C",
+            "Brandt AS"
           ],
-          "snippet": "Altered tryptophan-kynurenine metabolism has been associated with schizophrenia. Beyond healthy-control differences, elevated brain kynurenic acid and reduced peripheral metabolites have been linked to symptoms and cognitive deficits. Nonetheless,..."
+          "snippet": "Clozapine is the most effective antipsychotic for treatment-resistant schizophrenia, yet patients face substantial challenges in maintaining long-term adherence. In this investigation, we used a qualitative approach to understand how patients over..."
         },
         {
-          "id": "41904268",
-          "title": "Brain structural abnormalities in treatment-resistant schizophrenia.",
-          "journal": "Molecular psychiatry",
-          "published": "2026 Mar 28",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41904268/",
+          "id": "41935922",
+          "title": "Oral language acquisition difficulties in patients with early-onset schizophrenia or bipolar disorder.",
+          "journal": "L'Encephale",
+          "published": "2026 Apr 3",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41935922/",
           "authors": [
-            "Etyemez S",
-            "Sivananthan R",
-            "Faria AV",
-            "Iasevoli F",
-            "Pontillo G"
+            "Khoury E",
+            "Lauferon C",
+            "Cohen A",
+            "Delorme R",
+            "Hamadouche D"
           ],
-          "snippet": "Treatment-resistant schizophrenia (TRS) poses a considerable challenge in psychiatric care, with approximately 10-60% of patients exhibiting non-responsiveness to antipsychotic medication. While early treatment could improve clinical outcomes, the..."
+          "snippet": "Schizophrenia and bipolar disorder are psychiatric conditions increasingly recognized as involving an underlying neurodevelopmental dimension, particularly in early-onset forms. Among neurodevelopmental disorders, language disorders occupy a centr..."
         },
         {
-          "id": "41902948",
-          "title": "Gender differences in working memory impairment and metabolic characteristics among patients with stable schizophrenia: a cross-sectional study.",
-          "journal": "European archives of psychiatry and clinical neuroscience",
-          "published": "2026 Mar 28",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41902948/",
+          "id": "41935843",
+          "title": "Correlates of Professional Help-Seeking Attitudes in Persons With Schizophrenia in Taiwan.",
+          "journal": "Journal of nursing scholarship : an official publication of Sigma Theta Tau International Honor Society of Nursing",
+          "published": "2026 May",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41935843/",
           "authors": [
-            "Gu J",
-            "Lei Q",
-            "Liu M",
-            "Wang L",
-            "Wang Z"
+            "Hsiao CY",
+            "Wu KY",
+            "Chiu CK",
+            "Lu HL",
+            "Chiu SC"
           ],
-          "snippet": "View full article on PubMed"
+          "snippet": "In Taiwan, engagement in professional help-seeking among persons living with schizophrenia remains limited despite increasing demands on mental healthcare systems. Clarifying the factors that shape professional help-seeking attitudes is essential ..."
         }
       ]
     },
@@ -170,79 +166,76 @@
       "summary": "Research on reducing risk and catching early signs before a full episode develops.",
       "articles": [
         {
-          "id": "41906055",
-          "title": "Cognitive and balance dual-task training for middle-aged and older individuals with schizophrenia: a three-arm randomized controlled trial.",
-          "journal": "European archives of psychiatry and clinical neuroscience",
-          "published": "2026 Mar 30",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41906055/",
+          "id": "41936622",
+          "title": "Childhood socioemotional development and growth mindset preceding schizophrenia: case-control study using prospectively collected data.",
+          "journal": "BJPsych open",
+          "published": "2026 Apr 6",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41936622/",
           "authors": [
-            "Chen HY",
-            "Wang LT",
-            "Chang JJ",
-            "Hsu MJ",
-            "Wang PW"
+            "Vasquez-Nuñez J",
+            "Conejeros J",
+            "Díaz-Dellarrossa C",
+            "Mena C",
+            "Undurraga J"
           ],
-          "snippet": "Individuals with schizophrenia experience premature aging, leading to balance deficits and higher fall risk. Dual-task training integrating balance and cognitive training has emerged as a novel intervention. This study examined the effectiveness o..."
+          "snippet": "Understanding premorbid socioemotional trajectories in schizophrenia is crucial for early identification and potential primary prevention. Studies in adults with schizophrenia suggest similar socioemotional premorbid difficulties, but are limited ..."
         },
         {
-          "id": "41904841",
-          "title": "Physical exercise as a catalyst for neuroimmune balance in schizophrenia: Targeting the kynurenine pathway in the PsyLetics project.",
-          "journal": "Journal of psychiatric research",
-          "published": "2026 Mar 16",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41904841/",
+          "id": "41929365",
+          "title": "Treatment continuation and factors associated with discontinuation with 3-month paliperidone palmitate in patients with schizophrenia: a post hoc analysis of post-marketing surveillance data in Japan.",
+          "journal": "Frontiers in psychiatry",
+          "published": "2026",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41929365/",
           "authors": [
-            "Rißmayer M",
-            "Fischer J",
-            "Hanssen R",
-            "Kretschmer AC",
-            "Blaschke SJ"
+            "Takekita Y",
+            "Tokushige N",
+            "Saga Y"
           ],
-          "snippet": "Altered tryptophan-kynurenine metabolism has been associated with schizophrenia. Beyond healthy-control differences, elevated brain kynurenic acid and reduced peripheral metabolites have been linked to symptoms and cognitive deficits. Nonetheless,..."
+          "snippet": "Schizophrenia requires sustained treatment to prevent relapse and maintain functional stability. Poor adherence to oral antipsychotics is common and increases the risk of relapse and rehospitalization. Long-acting injectable antipsychotics, such a..."
         },
         {
-          "id": "41904268",
-          "title": "Brain structural abnormalities in treatment-resistant schizophrenia.",
-          "journal": "Molecular psychiatry",
-          "published": "2026 Mar 28",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41904268/",
+          "id": "41926504",
+          "title": "Analysis of Factors Related to Constipation in Hospitalised Patients with Schizophrenia: A Study from Wuhan, China.",
+          "journal": "Journal of multidisciplinary healthcare",
+          "published": "2026",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41926504/",
           "authors": [
-            "Etyemez S",
-            "Sivananthan R",
-            "Faria AV",
-            "Iasevoli F",
-            "Pontillo G"
+            "Gong JF",
+            "Wu CX",
+            "Qiao J",
+            "Li LH",
+            "Xiang SQ"
           ],
-          "snippet": "Treatment-resistant schizophrenia (TRS) poses a considerable challenge in psychiatric care, with approximately 10-60% of patients exhibiting non-responsiveness to antipsychotic medication. While early treatment could improve clinical outcomes, the..."
+          "snippet": "To investigate the factors associated with constipation in patients with schizophrenia. This retrospective study analysed medical records of hospitalised patients with schizophrenia admitted to a psychiatric department in Wuhan between January and..."
         },
         {
-          "id": "41902948",
-          "title": "Gender differences in working memory impairment and metabolic characteristics among patients with stable schizophrenia: a cross-sectional study.",
-          "journal": "European archives of psychiatry and clinical neuroscience",
-          "published": "2026 Mar 28",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41902948/",
+          "id": "41924136",
+          "title": "Long-term traditional Chinese medicine use and incidence of metabolic syndrome in schizophrenia: a retrospective cohort study.",
+          "journal": "Frontiers in pharmacology",
+          "published": "2026",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41924136/",
           "authors": [
-            "Gu J",
-            "Lei Q",
-            "Liu M",
-            "Wang L",
-            "Wang Z"
+            "Zhang JS",
+            "Gu WJ",
+            "Huang YH",
+            "Guo M"
           ],
-          "snippet": "View full article on PubMed"
+          "snippet": "This study aims to assess the impact of medium-to long-term traditional Chinese medicine (TCM) combined with antipsychotic medications on metabolic syndrome (MetS) in patients with schizophrenia and to explore the prevalence and related influencin..."
         },
         {
-          "id": "41888739",
-          "title": "Assessing demographic and clinical characteristics and healthcare resource utilization of patients with schizophrenia with inadequate response to antipsychotic treatment.",
-          "journal": "BMC psychiatry",
-          "published": "2026 Mar 26",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41888739/",
+          "id": "41918772",
+          "title": "Effects of cariprazine on cholesterol, glucose, and weight in patients with schizophrenia: a systematic review and meta-analysis.",
+          "journal": "Therapeutic advances in psychopharmacology",
+          "published": "2026",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41918772/",
           "authors": [
-            "Hejazi A",
-            "Bron M",
-            "Perez-Rodriguez MM",
-            "Attar A",
-            "Burgess MV"
+            "Berardelli I",
+            "Cifrodelli M",
+            "Mammoliti AV",
+            "Formica F",
+            "Iannazzo R"
           ],
-          "snippet": "View full article on PubMed"
+          "snippet": "Cariprazine is a second-generation antipsychotic approved for treating schizophrenia, acute manic or mixed episodes associated with bipolar I disorder, and major depressive disorder. Antipsychotic treatment is often associated with metabolic alter..."
         }
       ]
     }
