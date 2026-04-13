@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-06T09:23:06.225Z",
+  "lastUpdated": "2026-04-13T09:30:42.802Z",
   "categories": [
     {
       "id": "diagnosis",
@@ -7,76 +7,79 @@
       "summary": "How schizophrenia is identified — from early warning signs to brain imaging and screening tools.",
       "articles": [
         {
-          "id": "41936622",
-          "title": "Childhood socioemotional development and growth mindset preceding schizophrenia: case-control study using prospectively collected data.",
-          "journal": "BJPsych open",
-          "published": "2026 Apr 6",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41936622/",
+          "id": "41967301",
+          "title": "Development and evaluation of a predictive biomarker model based on the niacin flush pathway for differentiating schizophrenia and bipolar disorder.",
+          "journal": "Schizophrenia research",
+          "published": "2026 Apr 11",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41967301/",
           "authors": [
-            "Vasquez-Nuñez J",
-            "Conejeros J",
-            "Díaz-Dellarrossa C",
-            "Mena C",
-            "Undurraga J"
+            "Wu CJ",
+            "Lin JJ",
+            "Huang CC",
+            "Tseng HH",
+            "Cheng WL"
           ],
-          "snippet": "Understanding premorbid socioemotional trajectories in schizophrenia is crucial for early identification and potential primary prevention. Studies in adults with schizophrenia suggest similar socioemotional premorbid difficulties, but are limited ..."
+          "snippet": "Our previous study demonstrated that the niacin flush response and pathway biomarkers could differentiate schizophrenia patients from healthy controls. Whether these biomarkers also distinguish schizophrenia from bipolar disorder remains unclear. ..."
         },
         {
-          "id": "41935922",
-          "title": "Oral language acquisition difficulties in patients with early-onset schizophrenia or bipolar disorder.",
-          "journal": "L'Encephale",
-          "published": "2026 Apr 3",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41935922/",
-          "authors": [
-            "Khoury E",
-            "Lauferon C",
-            "Cohen A",
-            "Delorme R",
-            "Hamadouche D"
-          ],
-          "snippet": "Schizophrenia and bipolar disorder are psychiatric conditions increasingly recognized as involving an underlying neurodevelopmental dimension, particularly in early-onset forms. Among neurodevelopmental disorders, language disorders occupy a centr..."
-        },
-        {
-          "id": "41935040",
-          "title": "Plasma proteome profiling identifies novel biomarkers and predictors for schizophrenia.",
+          "id": "41965717",
+          "title": "Correlation networks of blood proteins in the neuroimmunology of schizophrenia-replication and extension.",
           "journal": "Translational psychiatry",
-          "published": "2026 Apr 4",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41935040/",
+          "published": "2026 Apr 11",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41965717/",
           "authors": [
-            "Wu S",
-            "Guo X",
-            "Jia T",
-            "Sun Z",
-            "Yu G"
+            "Jeffries CD",
+            "Bizon CA",
+            "Ford JR",
+            "Addington J",
+            "Bearden CE"
           ],
-          "snippet": "This study performed a systematic investigation through proteomic and longitudinal follow-up data from the UK Biobank (comprising 70 schizophrenia cases and 36,135 healthy controls) to reveal the association between protein biomarkers and the onse..."
+          "snippet": "The Pearson sample correlation between two biomarkers across a group of individuals can sometimes be much stronger than expected by chance. In the context of psychosis risk, we previously analyzed blood plasma protein data from initial presentatio..."
         },
         {
-          "id": "41934269",
-          "title": "Use of Z-Scores and Percentages to Assess Structural Brain MRI Findings in Patients With Schizophrenia.",
-          "journal": "International journal of methods in psychiatric research",
-          "published": "2026 Jun",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41934269/",
+          "id": "41965134",
+          "title": "Association of physical function with cardiovascular risk in middle-aged and older patients with schizophrenia.",
+          "journal": "Journal of psychosomatic research",
+          "published": "2026 Apr 8",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41965134/",
           "authors": [
-            "Mitkani CA",
-            "Prassopoulos P",
-            "Aletras AH",
-            "Fountoulakis KN"
+            "Wang M",
+            "Yin A",
+            "Zhang K",
+            "Song X",
+            "Wang B"
           ],
-          "snippet": "Schizophrenia is associated with structural brain abnormalities, although findings have been inconsistent. This study aimed to investigate global and regional volumetric measures in patients with schizophrenia using an automated volumetric analysi..."
+          "snippet": "Cardiovascular disease is a leading cause of mortality among patients with schizophrenia. Impaired physical function may contribute to the elevated cardiovascular risk in this population. This study aimed to examine the association between physica..."
         },
         {
-          "id": "41932132",
-          "title": "\"Comparison of parietal cortex volumes in schizophrenia and schizoaffective disorder\".",
-          "journal": "Psychiatry research. Neuroimaging",
-          "published": "2026 Mar 30",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41932132/",
+          "id": "41963987",
+          "title": "Associations of inflammatory biomarkers with brain atrophy and clinical scores in schizophrenia patients with autistic features.",
+          "journal": "BMC research notes",
+          "published": "2026 Apr 10",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41963987/",
           "authors": [
-            "Kurnaz A",
-            "Unal A",
-            "Erbay MF"
+            "Wang J",
+            "Shen J",
+            "Pang Y",
+            "Liu J",
+            "Zhao L"
           ],
-          "snippet": "Schizophrenia and schizoaffective disorder are closely related psychotic disorders with overlapping clinical features and unclear neurobiological boundaries. In our study, we aimed to compare bilateral parietal cortex volumes among patients diagno..."
+          "snippet": "View full article on PubMed"
+        },
+        {
+          "id": "41962430",
+          "title": "The role of cognitive schemas in personal recovery, symptom severity, and functioning in schizophrenia-spectrum disorders.",
+          "journal": "Schizophrenia research",
+          "published": "2026 Apr 9",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41962430/",
+          "authors": [
+            "Hamzai HV",
+            "D'Arcey J",
+            "Jagtap S",
+            "Leibovitz T",
+            "Martins F"
+          ],
+          "snippet": "Negative cognitive schemas about the self and others are prevalent in schizophrenia-spectrum disorders (SSDs) and are associated with symptom severity. Recent conceptualizations of recovery emphasize functional and personal outcomes in addition to..."
         }
       ]
     },
@@ -86,77 +89,79 @@
       "summary": "Current and emerging treatments — including medications, therapy, and newer approaches.",
       "articles": [
         {
-          "id": "41937202",
-          "title": "Hippocampal transcriptome profiling in a 22q11.2 deletion syndrome mouse model: comparison with human schizophrenia.",
-          "journal": "Molecular brain",
-          "published": "2026 Apr 5",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41937202/",
+          "id": "41967302",
+          "title": "Structural and construct validity assessment of the schizophrenia cognition rating scale (SCoRS) using data from three international phase 3 randomized controlled trials (CONNEX programme).",
+          "journal": "Schizophrenia research",
+          "published": "2026 Apr 11",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41967302/",
           "authors": [
-            "Yonemaru H",
-            "Ozawa T",
-            "Hikida T"
+            "Pascoe B",
+            "Cocks K",
+            "Clarke N",
+            "Langevin N",
+            "Fowler C"
           ],
-          "snippet": "22q11.2 deletion syndrome (22q11.2DS) confers one of the highest genetic risks for schizophrenia, yet the molecular mechanisms remain incompletely understood. We performed comprehensive RNA sequencing of the dorsal hippocampus in Df1/+ mice, a 22q..."
+          "snippet": "Cognitive impairment associated with schizophrenia (CIAS) is a fundamental symptom of the disorder, which significantly affects individuals' daily functioning and overall quality of life. Currently available antipsychotic drugs have little benefic..."
         },
         {
-          "id": "41936622",
-          "title": "Childhood socioemotional development and growth mindset preceding schizophrenia: case-control study using prospectively collected data.",
-          "journal": "BJPsych open",
-          "published": "2026 Apr 6",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41936622/",
+          "id": "41966036",
+          "title": "Two patterns of abnormal FA with different radial features and their relation to polygenic risks in first-episode schizophrenia and unaffected siblings.",
+          "journal": "Journal of psychiatric research",
+          "published": "2026 Apr 7",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41966036/",
           "authors": [
-            "Vasquez-Nuñez J",
-            "Conejeros J",
-            "Díaz-Dellarrossa C",
-            "Mena C",
-            "Undurraga J"
+            "Huang W",
+            "Liu Z",
+            "Tan W",
+            "Chen X",
+            "Wu G"
           ],
-          "snippet": "Understanding premorbid socioemotional trajectories in schizophrenia is crucial for early identification and potential primary prevention. Studies in adults with schizophrenia suggest similar socioemotional premorbid difficulties, but are limited ..."
+          "snippet": "White matter microstructure abnormalities have been widely observed in schizophrenia, closely associated with clinical symptoms and cognitive deficits. While various alterations have been suggested, the nature of their specific patterns and underl..."
         },
         {
-          "id": "41936157",
-          "title": "Qualitative analysis of long-term clozapine adherence in schizophrenia: An exploratory study.",
-          "journal": "Psychiatry research",
-          "published": "2026 Mar 31",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41936157/",
+          "id": "41965717",
+          "title": "Correlation networks of blood proteins in the neuroimmunology of schizophrenia-replication and extension.",
+          "journal": "Translational psychiatry",
+          "published": "2026 Apr 11",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41965717/",
           "authors": [
-            "Daniel DTG",
-            "Choi JJ",
-            "Aluri J",
-            "McCaulley C",
-            "Brandt AS"
+            "Jeffries CD",
+            "Bizon CA",
+            "Ford JR",
+            "Addington J",
+            "Bearden CE"
           ],
-          "snippet": "Clozapine is the most effective antipsychotic for treatment-resistant schizophrenia, yet patients face substantial challenges in maintaining long-term adherence. In this investigation, we used a qualitative approach to understand how patients over..."
+          "snippet": "The Pearson sample correlation between two biomarkers across a group of individuals can sometimes be much stronger than expected by chance. In the context of psychosis risk, we previously analyzed blood plasma protein data from initial presentatio..."
         },
         {
-          "id": "41935922",
-          "title": "Oral language acquisition difficulties in patients with early-onset schizophrenia or bipolar disorder.",
-          "journal": "L'Encephale",
-          "published": "2026 Apr 3",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41935922/",
+          "id": "41965146",
+          "title": "Genetic interactions between bioactive ingredients in traditional Chinese medicine and major depressive disorder, bipolar disorder, and schizophrenia.",
+          "journal": "Computational biology and chemistry",
+          "published": "2026 Apr 8",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41965146/",
           "authors": [
-            "Khoury E",
-            "Lauferon C",
-            "Cohen A",
-            "Delorme R",
-            "Hamadouche D"
+            "Xu Y",
+            "Deng B",
+            "Li Q",
+            "Li L",
+            "Du Y"
           ],
-          "snippet": "Schizophrenia and bipolar disorder are psychiatric conditions increasingly recognized as involving an underlying neurodevelopmental dimension, particularly in early-onset forms. Among neurodevelopmental disorders, language disorders occupy a centr..."
+          "snippet": "This study explored the genetic interactions between Traditional Chinese Medicine (TCM) bioactive ingredients and major psychiatric disorders, namely major depressive disorder (MDD), bipolar disorder (BIP), and schizophrenia (SCZ). Predicting TCM ..."
         },
         {
-          "id": "41935843",
-          "title": "Correlates of Professional Help-Seeking Attitudes in Persons With Schizophrenia in Taiwan.",
-          "journal": "Journal of nursing scholarship : an official publication of Sigma Theta Tau International Honor Society of Nursing",
-          "published": "2026 May",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41935843/",
+          "id": "41965134",
+          "title": "Association of physical function with cardiovascular risk in middle-aged and older patients with schizophrenia.",
+          "journal": "Journal of psychosomatic research",
+          "published": "2026 Apr 8",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41965134/",
           "authors": [
-            "Hsiao CY",
-            "Wu KY",
-            "Chiu CK",
-            "Lu HL",
-            "Chiu SC"
+            "Wang M",
+            "Yin A",
+            "Zhang K",
+            "Song X",
+            "Wang B"
           ],
-          "snippet": "In Taiwan, engagement in professional help-seeking among persons living with schizophrenia remains limited despite increasing demands on mental healthcare systems. Clarifying the factors that shape professional help-seeking attitudes is essential ..."
+          "snippet": "Cardiovascular disease is a leading cause of mortality among patients with schizophrenia. Impaired physical function may contribute to the elevated cardiovascular risk in this population. This study aimed to examine the association between physica..."
         }
       ]
     },
@@ -166,76 +171,72 @@
       "summary": "Research on reducing risk and catching early signs before a full episode develops.",
       "articles": [
         {
-          "id": "41936622",
-          "title": "Childhood socioemotional development and growth mindset preceding schizophrenia: case-control study using prospectively collected data.",
-          "journal": "BJPsych open",
-          "published": "2026 Apr 6",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41936622/",
+          "id": "41967871",
+          "title": "Increased Reporting of Speech in Degraded Stimuli in Schizophrenia: A Case Control Study with Sine-Wave-Speech.",
+          "journal": "Schizophrenia bulletin",
+          "published": "2026 Apr 10",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41967871/",
           "authors": [
-            "Vasquez-Nuñez J",
-            "Conejeros J",
-            "Díaz-Dellarrossa C",
-            "Mena C",
-            "Undurraga J"
+            "Castiello S",
+            "Barch DM",
+            "Erickson MA",
+            "Boudewyn MA",
+            "Carter CS"
           ],
-          "snippet": "Understanding premorbid socioemotional trajectories in schizophrenia is crucial for early identification and potential primary prevention. Studies in adults with schizophrenia suggest similar socioemotional premorbid difficulties, but are limited ..."
+          "snippet": "People who hear voices may have strong prior expectations of speech, so that noisy auditory signals are resolved as speech. Data in non-clinical voice hearers suggest that voice hearing may involve sensitivity to speech in degraded stimuli. This h..."
         },
         {
-          "id": "41929365",
-          "title": "Treatment continuation and factors associated with discontinuation with 3-month paliperidone palmitate in patients with schizophrenia: a post hoc analysis of post-marketing surveillance data in Japan.",
-          "journal": "Frontiers in psychiatry",
-          "published": "2026",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41929365/",
+          "id": "41965717",
+          "title": "Correlation networks of blood proteins in the neuroimmunology of schizophrenia-replication and extension.",
+          "journal": "Translational psychiatry",
+          "published": "2026 Apr 11",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41965717/",
           "authors": [
-            "Takekita Y",
-            "Tokushige N",
-            "Saga Y"
+            "Jeffries CD",
+            "Bizon CA",
+            "Ford JR",
+            "Addington J",
+            "Bearden CE"
           ],
-          "snippet": "Schizophrenia requires sustained treatment to prevent relapse and maintain functional stability. Poor adherence to oral antipsychotics is common and increases the risk of relapse and rehospitalization. Long-acting injectable antipsychotics, such a..."
+          "snippet": "The Pearson sample correlation between two biomarkers across a group of individuals can sometimes be much stronger than expected by chance. In the context of psychosis risk, we previously analyzed blood plasma protein data from initial presentatio..."
         },
         {
-          "id": "41926504",
-          "title": "Analysis of Factors Related to Constipation in Hospitalised Patients with Schizophrenia: A Study from Wuhan, China.",
-          "journal": "Journal of multidisciplinary healthcare",
-          "published": "2026",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41926504/",
+          "id": "41964132",
+          "title": "The real experience of older people with schizophrenia: A qualitative meta-synthesis.",
+          "journal": "The British journal of clinical psychology",
+          "published": "2026 Apr 10",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41964132/",
           "authors": [
-            "Gong JF",
-            "Wu CX",
-            "Qiao J",
-            "Li LH",
-            "Xiang SQ"
+            "Sun Y",
+            "Liao L",
+            "Jin X",
+            "Li P",
+            "Zhao W"
           ],
-          "snippet": "To investigate the factors associated with constipation in patients with schizophrenia. This retrospective study analysed medical records of hospitalised patients with schizophrenia admitted to a psychiatric department in Wuhan between January and..."
+          "snippet": "Schizophrenia is a severe, chronic mental disorder. Global ageing and improved survival rates have increased the proportion of older people living with schizophrenia, a population whose complex subjective experiences and needs require deeper under..."
         },
         {
-          "id": "41924136",
-          "title": "Long-term traditional Chinese medicine use and incidence of metabolic syndrome in schizophrenia: a retrospective cohort study.",
-          "journal": "Frontiers in pharmacology",
-          "published": "2026",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41924136/",
+          "id": "41963178",
+          "title": "Sleep and schizophrenia spectrum.",
+          "journal": "L'Encephale",
+          "published": "2026 Apr 9",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41963178/",
           "authors": [
-            "Zhang JS",
-            "Gu WJ",
-            "Huang YH",
-            "Guo M"
+            "Gauld C",
+            "Hanin C"
           ],
-          "snippet": "This study aims to assess the impact of medium-to long-term traditional Chinese medicine (TCM) combined with antipsychotic medications on metabolic syndrome (MetS) in patients with schizophrenia and to explore the prevalence and related influencin..."
+          "snippet": "The relationships between sleep disorders and psychotic disorders, particularly schizophrenia, are extensively documented in the literature due to their shared diagnostic, prognostic, and therapeutic implications. This chapter examines the relatio..."
         },
         {
-          "id": "41918772",
-          "title": "Effects of cariprazine on cholesterol, glucose, and weight in patients with schizophrenia: a systematic review and meta-analysis.",
-          "journal": "Therapeutic advances in psychopharmacology",
+          "id": "41960260",
+          "title": "Ketogenic metabolic therapy as a candidate adjunct for CBTp delivery in schizophrenia spectrum disorders.",
+          "journal": "Frontiers in psychology",
           "published": "2026",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41918772/",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41960260/",
           "authors": [
-            "Berardelli I",
-            "Cifrodelli M",
-            "Mammoliti AV",
-            "Formica F",
-            "Iannazzo R"
+            "Laurent N"
           ],
-          "snippet": "Cariprazine is a second-generation antipsychotic approved for treating schizophrenia, acute manic or mixed episodes associated with bipolar I disorder, and major depressive disorder. Antipsychotic treatment is often associated with metabolic alter..."
+          "snippet": "Schizophrenia spectrum disorders (SSDs) are managed with pharmacotherapy alongside psychosocial interventions, including cognitive-behavioral therapy for psychosis (CBTp). In routine services, uptake and completion of CBTp remain limited, and part..."
         }
       ]
     }
