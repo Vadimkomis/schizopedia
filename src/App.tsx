@@ -1,12 +1,18 @@
-import { ResearchDashboard } from "@/components/research/ResearchDashboard";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
-import { useResearchData } from "@/hooks/useResearchData";
+import { LandingPage } from "@/pages/LandingPage";
+import { CategoryPage } from "@/pages/CategoryPage";
 
 function App() {
-  const state = useResearchData();
   return (
     <ThemeProvider>
-      <ResearchDashboard {...state} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/category/:id" element={<CategoryPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }

@@ -15,7 +15,7 @@ const categories = [
     id: "diagnosis",
     title: "Diagnosis",
     summary:
-      "How schizophrenia is identified — from early warning signs to brain imaging and screening tools.",
+      "Learn about innovative tools and biomarkers improving early and accurate diagnosis.",
     query:
       "schizophrenia[Title] AND (diagnosis OR early detection OR biomarkers OR screening)",
   },
@@ -23,7 +23,7 @@ const categories = [
     id: "treatment",
     title: "Treatment",
     summary:
-      "Current and emerging treatments — including medications, therapy, and newer approaches.",
+      "Explore emerging therapies, medications, and approaches improving quality of life.",
     query:
       "schizophrenia[Title] AND (treatment OR antipsychotic OR psychotherapy OR intervention)",
   },
@@ -31,7 +31,7 @@ const categories = [
     id: "prevention",
     title: "Prevention",
     summary:
-      "Research on reducing risk and catching early signs before a full episode develops.",
+      "Stay informed on research focused on reducing risk factors and promoting brain health.",
     query:
       "schizophrenia[Title] AND (prevention OR prodromal OR early intervention OR risk reduction)",
   },

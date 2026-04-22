@@ -17,10 +17,10 @@ describe("SourcesPanel", () => {
     render(<SourcesPanel sources={sources} />);
 
     expect(
-      screen.getByText("Where this research comes from"),
+      screen.getByText("Sources and verification"),
     ).toBeVisible();
     expect(
-      screen.getByText(/National Institutes of Health/i),
+      screen.getByText(/links to the original record/i),
     ).toBeVisible();
   });
 

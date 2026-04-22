@@ -1,5 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { buildArticleMeta, formatAuthors, formatDateTime } from "./format";
+import {
+  buildArticleMeta,
+  formatActionability,
+  formatAuthors,
+  formatDateTime,
+  formatEvidenceLevel,
+} from "./format";
 
 describe("formatDateTime", () => {
   it("formats ISO strings into readable dates", () => {
@@ -100,5 +106,27 @@ describe("buildArticleMeta", () => {
       url: "https://example.com",
     });
     expect(meta).toBe("Authors unavailable");
+  });
+});
+
+describe("formatEvidenceLevel", () => {
+  it("formats synthesis level", () => {
+    expect(formatEvidenceLevel("synthesis")).toBe("Higher-level synthesis");
+  });
+
+  it("formats unknown level", () => {
+    expect(formatEvidenceLevel(undefined)).toBe("Evidence level pending");
+  });
+});
+
+describe("formatActionability", () => {
+  it("formats discuss with clinician state", () => {
+    expect(formatActionability("discuss_with_clinician")).toMatch(
+      /shared decisions/i,
+    );
+  });
+
+  it("formats unknown actionability", () => {
+    expect(formatActionability(undefined)).toMatch(/interpret carefully/i);
   });
 });

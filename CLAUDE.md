@@ -3,9 +3,10 @@
 ## Stack
 
 - **Framework:** React 18 + TypeScript
+- **Routing:** react-router-dom v7
 - **Build:** Vite 5
-- **Styling:** Tailwind CSS 3 + `tailwindcss-animate`
-- **UI primitives:** Radix UI (scroll-area), custom Card/Badge components
+- **Styling:** Tailwind CSS 3
+- **UI primitives:** Custom Card / Badge components
 - **Icons:** lucide-react
 - **Testing:** Vitest + Testing Library + jsdom
 - **Package manager:** pnpm
@@ -25,31 +26,40 @@
 
 ```
 src/
-  App.tsx                          # Root: ThemeProvider + ResearchDashboard
-  hooks/useResearchData.ts         # Fetches /data/research.json
-  lib/format.ts                    # formatDateTime, formatAuthors, buildArticleMeta
-  lib/types.ts                     # ResearchArticle, ResearchCategory, ResearchPayload, ResearchSource
-  lib/utils.ts                     # cn() utility
+  App.tsx                            # ThemeProvider + BrowserRouter routes
+  hooks/useResearchData.ts           # Fetches /data/research.json
+  lib/format.ts                      # formatDateTime, formatAuthors, buildArticleMeta
+  lib/types.ts                       # Research types
+  lib/utils.ts                       # cn() utility
+  pages/
+    LandingPage.tsx                  # / — hero + category grid + highlights + about + footer
+    CategoryPage.tsx                 # /category/:id — per-category article list
+  components/landing/
+    SiteNav.tsx                      # Sticky top nav with wordmark + theme toggle
+    HeroSection.tsx                  # Hero band with CTAs, brain illustration, metric tiles
+    CategoryIconCard.tsx             # Pastel-tint icon card (Cure / Diagnosis / Treatment / Prevention)
+    LatestHighlights.tsx             # Picks 3 most recent articles; exports formatPublishedShort
+    HighlightCard.tsx                # Gradient-header article card
+    AboutSection.tsx                 # Teal "About" block with value props
+    SiteFooter.tsx                   # Wordmark, legal links, donate CTA
   components/research/
-    ResearchDashboard.tsx          # Orchestrator (composes sub-components)
-    HeroPanel.tsx                  # Hero section with stat pills
-    CategoryCard.tsx               # Category card with article list
-    ArticleCard.tsx                # Single article item
-    SkeletonList.tsx               # Loading skeleton
-    SourcesPanel.tsx               # Data sources footer
-    constants.ts                   # FALLBACK_CATEGORIES, CATEGORY_ACCENTS, DEFAULT_SOURCES
+    ArticleCard.tsx                  # Single article item (used by CategoryPage)
+    SafetyPanel.tsx                  # Educational-use disclaimer (used by CategoryPage)
+    SourcesPanel.tsx                 # Data sources (used by CategoryPage)
+    SkeletonList.tsx                 # Article loading skeleton
+    constants.ts                     # FALLBACK_CATEGORIES, DEFAULT_SOURCES
   components/theme/
-    ThemeProvider.tsx               # Dark/light context + localStorage persistence
-    ThemeToggle.tsx                 # Toggle button
+    ThemeProvider.tsx                # Dark/light context + localStorage persistence
+    ThemeToggle.tsx                  # Toggle button
   components/ui/
-    card.tsx, badge.tsx, scroll-area.tsx  # Reusable UI primitives
+    card.tsx, badge.tsx              # Reusable UI primitives
 
 scripts/
-  fetchResearch.mjs                # PubMed esearch → esummary → efetch pipeline
-  validateData.mjs                 # Schema validation for research.json
+  fetchResearch.mjs                  # PubMed esearch → esummary → efetch pipeline
+  validateData.mjs                   # Schema validation for research.json
 
-data/research.json                 # Source of truth for article data
-public/data/research.json          # Copy served by dev server
+data/research.json                   # Source of truth for article data
+public/data/research.json            # Copy served at /data/research.json
 ```
 
 ## Conventions
@@ -58,12 +68,20 @@ public/data/research.json          # Copy served by dev server
 - Tailwind classes use `dark:` prefix for dark-mode variants
 - All external links use `target="_blank" rel="noreferrer noopener"`
 - Tests co-locate with source files (e.g., `ArticleCard.test.tsx` next to `ArticleCard.tsx`)
+- React Router tests wrap rendered trees in `<MemoryRouter>`
 - Format helpers tested in `src/lib/format.test.ts`
 - Hook tests mock `globalThis.fetch`
+
+## Routing
+
+- `/` → `LandingPage`
+- `/category/:id` → `CategoryPage` (valid ids: `diagnosis`, `treatment`, `prevention`)
+- Unknown paths redirect to `/`
 
 ## Data Flow
 
 1. `scripts/fetchResearch.mjs` queries PubMed and writes to `data/research.json` + `public/data/research.json`
-2. At runtime, `useResearchData` fetches `/data/research.json`
-3. `ResearchDashboard` receives `{ data, loading, error }` and renders sub-components
-4. If data is null or empty, fallback categories from `constants.ts` are used
+2. At runtime, pages call `useResearchData()` which fetches `/data/research.json`
+3. `LandingPage` derives a "Latest Highlights" set (top 3 by published date across categories) and populates the 3 data-backed category cards (Diagnosis / Treatment / Prevention); `Cure Research` is a static card
+4. `CategoryPage` renders a single category's articles using `ArticleCard`, with `SafetyPanel` + `SourcesPanel`
+5. If data is null or empty, fallback categories from `constants.ts` are used

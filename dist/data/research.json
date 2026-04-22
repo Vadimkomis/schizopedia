@@ -1,30 +1,337 @@
 {
-  "lastUpdated": null,
+  "lastUpdated": "2026-02-25T21:49:40.791Z",
   "categories": [
     {
       "id": "diagnosis",
       "title": "Diagnosis",
-      "summary": "Pending sync",
-      "articles": []
+      "summary": "Learn about innovative tools and biomarkers improving early and accurate diagnosis.",
+      "articles": [
+        {
+          "id": "41737726",
+          "title": "Sex-informed estrogen receptor modulation in schizophrenia: a male-focused ERβ/GPER1 framework for cognitive and negative symptoms.",
+          "journal": "Frontiers in psychiatry",
+          "published": "2025",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41737726/",
+          "authors": [
+            "Carlson J"
+          ],
+          "snippet": "Treatment-resistant schizophrenia (TRS) remains a major unmet clinical need, particularly in males who exhibit more severe negative and cognitive symptoms and limited responsiveness to dopamine-based therapies. Estrogenic signaling-especially thro...",
+          "studyType": "Observational study",
+          "evidenceLevel": "exploratory",
+          "actionability": "emerging_only",
+          "categoryTags": [
+            "diagnosis"
+          ]
+        },
+        {
+          "id": "41733634",
+          "title": "Early-Age onset of psychotic spectrum symptoms is highly prevalent and associated with greater illness severity in schizophrenia spectrum disorders that develop later in life.",
+          "journal": "Social psychiatry and psychiatric epidemiology",
+          "published": "2026 Feb 24",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41733634/",
+          "authors": [
+            "Carmellini P",
+            "Cuomo A",
+            "Magno M",
+            "Martella D",
+            "De Girolamo G"
+          ],
+          "snippet": "Early identification of symptoms in schizophrenia spectrum disorders (SSD) may improve clinical outcomes, yet the temporal trajectory and prognostic relevance of initial symptom dimensions remain unclear. This study aimed to identify the earliest ...",
+          "studyType": "Observational study",
+          "evidenceLevel": "exploratory",
+          "actionability": "emerging_only",
+          "categoryTags": [
+            "diagnosis",
+            "treatment",
+            "risk-reduction"
+          ]
+        },
+        {
+          "id": "41732835",
+          "title": "Channel Graph Neural Network Revealing Multimodal Brain Connectivity Abnormalities in Schizophrenia.",
+          "journal": "International journal of neural systems",
+          "published": "2026 May",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41732835/",
+          "authors": [
+            "Gong J",
+            "Ma R",
+            "Rodriguez-Labrada R",
+            "Zhu Y",
+            "Lin H"
+          ],
+          "snippet": "Investigating abnormal brain network characteristics in schizophrenia can improve our understanding of disease mechanisms and help identify potential intervention targets. Graph learning techniques can capture high-dimensional features of large-sc...",
+          "studyType": "Observational study",
+          "evidenceLevel": "exploratory",
+          "actionability": "emerging_only",
+          "categoryTags": [
+            "diagnosis"
+          ]
+        },
+        {
+          "id": "41732642",
+          "title": "Exploring the Connection Between Thyroid Health and Psychiatric Disorders: A Comprehensive Review With a Focus on Schizophrenia and Bipolar Disorder.",
+          "journal": "Cureus",
+          "published": "2026 Jan",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41732642/",
+          "authors": [
+            "Al Qaderi AH",
+            "Osman AA",
+            "Manasrah H",
+            "Ali MZ",
+            "Al Qaderi N"
+          ],
+          "snippet": "The interplay between thyroid dysfunction and major psychiatric disorders, particularly schizophrenia and bipolar disorder, represents a critical area of research with significant implications for diagnosis and management. Thyroid dysfunction mani...",
+          "studyType": "Review",
+          "evidenceLevel": "synthesis",
+          "actionability": "discuss_with_clinician",
+          "categoryTags": [
+            "diagnosis",
+            "treatment"
+          ]
+        },
+        {
+          "id": "41731301",
+          "title": "Identification of a diagnosis-selective neurobiological substrate for bipolar disorder, major depressive disorder, and schizophrenia: a meta-analysis of 57,717 subjects.",
+          "journal": "Psychological medicine",
+          "published": "2026 Feb 24",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41731301/",
+          "authors": [
+            "Liloia D",
+            "Rocca P",
+            "Brasso C",
+            "Tanaka M",
+            "Manuello J"
+          ],
+          "snippet": "Neuroimaging studies have consistently revealed neuroanatomical abnormalities in individuals with bipolar disorder (BD), major depressive disorder (MDD), and schizophrenia (SZ). However, it remains unknown whether and to what extent disorder-selec...",
+          "studyType": "Review",
+          "evidenceLevel": "synthesis",
+          "actionability": "discuss_with_clinician",
+          "categoryTags": [
+            "diagnosis"
+          ]
+        }
+      ]
     },
     {
       "id": "treatment",
       "title": "Treatment",
-      "summary": "Pending sync",
-      "articles": []
+      "summary": "Explore emerging therapies, medications, and approaches improving quality of life.",
+      "articles": [
+        {
+          "id": "41738648",
+          "title": "Long-Term Impact of EGUIDE Training on Facility-Wide Guideline Adherence Rate in Schizophrenia and Major Depressive Disorder-A Methodological Reflection.",
+          "journal": "Neuropsychopharmacology reports",
+          "published": "2026 Mar",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41738648/",
+          "authors": [
+            "Rizvi GS"
+          ],
+          "snippet": "This Letter highlights crucial methodological flaws, including selection bias and ignored data clustering, in the EGUIDE training impact study. We recommend adopting quasiexperimental designs, multilevel modeling, and patient-centered outcomes to ...",
+          "studyType": "Observational study",
+          "evidenceLevel": "exploratory",
+          "actionability": "emerging_only",
+          "categoryTags": [
+            "treatment"
+          ]
+        },
+        {
+          "id": "41737960",
+          "title": "Empowerment-based case management for treatment-resistant schizophrenia: a three-year single case report.",
+          "journal": "Frontiers in psychiatry",
+          "published": "2026",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41737960/",
+          "authors": [
+            "Wang C",
+            "Li X",
+            "Chen J",
+            "Li X",
+            "Hou W"
+          ],
+          "snippet": "This case report describes the implementation and observed outcomes of an empowerment-oriented case management approach in a patient with treatment-resistant schizophrenia (TRS), addressing the limitations of conventional approaches that often neg...",
+          "studyType": "Observational study",
+          "evidenceLevel": "exploratory",
+          "actionability": "emerging_only",
+          "categoryTags": [
+            "treatment"
+          ]
+        },
+        {
+          "id": "41737958",
+          "title": "Advances in implementation strategies for treatment adherence in schizophrenia: a narrative review.",
+          "journal": "Frontiers in psychiatry",
+          "published": "2026",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41737958/",
+          "authors": [
+            "Shen Y",
+            "Wu X"
+          ],
+          "snippet": "Schizophrenia is a chronic, relapsing mental illness where poor treatment adherence is a core challenge, significantly contributing to relapse and poor prognosis. Despite the efficacy of current pharmacotherapy, non-adherence rates are high. This ...",
+          "studyType": "Review",
+          "evidenceLevel": "synthesis",
+          "actionability": "discuss_with_clinician",
+          "categoryTags": [
+            "treatment"
+          ]
+        },
+        {
+          "id": "41737148",
+          "title": "Prescriber- and Patient-Level Characteristics Associated with Patient Adherence to Any Antipsychotics Among Patients with Schizophrenia in the United States.",
+          "journal": "Patient preference and adherence",
+          "published": "2026",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41737148/",
+          "authors": [
+            "Voegel A",
+            "Naranjo RR Jr",
+            "Diaz L",
+            "Vanden Eynde C",
+            "Wang Y"
+          ],
+          "snippet": "Antipsychotic (AP) medication adherence is important for the management of schizophrenia. This study thus aimed to evaluate prescriber- and patient-level characteristics and long-acting injectable (LAI) treatment use among patients with schizophre...",
+          "studyType": "Observational study",
+          "evidenceLevel": "exploratory",
+          "actionability": "emerging_only",
+          "categoryTags": [
+            "treatment"
+          ]
+        },
+        {
+          "id": "41737140",
+          "title": "Quality of Life After Psychosis: Surviving Schizophrenia and Making a Full Emotional Recovery.",
+          "journal": "Schizophrenia bulletin open",
+          "published": "2026",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41737140/",
+          "authors": [
+            "Ryan SM"
+          ],
+          "snippet": "Abstract unavailable in PubMed metadata. Open PubMed for details.",
+          "studyType": "Observational study",
+          "evidenceLevel": "exploratory",
+          "actionability": "emerging_only",
+          "categoryTags": [
+            "treatment"
+          ]
+        }
+      ]
     },
     {
-      "id": "prevention",
+      "id": "risk-reduction",
       "title": "Prevention",
-      "summary": "Pending sync",
-      "articles": []
+      "summary": "Stay informed on research focused on reducing risk factors and promoting brain health.",
+      "articles": [
+        {
+          "id": "41734274",
+          "title": "Risperidone-ISM(®) effectiveness and tolerability in acute schizophrenia patients hospitalised due to a relapse: results from an international, prospective, non-interventional evaluation (RESHAPE study).",
+          "journal": "The world journal of biological psychiatry : the official journal of the World Federation of Societies of Biological Psychiatry",
+          "published": "2026 Feb 24",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41734274/",
+          "authors": [
+            "Correll CU",
+            "Rohner H",
+            "Dimalta S",
+            "Göldner RS",
+            "Assion HJ"
+          ],
+          "snippet": "To evaluate the effectiveness, time to discharge, functioning, and tolerability of Risperidone-ISM&#xae; in hospitalised patients with schizophrenia relapse. Non-interventional, multicentre, prospective study of adults admitted for acute exacerbat...",
+          "studyType": "Observational study",
+          "evidenceLevel": "exploratory",
+          "actionability": "emerging_only",
+          "categoryTags": [
+            "risk-reduction"
+          ]
+        },
+        {
+          "id": "41732164",
+          "title": "Speech under stress: Affective and cognitive reactivity in schizophrenia and their functional correlates.",
+          "journal": "Schizophrenia research. Cognition",
+          "published": "2026 Mar",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41732164/",
+          "authors": [
+            "Minor KS",
+            "Russell MT",
+            "Myers EJ",
+            "Satchivi AT",
+            "Brown-Hughston ME"
+          ],
+          "snippet": "Disorganized speech is a core diagnostic criterion of schizophrenia, yet mechanisms driving its variability remain unclear. Building on evidence from schizotypy and first-episode psychosis literature, we examined whether affective and cognitive sy...",
+          "studyType": "Observational study",
+          "evidenceLevel": "exploratory",
+          "actionability": "emerging_only",
+          "categoryTags": [
+            "treatment",
+            "risk-reduction"
+          ]
+        },
+        {
+          "id": "41731284",
+          "title": "A systematic review on dysconnectivity in face and emotion processing networks in schizophrenia.",
+          "journal": "Cognitive, affective & behavioral neuroscience",
+          "published": "2026 Feb 24",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41731284/",
+          "authors": [
+            "Harikumar A",
+            "Dai J",
+            "Walker EF",
+            "Calhoun VD"
+          ],
+          "snippet": "Schizophrenia is a complex psychiatric disorder that affects approximately 20 million people worldwide. Patients show face-processing deficits that significantly affect their social interactions and social cognitive abilities (e.g., recognizing hu...",
+          "studyType": "Review",
+          "evidenceLevel": "synthesis",
+          "actionability": "discuss_with_clinician",
+          "categoryTags": [
+            "risk-reduction"
+          ]
+        },
+        {
+          "id": "41730352",
+          "title": "Readiness to change: Exploring clinical, cognitive and neural predictors of treatment efficacy following virtual reality-based cognitive remediation in mood and schizophrenia spectrum disorders.",
+          "journal": "Journal of affective disorders",
+          "published": "2026 Feb 21",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41730352/",
+          "authors": [
+            "Jespersen AE",
+            "Montejo L",
+            "Damgaard V",
+            "Macoveanu J",
+            "Fortea L"
+          ],
+          "snippet": "Virtual reality-based cognitive remediation therapy (VR-CRT) offers an ecologically valid approach to enhance real-world cognitive functioning in mood disorders (MD) or schizophrenia spectrum disorders (SSD). This study investigated baseline cogni...",
+          "studyType": "Observational study",
+          "evidenceLevel": "exploratory",
+          "actionability": "emerging_only",
+          "categoryTags": [
+            "diagnosis",
+            "treatment",
+            "risk-reduction"
+          ]
+        },
+        {
+          "id": "41726271",
+          "title": "Disability, quality of life, and family burden in treatment naïve patients with schizophrenia and obsessive-compulsive disorder: A comparative study.",
+          "journal": "Industrial psychiatry journal",
+          "published": "2026 Jan-Apr",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41726271/",
+          "authors": [
+            "Patel AS",
+            "Jeenger J",
+            "Kumawat AK"
+          ],
+          "snippet": "Numerous studies have explored the dysfunction experienced by patients and their families due to psychotic disorders such as schizophrenia. However, there is a paucity of research comparing schizophrenia with neurotic disorders like obsessive-comp...",
+          "studyType": "Observational study",
+          "evidenceLevel": "exploratory",
+          "actionability": "emerging_only",
+          "categoryTags": [
+            "treatment",
+            "risk-reduction"
+          ]
+        }
+      ]
     }
   ],
   "sources": [
     {
-      "name": "PubMed (NIH)",
+      "name": "PubMed",
       "url": "https://pubmed.ncbi.nlm.nih.gov/",
-      "description": "Peer-reviewed biomedical literature"
+      "description": "The National Institutes of Health's free database of medical research."
     }
   ]
 }

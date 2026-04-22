@@ -6,6 +6,10 @@ export interface ResearchArticle {
   url: string;
   authors?: string[];
   snippet?: string;
+  studyType?: string;
+  evidenceLevel?: "exploratory" | "clinical" | "synthesis";
+  actionability?: "learn" | "discuss_with_clinician" | "emerging_only";
+  categoryTags?: string[];
 }
 
 export interface ResearchCategory {

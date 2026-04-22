@@ -22,3 +22,27 @@ export function buildArticleMeta(article: ResearchArticle) {
     .filter(Boolean)
     .join(" • ");
 }
+
+export function formatEvidenceLevel(
+  level?: ResearchArticle["evidenceLevel"],
+) {
+  if (level === "synthesis") return "Higher-level synthesis";
+  if (level === "clinical") return "Clinical evidence";
+  if (level === "exploratory") return "Early-stage evidence";
+  return "Evidence level pending";
+}
+
+export function formatActionability(
+  actionability?: ResearchArticle["actionability"],
+) {
+  if (actionability === "discuss_with_clinician") {
+    return "Useful for shared decisions with a licensed clinician.";
+  }
+  if (actionability === "learn") {
+    return "Useful for learning and preparing informed questions.";
+  }
+  if (actionability === "emerging_only") {
+    return "Promising but early. Not ready for direct personal action.";
+  }
+  return "Interpret carefully and verify details on PubMed.";
+}

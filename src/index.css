@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Public+Sans:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -13,111 +13,126 @@
 }
 
 body {
-  @apply bg-gradient-to-b from-rose-50 via-white to-indigo-50 text-slate-900 antialiased;
-  background-image: radial-gradient(
-      circle at 20% -10%,
-      rgba(248, 113, 113, 0.25),
-      transparent 45%
-    ),
-    radial-gradient(
-      circle at 80% 0%,
-      rgba(96, 165, 250, 0.18),
-      transparent 45%
-    ),
-    linear-gradient(180deg, #fffdf8 0%, #fef6f8 40%, #edf2ff 100%);
+  @apply bg-white text-slate-900 antialiased;
   min-height: 100vh;
 }
 
 .dark body {
-  @apply bg-slate-950 text-slate-100 antialiased;
-  background-image: radial-gradient(
-      circle at top,
-      rgba(59, 130, 246, 0.15),
-      transparent 55%
-    ),
-    linear-gradient(180deg, #020617 0%, #020617 65%, #05031a 100%);
+  @apply bg-[#0b1220] text-slate-100;
 }
 
 #root {
   min-height: 100vh;
 }
 
-.grid-overlay {
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(
-      rgba(15, 23, 42, 0.08) 1px,
-      transparent 1px
-    ),
-    linear-gradient(90deg, rgba(15, 23, 42, 0.08) 1px, transparent 1px);
-  background-size: 44px 44px;
-  mask-image: radial-gradient(circle at 50% 0%, black, transparent 70%);
-  opacity: 0.4;
-  pointer-events: none;
-}
-
-.dark .grid-overlay {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.05) 1px,
-      transparent 1px
-    ),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  opacity: 0.25;
-}
-
-.glow-card {
-  position: relative;
-  isolation: isolate;
-}
-
-.glow-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 1px;
+/* --- Hero gradient band --- */
+.hero-band {
   background: linear-gradient(
-    135deg,
-    rgba(248, 113, 113, 0.6),
-    rgba(14, 165, 233, 0.6),
-    rgba(79, 70, 229, 0.35)
+    180deg,
+    #f0f6ff 0%,
+    #eaf1ff 45%,
+    #eef4ff 100%
   );
-  -webkit-mask:
-    linear-gradient(#000, #000) content-box,
-    linear-gradient(#000, #000);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0.75;
 }
 
-.dark .glow-card::before {
+.dark .hero-band {
   background: linear-gradient(
-    135deg,
-    rgba(14, 165, 233, 0.5),
-    rgba(217, 70, 239, 0.5),
-    rgba(14, 116, 144, 0.25)
+    180deg,
+    #0f1a2e 0%,
+    #0d1628 60%,
+    #0b1220 100%
   );
 }
 
-.glow-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: radial-gradient(
-    circle at 30% 20%,
-    rgba(251, 113, 133, 0.35),
-    transparent 55%
-  );
-  filter: blur(35px);
-  opacity: 0.6;
-  z-index: -1;
+/* --- Decorative brain network backdrop (radial glow + dots) --- */
+.brain-glow {
+  background:
+    radial-gradient(circle at 50% 45%, rgba(59, 130, 246, 0.25), transparent 55%),
+    radial-gradient(circle at 30% 70%, rgba(99, 102, 241, 0.18), transparent 60%),
+    radial-gradient(circle at 70% 30%, rgba(56, 189, 248, 0.18), transparent 55%);
 }
 
-.dark .glow-card::after {
-  background: radial-gradient(
-    circle at 30% 20%,
-    rgba(59, 130, 246, 0.35),
-    transparent 55%
-  );
+.dark .brain-glow {
+  background:
+    radial-gradient(circle at 50% 45%, rgba(59, 130, 246, 0.35), transparent 55%),
+    radial-gradient(circle at 30% 70%, rgba(99, 102, 241, 0.28), transparent 60%),
+    radial-gradient(circle at 70% 30%, rgba(56, 189, 248, 0.28), transparent 55%);
+}
+
+/* --- Pastel icon tints for category cards --- */
+.tint-mint {
+  background-color: #ecfdf5;
+  color: #047857;
+}
+.tint-sky {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+}
+.tint-violet {
+  background-color: #f5f3ff;
+  color: #6d28d9;
+}
+.tint-emerald {
+  background-color: #ecfdf5;
+  color: #065f46;
+}
+
+.dark .tint-mint {
+  background-color: rgba(16, 185, 129, 0.14);
+  color: #6ee7b7;
+}
+.dark .tint-sky {
+  background-color: rgba(59, 130, 246, 0.16);
+  color: #93c5fd;
+}
+.dark .tint-violet {
+  background-color: rgba(139, 92, 246, 0.16);
+  color: #c4b5fd;
+}
+.dark .tint-emerald {
+  background-color: rgba(5, 150, 105, 0.18);
+  color: #6ee7b7;
+}
+
+/* --- Highlight card gradient placeholders (no photo required) --- */
+.highlight-gradient-neuro {
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.35), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.25), transparent 45%),
+    linear-gradient(135deg, #0b1e4a 0%, #1e3a8a 50%, #3b82f6 100%);
+}
+.highlight-gradient-scan {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.3), transparent 40%),
+    radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.2), transparent 45%),
+    linear-gradient(135deg, #0f172a 0%, #1e40af 60%, #60a5fa 100%);
+}
+.highlight-gradient-lab {
+  background:
+    radial-gradient(circle at 25% 75%, rgba(255, 255, 255, 0.35), transparent 40%),
+    radial-gradient(circle at 75% 25%, rgba(255, 255, 255, 0.2), transparent 45%),
+    linear-gradient(135deg, #0e7490 0%, #0891b2 50%, #67e8f9 100%);
+}
+
+/* --- Stagger fade-in for hero children --- */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fade-up 500ms ease both;
+}
+
+/* --- Focus ring override for light background --- */
+:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
+  border-radius: 4px;
 }

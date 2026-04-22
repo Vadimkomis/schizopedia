@@ -1,48 +1,130 @@
 # Schizopedia Features
 
-## Research Directory
+```gherkin
+Feature: Research data pipeline
 
-| Feature | Status | Description |
-|---------|--------|-------------|
-| PubMed data pipeline | completed | Fetches articles from PubMed's esearch/esummary/efetch APIs for diagnosis, treatment, and prevention categories |
-| Real abstracts | completed | Snippets are real abstract excerpts (up to 250 chars) from efetch, not DOIs |
-| Diagnosis category | completed | Articles on early detection, biomarkers, imaging, and screening tools |
-| Treatment category | completed | Articles on medications, psychotherapy, and intervention approaches |
-| Prevention category | completed | Articles on prodromal signs, risk reduction, and early intervention |
-| Data validation | completed | `scripts/validateData.mjs` ensures structural integrity of research.json |
+  Scenario: Fetch articles from PubMed
+    Given the fetch script is configured with diagnosis, treatment, and prevention queries
+    When `pnpm fetch` runs
+    Then articles are written to data/research.json and public/data/research.json with real abstract snippets, evidence metadata, and deduped IDs
+    And the status is "completed"
 
-## UI & Design
+  Scenario: Validate research.json before test runs
+    Given a research.json file exists
+    When `pnpm validate:data` runs as part of `pnpm test`
+    Then structural integrity, required fields, duplicate IDs, and placeholder snippets are checked
+    And the status is "completed"
 
-| Feature | Status | Description |
-|---------|--------|-------------|
-| Hero panel | completed | Displays site heading, description, and live stat pills (last refresh, article count, category count) |
-| Tabbed categories | completed | Diagnosis, Treatment, and Prevention as switchable tabs (Radix UI), each with scrollable content |
-| Article cards | completed | Each article shows title, journal/authors/date meta, abstract snippet, and PubMed link |
-| Loading skeletons | completed | Pulse-animated placeholders while data loads |
-| Sources panel | completed | Footer section showing data sources with visit links |
-| Dark/light theme toggle | completed | Persisted toggle using localStorage, respects system preference |
-| Light mode text fix | completed | Category index numbers visible in both light and dark modes |
+Feature: Landing page
 
-## Accessibility
+  Scenario: Hero section with primary CTAs
+    Given a visitor lands on /
+    When the page renders
+    Then they see the headline "Understand the Latest Research on Schizophrenia", the supporting description, and two CTAs: filled "Explore Research" and outlined "Learn More"
+    And a decorative brain illustration with three metric tiles (brain, trend spark, research progress ring) appears on the right
+    And the status is "completed"
 
-| Feature | Status | Description |
-|---------|--------|-------------|
-| Skip navigation link | completed | sr-only link to jump past hero to research categories |
-| Decorative dot aria-hidden | completed | Green dots in article cards hidden from screen readers |
-| Semantic landmarks | completed | Sections use proper ARIA attributes (aria-busy, aria-live) |
+  Scenario: Four category entry cards
+    Given a visitor views the category grid
+    When the section renders
+    Then four cards are shown: Cure Research (static), Diagnosis, Treatment, and Prevention, each with a pastel circular icon, title, description, and "Learn more →" link
+    And the backing categories deep-link to /category/:id detail pages
+    And the status is "completed"
 
-## SEO
+  Scenario: Latest research highlights
+    Given research data has loaded
+    When the highlights section renders
+    Then the three most recently published articles across all categories are shown as cards with a gradient placeholder header, category chip (Neuroscience / Imaging / Biomarkers), published date, title, truncated abstract, and "Read summary →" link to PubMed
+    And while loading without any data, three skeleton cards are displayed instead
+    And the status is "completed"
 
-| Feature | Status | Description |
-|---------|--------|-------------|
-| Meta description | completed | Description meta tag for search engines |
-| Open Graph tags | completed | og:title, og:description, og:type for social sharing |
-| Twitter card tags | completed | twitter:card, twitter:title, twitter:description |
+  Scenario: About section
+    Given a visitor scrolls to the about block
+    When the section renders
+    Then a mint-tinted rounded card shows the "About Schizopedia" eyebrow, the headline "Making Research Accessible. Empowering Minds.", a mission paragraph, an orbital brain illustration, and three value props (Evidence-Based, Accessible for All, Independent & Trusted)
+    And the status is "completed"
 
-## Planned
+  Scenario: Site footer with donate CTA
+    Given a visitor reaches the footer
+    When it renders
+    Then the Schizopedia wordmark, tagline "Knowledge today. Better tomorrows.", Privacy and Terms links, and a filled Donate button (opens externally) are visible
+    And the status is "completed"
 
-| Feature | Status | Description |
-|---------|--------|-------------|
-| Search/filter articles | planned | Allow users to search within articles by keyword |
-| Article bookmarking | planned | Let users save articles to revisit later |
-| Automated weekly refresh | planned | GitHub Actions cron job to run fetch script weekly |
+Feature: Category detail page
+
+  Scenario: Per-category article list
+    Given a visitor navigates to /category/diagnosis (or /treatment, /prevention)
+    When the page renders
+    Then the category title and summary appear in the hero band, followed by the SafetyPanel, the full article list (ArticleCard per study), and the SourcesPanel
+    And the status is "completed"
+
+  Scenario: Unknown category redirect
+    Given a visitor navigates to /category/unknown-id
+    When the router resolves
+    Then they are redirected to the landing page
+    And the status is "completed"
+
+  Scenario: Empty category state
+    Given a category has zero articles in data/research.json
+    When the detail page renders
+    Then a "No articles indexed for this category yet" placeholder is shown instead of the article list
+    And the status is "completed"
+
+Feature: Site chrome
+
+  Scenario: Sticky top navigation
+    Given a visitor is on any route
+    When they scroll
+    Then a sticky white/translucent nav persists with the Schizopedia wordmark (links to /), Research/Diagnosis/Treatment/Prevention links, and a theme toggle on desktop
+    And the status is "completed"
+
+  Scenario: Dark/light theme toggle
+    Given a visitor clicks the theme toggle
+    When the theme changes
+    Then the preference is persisted to localStorage and every surface (hero band, cards, illustrations, gradients) adapts
+    And the status is "completed"
+
+Feature: Content safety
+
+  Scenario: Educational-use disclaimer on category pages
+    Given a visitor views any category detail page
+    When the page renders
+    Then a "Read this first" safety panel is shown explaining the library is for learning, not diagnosis, and how to escalate emergencies
+    And the status is "completed"
+
+Feature: Accessibility
+
+  Scenario: Semantic landmarks and hidden decorations
+    Given assistive-tech users browse the site
+    When they navigate
+    Then the page uses landmark regions (header, main, footer), headings flow 1→2→3, decorative icons and illustrations are aria-hidden, and the highlight card provides a meaningful aria-label for its "Read summary" link
+    And the status is "completed"
+
+Feature: SEO
+
+  Scenario: Meta and social tags
+    Given a crawler or social card generator fetches /
+    When index.html is served
+    Then meta description, Open Graph (og:title, og:description, og:type), and Twitter card tags are present
+    And the status is "completed"
+
+Feature: Planned
+
+  Scenario: Search across articles
+    Given a visitor wants to find a specific topic
+    When they use a future search input
+    Then articles across categories are filtered by keyword
+    And the status is "planned"
+
+  Scenario: Automated weekly data refresh
+    Given the PubMed feed updates over time
+    When a GitHub Actions cron job runs weekly
+    Then `pnpm fetch` is executed and the updated data/research.json is committed
+    And the status is "planned"
+
+  Scenario: Real imagery on highlight cards
+    Given placeholder gradients are acceptable but not ideal
+    When per-article image URLs are added to data/research.json
+    Then HighlightCard renders the photo with the gradient as fallback
+    And the status is "planned"
+```
