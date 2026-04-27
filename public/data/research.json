@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-13T09:30:42.802Z",
+  "lastUpdated": "2026-04-27T09:41:02.021Z",
   "categories": [
     {
       "id": "diagnosis",
@@ -7,79 +7,77 @@
       "summary": "Learn about innovative tools and biomarkers improving early and accurate diagnosis.",
       "articles": [
         {
-          "id": "41967301",
-          "title": "Development and evaluation of a predictive biomarker model based on the niacin flush pathway for differentiating schizophrenia and bipolar disorder.",
-          "journal": "Schizophrenia research",
-          "published": "2026 Apr 11",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41967301/",
+          "id": "42036035",
+          "title": "EEG-based schizophrenia detection using handcrafted biomarkers and a TOA-optimized hybrid multi-branch CNN-Transformer framework.",
+          "journal": "Brain research bulletin",
+          "published": "2026 Apr 24",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42036035/",
           "authors": [
-            "Wu CJ",
-            "Lin JJ",
-            "Huang CC",
-            "Tseng HH",
-            "Cheng WL"
+            "Rezaee K",
+            "Dehghanpour M",
+            "Anari MS"
           ],
-          "snippet": "Our previous study demonstrated that the niacin flush response and pathway biomarkers could differentiate schizophrenia patients from healthy controls. Whether these biomarkers also distinguish schizophrenia from bipolar disorder remains unclear. ..."
+          "snippet": "Schizophrenia is a chronic psychiatric disorder for which electroencephalography (EEG) offers a low-cost, non-invasive window into abnormal neural dynamics. However, many EEG-based computer-aided diagnosis (CAD) pipelines still rely on a single fe..."
         },
         {
-          "id": "41965717",
-          "title": "Correlation networks of blood proteins in the neuroimmunology of schizophrenia-replication and extension.",
-          "journal": "Translational psychiatry",
-          "published": "2026 Apr 11",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41965717/",
+          "id": "42034651",
+          "title": "Blood levels of D-aspartate oxidase, D-amino acid oxidase, serine racemase, and pLG72 are influenced by diagnoses of schizophrenia and autism spectrum disorder.",
+          "journal": "Schizophrenia (Heidelberg, Germany)",
+          "published": "2026 Apr 25",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42034651/",
           "authors": [
-            "Jeffries CD",
-            "Bizon CA",
-            "Ford JR",
-            "Addington J",
-            "Bearden CE"
+            "Maffioli E",
+            "Errico F",
+            "Motta Z",
+            "di Vito R",
+            "Grana J"
           ],
-          "snippet": "The Pearson sample correlation between two biomarkers across a group of individuals can sometimes be much stronger than expected by chance. In the context of psychosis risk, we previously analyzed blood plasma protein data from initial presentatio..."
+          "snippet": "Free D-serine (D-Ser) and D-aspartate (D-Asp) are increasingly recognized as key modulators of glutamatergic NMDA receptor-dependent neurotransmission, whose dysfunction has been implicated in neuropsychiatric conditions, including schizophrenia (..."
         },
         {
-          "id": "41965134",
-          "title": "Association of physical function with cardiovascular risk in middle-aged and older patients with schizophrenia.",
-          "journal": "Journal of psychosomatic research",
-          "published": "2026 Apr 8",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41965134/",
+          "id": "42034252",
+          "title": "Seasonal longitudinal effects of winter birth on psychopathology, cognition, and functioning in schizophrenia-spectrum and affective disorders: Findings from the PsyCourse Study.",
+          "journal": "Journal of affective disorders",
+          "published": "2026 Apr 23",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42034252/",
           "authors": [
-            "Wang M",
-            "Yin A",
-            "Zhang K",
-            "Song X",
-            "Wang B"
+            "Pérez-Ramos A",
+            "Budde M",
+            "Adorjan K",
+            "Amoretti S",
+            "Anghelescu IG"
           ],
-          "snippet": "Cardiovascular disease is a leading cause of mortality among patients with schizophrenia. Impaired physical function may contribute to the elevated cardiovascular risk in this population. This study aimed to examine the association between physica..."
+          "snippet": "Winter birth (WB) is a replicated risk factor for mental health conditions, potentially due to third-trimester Vitamin D deficiency and maternal viral infections. Beyond diagnosis, WB is associated with psychopathology, cognition, and functionalit..."
         },
         {
-          "id": "41963987",
-          "title": "Associations of inflammatory biomarkers with brain atrophy and clinical scores in schizophrenia patients with autistic features.",
-          "journal": "BMC research notes",
+          "id": "42034251",
+          "title": "Core microRNAs bridging peripheral transcriptomic alterations, brain functional abnormalities, and clinical symptomatology in schizophrenia.",
+          "journal": "Journal of affective disorders",
+          "published": "2026 Apr 23",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42034251/",
+          "authors": [
+            "Liu YH",
+            "Han YK",
+            "Ala M",
+            "Ge JM",
+            "Ma F"
+          ],
+          "snippet": "This study adopted a comprehensive multi-omics approach integrating blood microRNA (miRNA) transcriptomic profiles, resting-state functional magnetic resonance imaging (rs-fMRI) neuroimaging data, and clinical symptomatology to elucidate the molec..."
+        },
+        {
+          "id": "42032975",
+          "title": "The Immediate and Sustained Effects of Multi-Session Biparietal Transcranial Direct Current Stimulation on Insight in Schizophrenia.",
+          "journal": "Schizophrenia bulletin",
           "published": "2026 Apr 10",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41963987/",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42032975/",
           "authors": [
-            "Wang J",
-            "Shen J",
-            "Pang Y",
-            "Liu J",
-            "Zhao L"
+            "Song J",
+            "Kim J",
+            "Carmona-Torres E",
+            "Kambari Y",
+            "Ueno F"
           ],
-          "snippet": "View full article on PubMed"
-        },
-        {
-          "id": "41962430",
-          "title": "The role of cognitive schemas in personal recovery, symptom severity, and functioning in schizophrenia-spectrum disorders.",
-          "journal": "Schizophrenia research",
-          "published": "2026 Apr 9",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41962430/",
-          "authors": [
-            "Hamzai HV",
-            "D'Arcey J",
-            "Jagtap S",
-            "Leibovitz T",
-            "Martins F"
-          ],
-          "snippet": "Negative cognitive schemas about the self and others are prevalent in schizophrenia-spectrum disorders (SSDs) and are associated with symptom severity. Recent conceptualizations of recovery emphasize functional and personal outcomes in addition to..."
+          "snippet": "Impaired insight into illness affects up to 95% of individuals with schizophrenia, depending on the stage of illness, and is a predictor of antipsychotic nonadherence and poor clinical outcomes. Despite its importance, no effective treatment exist..."
         }
       ]
     },
@@ -89,79 +87,77 @@
       "summary": "Explore emerging therapies, medications, and approaches improving quality of life.",
       "articles": [
         {
-          "id": "41967302",
-          "title": "Structural and construct validity assessment of the schizophrenia cognition rating scale (SCoRS) using data from three international phase 3 randomized controlled trials (CONNEX programme).",
-          "journal": "Schizophrenia research",
-          "published": "2026 Apr 11",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41967302/",
+          "id": "42036735",
+          "title": "Efficacy and Safety of Olanzapine Long-acting Injection in Schizophrenia and Schizoaffective Disorder: A Systematic Review and Meta-analysis.",
+          "journal": "Clinical psychopharmacology and neuroscience : the official scientific journal of the Korean College of Neuropsychopharmacology",
+          "published": "2026 May 31",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42036735/",
           "authors": [
-            "Pascoe B",
-            "Cocks K",
-            "Clarke N",
-            "Langevin N",
-            "Fowler C"
+            "Joseph JT",
+            "Vishwanath R",
+            "Shenoy S"
           ],
-          "snippet": "Cognitive impairment associated with schizophrenia (CIAS) is a fundamental symptom of the disorder, which significantly affects individuals' daily functioning and overall quality of life. Currently available antipsychotic drugs have little benefic..."
+          "snippet": "Olanzapine long-acting injection (LAI) is a second-generation antipsychotic used in patients with schizophrenia-spectrum disorders, particularly those with poor adherence. However, evidence on its comparative efficacy, safety, and tolerability rem..."
         },
         {
-          "id": "41966036",
-          "title": "Two patterns of abnormal FA with different radial features and their relation to polygenic risks in first-episode schizophrenia and unaffected siblings.",
-          "journal": "Journal of psychiatric research",
-          "published": "2026 Apr 7",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41966036/",
+          "id": "42034849",
+          "title": "A frontotemporal dementia-like phenotype in schizophrenia: links to striatal dopamine and iron accumulation.",
+          "journal": "Neuropsychopharmacology : official publication of the American College of Neuropsychopharmacology",
+          "published": "2026 Apr 25",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42034849/",
           "authors": [
-            "Huang W",
-            "Liu Z",
-            "Tan W",
-            "Chen X",
-            "Wu G"
+            "Chang X",
+            "Bryant L",
+            "Mena Ortega S",
+            "Howes O",
+            "Sedlacik J"
           ],
-          "snippet": "White matter microstructure abnormalities have been widely observed in schizophrenia, closely associated with clinical symptoms and cognitive deficits. While various alterations have been suggested, the nature of their specific patterns and underl..."
+          "snippet": "Some schizophrenia patients share characteristics with behavioral variant frontotemporal dementia (bvFTD) including gray matter volume (GMV) similarities, suggesting overlapping brain mechanisms that may contribute to disease heterogeneity in schi..."
         },
         {
-          "id": "41965717",
-          "title": "Correlation networks of blood proteins in the neuroimmunology of schizophrenia-replication and extension.",
-          "journal": "Translational psychiatry",
-          "published": "2026 Apr 11",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41965717/",
+          "id": "42034651",
+          "title": "Blood levels of D-aspartate oxidase, D-amino acid oxidase, serine racemase, and pLG72 are influenced by diagnoses of schizophrenia and autism spectrum disorder.",
+          "journal": "Schizophrenia (Heidelberg, Germany)",
+          "published": "2026 Apr 25",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42034651/",
           "authors": [
-            "Jeffries CD",
-            "Bizon CA",
-            "Ford JR",
-            "Addington J",
-            "Bearden CE"
+            "Maffioli E",
+            "Errico F",
+            "Motta Z",
+            "di Vito R",
+            "Grana J"
           ],
-          "snippet": "The Pearson sample correlation between two biomarkers across a group of individuals can sometimes be much stronger than expected by chance. In the context of psychosis risk, we previously analyzed blood plasma protein data from initial presentatio..."
+          "snippet": "Free D-serine (D-Ser) and D-aspartate (D-Asp) are increasingly recognized as key modulators of glutamatergic NMDA receptor-dependent neurotransmission, whose dysfunction has been implicated in neuropsychiatric conditions, including schizophrenia (..."
         },
         {
-          "id": "41965146",
-          "title": "Genetic interactions between bioactive ingredients in traditional Chinese medicine and major depressive disorder, bipolar disorder, and schizophrenia.",
-          "journal": "Computational biology and chemistry",
-          "published": "2026 Apr 8",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41965146/",
+          "id": "42034252",
+          "title": "Seasonal longitudinal effects of winter birth on psychopathology, cognition, and functioning in schizophrenia-spectrum and affective disorders: Findings from the PsyCourse Study.",
+          "journal": "Journal of affective disorders",
+          "published": "2026 Apr 23",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42034252/",
           "authors": [
-            "Xu Y",
-            "Deng B",
-            "Li Q",
-            "Li L",
-            "Du Y"
+            "Pérez-Ramos A",
+            "Budde M",
+            "Adorjan K",
+            "Amoretti S",
+            "Anghelescu IG"
           ],
-          "snippet": "This study explored the genetic interactions between Traditional Chinese Medicine (TCM) bioactive ingredients and major psychiatric disorders, namely major depressive disorder (MDD), bipolar disorder (BIP), and schizophrenia (SCZ). Predicting TCM ..."
+          "snippet": "Winter birth (WB) is a replicated risk factor for mental health conditions, potentially due to third-trimester Vitamin D deficiency and maternal viral infections. Beyond diagnosis, WB is associated with psychopathology, cognition, and functionalit..."
         },
         {
-          "id": "41965134",
-          "title": "Association of physical function with cardiovascular risk in middle-aged and older patients with schizophrenia.",
-          "journal": "Journal of psychosomatic research",
-          "published": "2026 Apr 8",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41965134/",
+          "id": "42034031",
+          "title": "Kaempferol alleviates schizophrenia-like social and cognitive deficits through cholinergic modulation.",
+          "journal": "Phytomedicine : international journal of phytotherapy and phytopharmacology",
+          "published": "2026 Apr 18",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42034031/",
           "authors": [
-            "Wang M",
-            "Yin A",
-            "Zhang K",
-            "Song X",
-            "Wang B"
+            "Li M",
+            "Wang B",
+            "Gao C",
+            "Sun J",
+            "Liu J"
           ],
-          "snippet": "Cardiovascular disease is a leading cause of mortality among patients with schizophrenia. Impaired physical function may contribute to the elevated cardiovascular risk in this population. This study aimed to examine the association between physica..."
+          "snippet": "Conventional antipsychotics exhibit limited efficacy in treating the negative symptoms and cognitive deficits of schizophrenia. Although the dietary flavonoid kaempferol has demonstrated neuroprotective effects in various neurological disorders, i..."
         }
       ]
     },
@@ -171,72 +167,76 @@
       "summary": "Stay informed on research focused on reducing risk factors and promoting brain health.",
       "articles": [
         {
-          "id": "41967871",
-          "title": "Increased Reporting of Speech in Degraded Stimuli in Schizophrenia: A Case Control Study with Sine-Wave-Speech.",
+          "id": "42032975",
+          "title": "The Immediate and Sustained Effects of Multi-Session Biparietal Transcranial Direct Current Stimulation on Insight in Schizophrenia.",
           "journal": "Schizophrenia bulletin",
           "published": "2026 Apr 10",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41967871/",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42032975/",
           "authors": [
-            "Castiello S",
-            "Barch DM",
-            "Erickson MA",
-            "Boudewyn MA",
-            "Carter CS"
+            "Song J",
+            "Kim J",
+            "Carmona-Torres E",
+            "Kambari Y",
+            "Ueno F"
           ],
-          "snippet": "People who hear voices may have strong prior expectations of speech, so that noisy auditory signals are resolved as speech. Data in non-clinical voice hearers suggest that voice hearing may involve sensitivity to speech in degraded stimuli. This h..."
+          "snippet": "Impaired insight into illness affects up to 95% of individuals with schizophrenia, depending on the stage of illness, and is a predictor of antipsychotic nonadherence and poor clinical outcomes. Despite its importance, no effective treatment exist..."
         },
         {
-          "id": "41965717",
-          "title": "Correlation networks of blood proteins in the neuroimmunology of schizophrenia-replication and extension.",
-          "journal": "Translational psychiatry",
-          "published": "2026 Apr 11",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41965717/",
+          "id": "42026081",
+          "title": "A new approach for understanding the association between chronic stress in childhood and psychotic symptoms in schizophrenia patients from mediating role of lncRNA.",
+          "journal": "Schizophrenia (Heidelberg, Germany)",
+          "published": "2026 Apr 24",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42026081/",
           "authors": [
-            "Jeffries CD",
-            "Bizon CA",
-            "Ford JR",
-            "Addington J",
-            "Bearden CE"
+            "Mi Z",
+            "Yan Y",
+            "Kong L"
           ],
-          "snippet": "The Pearson sample correlation between two biomarkers across a group of individuals can sometimes be much stronger than expected by chance. In the context of psychosis risk, we previously analyzed blood plasma protein data from initial presentatio..."
+          "snippet": "Schizophrenia (SCZ) remains an etiological and therapeutic challenge, this article aims to explore the mediating role of lncRNA between chronic childhood stress and SCZ for providing a scientific basis of SCZ prevention. 200 SCZ patients and 200 h..."
         },
         {
-          "id": "41964132",
-          "title": "The real experience of older people with schizophrenia: A qualitative meta-synthesis.",
-          "journal": "The British journal of clinical psychology",
-          "published": "2026 Apr 10",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41964132/",
+          "id": "42024996",
+          "title": "A multimodal fNIRS-based machine learning model for symptom assessment and treatment response prediction in schizophrenia.",
+          "journal": "Schizophrenia research",
+          "published": "2026 Apr 22",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42024996/",
           "authors": [
-            "Sun Y",
-            "Liao L",
-            "Jin X",
-            "Li P",
-            "Zhao W"
+            "Cheng L",
+            "Xu X",
+            "Yang H",
+            "Du J",
+            "Sheng L"
           ],
-          "snippet": "Schizophrenia is a severe, chronic mental disorder. Global ageing and improved survival rates have increased the proportion of older people living with schizophrenia, a population whose complex subjective experiences and needs require deeper under..."
+          "snippet": "Predicting early symptom severity and treatment response in schizophrenia is crucial for selecting optimal therapeutic strategies. This study aimed to develop machine learning (ML) models utilizing functional near-infrared spectroscopy (fNIRS) to ..."
         },
         {
-          "id": "41963178",
-          "title": "Sleep and schizophrenia spectrum.",
-          "journal": "L'Encephale",
-          "published": "2026 Apr 9",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41963178/",
+          "id": "42021552",
+          "title": "Evaluating the clinical efficacy of combinatorial pharmacogenomic-guided treatment in schizophrenia patients.",
+          "journal": "British journal of clinical pharmacology",
+          "published": "2026 Apr 22",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42021552/",
           "authors": [
-            "Gauld C",
-            "Hanin C"
+            "Li J",
+            "Xia W",
+            "Fu P",
+            "Yu T",
+            "Xue F"
           ],
-          "snippet": "The relationships between sleep disorders and psychotic disorders, particularly schizophrenia, are extensively documented in the literature due to their shared diagnostic, prognostic, and therapeutic implications. This chapter examines the relatio..."
+          "snippet": "This study aims to evaluate the impact of combinatorial pharmacogenomic (CPGx)-guided treatment (CPGT) on medication patterns, symptom remission and hospital stay in patients with schizophrenia. This retrospective study included schizophrenia pati..."
         },
         {
-          "id": "41960260",
-          "title": "Ketogenic metabolic therapy as a candidate adjunct for CBTp delivery in schizophrenia spectrum disorders.",
-          "journal": "Frontiers in psychology",
-          "published": "2026",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/41960260/",
+          "id": "42013778",
+          "title": "Nationwide trends in antipsychotic and co-medication prescribing for schizophrenia: analysis of National Health Insurance data (2011-2023).",
+          "journal": "Psychiatry research",
+          "published": "2026 Apr 8",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42013778/",
           "authors": [
-            "Laurent N"
+            "Kim KH",
+            "Kim C",
+            "Song I",
+            "Kim DS"
           ],
-          "snippet": "Schizophrenia spectrum disorders (SSDs) are managed with pharmacotherapy alongside psychosocial interventions, including cognitive-behavioral therapy for psychosis (CBTp). In routine services, uptake and completion of CBTp remain limited, and part..."
+          "snippet": "Schizophrenia treatment has increasingly shifted toward the use of second-generation antipsychotics (SGAs), yet real-world prescribing often involves complex polypharmacy. Evidence from Asian countries, particularly regarding adjunctive psychotrop..."
         }
       ]
     }
