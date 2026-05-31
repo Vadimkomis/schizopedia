@@ -15,6 +15,24 @@ Feature: Research data pipeline
     Then structural integrity, required fields, duplicate IDs, and placeholder snippets are checked
     And the status is "completed"
 
+  Scenario: Continuous integration on every push and pull request
+    Given the CI workflow is configured
+    When code is pushed to main or a pull request is opened
+    Then GitHub Actions runs `pnpm test` (data validation + unit tests) and `pnpm run build` on Node 20, blocking merges if any step fails
+    And the status is "completed"
+
+  Scenario: Automated weekly data refresh
+    Given the PubMed feed updates over time
+    When the scheduled GitHub Actions job runs every Monday at 09:00 UTC (or is dispatched manually)
+    Then `pnpm fetch` refreshes the feed, `pnpm validate:data` checks it, and any changes to data/research.json and public/data/research.json are auto-committed
+    And the status is "completed"
+
+  Scenario: Enrich articles with study type, evidence level, and actionability
+    Given the data model supports studyType, evidenceLevel, and actionability fields
+    When the fetch script writes research.json
+    Then these fields are populated per article so cards show specific badges instead of the current "pending" fallbacks
+    And the status is "planned"
+
 Feature: Landing page
 
   Scenario: Hero section with primary CTAs
@@ -44,6 +62,12 @@ Feature: Landing page
     Then a mint-tinted rounded card shows the "About Schizopedia" eyebrow, the headline "Making Research Accessible. Empowering Minds.", a mission paragraph, an orbital brain illustration, and three value props (Evidence-Based, Accessible for All, Independent & Trusted)
     And the status is "completed"
 
+  Scenario: Smooth-scroll to in-page sections
+    Given a visitor follows a hash link such as /#categories or /#about
+    When the landing page loads or the hash changes
+    Then the matching section is smoothly scrolled into view
+    And the status is "completed"
+
   Scenario: Site footer with donate CTA
     Given a visitor reaches the footer
     When it renders
@@ -68,6 +92,32 @@ Feature: Category detail page
     Given a category has zero articles in data/research.json
     When the detail page renders
     Then a "No articles indexed for this category yet" placeholder is shown instead of the article list
+    And the status is "completed"
+
+  Scenario: Article card details
+    Given a category has articles
+    When each ArticleCard renders
+    Then it shows an evidence-level badge, an optional study-type badge, the title linking to the PubMed record in a new tab, the journal/authors/published meta line, the abstract snippet (or a "View full article on PubMed" fallback), and an actionability guidance tag
+    And the status is "completed"
+
+  Scenario: Loading and error states
+    Given the research feed is still loading or failed to load
+    When the category page renders
+    Then skeleton cards appear while loading without cached data, and a red error banner is shown above the list if the fetch fails
+    And the status is "completed"
+
+Feature: Data loading and resilience
+
+  Scenario: Fetch the research feed on page load
+    Given a visitor opens the landing or a category page
+    When the page mounts
+    Then useResearchData fetches /data/research.json with a cache-busting query param and exposes loading, data, and error states
+    And the status is "completed"
+
+  Scenario: Fall back to default categories and sources
+    Given research.json is missing, empty, or fails to load
+    When a page needs categories or sources
+    Then the built-in FALLBACK_CATEGORIES (Diagnosis, Treatment, Prevention) and DEFAULT_SOURCES (PubMed) are used so the UI still renders
     And the status is "completed"
 
 Feature: Site chrome
@@ -116,10 +166,10 @@ Feature: Planned
     Then articles across categories are filtered by keyword
     And the status is "planned"
 
-  Scenario: Automated weekly data refresh
-    Given the PubMed feed updates over time
-    When a GitHub Actions cron job runs weekly
-    Then `pnpm fetch` is executed and the updated data/research.json is committed
+  Scenario: Legal pages
+    Given the footer links to Privacy and Terms & Conditions
+    When a visitor clicks either link
+    Then dedicated /privacy and /terms pages are shown instead of redirecting to the landing page
     And the status is "planned"
 
   Scenario: Real imagery on highlight cards
