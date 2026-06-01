@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-18T10:24:16.839Z",
+  "lastUpdated": "2026-06-01T10:39:50.767Z",
   "categories": [
     {
       "id": "diagnosis",
@@ -7,79 +7,77 @@
       "summary": "Learn about innovative tools and biomarkers improving early and accurate diagnosis.",
       "articles": [
         {
-          "id": "42143979",
-          "title": "Changes in neurovascular coupling of cerebral blood flow and functional connectivity strength in first-episode schizophrenia patients after antipsychotic treatment.",
-          "journal": "Schizophrenia research",
-          "published": "2026 May 17",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42143979/",
+          "id": "42218673",
+          "title": "Abnormal Temporal Variability Organization Associated with Compromised Verbal Memory and Psychotic Symptoms in Schizophrenia Patients and Their First-Degree Relatives.",
+          "journal": "International journal of neural systems",
+          "published": "2026 May 30",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42218673/",
           "authors": [
-            "Wang J",
-            "Yang M",
-            "Wang Z",
-            "Xue K",
-            "Song X"
+            "Si Y",
+            "Ye J",
+            "Zhu Y",
+            "Zhang H",
+            "Kou Y"
           ],
-          "snippet": "Previous studies have identified abnormalities in neurovascular coupling in chronic schizophrenia patients based on functional connectivity strength (FCS) and cerebral blood flow (CBF). Pharmacological treatment remains the cornerstone of schizoph..."
+          "snippet": "Schizophrenia (SCZ) is a highly disabling psychiatric disorder marked by compromised brain dynamic interactions. However, the underlying neuropathology of SCZ remains poorly elucidated in terms of its associated disruption of network-level and rhy..."
         },
         {
-          "id": "42143126",
-          "title": "Plasma circulating free DNA in chronic schizophrenia: a case-control study.",
-          "journal": "Scientific reports",
-          "published": "2026 May 16",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42143126/",
+          "id": "42214783",
+          "title": "Impact of ABCB1 (rs1045642) polymorphism on antipsychotic-induced extrapyramidal symptoms in Egyptian patients with schizophrenia.",
+          "journal": "Food and chemical toxicology : an international journal published for the British Industrial Biological Research Association",
+          "published": "2026 May 28",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42214783/",
           "authors": [
-            "Meca K",
-            "Czogalik Ł",
-            "Lewandowski P",
-            "Rojek M",
-            "Florek S"
+            "Ahmed AMS",
+            "Moawad AM",
+            "Tarek MA",
+            "Abdelgwad M",
+            "Aboutaleb AMI"
           ],
-          "snippet": "Circulating cell-free DNA (cf-DNA) reflects ongoing cell injury and inflammation, but its role in schizophrenia remains unclear. We conducted a case-control study of 33 clinically stabilized patients with chronic schizophrenia and 30 healthy volun..."
+          "snippet": "The ABCB1 polymorphisms may influence risperidone-induced extrapyramidal symptoms (EPS) in schizophrenia. This cross-sectional study examined the relationships among ABCB1 variants, clinical factors, and objective, subjective EPS in 150 patients r..."
         },
         {
-          "id": "42142164",
-          "title": "Age of onset: static and dynamic brain regional activity in first-episode drug-naïve schizophrenia.",
-          "journal": "European child & adolescent psychiatry",
-          "published": "2026 May 16",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42142164/",
+          "id": "42211196",
+          "title": "Romanian male patients with the dual diagnosis of schizophrenia and alcohol use disorder: a prospective study of clinical, social, and treatment-related factors affecting quality of life.",
+          "journal": "Frontiers in psychiatry",
+          "published": "2026",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42211196/",
           "authors": [
-            "Zhong M",
-            "Yang J",
-            "Zhang M",
-            "Wang F",
-            "Wang Y"
+            "Vasile AI",
+            "Trifu S",
+            "Negoita CA"
           ],
-          "snippet": "The age at which schizophrenia manifests is a critical factor influencing long-term outcomes. It is essential to distinguish the effects of the illness phase from those of the age of onset. We assessed static/dynamic brain regional activity from 4..."
+          "snippet": "Schizophrenia frequently co-occurs with alcohol use disorder (AUD), resulting in a complex clinical profile associated with poor functional outcomes and reduced quality of life (QoL). Although both conditions independently impair psychosocial func..."
         },
         {
-          "id": "42141376",
-          "title": "Differential Responsiveness to Exercise and Cognitive Remediation in Physical Health in People With Schizophrenia: Results From the CORTEX-SP Study.",
-          "journal": "European journal of sport science",
-          "published": "2026 Jun",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42141376/",
+          "id": "42211188",
+          "title": "Assessing directional connections between symptoms, cognition, insight, and real-life functioning in schizophrenia: a partial ancestor graphs analysis.",
+          "journal": "Frontiers in psychiatry",
+          "published": "2026",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42211188/",
           "authors": [
-            "Tous-Espelosin M",
-            "Iriarte-Yoller N",
-            "Sampedro A",
-            "Lasa-Sagaseta I",
-            "Pavon C"
+            "Brasso C",
+            "Colli G",
+            "Bellino S",
+            "Bozzatello P",
+            "Montemagni C"
           ],
-          "snippet": "Non-pharmacological interventions, such as exercise and cognitive remediation, have been widely investigated in people with schizophrenia (SZ), showing beneficial effects and supporting their role as complementary approaches to pharmacological tre..."
+          "snippet": "Schizophrenia is a severe chronic mental disorder causing significant global disability. Understanding the intricate relationships between symptoms, cognitive functions, and real-life outcomes is essential for developing effective interventions. P..."
         },
         {
-          "id": "42140874",
-          "title": "Predictive value of traditional, naturalistic, and self-rated executive measures on the everyday functional status of outpatients with schizophrenia: an exploratory study.",
-          "journal": "Applied neuropsychology. Adult",
-          "published": "2026 May 15",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42140874/",
+          "id": "42208959",
+          "title": "Factors associated with social functioning by relapse frequency in Japanese outpatients with schizophrenia: the Multicenter Treatment Survey and Assessments for Schizophrenia in Psychiatric Clinics (MUSASI).",
+          "journal": "Psychological medicine",
+          "published": "2026 May 29",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42208959/",
           "authors": [
-            "Bayard S",
-            "Adloff V",
-            "Decombe A",
-            "Madiouni C",
-            "Capdevielle D"
+            "Takekita Y",
+            "Katsumoto E",
+            "Adachi N",
+            "Kubota Y",
+            "Edagawa K"
           ],
-          "snippet": "Executive deficits in schizophrenia are a major concern due to their strong impact on everyday functioning. Clinical neuropsychology offers several types of tools to assess executive functioning, including traditional, naturalistic, and self-rated..."
+          "snippet": "Impaired social functioning substantially affects the quality of life of patients with schizophrenia; however, it remains unclear whether the factors associated with social functioning differ according to relapse frequency. This study aimed to exa..."
         }
       ]
     },
@@ -89,79 +87,79 @@
       "summary": "Explore emerging therapies, medications, and approaches improving quality of life.",
       "articles": [
         {
-          "id": "42143979",
-          "title": "Changes in neurovascular coupling of cerebral blood flow and functional connectivity strength in first-episode schizophrenia patients after antipsychotic treatment.",
-          "journal": "Schizophrenia research",
-          "published": "2026 May 17",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42143979/",
+          "id": "42218673",
+          "title": "Abnormal Temporal Variability Organization Associated with Compromised Verbal Memory and Psychotic Symptoms in Schizophrenia Patients and Their First-Degree Relatives.",
+          "journal": "International journal of neural systems",
+          "published": "2026 May 30",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42218673/",
           "authors": [
-            "Wang J",
-            "Yang M",
-            "Wang Z",
-            "Xue K",
-            "Song X"
+            "Si Y",
+            "Ye J",
+            "Zhu Y",
+            "Zhang H",
+            "Kou Y"
           ],
-          "snippet": "Previous studies have identified abnormalities in neurovascular coupling in chronic schizophrenia patients based on functional connectivity strength (FCS) and cerebral blood flow (CBF). Pharmacological treatment remains the cornerstone of schizoph..."
+          "snippet": "Schizophrenia (SCZ) is a highly disabling psychiatric disorder marked by compromised brain dynamic interactions. However, the underlying neuropathology of SCZ remains poorly elucidated in terms of its associated disruption of network-level and rhy..."
         },
         {
-          "id": "42142164",
-          "title": "Age of onset: static and dynamic brain regional activity in first-episode drug-naïve schizophrenia.",
-          "journal": "European child & adolescent psychiatry",
-          "published": "2026 May 16",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42142164/",
+          "id": "42218337",
+          "title": "A hierarchical multi-scale framework for schizophrenia: integrating symptom networks, functional circuits, and molecular pathways.",
+          "journal": "Molecular psychiatry",
+          "published": "2026 May 30",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42218337/",
           "authors": [
-            "Zhong M",
-            "Yang J",
-            "Zhang M",
+            "Cheng P",
+            "Liu Z",
+            "Li X",
             "Wang F",
-            "Wang Y"
+            "Chen X"
           ],
-          "snippet": "The age at which schizophrenia manifests is a critical factor influencing long-term outcomes. It is essential to distinguish the effects of the illness phase from those of the age of onset. We assessed static/dynamic brain regional activity from 4..."
+          "snippet": "Schizophrenia is characterized by striking symptom heterogeneity, yet the mapping between specific clinical phenotypes and their underlying biological substrates remains elusive. To bridge this gap, we applied an integrative, multi-scale framework..."
         },
         {
-          "id": "42141376",
-          "title": "Differential Responsiveness to Exercise and Cognitive Remediation in Physical Health in People With Schizophrenia: Results From the CORTEX-SP Study.",
-          "journal": "European journal of sport science",
-          "published": "2026 Jun",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42141376/",
+          "id": "42218138",
+          "title": "OFC-induced network modularity improves positive symptoms and attentional alertness in schizophrenia: a combined rTMS-fMRI study.",
+          "journal": "Nature communications",
+          "published": "2026 May 30",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42218138/",
           "authors": [
-            "Tous-Espelosin M",
-            "Iriarte-Yoller N",
-            "Sampedro A",
-            "Lasa-Sagaseta I",
-            "Pavon C"
+            "Zeng N",
+            "Wang M",
+            "Zheng H",
+            "Jiao X",
+            "Wang Z"
           ],
-          "snippet": "Non-pharmacological interventions, such as exercise and cognitive remediation, have been widely investigated in people with schizophrenia (SZ), showing beneficial effects and supporting their role as complementary approaches to pharmacological tre..."
+          "snippet": "Repetitive Transcranial Magnetic Stimulation (rTMS) targeting the orbitofrontal cortex (OFC) has emerged as a promisingerapeutic option for drug-na&#xef;ve people with schizophrenia (SCZ). However, the putative underlying mechanisms of OFC-induced..."
         },
         {
-          "id": "42140874",
-          "title": "Predictive value of traditional, naturalistic, and self-rated executive measures on the everyday functional status of outpatients with schizophrenia: an exploratory study.",
-          "journal": "Applied neuropsychology. Adult",
-          "published": "2026 May 15",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42140874/",
+          "id": "42217092",
+          "title": "Schizophrenia-related suicide mortality in the United States by sex, 1999-2023.",
+          "journal": "Discover mental health",
+          "published": "2026 May 30",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42217092/",
           "authors": [
-            "Bayard S",
-            "Adloff V",
-            "Decombe A",
-            "Madiouni C",
-            "Capdevielle D"
+            "Hoopsick RA",
+            "Khan TN",
+            "Okon SA",
+            "Apu MAI",
+            "Ni A"
           ],
-          "snippet": "Executive deficits in schizophrenia are a major concern due to their strong impact on everyday functioning. Clinical neuropsychology offers several types of tools to assess executive functioning, including traditional, naturalistic, and self-rated..."
+          "snippet": "People with schizophrenia experience markedly elevated risk of suicide, yet national-level data on schizophrenia-related suicide mortality in the United States (US) remain limited. This serial cross-sectional, population-based study quantifies tem..."
         },
         {
-          "id": "42140157",
-          "title": "Transgenerational consolidation of schizophrenia-relevant behavioral phenotypes reveals sex-specific trajectories and individual heterogeneity.",
-          "journal": "Experimental and molecular pathology",
-          "published": "2026 May 15",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42140157/",
+          "id": "42215707",
+          "title": "Associations between plasma BDNF, VEGF, and EGF and cognition in drug-naïve schizophrenia with and without sleep disturbances.",
+          "journal": "European archives of psychiatry and clinical neuroscience",
+          "published": "2026 May 30",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42215707/",
           "authors": [
-            "Horvath G",
-            "Czimbalmos O",
-            "Plesz SB",
-            "Liszli P",
-            "Kekesi G"
+            "Zhou B",
+            "Su Q",
+            "Wang Z",
+            "Huo Y",
+            "Wang S"
           ],
-          "snippet": "Modeling schizophrenia in rodents is challenging because of the disorder's complexity and multifactorial etiology. This study aimed to elucidate the transgenerational consolidation of schizophrenia-relevant behavioral alterations in a triple-hit r..."
+          "snippet": "Cognitive impairment is core symptom in schizophrenia (SCZ), and sleep disturbances (SD) are common and linked to worse cognition. The roles of plasma brain-derived neurotrophic factor (BDNF), vascular endothelial growth factor (VEGF), and epiderm..."
         }
       ]
     },
@@ -171,75 +169,79 @@
       "summary": "Stay informed on research focused on reducing risk factors and promoting brain health.",
       "articles": [
         {
-          "id": "42138587",
-          "title": "Aripiprazole Once-Monthly for Patients Diagnosed With Schizophrenia: Number Needed to Treat, Number Needed to Harm, and Likelihood to be Helped or Harmed.",
-          "journal": "The Journal of clinical psychiatry",
-          "published": "2026 May 13",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42138587/",
+          "id": "42218673",
+          "title": "Abnormal Temporal Variability Organization Associated with Compromised Verbal Memory and Psychotic Symptoms in Schizophrenia Patients and Their First-Degree Relatives.",
+          "journal": "International journal of neural systems",
+          "published": "2026 May 30",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42218673/",
           "authors": [
-            "Citrome L",
-            "Bell Lynum KS",
-            "Zhang Z",
-            "Atkins N Jr",
-            "Hutson Walker AM"
+            "Si Y",
+            "Ye J",
+            "Zhu Y",
+            "Zhang H",
+            "Kou Y"
           ],
-          "snippet": "Objective: This post hoc analysis assessed the benefit-risk of aripiprazole once-monthly 400 mg (AOM 400) as acute and long-term maintenance treatment for patients diagnosed with schizophrenia, based on number needed to treat (NNT), number needed ..."
+          "snippet": "Schizophrenia (SCZ) is a highly disabling psychiatric disorder marked by compromised brain dynamic interactions. However, the underlying neuropathology of SCZ remains poorly elucidated in terms of its associated disruption of network-level and rhy..."
         },
         {
-          "id": "42137534",
-          "title": "Mind the delay: duration of untreated psychosis is associated with short-term outcomes in first-episode schizophrenia.",
-          "journal": "Frontiers in psychiatry",
+          "id": "42218337",
+          "title": "A hierarchical multi-scale framework for schizophrenia: integrating symptom networks, functional circuits, and molecular pathways.",
+          "journal": "Molecular psychiatry",
+          "published": "2026 May 30",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42218337/",
+          "authors": [
+            "Cheng P",
+            "Liu Z",
+            "Li X",
+            "Wang F",
+            "Chen X"
+          ],
+          "snippet": "Schizophrenia is characterized by striking symptom heterogeneity, yet the mapping between specific clinical phenotypes and their underlying biological substrates remains elusive. To bridge this gap, we applied an integrative, multi-scale framework..."
+        },
+        {
+          "id": "42217092",
+          "title": "Schizophrenia-related suicide mortality in the United States by sex, 1999-2023.",
+          "journal": "Discover mental health",
+          "published": "2026 May 30",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42217092/",
+          "authors": [
+            "Hoopsick RA",
+            "Khan TN",
+            "Okon SA",
+            "Apu MAI",
+            "Ni A"
+          ],
+          "snippet": "People with schizophrenia experience markedly elevated risk of suicide, yet national-level data on schizophrenia-related suicide mortality in the United States (US) remain limited. This serial cross-sectional, population-based study quantifies tem..."
+        },
+        {
+          "id": "42211080",
+          "title": "Disentangling Psychopathology and Social Cognition in 22q11.2 Deletion Syndrome with Psychotic Symptoms and Schizophrenia.",
+          "journal": "Schizophrenia bulletin open",
           "published": "2026",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42137534/",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42211080/",
           "authors": [
-            "Wang D",
-            "Zhang K",
-            "Zhang ZX",
-            "Zhang Q",
-            "Liu M"
+            "Berardelli I",
+            "Comparelli A",
+            "Formica F",
+            "Iannazzo R",
+            "Mammoliti AV"
           ],
-          "snippet": "Schizophrenia is a severe mental disorder associated with substantial disability. Although a growing body of evidence suggests that the duration of untreated psychosis (DUP) may influence prognosis, findings remains inconsistent. We retrospectivel..."
+          "snippet": "Background: 22q11.2 deletion syndrome (22q11.2DS) is the most common microdeletion disorder and represents one of the strongest known genetic risk factors for psychosis. Social cognition (SC) deficits are a core feature of schizophrenia and are st..."
         },
         {
-          "id": "42136560",
-          "title": "New approaches to clinical research for people with schizophrenia.",
-          "journal": "The British journal of psychiatry : the journal of mental science",
-          "published": "2026 May 15",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42136560/",
+          "id": "42200153",
+          "title": "Beyond treatment non-adherence: A qualitative study of clinicians' perspectives on structural and social determinants of schizophrenia relapse in South Africa.",
+          "journal": "Global mental health (Cambridge, England)",
+          "published": "2026",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42200153/",
           "authors": [
-            "Beck K",
-            "Broome M",
-            "Farooq S",
-            "Gaughran F",
-            "Howes OD"
+            "Smit AM",
+            "Kilian S",
+            "Luckhoff HK",
+            "Phahladira LS",
+            "Emsley R"
           ],
-          "snippet": "Schizophrenia trials have been too small, short and exclusionary, leaving the most disabled patients under-represented and key outcomes neglected. Future research should match the illness burden through sustained funding, representative recruitmen..."
-        },
-        {
-          "id": "42136419",
-          "title": "The problem of recognition of clinical high-risk states is hampering the prevention of schizophrenia.",
-          "journal": "World psychiatry : official journal of the World Psychiatric Association (WPA)",
-          "published": "2026 Jun",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42136419/",
-          "authors": [
-            "Woods SW"
-          ],
-          "snippet": "View full article on PubMed"
-        },
-        {
-          "id": "42136416",
-          "title": "Real-world comprehensive care of people living with schizophrenia: recommendations across different settings and clinical stages.",
-          "journal": "World psychiatry : official journal of the World Psychiatric Association (WPA)",
-          "published": "2026 Jun",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42136416/",
-          "authors": [
-            "Fusar-Poli P",
-            "Pillinger T",
-            "McCutcheon RA",
-            "Rangaswamy T",
-            "Asmal L"
-          ],
-          "snippet": "The clinical management of a complex disorder such as schizophrenia remains a significant challenge worldwide. This disorder requires a comprehensive, integrated and personalized care that blends multiple approaches, and the real-world availabilit..."
+          "snippet": "The objective of this study is to explore public sector clinicians' perspectives on factors associated with relapse in schizophrenia within a South African context, focusing on structural, social and environmental contributors beyond treatment non..."
         }
       ]
     }
