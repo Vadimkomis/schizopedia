@@ -33,4 +33,13 @@ describe("SiteNav", () => {
       screen.getByRole("link", { name: "Prevention" }),
     ).toHaveAttribute("href", "/category/prevention");
   });
+
+  it("renders a donate button that opens externally", () => {
+    wrap(<SiteNav />);
+
+    const donate = screen.getByRole("link", { name: /donate/i });
+    expect(donate).toHaveAttribute("href", expect.stringContaining("https://"));
+    expect(donate).toHaveAttribute("target", "_blank");
+    expect(donate).toHaveAttribute("rel", "noreferrer noopener");
+  });
 });

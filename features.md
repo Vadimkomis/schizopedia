@@ -86,10 +86,16 @@ Feature: Landing page
     Then the matching section is smoothly scrolled into view
     And the status is "completed"
 
-  Scenario: Site footer with donate CTA
+  Scenario: Site footer with donate CTA and subscribe field
     Given a visitor reaches the footer
     When it renders
-    Then the Schizopedia wordmark, tagline "Knowledge today. Better tomorrows.", Privacy and Terms links, and a filled Donate button (opens externally) are visible
+    Then the Schizopedia wordmark, tagline "Knowledge today. Better tomorrows.", Privacy and Terms links, a compact email subscribe field, and a filled Donate button (opens externally) are visible
+    And the status is "completed"
+
+  Scenario: Email subscribe band
+    Given a visitor finishes the Latest Highlights section
+    When the subscribe band renders (between highlights and the About block)
+    Then it pitches the real Monday refresh cadence ("New research lands every Monday"), validates the email address, and on valid submit shows an honest launching-soon message stating the address was not stored
     And the status is "completed"
 
 Feature: Category detail page
@@ -149,7 +155,7 @@ Feature: Site chrome
   Scenario: Sticky top navigation
     Given a visitor is on any route
     When they scroll
-    Then a sticky white/translucent nav persists with the Schizopedia wordmark (links to /), Research/Diagnosis/Treatment/Prevention links, and a theme toggle on desktop
+    Then a sticky white/translucent nav persists with the Schizopedia wordmark (links to /), Research/Diagnosis/Treatment/Prevention links, a filled Donate button (opens externally), and an icon-only theme toggle on desktop
     And the status is "completed"
 
   Scenario: Dark/light theme toggle
@@ -196,6 +202,12 @@ Feature: Planned
     Given a visitor wants to find a specific topic
     When they use a future search input
     Then articles across categories are filtered by keyword
+    And the status is "planned"
+
+  Scenario: Deliver the weekly email digest
+    Given the subscribe UI is live but no email provider is connected
+    When an email provider account (e.g. Buttondown) is created and wired to the form
+    Then submitted addresses are stored with the provider and a weekly digest of newly fetched studies is delivered every Monday
     And the status is "planned"
 
   Scenario: Real imagery on highlight cards

@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { Heart } from "lucide-react";
+import { SubscribeForm } from "@/components/landing/SubscribeForm";
+import { DONATE_URL } from "@/lib/links";
 
 export function SiteFooter() {
   return (
@@ -12,6 +14,7 @@ export function SiteFooter() {
           <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
             Knowledge today. Better tomorrows.
           </p>
+          <SubscribeForm compact className="mt-4" />
         </div>
 
         <nav
@@ -28,7 +31,7 @@ export function SiteFooter() {
         </nav>
 
         <a
-          href="https://opencollective.com/schizopedia"
+          href={DONATE_URL}
           target="_blank"
           rel="noreferrer noopener"
           className="inline-flex items-center gap-2 self-start rounded-xl bg-brand-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 md:self-auto"

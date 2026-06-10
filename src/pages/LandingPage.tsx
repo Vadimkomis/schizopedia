@@ -8,6 +8,7 @@ import {
   type CategoryIconCardProps,
 } from "@/components/landing/CategoryIconCard";
 import { LatestHighlights } from "@/components/landing/LatestHighlights";
+import { SubscribeSection } from "@/components/landing/SubscribeSection";
 import { AboutSection } from "@/components/landing/AboutSection";
 import { SiteFooter } from "@/components/landing/SiteFooter";
 import { FALLBACK_CATEGORIES } from "@/components/research/constants";
@@ -117,6 +118,8 @@ export function LandingPage() {
         </section>
 
         <LatestHighlights categories={categories} loading={loading} />
+
+        <SubscribeSection />
 
         <AboutSection />
       </main>

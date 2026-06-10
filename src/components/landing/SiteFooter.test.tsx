@@ -27,4 +27,10 @@ describe("SiteFooter", () => {
     expect(donate).toHaveAttribute("target", "_blank");
     expect(donate).toHaveAttribute("rel", "noreferrer noopener");
   });
+
+  it("renders a compact email subscribe field", () => {
+    wrap(<SiteFooter />);
+    expect(screen.getByLabelText(/email address/i)).toBeVisible();
+    expect(screen.getByRole("button", { name: /subscribe/i })).toBeVisible();
+  });
 });
