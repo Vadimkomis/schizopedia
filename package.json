@@ -9,6 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "validate:data": "node scripts/validateData.mjs",
+    "verify:data": "node scripts/verifyResearch.mjs",
     "fetch": "node scripts/fetchResearch.mjs",
     "test": "pnpm run validate:data && vitest run",
     "test:watch": "vitest"

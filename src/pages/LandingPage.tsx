@@ -79,13 +79,15 @@ export function LandingPage() {
     (sum, c) => sum + (c.articles?.length ?? 0),
     0,
   );
-  const progress = deriveProgressPercent(totalArticles);
 
   return (
     <div className="flex min-h-screen flex-col bg-white dark:bg-[#0b1220]">
       <SiteNav />
       <main id="top" className="flex-1">
-        <HeroSection researchProgress={progress} totalArticles={totalArticles} />
+        <HeroSection
+          totalArticles={totalArticles}
+          lastUpdated={data?.lastUpdated ?? null}
+        />
 
         <section
           id="categories"
@@ -121,10 +123,4 @@ export function LandingPage() {
       <SiteFooter />
     </div>
   );
-}
-
-function deriveProgressPercent(totalArticles: number): number {
-  if (totalArticles <= 0) return 0;
-  const target = 40;
-  return Math.min(99, Math.max(12, Math.round((totalArticles / target) * 100)));
 }

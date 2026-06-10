@@ -1,13 +1,14 @@
 import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
+import { classifyArticle } from "./classify.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const DATA_PATH = path.join(ROOT, "data", "research.json");
 const PUBLIC_DATA_PATH = path.join(ROOT, "public", "data", "research.json");
 const PUBMED_BASE = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils";
-const RETMAX = Number.parseInt(process.env.RETMAX ?? "5", 10);
+const RETMAX = Number.parseInt(process.env.RETMAX ?? "10", 10);
 const API_KEY = process.env.NCBI_API_KEY?.trim();
 
 const categories = [
@@ -149,16 +150,24 @@ async function fetchPubMedArticles(query) {
   return ids
     .map((id) => result[id])
     .filter(Boolean)
-    .map((article) => ({
-      id: article.uid,
-      title: article.title,
-      journal: article.fulljournalname ?? article.source ?? "Unknown journal",
-      published: article.pubdate,
-      url: `https://pubmed.ncbi.nlm.nih.gov/${article.uid}/`,
-      authors: (article.authors ?? []).map((author) => author.name).slice(0, 5),
-      snippet:
-        abstracts[article.uid] ?? "View full article on PubMed",
-    }));
+    .map((article) => {
+      const snippet = abstracts[article.uid] ?? "View full article on PubMed";
+      const classification = classifyArticle({
+        title: article.title ?? "",
+        snippet,
+        pubTypes: article.pubtype ?? [],
+      });
+      return {
+        id: article.uid,
+        title: article.title,
+        journal: article.fulljournalname ?? article.source ?? "Unknown journal",
+        published: article.pubdate,
+        url: `https://pubmed.ncbi.nlm.nih.gov/${article.uid}/`,
+        authors: (article.authors ?? []).map((author) => author.name).slice(0, 5),
+        snippet,
+        ...classification,
+      };
+    });
 }
 
 async function buildPayload() {
@@ -175,8 +184,15 @@ async function buildPayload() {
     ],
   };
 
+  const seenIds = new Set();
   for (const category of categories) {
-    const articles = await fetchPubMedArticles(category.query);
+    const articles = (await fetchPubMedArticles(category.query)).filter(
+      (article) => {
+        if (seenIds.has(article.id)) return false;
+        seenIds.add(article.id);
+        return true;
+      },
+    );
     payload.categories.push({
       id: category.id,
       title: category.title,

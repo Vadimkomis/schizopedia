@@ -12,7 +12,13 @@ Feature: Research data pipeline
   Scenario: Validate research.json before test runs
     Given a research.json file exists
     When `pnpm validate:data` runs as part of `pnpm test`
-    Then structural integrity, required fields, duplicate IDs, and placeholder snippets are checked
+    Then structural integrity, required fields, duplicate IDs across all categories, and evidence-level/actionability enum values are checked
+    And the status is "completed"
+
+  Scenario: Verify research content against live PubMed records
+    Given articles in research.json claim to summarize real PubMed studies
+    When `pnpm verify:data` runs (locally or in the weekly refresh workflow before auto-commit)
+    Then every PMID is re-queried via esummary and the stored title, journal, and canonical URL must match the live record, the served public copy must be byte-identical to data/research.json, and any unverifiable article fails the run
     And the status is "completed"
 
   Scenario: Continuous integration on every push and pull request
@@ -24,14 +30,20 @@ Feature: Research data pipeline
   Scenario: Automated weekly data refresh
     Given the PubMed feed updates over time
     When the scheduled GitHub Actions job runs every Monday at 09:00 UTC (or is dispatched manually)
-    Then `pnpm fetch` refreshes the feed, `pnpm validate:data` checks it, and any changes to data/research.json and public/data/research.json are auto-committed
+    Then `pnpm fetch` refreshes the feed, `pnpm validate:data` checks it, `pnpm verify:data` confirms it against live PubMed, and any changes to data/research.json and public/data/research.json are auto-committed
     And the status is "completed"
 
   Scenario: Enrich articles with study type, evidence level, and actionability
-    Given the data model supports studyType, evidenceLevel, and actionability fields
+    Given PubMed reports publication types per article
     When the fetch script writes research.json
-    Then these fields are populated per article so cards show specific badges instead of the current "pending" fallbacks
-    And the status is "planned"
+    Then scripts/classify.mjs derives studyType, evidenceLevel (synthesis/clinical/exploratory), and actionability per article from pubtypes plus title/abstract keywords, so cards show specific badges instead of "pending" fallbacks
+    And the status is "completed"
+
+  Scenario: Deduplicate articles across categories
+    Given the same study can match multiple category queries
+    When the fetch script assembles the payload
+    Then each PMID appears in at most one category (first match wins)
+    And the status is "completed"
 
 Feature: Landing page
 
@@ -39,7 +51,13 @@ Feature: Landing page
     Given a visitor lands on /
     When the page renders
     Then they see the headline "Understand the Latest Research on Schizophrenia", the supporting description, and two CTAs: filled "Explore Research" and outlined "Learn More"
-    And a decorative brain illustration with three metric tiles (brain, trend spark, research progress ring) appears on the right
+    And a decorative anatomical brain SVG with animated synapse nodes appears on the right, with three metric tiles (brain, trend spark, studies-indexed count)
+    And the status is "completed"
+
+  Scenario: Honest stats band under the hero
+    Given research data has loaded
+    When the hero stats band renders
+    Then it shows real, verifiable numbers only: peer-reviewed studies indexed, weekly automatic PubMed refresh, 100% linked to primary sources, and the last-refreshed timestamp (no synthetic "research progress" percentage)
     And the status is "completed"
 
   Scenario: Four category entry cards
@@ -79,7 +97,13 @@ Feature: Category detail page
   Scenario: Per-category article list
     Given a visitor navigates to /category/diagnosis (or /treatment, /prevention)
     When the page renders
-    Then the category title and summary appear in the hero band, followed by the SafetyPanel, the full article list (ArticleCard per study), and the SourcesPanel
+    Then the category title and summary appear in the hero band, followed by the SafetyPanel, the EvidenceLegend, the full article list (ArticleCard per study), and the SourcesPanel
+    And the status is "completed"
+
+  Scenario: Evidence legend explains the badges
+    Given evidence-level badges can be unfamiliar to lay readers
+    When a category page renders
+    Then a legend explains the three levels (higher-level synthesis, clinical evidence, early-stage evidence) in plain language and notes that labels derive from PubMed publication types
     And the status is "completed"
 
   Scenario: Unknown category redirect
@@ -158,18 +182,20 @@ Feature: SEO
     Then meta description, Open Graph (og:title, og:description, og:type), and Twitter card tags are present
     And the status is "completed"
 
+Feature: Legal pages
+
+  Scenario: Privacy and Terms pages
+    Given the footer links to Privacy and Terms & Conditions
+    When a visitor clicks either link
+    Then dedicated /privacy and /terms pages are shown with a no-tracking privacy policy and education-only terms including a crisis-line notice
+    And the status is "completed"
+
 Feature: Planned
 
   Scenario: Search across articles
     Given a visitor wants to find a specific topic
     When they use a future search input
     Then articles across categories are filtered by keyword
-    And the status is "planned"
-
-  Scenario: Legal pages
-    Given the footer links to Privacy and Terms & Conditions
-    When a visitor clicks either link
-    Then dedicated /privacy and /terms pages are shown instead of redirecting to the landing page
     And the status is "planned"
 
   Scenario: Real imagery on highlight cards

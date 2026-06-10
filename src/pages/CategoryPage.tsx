@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { SiteNav } from "@/components/landing/SiteNav";
 import { SiteFooter } from "@/components/landing/SiteFooter";
 import { ArticleCard } from "@/components/research/ArticleCard";
+import { EvidenceLegend } from "@/components/research/EvidenceLegend";
 import { SafetyPanel } from "@/components/research/SafetyPanel";
 import { SourcesPanel } from "@/components/research/SourcesPanel";
 import { SkeletonList } from "@/components/research/SkeletonList";
@@ -66,6 +67,7 @@ export function CategoryPage() {
 
         <section className="container space-y-8 py-12 lg:py-16">
           <SafetyPanel />
+          <EvidenceLegend />
 
           {error && (
             <p className="rounded-2xl border border-red-200 bg-red-50 px-6 py-4 text-sm text-red-700 dark:border-red-500/30 dark:bg-red-500/10 dark:text-red-100">

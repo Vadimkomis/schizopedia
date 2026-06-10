@@ -9,7 +9,7 @@ function wrap(ui: React.ReactElement) {
 
 describe("HeroSection", () => {
   it("renders the primary headline and CTAs", () => {
-    wrap(<HeroSection researchProgress={78} totalArticles={30} />);
+    wrap(<HeroSection totalArticles={30} lastUpdated="2026-06-01T09:00:00Z" />);
 
     expect(
       screen.getByRole("heading", {
@@ -24,8 +24,23 @@ describe("HeroSection", () => {
     ).toHaveAttribute("href", "/#about");
   });
 
-  it("shows the research progress value", () => {
-    wrap(<HeroSection researchProgress={42} totalArticles={18} />);
-    expect(screen.getByText("42%")).toBeVisible();
+  it("shows the indexed studies count in the stats band", () => {
+    wrap(<HeroSection totalArticles={18} lastUpdated="2026-06-01T09:00:00Z" />);
+    expect(screen.getAllByText("18").length).toBeGreaterThan(0);
+    expect(
+      screen.getAllByText(/peer-reviewed studies indexed/i).length,
+    ).toBeGreaterThan(0);
+  });
+
+  it("shows honest refresh stats instead of a synthetic progress metric", () => {
+    wrap(<HeroSection totalArticles={18} lastUpdated="2026-06-01T09:00:00Z" />);
+    expect(screen.getByText(/automatic pubmed refresh/i)).toBeVisible();
+    expect(screen.getByText(/linked to primary sources/i)).toBeVisible();
+    expect(screen.queryByText(/research progress/i)).not.toBeInTheDocument();
+  });
+
+  it("falls back to a pending label when the feed has not synced", () => {
+    wrap(<HeroSection totalArticles={0} lastUpdated={null} />);
+    expect(screen.getByText(/pending sync/i)).toBeVisible();
   });
 });

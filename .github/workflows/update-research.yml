@@ -24,6 +24,8 @@ jobs:
         run: pnpm run fetch
       - name: Validate schema
         run: pnpm run validate:data
+      - name: Verify content against live PubMed records
+        run: pnpm run verify:data
       - name: Commit updated data
         uses: stefanzweifel/git-auto-commit-action@v5
         with:

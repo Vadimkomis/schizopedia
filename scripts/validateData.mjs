@@ -13,6 +13,13 @@ const assert = (condition, message) => {
 
 const isString = (value) => typeof value === "string" && value.trim().length > 0;
 
+const EVIDENCE_LEVELS = new Set(["exploratory", "clinical", "synthesis"]);
+const ACTIONABILITY_VALUES = new Set([
+  "learn",
+  "discuss_with_clinician",
+  "emerging_only",
+]);
+
 async function validate() {
   const raw = await fs.readFile(DATA_PATH, "utf8");
 
@@ -37,6 +44,7 @@ async function validate() {
   }
 
   const ids = new Set();
+  const articleIds = new Set();
   payload.categories.forEach((category, index) => {
     assert(
       typeof category === "object" && category !== null,
@@ -76,6 +84,25 @@ async function validate() {
         isString(article.url),
         `Article ${article.id} missing url.`,
       );
+      if (isString(article.id)) {
+        assert(
+          !articleIds.has(article.id),
+          `Article id "${article.id}" appears in more than one category.`,
+        );
+        articleIds.add(article.id);
+      }
+      if (article.evidenceLevel !== undefined) {
+        assert(
+          EVIDENCE_LEVELS.has(article.evidenceLevel),
+          `Article ${article.id} has invalid evidenceLevel "${article.evidenceLevel}".`,
+        );
+      }
+      if (article.actionability !== undefined) {
+        assert(
+          ACTIONABILITY_VALUES.has(article.actionability),
+          `Article ${article.id} has invalid actionability "${article.actionability}".`,
+        );
+      }
     });
   });
 

@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
-import { Activity, BookOpen, Brain, FlaskConical, LineChart } from "lucide-react";
+import { BookOpen, Brain, FlaskConical, LineChart } from "lucide-react";
+import { BrainIllustration } from "@/components/landing/BrainIllustration";
+import { formatDateTime } from "@/lib/format";
 
 export interface HeroSectionProps {
-  researchProgress: number;
   totalArticles: number;
+  lastUpdated?: string | null;
 }
 
-export function HeroSection({ researchProgress, totalArticles }: HeroSectionProps) {
+export function HeroSection({ totalArticles, lastUpdated }: HeroSectionProps) {
   return (
     <section className="hero-band">
       <div className="container grid gap-10 py-14 lg:grid-cols-[1.1fr_1fr] lg:gap-12 lg:py-20">
@@ -55,19 +57,62 @@ export function HeroSection({ researchProgress, totalArticles }: HeroSectionProp
             </MetricCard>
 
             <MetricCard>
-              <ProgressRing value={researchProgress} />
+              <span className="font-heading text-2xl font-semibold text-brand-700 dark:text-brand-200">
+                {totalArticles}
+              </span>
               <div className="text-[11px] text-slate-500 dark:text-slate-400">
-                Research Progress
+                Peer-reviewed studies indexed
               </div>
             </MetricCard>
           </div>
         </div>
       </div>
 
-      <p className="sr-only">
-        Schizopedia currently indexes {totalArticles} peer-reviewed articles.
-      </p>
+      <HeroStats totalArticles={totalArticles} lastUpdated={lastUpdated} />
     </section>
+  );
+}
+
+function HeroStats({ totalArticles, lastUpdated }: HeroSectionProps) {
+  return (
+    <dl className="container grid grid-cols-2 gap-6 border-t border-slate-200/70 py-8 dark:border-white/10 md:grid-cols-4">
+      <StatItem
+        value={String(totalArticles)}
+        label="Peer-reviewed studies indexed"
+      />
+      <StatItem value="Weekly" label="Automatic PubMed refresh" />
+      <StatItem value="100%" label="Linked to primary sources" />
+      <StatItem
+        value={lastUpdated ? formatDateTime(lastUpdated) : "Pending sync…"}
+        label="Last refreshed"
+        compact
+      />
+    </dl>
+  );
+}
+
+function StatItem({
+  value,
+  label,
+  compact = false,
+}: {
+  value: string;
+  label: string;
+  compact?: boolean;
+}) {
+  return (
+    <div className="flex flex-col gap-1">
+      <dt className="order-2 text-sm text-slate-500 dark:text-slate-400">
+        {label}
+      </dt>
+      <dd
+        className={`order-1 font-heading font-semibold text-slate-900 dark:text-white ${
+          compact ? "text-base" : "text-3xl"
+        }`}
+      >
+        {value}
+      </dd>
+    </div>
   );
 }
 
@@ -92,86 +137,5 @@ function TrendSpark() {
       />
       <circle cx="88" cy="4" r="2.5" fill="currentColor" />
     </svg>
-  );
-}
-
-function ProgressRing({ value }: { value: number }) {
-  const radius = 18;
-  const circumference = 2 * Math.PI * radius;
-  const offset = circumference - (value / 100) * circumference;
-  return (
-    <div className="relative flex h-12 w-12 items-center justify-center">
-      <svg viewBox="0 0 48 48" className="h-full w-full -rotate-90" aria-hidden="true">
-        <circle
-          cx="24"
-          cy="24"
-          r={radius}
-          fill="none"
-          stroke="#dbeafe"
-          strokeWidth="4"
-          className="dark:stroke-white/15"
-        />
-        <circle
-          cx="24"
-          cy="24"
-          r={radius}
-          fill="none"
-          stroke="#2563eb"
-          strokeWidth="4"
-          strokeLinecap="round"
-          strokeDasharray={circumference}
-          strokeDashoffset={offset}
-          className="dark:stroke-brand-300"
-        />
-      </svg>
-      <span className="absolute text-[11px] font-semibold text-brand-700 dark:text-brand-200">
-        {value}%
-      </span>
-    </div>
-  );
-}
-
-function BrainIllustration() {
-  return (
-    <div className="relative mx-auto flex h-[320px] w-full max-w-[480px] items-center justify-center lg:h-[380px]">
-      <div
-        className="absolute inset-0 brain-glow blur-2xl opacity-80"
-        aria-hidden="true"
-      />
-      <div className="relative flex h-full w-full items-center justify-center">
-        <Activity
-          aria-hidden="true"
-          className="h-52 w-52 text-brand-500/60 drop-shadow-[0_8px_30px_rgba(59,130,246,0.35)] dark:text-brand-300 lg:h-64 lg:w-64"
-        />
-        <NetworkNodes />
-      </div>
-    </div>
-  );
-}
-
-function NetworkNodes() {
-  const nodes = [
-    { top: "10%", left: "18%", size: 6 },
-    { top: "22%", left: "78%", size: 5 },
-    { top: "60%", left: "8%", size: 5 },
-    { top: "72%", left: "82%", size: 7 },
-    { top: "84%", left: "32%", size: 4 },
-    { top: "34%", left: "50%", size: 5 },
-  ];
-  return (
-    <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-      {nodes.map((n, i) => (
-        <span
-          key={i}
-          className="absolute rounded-full bg-brand-500 shadow-[0_0_14px_rgba(59,130,246,0.6)] dark:bg-brand-300"
-          style={{
-            top: n.top,
-            left: n.left,
-            width: n.size,
-            height: n.size,
-          }}
-        />
-      ))}
-    </div>
   );
 }
