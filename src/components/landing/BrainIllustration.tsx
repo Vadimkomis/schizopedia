@@ -12,7 +12,7 @@ export function BrainIllustration() {
       <svg
         viewBox="0 0 320 280"
         aria-hidden="true"
-        className="relative h-full w-auto text-brand-500 drop-shadow-[0_8px_30px_rgba(59,130,246,0.35)] dark:text-brand-300"
+        className="relative h-full w-auto max-w-full text-brand-500 drop-shadow-[0_8px_30px_rgba(59,130,246,0.35)] dark:text-brand-300"
       >
         {/* Outer cortex profile (facing right) */}
         <path

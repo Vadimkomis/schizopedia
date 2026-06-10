@@ -181,7 +181,8 @@ Feature: Site chrome
   Scenario: Sticky top navigation
     Given a visitor is on any route
     When they scroll
-    Then a sticky white/translucent nav persists with the Schizopedia wordmark (links to /), Start Here/Research/Diagnosis/Treatment/Prevention links, a filled Donate button (opens externally), and an icon-only theme toggle on desktop
+    Then a sticky white/translucent nav persists with the Schizopedia wordmark (links to / as the home affordance), Research/Diagnosis/Treatment/Prevention links, a filled Donate button (opens externally), and an icon-only theme toggle on desktop
+    And on mobile the links collapse behind a hamburger menu button that toggles a panel with the nav links and theme toggle
     And the status is "completed"
 
   Scenario: Dark/light theme toggle
