@@ -92,10 +92,10 @@ Feature: Landing page
     Then the matching section is smoothly scrolled into view
     And the status is "completed"
 
-  Scenario: Site footer with donate CTA and subscribe field
+  Scenario: Site footer with subscribe field
     Given a visitor reaches the footer
     When it renders
-    Then the Schizopedia wordmark, tagline "Knowledge today. Better tomorrows.", Privacy and Terms links, a compact email subscribe field, and a filled Donate button (opens externally) are visible
+    Then the Schizopedia wordmark, tagline "Knowledge today. Better tomorrows.", Privacy and Terms links, and a compact email subscribe field are visible (the Donate button lives only in the sticky nav)
     And the status is "completed"
 
   Scenario: Email subscribe band

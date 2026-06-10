@@ -21,11 +21,11 @@ describe("SiteFooter", () => {
     ).toHaveAttribute("href", "/terms");
   });
 
-  it("renders a donate button that opens externally", () => {
+  it("does not render a donate button (donate lives in the nav)", () => {
     wrap(<SiteFooter />);
-    const donate = screen.getByRole("link", { name: /donate/i });
-    expect(donate).toHaveAttribute("target", "_blank");
-    expect(donate).toHaveAttribute("rel", "noreferrer noopener");
+    expect(
+      screen.queryByRole("link", { name: /donate/i }),
+    ).not.toBeInTheDocument();
   });
 
   it("renders a compact email subscribe field", () => {
