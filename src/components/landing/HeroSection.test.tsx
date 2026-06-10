@@ -13,15 +13,15 @@ describe("HeroSection", () => {
 
     expect(
       screen.getByRole("heading", {
-        name: /understand the latest research on schizophrenia/i,
+        name: /when schizophrenia touches someone you love, start here\./i,
       }),
     ).toBeVisible();
     expect(
+      screen.getByRole("link", { name: /start here/i }),
+    ).toHaveAttribute("href", "/#start-here");
+    expect(
       screen.getByRole("link", { name: /explore research/i }),
     ).toHaveAttribute("href", "/#highlights");
-    expect(
-      screen.getByRole("link", { name: /learn more/i }),
-    ).toHaveAttribute("href", "/#about");
   });
 
   it("shows the indexed studies count in the stats band", () => {

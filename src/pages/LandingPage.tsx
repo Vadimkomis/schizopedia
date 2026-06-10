@@ -8,6 +8,7 @@ import {
   type CategoryIconCardProps,
 } from "@/components/landing/CategoryIconCard";
 import { LatestHighlights } from "@/components/landing/LatestHighlights";
+import { StartHereSection } from "@/components/landing/StartHereSection";
 import { SubscribeSection } from "@/components/landing/SubscribeSection";
 import { AboutSection } from "@/components/landing/AboutSection";
 import { SiteFooter } from "@/components/landing/SiteFooter";
@@ -89,6 +90,8 @@ export function LandingPage() {
           totalArticles={totalArticles}
           lastUpdated={data?.lastUpdated ?? null}
         />
+
+        <StartHereSection />
 
         <section
           id="categories"

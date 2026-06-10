@@ -74,7 +74,14 @@ describe("LandingPage", () => {
     expect(
       screen.getByRole("heading", {
         level: 1,
-        name: /understand the latest research on schizophrenia/i,
+        name: /when schizophrenia touches someone you love, start here\./i,
+      }),
+    ).toBeVisible();
+
+    // Start-here guide cards
+    expect(
+      screen.getByRole("heading", {
+        name: /new to all of this\? you're in the right place\./i,
       }),
     ).toBeVisible();
 

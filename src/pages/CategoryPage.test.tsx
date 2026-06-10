@@ -81,7 +81,7 @@ describe("CategoryPage", () => {
     expect(
       screen.getByRole("heading", {
         level: 1,
-        name: /understand the latest research on schizophrenia/i,
+        name: /when schizophrenia touches someone you love, start here\./i,
       }),
     ).toBeVisible();
   });

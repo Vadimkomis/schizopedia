@@ -50,7 +50,7 @@ Feature: Landing page
   Scenario: Hero section with primary CTAs
     Given a visitor lands on /
     When the page renders
-    Then they see the headline "Understand the Latest Research on Schizophrenia", the supporting description, and two CTAs: filled "Explore Research" and outlined "Learn More"
+    Then they see the caregiver-first headline "When schizophrenia touches someone you love, start here.", a plain-language supporting description, and two CTAs: filled "Start Here" (scrolls to the guide section) and outlined "Explore Research"
     And a decorative anatomical brain SVG with animated synapse nodes appears on the right, with three metric tiles (brain, trend spark, studies-indexed count)
     And the status is "completed"
 
@@ -58,6 +58,12 @@ Feature: Landing page
     Given research data has loaded
     When the hero stats band renders
     Then it shows real, verifiable numbers only: peer-reviewed studies indexed, weekly automatic PubMed refresh, 100% linked to primary sources, and the last-refreshed timestamp (no synthetic "research progress" percentage)
+    And the status is "completed"
+
+  Scenario: Start-here guide cards
+    Given a visitor with no scientific background lands on /
+    When the start-here section renders (directly below the hero)
+    Then five guide cards are shown in reading order (What it is, Warning signs, Getting help, Treatment, For caregivers), each with an icon, guide number, reading time, title, description, and a link to /guide/:id
     And the status is "completed"
 
   Scenario: Four category entry cards
@@ -96,6 +102,26 @@ Feature: Landing page
     Given a visitor finishes the Latest Highlights section
     When the subscribe band renders (between highlights and the About block)
     Then it pitches the real Monday refresh cadence ("New research lands every Monday"), validates the email address, and on valid submit shows an honest launching-soon message stating the address was not stored
+    And the status is "completed"
+
+Feature: Caregiver guides
+
+  Scenario: Plain-language guide pages
+    Given a visitor navigates to /guide/:id (what-is-schizophrenia, early-warning-signs, getting-help, treatment-explained, caring-for-yourself)
+    When the page renders
+    Then the guide title, description, and reading time appear in the hero band, followed by a not-medical-advice note and the guide sections (headings, paragraphs, bullet lists, and info/warning callouts including 988 crisis guidance)
+    And the status is "completed"
+
+  Scenario: Sequential guide navigation
+    Given guides are meant to be read in order
+    When a guide page renders
+    Then previous/next links navigate between adjacent guides, and the first/last guides omit the missing direction
+    And the status is "completed"
+
+  Scenario: Unknown guide redirect
+    Given a visitor navigates to /guide/unknown-id
+    When the router resolves
+    Then they are redirected to the landing page
     And the status is "completed"
 
 Feature: Category detail page
@@ -155,7 +181,7 @@ Feature: Site chrome
   Scenario: Sticky top navigation
     Given a visitor is on any route
     When they scroll
-    Then a sticky white/translucent nav persists with the Schizopedia wordmark (links to /), Research/Diagnosis/Treatment/Prevention links, a filled Donate button (opens externally), and an icon-only theme toggle on desktop
+    Then a sticky white/translucent nav persists with the Schizopedia wordmark (links to /), Start Here/Research/Diagnosis/Treatment/Prevention links, a filled Donate button (opens externally), and an icon-only theme toggle on desktop
     And the status is "completed"
 
   Scenario: Dark/light theme toggle

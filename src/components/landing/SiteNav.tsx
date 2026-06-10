@@ -5,6 +5,7 @@ import { DONATE_URL } from "@/lib/links";
 import { cn } from "@/lib/utils";
 
 const navItems = [
+  { label: "Start Here", to: "/#start-here" },
   { label: "Research", to: "/#highlights" },
   { label: "Diagnosis", to: "/category/diagnosis" },
   { label: "Treatment", to: "/category/treatment" },

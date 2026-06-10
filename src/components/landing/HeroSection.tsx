@@ -14,27 +14,27 @@ export function HeroSection({ totalArticles, lastUpdated }: HeroSectionProps) {
       <div className="container grid gap-10 py-14 lg:grid-cols-[1.1fr_1fr] lg:gap-12 lg:py-20">
         <div className="max-w-xl space-y-6 fade-up">
           <h1 className="font-heading text-4xl font-semibold leading-[1.08] tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-[54px]">
-            Understand the Latest Research on Schizophrenia
+            When schizophrenia touches someone you love, start here.
           </h1>
           <p className="text-lg text-slate-600 dark:text-slate-300">
-            Explore the latest studies and discoveries in cure, diagnosis,
-            prevention, and treatment research to build a better future for
-            brain health.
+            Plain-language guides and the latest peer-reviewed research —
+            written for caregivers, families, and friends. No scientific
+            background needed.
           </p>
           <div className="flex flex-wrap items-center gap-3 pt-2">
             <Link
-              to="/#highlights"
+              to="/#start-here"
               className="inline-flex items-center gap-2 rounded-xl bg-brand-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2"
+            >
+              <BookOpen className="h-4 w-4" aria-hidden="true" />
+              Start Here
+            </Link>
+            <Link
+              to="/#highlights"
+              className="inline-flex items-center gap-2 rounded-xl border border-brand-600 bg-white px-5 py-3 text-sm font-semibold text-brand-700 transition hover:bg-brand-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 dark:bg-transparent dark:text-brand-200 dark:hover:bg-brand-900/30"
             >
               <FlaskConical className="h-4 w-4" aria-hidden="true" />
               Explore Research
-            </Link>
-            <Link
-              to="/#about"
-              className="inline-flex items-center gap-2 rounded-xl border border-brand-600 bg-white px-5 py-3 text-sm font-semibold text-brand-700 transition hover:bg-brand-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 dark:bg-transparent dark:text-brand-200 dark:hover:bg-brand-900/30"
-            >
-              <BookOpen className="h-4 w-4" aria-hidden="true" />
-              Learn More
             </Link>
           </div>
         </div>
