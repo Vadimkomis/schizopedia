@@ -40,8 +40,8 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["'Public Sans'", ...fontFamily.sans],
-        heading: ["'Newsreader'", ...fontFamily.serif],
+        sans: ["'Public Sans Variable'", "'Public Sans'", ...fontFamily.sans],
+        heading: ["'Newsreader Variable'", "'Newsreader'", ...fontFamily.serif],
       },
       boxShadow: {
         card: "0 1px 2px rgba(15, 23, 42, 0.03), 0 2px 8px rgba(15, 23, 42, 0.04)",
