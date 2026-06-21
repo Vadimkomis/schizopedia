@@ -14,6 +14,8 @@ import { AboutSection } from "@/components/landing/AboutSection";
 import { SiteFooter } from "@/components/landing/SiteFooter";
 import { FALLBACK_CATEGORIES } from "@/components/research/constants";
 import { useResearchData } from "@/hooks/useResearchData";
+import { useSeo } from "@/hooks/useSeo";
+import { organizationJsonLd } from "@/lib/seo";
 
 type CategoryCardSpec = Omit<CategoryIconCardProps, "description" | "title"> & {
   fallbackTitle: string;
@@ -63,6 +65,15 @@ const CATEGORY_CARDS: CategoryCardSpec[] = [
 export function LandingPage() {
   const { data, loading } = useResearchData();
   const { hash } = useLocation();
+
+  useSeo({
+    title:
+      "Schizopedia — Plain-Language Guides & Latest Schizophrenia Research",
+    description:
+      "When schizophrenia touches someone you love, start here. Plain-language guides for families and caregivers, plus verifiable, weekly-updated research from PubMed.",
+    path: "/",
+    jsonLd: organizationJsonLd(),
+  });
 
   useEffect(() => {
     if (!hash) return;

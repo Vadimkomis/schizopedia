@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/generateSitemap.mjs",
     "preview": "vite preview",
     "validate:data": "node scripts/validateData.mjs",
     "verify:data": "node scripts/verifyResearch.mjs",

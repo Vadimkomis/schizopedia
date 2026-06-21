@@ -1,6 +1,14 @@
 import { LegalLayout, LegalSection } from "@/components/legal/LegalLayout";
+import { useSeo } from "@/hooks/useSeo";
 
 export function TermsPage() {
+  useSeo({
+    title: "Terms & Conditions",
+    description:
+      "Schizopedia is for education only — not medical advice. Read our terms of use, including crisis-line guidance.",
+    path: "/terms",
+  });
+
   return (
     <LegalLayout title="Terms &amp; Conditions" updated="June 10, 2026">
       <LegalSection heading="Educational purpose only">

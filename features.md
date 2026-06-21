@@ -209,10 +209,28 @@ Feature: Accessibility
 
 Feature: SEO
 
-  Scenario: Meta and social tags
-    Given a crawler or social card generator fetches /
-    When index.html is served
-    Then meta description, Open Graph (og:title, og:description, og:type), and Twitter card tags are present
+  Scenario: Per-route meta and social tags
+    Given each route needs distinct search and social metadata
+    When a page renders
+    Then useSeo sets a unique title, meta description, canonical URL, Open Graph (og:title/description/type/url/image), and Twitter card tags for that route, replacing the previous single shared set
+    And the status is "completed"
+
+  Scenario: Structured data for guides and categories
+    Given search engines reward structured data
+    When a guide or category page renders
+    Then a JSON-LD MedicalWebPage block describing the page (about schizophrenia, linked to the site) is injected into the head
+    And the status is "completed"
+
+  Scenario: Sitemap and robots
+    Given crawlers need to discover every page
+    When `pnpm build` runs
+    Then dist/sitemap.xml is generated from the canonical route list (home, five guides, three categories, privacy, terms) and public/robots.txt references it
+    And the status is "completed"
+
+  Scenario: Static hosting on Cloudflare Pages
+    Given the site deploys as static files on Cloudflare Pages with auto-deploy on push
+    When a visitor opens a deep link such as /guide/getting-help directly
+    Then the public/_redirects SPA fallback serves index.html with a 200 so client-side routing resolves instead of 404ing, and the Monday research auto-commit triggers an automatic rebuild and redeploy
     And the status is "completed"
 
 Feature: Legal pages
