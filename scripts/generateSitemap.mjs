@@ -10,7 +10,7 @@ import { buildRoutes } from "./routes.mjs";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const DIST = path.join(ROOT, "dist");
-const SITE_URL = (process.env.SITE_URL ?? "https://schizopedia.org").replace(
+const SITE_URL = (process.env.SITE_URL ?? "https://schizopedia.com").replace(
   /\/$/,
   "",
 );

@@ -3,7 +3,7 @@
  * production domain is finalized — it drives canonical URLs, Open Graph URLs,
  * robots.txt, and the sitemap.
  */
-export const SITE_URL = "https://schizopedia.org";
+export const SITE_URL = "https://schizopedia.com";
 export const SITE_NAME = "Schizopedia";
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 

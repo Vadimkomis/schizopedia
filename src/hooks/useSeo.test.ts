@@ -46,10 +46,10 @@ describe("useSeo", () => {
     expect(meta("description")).toBe("How treatment works");
     expect(
       document.head.querySelector('link[rel="canonical"]')?.getAttribute("href"),
-    ).toBe("https://schizopedia.org/category/treatment");
+    ).toBe("https://schizopedia.com/category/treatment");
     expect(prop("og:title")).toBe("Treatment | Schizopedia");
     expect(prop("og:type")).toBe("article");
-    expect(prop("og:url")).toBe("https://schizopedia.org/category/treatment");
+    expect(prop("og:url")).toBe("https://schizopedia.com/category/treatment");
     expect(meta("twitter:card")).toBe("summary_large_image");
   });
 
@@ -57,7 +57,7 @@ describe("useSeo", () => {
     renderHook(() => useSeo({ title: "Home", description: "x", path: "/" }));
     expect(
       document.head.querySelector('link[rel="canonical"]')?.getAttribute("href"),
-    ).toBe("https://schizopedia.org/");
+    ).toBe("https://schizopedia.com/");
   });
 
   it("injects JSON-LD when provided and omits it otherwise", () => {

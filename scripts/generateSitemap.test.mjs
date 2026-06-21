@@ -4,7 +4,7 @@ import { buildRoutes } from "./routes.mjs";
 
 describe("renderSitemap", () => {
   const routes = buildRoutes();
-  const xml = renderSitemap(routes, "https://schizopedia.org", "2026-06-20");
+  const xml = renderSitemap(routes, "https://schizopedia.com", "2026-06-20");
 
   it("emits a valid urlset with one entry per route", () => {
     expect(xml).toContain('<?xml version="1.0" encoding="UTF-8"?>');
@@ -13,10 +13,10 @@ describe("renderSitemap", () => {
   });
 
   it("uses absolute URLs and a trailing slash for the homepage", () => {
-    expect(xml).toContain("<loc>https://schizopedia.org/</loc>");
-    expect(xml).toContain("<loc>https://schizopedia.org/guide/getting-help</loc>");
+    expect(xml).toContain("<loc>https://schizopedia.com/</loc>");
+    expect(xml).toContain("<loc>https://schizopedia.com/guide/getting-help</loc>");
     expect(xml).toContain(
-      "<loc>https://schizopedia.org/category/treatment</loc>",
+      "<loc>https://schizopedia.com/category/treatment</loc>",
     );
   });
 
@@ -29,6 +29,6 @@ describe("renderSitemap", () => {
   it("respects a custom site URL without a trailing duplicate", () => {
     const custom = renderSitemap(routes, "https://example.com", "2026-06-20");
     expect(custom).toContain("<loc>https://example.com/</loc>");
-    expect(custom).not.toContain("https://schizopedia.org");
+    expect(custom).not.toContain("https://schizopedia.com");
   });
 });
