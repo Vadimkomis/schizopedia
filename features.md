@@ -227,10 +227,10 @@ Feature: SEO
     Then dist/sitemap.xml is generated from the canonical route list (home, five guides, three categories, privacy, terms) and public/robots.txt references it
     And the status is "completed"
 
-  Scenario: Static hosting on Cloudflare Pages
-    Given the site deploys as static files on Cloudflare Pages with auto-deploy on push
+  Scenario: Static hosting on Cloudflare (Workers static assets)
+    Given the site deploys to Cloudflare via Workers static assets (wrangler.toml points at dist) with auto-deploy on push
     When a visitor opens a deep link such as /guide/getting-help directly
-    Then the public/_redirects SPA fallback serves index.html with a 200 so client-side routing resolves instead of 404ing, and the Monday research auto-commit triggers an automatic rebuild and redeploy
+    Then not_found_handling = single-page-application serves index.html so client-side routing resolves instead of 404ing, and the Monday research auto-commit triggers an automatic rebuild and redeploy
     And the status is "completed"
 
 Feature: Legal pages
