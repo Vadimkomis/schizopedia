@@ -1,4 +1,0 @@
-# Cloudflare Pages SPA fallback: serve index.html for any path that isn't a
-# real static file, so client-side routes (e.g. /guide/..., /category/...)
-# resolve on direct load and refresh instead of 404ing.
-/*    /index.html    200
