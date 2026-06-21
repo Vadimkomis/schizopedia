@@ -1,12 +1,15 @@
 import type { ResearchArticle } from "./types";
 
+// Dates are formatted in a fixed locale and UTC so server-prerendered HTML and
+// the client render produce identical text (avoids hydration mismatches).
 export function formatDateTime(value: string | null | undefined) {
   if (!value) return "Pending sync…";
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) return "Pending sync…";
-  return new Intl.DateTimeFormat(undefined, {
+  return new Intl.DateTimeFormat("en-US", {
     dateStyle: "long",
     timeStyle: "short",
+    timeZone: "UTC",
   }).format(date);
 }
 

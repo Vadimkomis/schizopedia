@@ -12,38 +12,15 @@ import {
   FALLBACK_CATEGORIES,
 } from "@/components/research/constants";
 import { useResearchData } from "@/hooks/useResearchData";
-import { useSeo } from "@/hooks/useSeo";
-import { articleJsonLd } from "@/lib/seo";
 import { formatDateTime } from "@/lib/format";
 
 const VALID_IDS = new Set(FALLBACK_CATEGORIES.map((c) => c.id));
-const CATEGORY_META = new Map(
-  FALLBACK_CATEGORIES.map((c) => [c.id, { title: c.title, summary: c.summary }]),
-);
 
 export function CategoryPage() {
   const { id } = useParams<{ id: string }>();
   const { data, loading, error } = useResearchData();
 
-  const valid = !!id && VALID_IDS.has(id);
-  const meta = valid ? CATEGORY_META.get(id!) : undefined;
-  useSeo({
-    title: meta
-      ? `Schizophrenia ${meta.title} Research — Latest Studies`
-      : "Research",
-    description: meta?.summary ?? "",
-    path: valid ? `/category/${id}` : "/",
-    jsonLd:
-      valid && meta
-        ? articleJsonLd({
-            headline: `Schizophrenia ${meta.title} Research`,
-            description: meta.summary,
-            path: `/category/${id}`,
-          })
-        : undefined,
-  });
-
-  if (!valid) {
+  if (!id || !VALID_IDS.has(id)) {
     return <Navigate to="/" replace />;
   }
 

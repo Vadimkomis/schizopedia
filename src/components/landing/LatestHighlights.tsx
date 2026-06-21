@@ -93,14 +93,16 @@ function pickHighlights(categories: ResearchCategory[], count: number): Pick[] {
   return all.slice(0, count);
 }
 
+// Parsed and formatted in UTC so prerendered HTML matches the client render.
 export function formatPublishedShort(value: string | undefined): string | null {
   if (!value) return null;
-  const parsed = parseDateLocal(value);
+  const parsed = parseDateUtc(value);
   if (parsed) {
-    return new Intl.DateTimeFormat(undefined, {
+    return new Intl.DateTimeFormat("en-US", {
       month: "short",
       day: "numeric",
       year: "numeric",
+      timeZone: "UTC",
     }).format(parsed);
   }
   const yearMatch = value.match(/\b(19|20|21)\d{2}\b/);
@@ -109,19 +111,32 @@ export function formatPublishedShort(value: string | undefined): string | null {
 
 function parsePublishedTimestamp(value: string | undefined): number {
   if (!value) return 0;
-  const parsed = parseDateLocal(value);
+  const parsed = parseDateUtc(value);
   if (parsed) return parsed.getTime();
   const yearMatch = value.match(/\b(19|20|21)\d{2}\b/);
-  if (yearMatch) return new Date(Number(yearMatch[0]), 0, 1).getTime();
+  if (yearMatch) return Date.UTC(Number(yearMatch[0]), 0, 1);
   return 0;
 }
 
-function parseDateLocal(value: string): Date | null {
-  const dateOnly = value.match(/^(\d{4})-(\d{2})-(\d{2})$/);
-  if (dateOnly) {
-    const [, y, m, d] = dateOnly;
-    return new Date(Number(y), Number(m) - 1, Number(d));
+const MONTHS = [
+  "jan", "feb", "mar", "apr", "may", "jun",
+  "jul", "aug", "sep", "oct", "nov", "dec",
+];
+
+function parseDateUtc(value: string): Date | null {
+  const isoDate = value.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (isoDate) {
+    const [, y, m, d] = isoDate;
+    return new Date(Date.UTC(Number(y), Number(m) - 1, Number(d)));
   }
-  const parsed = new Date(value);
-  return Number.isNaN(parsed.getTime()) ? null : parsed;
+  // PubMed style, e.g. "2026 May 17" or "2026 May".
+  const pubmed = value.match(/^(\d{4})\s+([A-Za-z]{3})[a-z]*(?:\s+(\d{1,2}))?/);
+  if (pubmed) {
+    const [, y, mon, d] = pubmed;
+    const month = MONTHS.indexOf(mon.toLowerCase());
+    if (month >= 0) {
+      return new Date(Date.UTC(Number(y), month, d ? Number(d) : 1));
+    }
+  }
+  return null;
 }

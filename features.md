@@ -211,8 +211,8 @@ Feature: SEO
 
   Scenario: Per-route meta and social tags
     Given each route needs distinct search and social metadata
-    When a page renders
-    Then useSeo sets a unique title, meta description, canonical URL, Open Graph (og:title/description/type/url/image), and Twitter card tags for that route, replacing the previous single shared set
+    When a page is prerendered (and on client-side navigation via SeoManager)
+    Then a unique title, meta description, canonical URL, Open Graph (og:title/description/type/url/image), and Twitter card tags are present in the static HTML for that route, resolved from the pathname by resolveSeo
     And the status is "completed"
 
   Scenario: Structured data for guides and categories
@@ -231,6 +231,20 @@ Feature: SEO
     Given the site deploys to Cloudflare via Workers static assets (wrangler.toml points at dist) with auto-deploy on push
     When a visitor opens a deep link such as /guide/getting-help directly
     Then not_found_handling = single-page-application serves index.html so client-side routing resolves instead of 404ing, and the Monday research auto-commit triggers an automatic rebuild and redeploy
+    And the status is "completed"
+
+Feature: Performance
+
+  Scenario: Prerendered static HTML for every route
+    Given a static site should paint instantly without waiting for JavaScript
+    When `pnpm build` runs
+    Then a Vite SSR bundle prerenders every route (home, guides, categories, legal) to flat <route>.html files with full content and per-route head tags, the research payload is inlined on data routes (no client fetch), and the client hydrates the prerendered markup
+    And the status is "completed"
+
+  Scenario: Non-blocking fonts and pre-paint theme
+    Given render-blocking resources delay first paint
+    When the page loads
+    Then fonts load via a non-blocking preload+swap link (text paints immediately in a fallback) and an inline script applies the saved/system theme before paint to avoid a flash
     And the status is "completed"
 
 Feature: Legal pages

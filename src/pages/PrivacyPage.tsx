@@ -1,14 +1,6 @@
 import { LegalLayout, LegalSection } from "@/components/legal/LegalLayout";
-import { useSeo } from "@/hooks/useSeo";
 
 export function PrivacyPage() {
-  useSeo({
-    title: "Privacy Policy",
-    description:
-      "Schizopedia collects no personal data, uses no advertising trackers, and requires no account.",
-    path: "/privacy",
-  });
-
   return (
     <LegalLayout title="Privacy Policy" updated="June 10, 2026">
       <LegalSection heading="What we collect">

@@ -3,27 +3,11 @@ import { ArrowLeft, ArrowRight, Clock, Info, TriangleAlert } from "lucide-react"
 import { SiteNav } from "@/components/landing/SiteNav";
 import { SiteFooter } from "@/components/landing/SiteFooter";
 import { getAdjacentGuides, getGuide, type GuideSection } from "@/lib/guides";
-import { useSeo } from "@/hooks/useSeo";
-import { articleJsonLd } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
 export function GuidePage() {
   const { id } = useParams<{ id: string }>();
   const guide = getGuide(id);
-
-  useSeo({
-    title: guide ? `${guide.title} — Schizophrenia Guide` : "Guide",
-    description: guide?.description ?? "",
-    path: guide ? `/guide/${guide.id}` : "/",
-    type: "article",
-    jsonLd: guide
-      ? articleJsonLd({
-          headline: guide.title,
-          description: guide.description,
-          path: `/guide/${guide.id}`,
-        })
-      : undefined,
-  });
 
   if (!guide) {
     return <Navigate to="/" replace />;

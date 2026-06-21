@@ -4,26 +4,45 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Open-source, plain-language schizophrenia research directory. Covers diagnosis, treatment, and risk reduction using verifiable PubMed sources."
+
+    <!-- Set theme before paint to avoid a flash of the wrong color scheme. -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("schizopedia-theme");
+          if (t !== "light" && t !== "dark") {
+            t =
+              window.matchMedia &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          }
+          if (t === "dark") document.documentElement.classList.add("dark");
+        } catch (e) {}
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Load fonts without blocking first paint; text shows immediately in a
+         fallback (display=swap) and upgrades to the webfont when ready. -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Public+Sans:wght@400;500;600;700&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
-    <meta property="og:title" content="Schizopedia | Schizophrenia Research Directory" />
-    <meta
-      property="og:description"
-      content="Open-source, plain-language schizophrenia research directory. Covers diagnosis, treatment, and risk reduction using verifiable PubMed sources."
-    />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Schizopedia | Schizophrenia Research Directory" />
-    <meta
-      name="twitter:description"
-      content="Open-source, plain-language schizophrenia research directory. Covers diagnosis, treatment, and risk reduction using verifiable PubMed sources."
-    />
-    <title>Schizopedia | Schizophrenia Research Directory</title>
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Public+Sans:wght@400;500;600;700&display=swap"
+      />
+    </noscript>
+
+    <!--app-head-->
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><!--app-html--></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
