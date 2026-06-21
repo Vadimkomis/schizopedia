@@ -29,11 +29,23 @@ function outputFile(routePath) {
   return path.join(DIST, `${routePath.replace(/^\//, "")}.html`);
 }
 
+async function fontPreloadTags() {
+  const assets = await fs.readdir(path.join(DIST, "assets"));
+  return assets
+    .filter((f) => /^(newsreader|public-sans)-latin-wght-normal-.*\.woff2$/.test(f))
+    .map(
+      (f) =>
+        `<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/${f}" />`,
+    )
+    .join("\n    ");
+}
+
 async function main() {
-  const [template, dataRaw, { render }] = await Promise.all([
+  const [template, dataRaw, { render }, fontPreload] = await Promise.all([
     fs.readFile(path.join(DIST, "index.html"), "utf8"),
     fs.readFile(DATA_PATH, "utf8"),
     import(pathToFileURL(SSR_ENTRY).href),
+    fontPreloadTags(),
   ]);
 
   const data = JSON.parse(dataRaw);
@@ -42,14 +54,15 @@ async function main() {
 
   for (const route of routes) {
     const withData = needsResearchData(route.path);
-    const { html, head } = render(route.path, withData ? data : null);
+    const { html, head } = await render(route.path, withData ? data : null);
 
-    const headInjection = withData
-      ? `${head}\n    <script>window.__RESEARCH__=${serializedData}</script>`
-      : head;
+    const parts = [fontPreload, head];
+    if (withData) {
+      parts.push(`<script>window.__RESEARCH__=${serializedData}</script>`);
+    }
 
     const page = template
-      .replace("<!--app-head-->", headInjection)
+      .replace("<!--app-head-->", parts.filter(Boolean).join("\n    "))
       .replace("<!--app-html-->", html);
 
     const file = outputFile(route.path);

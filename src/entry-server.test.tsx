@@ -23,26 +23,26 @@ const payload: ResearchPayload = {
 };
 
 describe("entry-server render", () => {
-  it("renders the landing page content and head into HTML strings", () => {
-    const { html, head } = render("/", payload);
+  it("renders the landing page content and head into HTML strings", async () => {
+    const { html, head } = await render("/", payload);
     expect(html).toMatch(/when schizophrenia touches someone you love/i);
     expect(head).toContain("<title>");
     expect(head).toContain('rel="canonical"');
   });
 
-  it("renders a guide route to static markup with the guide title in head", () => {
-    const { html, head } = render("/guide/early-warning-signs", null);
+  it("renders a guide route to static markup with the guide title in head", async () => {
+    const { html, head } = await render("/guide/early-warning-signs", null);
     expect(html).toMatch(/early warning signs/i);
     expect(head).toMatch(/early warning signs/i);
   });
 
-  it("renders category articles when data is provided", () => {
-    const { html } = render("/category/treatment", payload);
+  it("renders category articles when data is provided", async () => {
+    const { html } = await render("/category/treatment", payload);
     expect(html).toContain("A promising treatment study");
   });
 
-  it("does not leak the research global between renders", () => {
-    render("/category/treatment", payload);
+  it("does not leak the research global between renders", async () => {
+    await render("/category/treatment", payload);
     expect(globalThis.__RESEARCH__).toBeUndefined();
   });
 });
