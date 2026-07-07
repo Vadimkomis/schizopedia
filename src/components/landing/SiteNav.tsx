@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Heart, Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
-import { DONATE_URL } from "@/lib/links";
+import { DONATE_PATH } from "@/lib/links";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { label: "Research", to: "/#highlights" },
+  { label: "Cure", to: "/category/cure" },
   { label: "Diagnosis", to: "/category/diagnosis" },
   { label: "Treatment", to: "/category/treatment" },
   { label: "Prevention", to: "/category/prevention" },
@@ -49,15 +49,13 @@ export function SiteNav() {
         </nav>
 
         <div className="flex items-center gap-2 sm:gap-3">
-          <a
-            href={DONATE_URL}
-            target="_blank"
-            rel="noreferrer noopener"
+          <Link
+            to={DONATE_PATH}
             className="inline-flex items-center gap-2 rounded-full bg-brand-600 px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 sm:px-4"
           >
             <Heart className="h-4 w-4 fill-current" aria-hidden="true" />
             Donate
-          </a>
+          </Link>
           <ThemeToggle className="hidden md:inline-flex" />
           <button
             type="button"

@@ -1,8 +1,7 @@
-import { render, screen, waitFor } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
+import { screen, waitFor } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { LandingPage } from "./LandingPage";
-import { ThemeProvider } from "@/components/theme/ThemeProvider";
+import { renderWithProviders } from "@/test/render";
 import type { ResearchPayload } from "@/lib/types";
 
 const payload: ResearchPayload = {
@@ -46,13 +45,7 @@ const payload: ResearchPayload = {
 };
 
 function renderPage() {
-  return render(
-    <ThemeProvider>
-      <MemoryRouter initialEntries={["/"]}>
-        <LandingPage />
-      </MemoryRouter>
-    </ThemeProvider>,
-  );
+  return renderWithProviders(<LandingPage />, { initialEntries: ["/"] });
 }
 
 beforeEach(() => {

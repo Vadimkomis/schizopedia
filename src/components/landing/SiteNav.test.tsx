@@ -1,28 +1,19 @@
-import { render, screen, within } from "@testing-library/react";
+import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
 import { SiteNav } from "./SiteNav";
-import { ThemeProvider } from "@/components/theme/ThemeProvider";
-
-function wrap(ui: React.ReactElement) {
-  return render(
-    <ThemeProvider>
-      <MemoryRouter>{ui}</MemoryRouter>
-    </ThemeProvider>,
-  );
-}
+import { renderWithProviders } from "@/test/render";
 
 describe("SiteNav", () => {
   it("renders the wordmark linking to root", () => {
-    wrap(<SiteNav />);
+    renderWithProviders(<SiteNav />);
 
     const brand = screen.getByRole("link", { name: /schizopedia/i });
     expect(brand).toHaveAttribute("href", "/");
   });
 
   it("lists the primary category nav links", () => {
-    wrap(<SiteNav />);
+    renderWithProviders(<SiteNav />);
 
     expect(
       screen.getByRole("link", { name: "Diagnosis" }),
@@ -35,17 +26,23 @@ describe("SiteNav", () => {
     ).toHaveAttribute("href", "/category/prevention");
   });
 
-  it("renders a donate button that opens externally", () => {
-    wrap(<SiteNav />);
+  it("renders a donate button linking to the in-app donate page", () => {
+    renderWithProviders(<SiteNav />);
 
     const donate = screen.getByRole("link", { name: /donate/i });
-    expect(donate).toHaveAttribute("href", expect.stringContaining("https://"));
-    expect(donate).toHaveAttribute("target", "_blank");
-    expect(donate).toHaveAttribute("rel", "noreferrer noopener");
+    expect(donate).toHaveAttribute("href", "/donate");
+  });
+
+  it("links the cure category from the nav", () => {
+    renderWithProviders(<SiteNav />);
+    expect(screen.getByRole("link", { name: "Cure" })).toHaveAttribute(
+      "href",
+      "/category/cure",
+    );
   });
 
   it("does not include a Start Here nav link (the wordmark is the home affordance)", () => {
-    wrap(<SiteNav />);
+    renderWithProviders(<SiteNav />);
     expect(
       screen.queryByRole("link", { name: /start here/i }),
     ).not.toBeInTheDocument();
@@ -53,7 +50,7 @@ describe("SiteNav", () => {
 
   it("toggles the mobile menu with the nav links and theme control", async () => {
     const user = userEvent.setup();
-    wrap(<SiteNav />);
+    renderWithProviders(<SiteNav />);
 
     expect(
       screen.queryByRole("navigation", { name: "Mobile" }),
@@ -63,7 +60,7 @@ describe("SiteNav", () => {
     const mobileNav = within(
       screen.getByRole("navigation", { name: "Mobile" }),
     );
-    expect(mobileNav.getByRole("link", { name: "Research" })).toBeVisible();
+    expect(mobileNav.getByRole("link", { name: "Cure" })).toBeVisible();
     expect(mobileNav.getByRole("link", { name: "Prevention" })).toBeVisible();
     expect(
       mobileNav.getByRole("button", { name: /toggle theme/i }),
@@ -77,7 +74,7 @@ describe("SiteNav", () => {
 
   it("closes the mobile menu after a link is chosen", async () => {
     const user = userEvent.setup();
-    wrap(<SiteNav />);
+    renderWithProviders(<SiteNav />);
 
     await user.click(screen.getByRole("button", { name: /open menu/i }));
     await user.click(

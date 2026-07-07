@@ -51,7 +51,7 @@ Feature: Landing page
     Given a visitor lands on /
     When the page renders
     Then they see the caregiver-first headline "When schizophrenia touches someone you love, start here.", a plain-language supporting description, and two CTAs: filled "Start Here" (scrolls to the guide section) and outlined "Explore Research"
-    And a decorative anatomical brain SVG with animated synapse nodes appears on the right, with three metric tiles (brain, trend spark, studies-indexed count)
+    And a decorative anatomical brain SVG with animated synapse nodes appears centered in the right column with no overlapping tiles (the studies-indexed count lives only in the stats band below)
     And the status is "completed"
 
   Scenario: Honest stats band under the hero
@@ -69,8 +69,8 @@ Feature: Landing page
   Scenario: Four category entry cards
     Given a visitor views the category grid
     When the section renders
-    Then four cards are shown: Cure Research (static), Diagnosis, Treatment, and Prevention, each with a pastel circular icon, title, description, and "Learn more →" link
-    And the backing categories deep-link to /category/:id detail pages
+    Then four cards are shown: Cure Research, Diagnosis, Treatment, and Prevention, each with a pastel circular icon, title, description, and "Learn more →" link
+    And all four cards deep-link to their /category/:id detail pages (including /category/cure)
     And the status is "completed"
 
   Scenario: Latest research highlights
@@ -92,17 +92,17 @@ Feature: Landing page
     Then the matching section is smoothly scrolled into view
     And the status is "completed"
 
-  Scenario: Site footer with subscribe field
+  Scenario: Site footer
     Given a visitor reaches the footer
     When it renders
-    Then the Schizopedia wordmark, tagline "Knowledge today. Better tomorrows.", Privacy and Terms links, and a compact email subscribe field are visible (the Donate button lives only in the sticky nav)
+    Then the Schizopedia wordmark, tagline "Knowledge today. Better tomorrows.", and Donate / Privacy / Terms links are visible
     And the status is "completed"
 
-  Scenario: Email subscribe band
-    Given a visitor finishes the Latest Highlights section
-    When the subscribe band renders (between highlights and the About block)
-    Then it pitches the real Monday refresh cadence ("New research lands every Monday"), validates the email address, and on valid submit shows an honest launching-soon message stating the address was not stored
-    And the status is "completed"
+  Scenario: Email subscribe removed pre-launch
+    Given no email delivery provider is wired up yet
+    When the landing page and footer render
+    Then no email subscribe field or subscribe band is shown anywhere (removed to avoid collecting addresses that go nowhere)
+    And the status is "deprecated"
 
 Feature: Caregiver guides
 
@@ -126,10 +126,22 @@ Feature: Caregiver guides
 
 Feature: Category detail page
 
-  Scenario: Per-category article list
-    Given a visitor navigates to /category/diagnosis (or /treatment, /prevention)
+  Scenario: Category state-of-the-field overview
+    Given a visitor navigates to /category/diagnosis (or /treatment, /prevention, /cure)
     When the page renders
-    Then the category title and summary appear in the hero band, followed by the SafetyPanel, the EvidenceLegend, the full article list (ArticleCard per study), and the SourcesPanel
+    Then the category title and summary appear in the hero band, followed by the SafetyPanel and a "Where things stand" panel with a plain-language state-of-the-field summary and a "Documented by" list linking the studies that support it
+    And the status is "completed"
+
+  Scenario: Most important and latest research sections
+    Given a visitor is on a category detail page
+    When the research sections render below the overview
+    Then a "Most important research" section lists the curated landmark studies as ArticleCards, and a "Latest research" section lists the newest studies (most recent first) excluding those already featured as most important, followed by the SourcesPanel
+    And the status is "completed"
+
+  Scenario: Cure research category page
+    Given the Cure category has no dedicated data feed
+    When a visitor navigates to /category/cure
+    Then the page renders its authored state-of-the-field summary and resolves its cited/important/latest studies by PMID from across the whole dataset (e.g. the muscarinic M1 receptor PET study)
     And the status is "completed"
 
   Scenario: Evidence legend explains the badges
@@ -147,7 +159,7 @@ Feature: Category detail page
   Scenario: Empty category state
     Given a category has zero articles in data/research.json
     When the detail page renders
-    Then a "No articles indexed for this category yet" placeholder is shown instead of the article list
+    Then the research sections show honest placeholders ("Key studies will appear here after the next refresh." / "No new studies indexed yet. Check back after the next refresh.") instead of article cards
     And the status is "completed"
 
   Scenario: Article card details
@@ -181,7 +193,7 @@ Feature: Site chrome
   Scenario: Sticky top navigation
     Given a visitor is on any route
     When they scroll
-    Then a sticky white/translucent nav persists with the Schizopedia wordmark (links to / as the home affordance), Research/Diagnosis/Treatment/Prevention links, a filled Donate button (opens externally), and an icon-only theme toggle on desktop
+    Then a sticky white/translucent nav persists with the Schizopedia wordmark (links to / as the home affordance), Cure/Diagnosis/Treatment/Prevention links, a filled Donate button (routes to the in-app /donate page), and an icon-only theme toggle on desktop
     And on mobile the links collapse behind a hamburger menu button that toggles a panel with the nav links and theme toggle
     And the status is "completed"
 
@@ -224,7 +236,7 @@ Feature: SEO
   Scenario: Sitemap and robots
     Given crawlers need to discover every page
     When `pnpm build` runs
-    Then dist/sitemap.xml is generated from the canonical route list (home, five guides, three categories, privacy, terms) and public/robots.txt references it
+    Then dist/sitemap.xml is generated from the canonical route list (home, five guides, four categories including cure, donate, privacy, terms) and public/robots.txt references it
     And the status is "completed"
 
   Scenario: Static hosting on Cloudflare (Workers static assets)
@@ -245,6 +257,14 @@ Feature: Performance
     Given render-blocking resources delay first paint
     When the page loads
     Then fonts load via a non-blocking preload+swap link (text paints immediately in a fallback) and an inline script applies the saved/system theme before paint to avoid a flash
+    And the status is "completed"
+
+Feature: Support / donations
+
+  Scenario: In-app donate page never dead-ends
+    Given the Donate button in the nav and footer routes to /donate
+    When a visitor opens the donate page
+    Then a "Support Schizopedia" page explains the site is free, ad-free, and privacy-respecting, and offers a working action: a "Donate now" button when a processor URL (VITE_DONATE_URL) is configured, otherwise a "Get in touch to contribute" mailto with a "launching soon" note — so no click leads to a 404
     And the status is "completed"
 
 Feature: Legal pages

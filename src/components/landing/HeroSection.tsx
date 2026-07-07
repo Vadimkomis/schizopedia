@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { BookOpen, Brain, FlaskConical, LineChart } from "lucide-react";
+import { BookOpen, FlaskConical } from "lucide-react";
 import { BrainIllustration } from "@/components/landing/BrainIllustration";
 import { formatDateTime } from "@/lib/format";
 
@@ -39,32 +39,8 @@ export function HeroSection({ totalArticles, lastUpdated }: HeroSectionProps) {
           </div>
         </div>
 
-        <div className="relative fade-up">
+        <div className="flex items-center justify-center fade-up">
           <BrainIllustration />
-          <div className="absolute inset-y-0 right-0 hidden flex-col justify-between gap-3 lg:flex">
-            <MetricCard>
-              <Brain className="h-6 w-6 text-brand-700 dark:text-brand-200" aria-hidden="true" />
-              <div className="flex flex-col gap-1">
-                <span className="block h-1.5 w-10 rounded-full bg-slate-200 dark:bg-white/15" />
-                <span className="block h-1.5 w-8 rounded-full bg-slate-200 dark:bg-white/15" />
-                <span className="block h-1.5 w-6 rounded-full bg-slate-200 dark:bg-white/15" />
-              </div>
-            </MetricCard>
-
-            <MetricCard>
-              <LineChart className="h-6 w-6 text-brand-700 dark:text-brand-200" aria-hidden="true" />
-              <TrendSpark />
-            </MetricCard>
-
-            <MetricCard>
-              <span className="font-heading text-2xl font-semibold text-brand-700 dark:text-brand-200">
-                {totalArticles}
-              </span>
-              <div className="text-[11px] text-slate-500 dark:text-slate-400">
-                Peer-reviewed studies indexed
-              </div>
-            </MetricCard>
-          </div>
         </div>
       </div>
 
@@ -116,26 +92,3 @@ function StatItem({
   );
 }
 
-function MetricCard({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="flex w-[168px] items-center gap-3 rounded-2xl border border-slate-200 bg-white/95 px-3 py-2.5 shadow-card backdrop-blur dark:border-white/10 dark:bg-white/5">
-      {children}
-    </div>
-  );
-}
-
-function TrendSpark() {
-  return (
-    <svg viewBox="0 0 90 36" className="h-7 w-[92px] text-brand-600 dark:text-brand-300" aria-hidden="true">
-      <polyline
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        points="2,30 14,26 26,28 38,18 50,22 62,12 74,14 88,4"
-      />
-      <circle cx="88" cy="4" r="2.5" fill="currentColor" />
-    </svg>
-  );
-}

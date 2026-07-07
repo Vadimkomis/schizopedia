@@ -1,12 +1,8 @@
-import { render, screen } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
+import { screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import { LatestHighlights, formatPublishedShort } from "./LatestHighlights";
+import { renderWithRouter } from "@/test/render";
 import type { ResearchCategory } from "@/lib/types";
-
-function wrap(ui: React.ReactElement) {
-  return render(<MemoryRouter>{ui}</MemoryRouter>);
-}
 
 const categories: ResearchCategory[] = [
   {
@@ -45,7 +41,7 @@ const categories: ResearchCategory[] = [
 
 describe("LatestHighlights", () => {
   it("picks the 3 most recent articles across categories", () => {
-    wrap(<LatestHighlights categories={categories} loading={false} />);
+    renderWithRouter(<LatestHighlights categories={categories} loading={false} />);
 
     expect(screen.getByText("Newest diagnosis article")).toBeVisible();
     expect(screen.getByText("Middle treatment article")).toBeVisible();
@@ -58,7 +54,7 @@ describe("LatestHighlights", () => {
   });
 
   it("renders skeletons while loading with no data", () => {
-    const { container } = wrap(
+    const { container } = renderWithRouter(
       <LatestHighlights categories={[]} loading={true} />,
     );
 
@@ -66,7 +62,7 @@ describe("LatestHighlights", () => {
   });
 
   it("shows empty message when no articles exist and not loading", () => {
-    wrap(
+    renderWithRouter(
       <LatestHighlights
         categories={[
           { id: "diagnosis", title: "Diagnosis", summary: "dx", articles: [] },

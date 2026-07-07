@@ -1,7 +1,6 @@
-import { render, screen } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
+import { screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
-import { ThemeProvider } from "@/components/theme/ThemeProvider";
+import { renderWithProviders } from "@/test/render";
 import { TermsPage } from "./TermsPage";
 
 vi.stubGlobal(
@@ -14,13 +13,7 @@ vi.stubGlobal(
 
 describe("TermsPage", () => {
   it("renders the terms headline and the medical disclaimer", () => {
-    render(
-      <ThemeProvider>
-        <MemoryRouter>
-          <TermsPage />
-        </MemoryRouter>
-      </ThemeProvider>,
-    );
+    renderWithProviders(<TermsPage />);
 
     expect(
       screen.getByRole("heading", { name: /terms & conditions/i }),

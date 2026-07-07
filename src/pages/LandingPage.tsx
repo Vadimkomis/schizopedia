@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Microscope, Pill, Search, ShieldCheck } from "lucide-react";
-import { SiteNav } from "@/components/landing/SiteNav";
+import { PageShell } from "@/components/layout/PageLayout";
 import { HeroSection } from "@/components/landing/HeroSection";
 import {
   CategoryIconCard,
@@ -9,9 +9,7 @@ import {
 } from "@/components/landing/CategoryIconCard";
 import { LatestHighlights } from "@/components/landing/LatestHighlights";
 import { StartHereSection } from "@/components/landing/StartHereSection";
-import { SubscribeSection } from "@/components/landing/SubscribeSection";
 import { AboutSection } from "@/components/landing/AboutSection";
-import { SiteFooter } from "@/components/landing/SiteFooter";
 import { FALLBACK_CATEGORIES } from "@/components/research/constants";
 import { useResearchData } from "@/hooks/useResearchData";
 
@@ -25,11 +23,11 @@ const CATEGORY_CARDS: CategoryCardSpec[] = [
   {
     icon: Microscope,
     tint: "mint",
-    to: "/#about",
+    to: "/category/cure",
     fallbackTitle: "Cure Research",
     fallbackDescription:
       "Discover the latest advances in understanding the causes of schizophrenia and the quest for a cure.",
-    categoryId: null,
+    categoryId: "cure",
   },
   {
     icon: Search,
@@ -83,50 +81,44 @@ export function LandingPage() {
   );
 
   return (
-    <div className="flex min-h-screen flex-col bg-white dark:bg-[#0b1220]">
-      <SiteNav />
-      <main id="top" className="flex-1">
-        <HeroSection
-          totalArticles={totalArticles}
-          lastUpdated={data?.lastUpdated ?? null}
-        />
+    <PageShell mainId="top">
+      <HeroSection
+        totalArticles={totalArticles}
+        lastUpdated={data?.lastUpdated ?? null}
+      />
 
-        <StartHereSection />
+      <StartHereSection />
 
-        <section
-          id="categories"
-          aria-labelledby="categories-heading"
-          className="container py-14 lg:py-16 scroll-mt-20"
-        >
-          <h2 id="categories-heading" className="sr-only">
-            Research categories
-          </h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {CATEGORY_CARDS.map((spec) => {
-              const backing = spec.categoryId
-                ? categoriesById.get(spec.categoryId)
-                : undefined;
-              return (
-                <CategoryIconCard
-                  key={spec.fallbackTitle}
-                  icon={spec.icon}
-                  tint={spec.tint}
-                  to={spec.to}
-                  title={backing?.title ?? spec.fallbackTitle}
-                  description={backing?.summary ?? spec.fallbackDescription}
-                />
-              );
-            })}
-          </div>
-        </section>
+      <section
+        id="categories"
+        aria-labelledby="categories-heading"
+        className="container py-14 lg:py-16 scroll-mt-20"
+      >
+        <h2 id="categories-heading" className="sr-only">
+          Research categories
+        </h2>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {CATEGORY_CARDS.map((spec) => {
+            const backing = spec.categoryId
+              ? categoriesById.get(spec.categoryId)
+              : undefined;
+            return (
+              <CategoryIconCard
+                key={spec.fallbackTitle}
+                icon={spec.icon}
+                tint={spec.tint}
+                to={spec.to}
+                title={backing?.title ?? spec.fallbackTitle}
+                description={backing?.summary ?? spec.fallbackDescription}
+              />
+            );
+          })}
+        </div>
+      </section>
 
-        <LatestHighlights categories={categories} loading={loading} />
+      <LatestHighlights categories={categories} loading={loading} />
 
-        <SubscribeSection />
-
-        <AboutSection />
-      </main>
-      <SiteFooter />
-    </div>
+      <AboutSection />
+    </PageShell>
   );
 }

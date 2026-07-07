@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, FlaskConical } from "lucide-react";
+import { TEXT_ACTION_LINK_CLASS } from "@/lib/styles";
+import { formatPublishedShort, publishedTimestamp } from "@/lib/dates";
 import type { ResearchCategory } from "@/lib/types";
 import { HighlightCard } from "./HighlightCard";
+
+// Re-exported for backwards compatibility with existing imports/tests.
+export { formatPublishedShort };
 
 const VARIANTS = ["neuro", "scan", "lab"] as const;
 type Variant = (typeof VARIANTS)[number];
@@ -27,7 +32,7 @@ export function LatestHighlights({ categories, loading }: LatestHighlightsProps)
         </div>
         <Link
           to="/category/diagnosis"
-          className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 transition hover:text-brand-800 dark:text-brand-300 dark:hover:text-brand-200"
+          className={TEXT_ACTION_LINK_CLASS}
         >
           View all research
           <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -85,58 +90,10 @@ function pickHighlights(categories: ResearchCategory[], count: number): Pick[] {
         article,
         category: { id: category.id, title: category.title },
         dateLabel: formatPublishedShort(article.published) ?? "Recent",
-        sortKey: parsePublishedTimestamp(article.published),
+        sortKey: publishedTimestamp(article.published),
       });
     });
   });
   all.sort((a, b) => b.sortKey - a.sortKey);
   return all.slice(0, count);
-}
-
-// Parsed and formatted in UTC so prerendered HTML matches the client render.
-export function formatPublishedShort(value: string | undefined): string | null {
-  if (!value) return null;
-  const parsed = parseDateUtc(value);
-  if (parsed) {
-    return new Intl.DateTimeFormat("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-      timeZone: "UTC",
-    }).format(parsed);
-  }
-  const yearMatch = value.match(/\b(19|20|21)\d{2}\b/);
-  return yearMatch ? yearMatch[0] : value;
-}
-
-function parsePublishedTimestamp(value: string | undefined): number {
-  if (!value) return 0;
-  const parsed = parseDateUtc(value);
-  if (parsed) return parsed.getTime();
-  const yearMatch = value.match(/\b(19|20|21)\d{2}\b/);
-  if (yearMatch) return Date.UTC(Number(yearMatch[0]), 0, 1);
-  return 0;
-}
-
-const MONTHS = [
-  "jan", "feb", "mar", "apr", "may", "jun",
-  "jul", "aug", "sep", "oct", "nov", "dec",
-];
-
-function parseDateUtc(value: string): Date | null {
-  const isoDate = value.match(/^(\d{4})-(\d{2})-(\d{2})/);
-  if (isoDate) {
-    const [, y, m, d] = isoDate;
-    return new Date(Date.UTC(Number(y), Number(m) - 1, Number(d)));
-  }
-  // PubMed style, e.g. "2026 May 17" or "2026 May".
-  const pubmed = value.match(/^(\d{4})\s+([A-Za-z]{3})[a-z]*(?:\s+(\d{1,2}))?/);
-  if (pubmed) {
-    const [, y, mon, d] = pubmed;
-    const month = MONTHS.indexOf(mon.toLowerCase());
-    if (month >= 0) {
-      return new Date(Date.UTC(Number(y), month, d ? Number(d) : 1));
-    }
-  }
-  return null;
 }

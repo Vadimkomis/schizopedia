@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, type LucideIcon } from "lucide-react";
+import { TEXT_ACTION_LINK_CLASS } from "@/lib/styles";
 import { cn } from "@/lib/utils";
 
 export interface CategoryIconCardProps {
@@ -43,7 +44,7 @@ export function CategoryIconCard({
       <div className="mt-auto pt-5">
         <Link
           to={to}
-          className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 transition hover:text-brand-800 dark:text-brand-300 dark:hover:text-brand-200"
+          className={TEXT_ACTION_LINK_CLASS}
         >
           Learn more
           <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" aria-hidden="true" />

@@ -4,7 +4,7 @@
  * robots.txt, and the sitemap.
  */
 import { getGuide } from "@/lib/guides";
-import { FALLBACK_CATEGORIES } from "@/components/research/constants";
+import { getCategoryContent } from "@/lib/categoryContent";
 
 export const SITE_URL = "https://schizopedia.com";
 export const SITE_NAME = "Schizopedia";
@@ -63,10 +63,6 @@ const HOME_TITLE =
 const HOME_DESCRIPTION =
   "When schizophrenia touches someone you love, start here. Plain-language guides for families and caregivers, plus verifiable, weekly-updated research from PubMed.";
 
-const CATEGORY_META = new Map(
-  FALLBACK_CATEGORIES.map((c) => [c.id, { title: c.title, summary: c.summary }]),
-);
-
 function homeSeo(): SeoMeta {
   return {
     title: HOME_TITLE,
@@ -102,22 +98,36 @@ export function resolveSeo(pathname: string): SeoMeta {
 
   const categoryMatch = pathname.match(/^\/category\/([^/]+)\/?$/);
   if (categoryMatch) {
-    const category = CATEGORY_META.get(categoryMatch[1]);
+    const category = getCategoryContent(categoryMatch[1]);
     if (category) {
+      const isCure = category.id === "cure";
       return {
-        title: `Schizophrenia ${category.title} Research — Latest Studies`,
-        description: category.summary,
+        title: isCure
+          ? "Schizophrenia Cure Research — Is There a Cure?"
+          : `Schizophrenia ${category.title} Research — Latest Studies`,
+        description: category.seoDescription,
         path: `/category/${categoryMatch[1]}`,
         type: "website",
         jsonLd: articleJsonLd({
-          headline: `Schizophrenia ${category.title} Research`,
-          description: category.summary,
+          headline: isCure
+            ? "Schizophrenia Cure Research"
+            : `Schizophrenia ${category.title} Research`,
+          description: category.seoDescription,
           path: `/category/${categoryMatch[1]}`,
         }),
       };
     }
   }
 
+  if (pathname === "/donate") {
+    return {
+      title: "Support Schizopedia — Donate",
+      description:
+        "Schizopedia is free, ad-free, and collects no personal data. Reader support keeps the plain-language schizophrenia guides and research current.",
+      path: "/donate",
+      type: "website",
+    };
+  }
   if (pathname === "/privacy") {
     return {
       title: "Privacy Policy",

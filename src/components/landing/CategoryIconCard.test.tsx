@@ -1,12 +1,8 @@
-import { render, screen } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
+import { screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import { Search } from "lucide-react";
 import { CategoryIconCard } from "./CategoryIconCard";
-
-function renderWithRouter(ui: React.ReactElement) {
-  return render(<MemoryRouter>{ui}</MemoryRouter>);
-}
+import { renderWithRouter } from "@/test/render";
 
 describe("CategoryIconCard", () => {
   it("renders title, description, and link", () => {

@@ -1,7 +1,6 @@
-import { render, screen } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
+import { screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
-import { ThemeProvider } from "@/components/theme/ThemeProvider";
+import { renderWithProviders } from "@/test/render";
 import { PrivacyPage } from "./PrivacyPage";
 
 vi.stubGlobal(
@@ -14,13 +13,7 @@ vi.stubGlobal(
 
 describe("PrivacyPage", () => {
   it("renders the privacy policy headline and key sections", () => {
-    render(
-      <ThemeProvider>
-        <MemoryRouter>
-          <PrivacyPage />
-        </MemoryRouter>
-      </ThemeProvider>,
-    );
+    renderWithProviders(<PrivacyPage />);
 
     expect(
       screen.getByRole("heading", { name: /privacy policy/i }),

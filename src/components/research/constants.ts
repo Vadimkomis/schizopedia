@@ -22,6 +22,13 @@ export const FALLBACK_CATEGORIES: ResearchCategory[] = [
       "Stay informed on research focused on reducing risk factors and promoting brain health.",
     articles: [],
   },
+  {
+    id: "cure",
+    title: "Cure Research",
+    summary:
+      "Understanding the causes of schizophrenia and the long search for a cure.",
+    articles: [],
+  },
 ];
 
 export const DEFAULT_SOURCES: ResearchSource[] = [

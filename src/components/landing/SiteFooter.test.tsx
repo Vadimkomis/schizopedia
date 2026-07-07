@@ -1,36 +1,35 @@
-import { render, screen } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
+import { screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import { SiteFooter } from "./SiteFooter";
-
-function wrap(ui: React.ReactElement) {
-  return render(<MemoryRouter>{ui}</MemoryRouter>);
-}
+import { renderWithRouter } from "@/test/render";
 
 describe("SiteFooter", () => {
   it("renders the tagline", () => {
-    wrap(<SiteFooter />);
+    renderWithRouter(<SiteFooter />);
     expect(screen.getByText(/knowledge today\. better tomorrows\./i)).toBeVisible();
   });
 
   it("links privacy and terms pages", () => {
-    wrap(<SiteFooter />);
+    renderWithRouter(<SiteFooter />);
     expect(screen.getByRole("link", { name: /privacy/i })).toHaveAttribute("href", "/privacy");
     expect(
       screen.getByRole("link", { name: /terms & conditions/i }),
     ).toHaveAttribute("href", "/terms");
   });
 
-  it("does not render a donate button (donate lives in the nav)", () => {
-    wrap(<SiteFooter />);
-    expect(
-      screen.queryByRole("link", { name: /donate/i }),
-    ).not.toBeInTheDocument();
+  it("links the donate page", () => {
+    renderWithRouter(<SiteFooter />);
+    expect(screen.getByRole("link", { name: /donate/i })).toHaveAttribute(
+      "href",
+      "/donate",
+    );
   });
 
-  it("renders a compact email subscribe field", () => {
-    wrap(<SiteFooter />);
-    expect(screen.getByLabelText(/email address/i)).toBeVisible();
-    expect(screen.getByRole("button", { name: /subscribe/i })).toBeVisible();
+  it("no longer renders an email subscribe field", () => {
+    renderWithRouter(<SiteFooter />);
+    expect(screen.queryByLabelText(/email address/i)).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole("button", { name: /subscribe/i }),
+    ).not.toBeInTheDocument();
   });
 });

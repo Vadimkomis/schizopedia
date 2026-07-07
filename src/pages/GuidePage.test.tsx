@@ -1,8 +1,8 @@
-import { render, screen, within } from "@testing-library/react";
-import { MemoryRouter, Route, Routes } from "react-router-dom";
+import { screen, within } from "@testing-library/react";
+import { Route, Routes } from "react-router-dom";
 import { describe, expect, it, vi } from "vitest";
-import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import { GuidePage } from "./GuidePage";
+import { renderWithProviders } from "@/test/render";
 
 vi.stubGlobal(
   "fetch",
@@ -13,15 +13,12 @@ vi.stubGlobal(
 );
 
 function renderAt(path: string) {
-  return render(
-    <ThemeProvider>
-      <MemoryRouter initialEntries={[path]}>
-        <Routes>
-          <Route path="/guide/:id" element={<GuidePage />} />
-          <Route path="*" element={<p>landing</p>} />
-        </Routes>
-      </MemoryRouter>
-    </ThemeProvider>,
+  return renderWithProviders(
+    <Routes>
+      <Route path="/guide/:id" element={<GuidePage />} />
+      <Route path="*" element={<p>landing</p>} />
+    </Routes>,
+    { initialEntries: [path] },
   );
 }
 

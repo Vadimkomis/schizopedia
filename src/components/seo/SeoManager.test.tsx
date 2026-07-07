@@ -1,14 +1,9 @@
-import { render } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
 import { beforeEach, describe, expect, it } from "vitest";
 import { SeoManager } from "./SeoManager";
+import { renderWithRouter } from "@/test/render";
 
 function renderAt(path: string) {
-  return render(
-    <MemoryRouter initialEntries={[path]}>
-      <SeoManager />
-    </MemoryRouter>,
-  );
+  return renderWithRouter(<SeoManager />, { initialEntries: [path] });
 }
 
 describe("SeoManager", () => {

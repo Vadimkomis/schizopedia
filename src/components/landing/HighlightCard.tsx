@@ -1,4 +1,5 @@
 import { ArrowRight, FlaskConical, ScanLine, TestTube } from "lucide-react";
+import { TEXT_ACTION_LINK_CLASS } from "@/lib/styles";
 import type { ResearchArticle } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -75,7 +76,7 @@ export function HighlightCard({
           href={article.url}
           target="_blank"
           rel="noreferrer noopener"
-          className="mt-auto inline-flex items-center gap-1.5 pt-4 text-sm font-semibold text-brand-700 transition hover:text-brand-800 dark:text-brand-300 dark:hover:text-brand-200"
+          className={cn("mt-auto pt-4", TEXT_ACTION_LINK_CLASS)}
           aria-label={`Read summary of ${article.title} (${category.title})`}
         >
           Read summary

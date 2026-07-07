@@ -11,7 +11,7 @@ export const GUIDE_IDS = [
   "caring-for-yourself",
 ];
 
-export const CATEGORY_IDS = ["diagnosis", "treatment", "prevention"];
+export const CATEGORY_IDS = ["diagnosis", "treatment", "prevention", "cure"];
 
 export function buildRoutes() {
   return [
@@ -26,6 +26,7 @@ export function buildRoutes() {
       priority: "0.7",
       changefreq: "weekly",
     })),
+    { path: "/donate", priority: "0.4", changefreq: "monthly" },
     { path: "/privacy", priority: "0.2", changefreq: "yearly" },
     { path: "/terms", priority: "0.2", changefreq: "yearly" },
   ];

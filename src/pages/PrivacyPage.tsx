@@ -22,8 +22,9 @@ export function PrivacyPage() {
       <LegalSection heading="External links">
         <p>
           Articles link to PubMed (a service of the U.S. National Library of
-          Medicine) and the donate button links to Open Collective. Once you
-          leave Schizopedia, those sites&apos; own privacy policies apply.
+          Medicine). If you choose to donate, that may take you to a third-party
+          payment provider. Once you leave Schizopedia, those sites&apos; own
+          privacy policies apply.
         </p>
       </LegalSection>
 

@@ -1,15 +1,13 @@
-import { render, screen } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
+import { screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import { HeroSection } from "./HeroSection";
-
-function wrap(ui: React.ReactElement) {
-  return render(<MemoryRouter>{ui}</MemoryRouter>);
-}
+import { renderWithRouter } from "@/test/render";
 
 describe("HeroSection", () => {
   it("renders the primary headline and CTAs", () => {
-    wrap(<HeroSection totalArticles={30} lastUpdated="2026-06-01T09:00:00Z" />);
+    renderWithRouter(
+      <HeroSection totalArticles={30} lastUpdated="2026-06-01T09:00:00Z" />,
+    );
 
     expect(
       screen.getByRole("heading", {
@@ -25,7 +23,9 @@ describe("HeroSection", () => {
   });
 
   it("shows the indexed studies count in the stats band", () => {
-    wrap(<HeroSection totalArticles={18} lastUpdated="2026-06-01T09:00:00Z" />);
+    renderWithRouter(
+      <HeroSection totalArticles={18} lastUpdated="2026-06-01T09:00:00Z" />,
+    );
     expect(screen.getAllByText("18").length).toBeGreaterThan(0);
     expect(
       screen.getAllByText(/peer-reviewed studies indexed/i).length,
@@ -33,14 +33,16 @@ describe("HeroSection", () => {
   });
 
   it("shows honest refresh stats instead of a synthetic progress metric", () => {
-    wrap(<HeroSection totalArticles={18} lastUpdated="2026-06-01T09:00:00Z" />);
+    renderWithRouter(
+      <HeroSection totalArticles={18} lastUpdated="2026-06-01T09:00:00Z" />,
+    );
     expect(screen.getByText(/automatic pubmed refresh/i)).toBeVisible();
     expect(screen.getByText(/linked to primary sources/i)).toBeVisible();
     expect(screen.queryByText(/research progress/i)).not.toBeInTheDocument();
   });
 
   it("falls back to a pending label when the feed has not synced", () => {
-    wrap(<HeroSection totalArticles={0} lastUpdated={null} />);
+    renderWithRouter(<HeroSection totalArticles={0} lastUpdated={null} />);
     expect(screen.getByText(/pending sync/i)).toBeVisible();
   });
 });
