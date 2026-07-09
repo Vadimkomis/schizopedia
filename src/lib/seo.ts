@@ -119,6 +119,21 @@ export function resolveSeo(pathname: string): SeoMeta {
     }
   }
 
+  if (pathname === "/prevalence") {
+    return {
+      title: "Schizophrenia Prevalence by Country — How Common Is It?",
+      description:
+        "Schizophrenia affects about 1 in 300 people (~24 million) worldwide. See modelled prevalence estimates by country and why the rate is strikingly consistent across the globe.",
+      path: "/prevalence",
+      type: "website",
+      jsonLd: articleJsonLd({
+        headline: "Schizophrenia prevalence around the world",
+        description:
+          "How common schizophrenia is worldwide and by country, from WHO and IHME Global Burden of Disease estimates.",
+        path: "/prevalence",
+      }),
+    };
+  }
   if (pathname === "/donate") {
     return {
       title: "Support Schizopedia — Donate",

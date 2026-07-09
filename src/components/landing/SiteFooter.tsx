@@ -18,6 +18,10 @@ export function SiteFooter() {
           aria-label="Legal"
           className="flex items-center gap-5 text-sm text-slate-600 dark:text-slate-300"
         >
+          <Link to="/prevalence" className="transition hover:text-brand-700 dark:hover:text-brand-200">
+            Worldwide data
+          </Link>
+          <span className="text-slate-300 dark:text-white/20" aria-hidden="true">|</span>
           <Link to={DONATE_PATH} className="transition hover:text-brand-700 dark:hover:text-brand-200">
             Donate
           </Link>

@@ -1,0 +1,41 @@
+{
+  "lastUpdated": "2026-07-07",
+  "global": {
+    "affectedMillions": 24,
+    "oneIn": 300,
+    "percent": 0.32,
+    "source": "World Health Organization — Schizophrenia fact sheet (2022)",
+    "sourceUrl": "https://www.who.int/news-room/fact-sheets/detail/schizophrenia"
+  },
+  "estimatesSource": {
+    "name": "IHME Global Burden of Disease (GBD 2021)",
+    "url": "https://vizhub.healthdata.org/gbd-results/",
+    "note": "Country figures are modelled, age-standardized point-prevalence estimates. Schizophrenia prevalence is unusually consistent worldwide — roughly 0.3% of people everywhere — so cross-country differences are small and model-dependent. New-case (incidence) rates vary more than prevalence, driven by factors such as migration and urban living."
+  },
+  "countries": [
+    { "code": "AU", "name": "Australia", "percent": 0.35 },
+    { "code": "NZ", "name": "New Zealand", "percent": 0.34 },
+    { "code": "JP", "name": "Japan", "percent": 0.34 },
+    { "code": "KR", "name": "South Korea", "percent": 0.34 },
+    { "code": "US", "name": "United States", "percent": 0.33 },
+    { "code": "CA", "name": "Canada", "percent": 0.33 },
+    { "code": "RU", "name": "Russia", "percent": 0.33 },
+    { "code": "GB", "name": "United Kingdom", "percent": 0.32 },
+    { "code": "DE", "name": "Germany", "percent": 0.32 },
+    { "code": "FR", "name": "France", "percent": 0.32 },
+    { "code": "IT", "name": "Italy", "percent": 0.31 },
+    { "code": "ES", "name": "Spain", "percent": 0.31 },
+    { "code": "CN", "name": "China", "percent": 0.31 },
+    { "code": "ID", "name": "Indonesia", "percent": 0.33 },
+    { "code": "TH", "name": "Thailand", "percent": 0.32 },
+    { "code": "PH", "name": "Philippines", "percent": 0.32 },
+    { "code": "IR", "name": "Iran", "percent": 0.31 },
+    { "code": "TR", "name": "Türkiye", "percent": 0.31 },
+    { "code": "EG", "name": "Egypt", "percent": 0.30 },
+    { "code": "BR", "name": "Brazil", "percent": 0.30 },
+    { "code": "MX", "name": "Mexico", "percent": 0.30 },
+    { "code": "IN", "name": "India", "percent": 0.30 },
+    { "code": "NG", "name": "Nigeria", "percent": 0.29 },
+    { "code": "ZA", "name": "South Africa", "percent": 0.30 }
+  ]
+}

@@ -17,6 +17,9 @@ const GuidePage = lazy(() =>
 const DonatePage = lazy(() =>
   import("@/pages/DonatePage").then((m) => ({ default: m.DonatePage })),
 );
+const PrevalencePage = lazy(() =>
+  import("@/pages/PrevalencePage").then((m) => ({ default: m.PrevalencePage })),
+);
 const PrivacyPage = lazy(() =>
   import("@/pages/PrivacyPage").then((m) => ({ default: m.PrivacyPage })),
 );
@@ -36,6 +39,7 @@ export function AppShell() {
           <Route path="/category/:id" element={<CategoryPage />} />
           <Route path="/guide/:id" element={<GuidePage />} />
           <Route path="/donate" element={<DonatePage />} />
+          <Route path="/prevalence" element={<PrevalencePage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/terms" element={<TermsPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />

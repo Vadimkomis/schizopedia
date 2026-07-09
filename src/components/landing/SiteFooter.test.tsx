@@ -25,6 +25,13 @@ describe("SiteFooter", () => {
     );
   });
 
+  it("links the worldwide prevalence page", () => {
+    renderWithRouter(<SiteFooter />);
+    expect(
+      screen.getByRole("link", { name: /worldwide data/i }),
+    ).toHaveAttribute("href", "/prevalence");
+  });
+
   it("no longer renders an email subscribe field", () => {
     renderWithRouter(<SiteFooter />);
     expect(screen.queryByLabelText(/email address/i)).not.toBeInTheDocument();

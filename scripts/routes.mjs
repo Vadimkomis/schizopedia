@@ -26,6 +26,7 @@ export function buildRoutes() {
       priority: "0.7",
       changefreq: "weekly",
     })),
+    { path: "/prevalence", priority: "0.6", changefreq: "monthly" },
     { path: "/donate", priority: "0.4", changefreq: "monthly" },
     { path: "/privacy", priority: "0.2", changefreq: "yearly" },
     { path: "/terms", priority: "0.2", changefreq: "yearly" },

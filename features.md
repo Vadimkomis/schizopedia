@@ -259,6 +259,15 @@ Feature: Performance
     Then fonts load via a non-blocking preload+swap link (text paints immediately in a fallback) and an inline script applies the saved/system theme before paint to avoid a flash
     And the status is "completed"
 
+Feature: Global prevalence
+
+  Scenario: Schizophrenia around the world
+    Given a visitor wants to know how common schizophrenia is
+    When they open /prevalence (linked from the footer "Worldwide data" and a landing teaser)
+    Then the page leads with the WHO global figure (about 1 in 300 people / ~24 million / ~0.32%) with a linked source, then shows modelled age-standardized prevalence estimates by country as a sorted bar list credited to IHME Global Burden of Disease, with a caveat that prevalence is strikingly uniform worldwide and that incidence varies more than prevalence
+    And the data lives in data/prevalence.json (validated by unit tests) so it can be corrected and expanded
+    And the status is "completed"
+
 Feature: Support / donations
 
   Scenario: In-app donate page never dead-ends
