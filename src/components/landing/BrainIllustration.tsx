@@ -1,6 +1,8 @@
 /**
- * Anatomical side-profile brain rendered as a neural network — outline,
- * gyri folds, synapse nodes, and connecting fibers. Purely decorative.
+ * Anatomical lateral (side-profile) view of a human brain: the folded cortex
+ * with its major sulci, the Sylvian fissure separating the temporal lobe, the
+ * cerebellum with its fine folia, and the brain stem. Purely decorative; it
+ * inherits its colour from the surrounding text colour so it adapts to theme.
  */
 export function BrainIllustration() {
   return (
@@ -10,88 +12,158 @@ export function BrainIllustration() {
         aria-hidden="true"
       />
       <svg
-        viewBox="0 0 320 280"
+        viewBox="0 0 400 300"
         aria-hidden="true"
         className="relative h-full w-auto max-w-full text-brand-500 drop-shadow-[0_8px_30px_rgba(59,130,246,0.35)] dark:text-brand-300"
       >
-        {/* Outer cortex profile (facing right) */}
+        <defs>
+          <clipPath id="brain-cerebrum-clip">
+            <path d={CEREBRUM} />
+          </clipPath>
+          <clipPath id="brain-cerebellum-clip">
+            <path d={CEREBELLUM} />
+          </clipPath>
+        </defs>
+
+        {/* Brain stem, drawn first so the cortex overlaps its top */}
         <path
-          d="M158 28
-             C 120 18, 84 30, 66 56
-             C 44 64, 32 86, 36 110
-             C 22 124, 20 150, 32 168
-             C 30 192, 44 212, 68 220
-             C 76 240, 100 250, 122 244
-             C 132 258, 156 262, 172 252
-             C 186 262, 210 258, 220 244
-             C 246 246, 268 230, 272 206
-             C 292 192, 298 164, 286 144
-             C 296 120, 288 94, 266 82
-             C 262 56, 238 38, 212 42
-             C 198 26, 174 22, 158 28 Z"
-          fill="none"
+          d={BRAIN_STEM}
+          fill="currentColor"
+          fillOpacity="0.1"
           stroke="currentColor"
-          strokeWidth="3"
-          strokeLinecap="round"
-          className="opacity-80"
+          strokeOpacity="0.85"
+          strokeWidth="2.4"
+          strokeLinejoin="round"
         />
-        {/* Gyri — inner folds */}
+
+        {/* Cerebellum body + folia */}
+        <path
+          d={CEREBELLUM}
+          fill="currentColor"
+          fillOpacity="0.14"
+          stroke="currentColor"
+          strokeOpacity="0.85"
+          strokeWidth="2.4"
+          strokeLinejoin="round"
+        />
         <g
+          clipPath="url(#brain-cerebellum-clip)"
           fill="none"
           stroke="currentColor"
-          strokeWidth="2"
+          strokeOpacity="0.4"
+          strokeWidth="1.3"
           strokeLinecap="round"
-          className="opacity-45"
         >
-          <path d="M70 64 C 92 52, 118 50, 138 60 C 154 48, 180 46, 198 56" />
-          <path d="M48 104 C 66 90, 92 88, 108 100 C 126 86, 152 88, 166 102" />
-          <path d="M44 152 C 64 138, 90 140, 104 154 C 124 142, 148 146, 160 160" />
-          <path d="M70 200 C 92 188, 116 190, 132 204 C 150 192, 174 194, 188 208" />
-          <path d="M196 84 C 216 74, 240 78, 252 94" />
-          <path d="M204 130 C 224 118, 250 122, 262 140" />
-          <path d="M206 176 C 226 166, 248 170, 258 186" />
-          {/* Cerebellum hatch */}
-          <path d="M196 224 C 206 216, 220 214, 232 220" />
-          <path d="M198 236 C 210 228, 226 226, 238 232" />
-        </g>
-        {/* Synapse fibers */}
-        <g
-          stroke="currentColor"
-          strokeWidth="1.5"
-          className="opacity-50"
-        >
-          <line x1="96" y1="80" x2="148" y2="118" />
-          <line x1="148" y1="118" x2="214" y2="100" />
-          <line x1="148" y1="118" x2="120" y2="176" />
-          <line x1="120" y1="176" x2="190" y2="190" />
-          <line x1="190" y1="190" x2="236" y2="156" />
-          <line x1="214" y1="100" x2="236" y2="156" />
-          <line x1="96" y1="80" x2="64" y2="136" />
-          <line x1="64" y1="136" x2="120" y2="176" />
-        </g>
-        {/* Synapse nodes */}
-        <g fill="currentColor">
-          {[
-            [96, 80, 5],
-            [148, 118, 6],
-            [214, 100, 5],
-            [120, 176, 5],
-            [190, 190, 6],
-            [236, 156, 5],
-            [64, 136, 4],
-          ].map(([cx, cy, r]) => (
-            <circle key={`${cx}-${cy}`} cx={cx} cy={cy} r={r} className="opacity-90">
-              <animate
-                attributeName="opacity"
-                values="0.5;1;0.5"
-                dur="3s"
-                begin={`${(cx + cy) % 17 / 10}s`}
-                repeatCount="indefinite"
-              />
-            </circle>
+          {CEREBELLUM_FOLIA.map((d, i) => (
+            <path key={`folia-${i}`} d={d} />
           ))}
+        </g>
+
+        {/* Cerebrum body */}
+        <path
+          d={CEREBRUM}
+          fill="currentColor"
+          fillOpacity="0.1"
+          stroke="currentColor"
+          strokeOpacity="0.9"
+          strokeWidth="2.6"
+          strokeLinejoin="round"
+        />
+
+        {/* Cortical folds (sulci), clipped to the cerebrum so they stay inside */}
+        <g
+          clipPath="url(#brain-cerebrum-clip)"
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+        >
+          {SULCI.map((d, i) => (
+            <path key={`sulcus-${i}`} d={d} strokeOpacity="0.45" strokeWidth="1.7" />
+          ))}
+          {/* Sylvian fissure + central sulcus, drawn heavier as key landmarks */}
+          <path d={SYLVIAN_FISSURE} strokeOpacity="0.7" strokeWidth="2.4" />
+          <path d={CENTRAL_SULCUS} strokeOpacity="0.62" strokeWidth="2.1" />
         </g>
       </svg>
     </div>
   );
 }
+
+// Lateral cerebrum silhouette, frontal lobe facing left (viewBox 0 0 400 300).
+// The top edge is deliberately scalloped so the gyri bulge at the outline.
+const CEREBRUM = `
+  M 52 150
+  C 46 120, 52 96, 70 80
+  C 78 72, 90 74, 96 82
+  C 104 70, 118 68, 128 76
+  C 138 66, 152 66, 160 74
+  C 172 62, 188 64, 196 72
+  C 210 62, 226 66, 234 76
+  C 250 68, 270 76, 286 92
+  C 308 110, 340 127, 337 157
+  C 334 178, 322 190, 301 194
+  C 293 196, 287 195, 282 191
+  C 273 200, 258 206, 240 208
+  C 208 213, 170 214, 138 210
+  C 116 207, 98 202, 86 192
+  C 74 183, 66 170, 60 160
+  C 57 155, 54 153, 52 150 Z
+`;
+
+// Cerebellum: rounded mass tucked under the occipital lobe, back-bottom.
+const CEREBELLUM = `
+  M 286 195
+  C 298 187, 324 186, 341 198
+  C 355 207, 356 230, 342 242
+  C 328 253, 301 254, 288 242
+  C 278 234, 276 205, 286 195 Z
+`;
+
+// Brain stem descending from between temporal lobe and cerebellum.
+const BRAIN_STEM = `
+  M 264 195
+  C 261 216, 263 236, 271 250
+  C 275 256, 281 256, 284 250
+  C 281 235, 280 214, 278 196
+  C 273 199, 268 199, 264 195 Z
+`;
+
+const CEREBELLUM_FOLIA = [
+  "M 290 204 C 308 198, 330 200, 345 209",
+  "M 287 213 C 307 207, 331 209, 347 218",
+  "M 286 223 C 307 218, 331 220, 346 228",
+  "M 289 232 C 309 228, 330 230, 343 236",
+  "M 296 240 C 313 238, 329 240, 339 244",
+];
+
+// Long horizontal fissure separating the temporal lobe from the rest.
+const SYLVIAN_FISSURE =
+  "M 74 158 C 112 176, 168 184, 226 177 C 246 174, 262 168, 272 160";
+
+// Central sulcus running down from the vertex.
+const CENTRAL_SULCUS = "M 200 62 C 197 90, 192 118, 182 148";
+
+const SULCI = [
+  // Frontal lobe folds
+  "M 72 92 C 92 84, 112 96, 132 88 C 146 83, 156 88, 164 92",
+  "M 70 110 C 92 102, 114 114, 136 106 C 150 101, 160 106, 168 110",
+  "M 74 128 C 94 122, 114 132, 134 126",
+  // Parietal folds
+  "M 168 80 C 196 72, 224 84, 252 76 C 276 70, 296 82, 312 96",
+  "M 176 98 C 204 90, 232 102, 260 94 C 284 88, 302 100, 316 114",
+  "M 184 118 C 210 110, 238 120, 264 114 C 288 109, 304 120, 316 132",
+  // Precentral / postcentral gyri, either side of the central sulcus
+  "M 176 66 C 173 92, 170 118, 162 148",
+  "M 226 66 C 224 92, 222 118, 216 150",
+  // Occipital (back) folds
+  "M 296 96 C 312 112, 320 132, 315 154",
+  "M 284 128 C 300 138, 310 154, 312 172",
+  // Frontal pole + short connecting folds
+  "M 86 148 C 76 134, 76 114, 86 98",
+  "M 150 110 C 158 120, 156 132, 148 140",
+  "M 230 100 C 238 110, 238 124, 230 134",
+  "M 120 150 C 132 156, 146 154, 158 158",
+  // Temporal lobe folds (below the Sylvian fissure)
+  "M 92 182 C 124 192, 162 186, 198 192 C 230 197, 256 191, 276 186",
+  "M 108 197 C 138 204, 174 200, 206 203 C 230 205, 250 202, 266 199",
+];
