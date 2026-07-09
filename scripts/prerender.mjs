@@ -57,6 +57,12 @@ async function main() {
     const { html, head } = await render(route.path, withData ? data : null);
 
     const parts = [fontPreload, head];
+    if (route.path === "/") {
+      // The hero image is the LCP element on the home page — preload it.
+      parts.push(
+        `<link rel="preload" as="image" href="/hero-brain.webp" type="image/webp" fetchpriority="high" />`,
+      );
+    }
     if (withData) {
       parts.push(`<script>window.__RESEARCH__=${serializedData}</script>`);
     }

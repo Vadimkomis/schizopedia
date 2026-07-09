@@ -51,7 +51,7 @@ Feature: Landing page
     Given a visitor lands on /
     When the page renders
     Then they see the caregiver-first headline "When schizophrenia touches someone you love, start here.", a plain-language supporting description, and two CTAs: filled "Start Here" (scrolls to the guide section) and outlined "Explore Research"
-    And a decorative anatomical brain SVG with animated synapse nodes appears centered in the right column with no overlapping tiles (the studies-indexed count lives only in the stats band below)
+    And a framed hero image of a human head in profile with a glowing neural-network brain appears in the right column (optimized WebP with a JPG fallback, preloaded as the LCP element; the studies-indexed count lives only in the stats band below)
     And the status is "completed"
 
   Scenario: Honest stats band under the hero
