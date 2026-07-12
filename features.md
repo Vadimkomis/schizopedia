@@ -51,7 +51,8 @@ Feature: Landing page
     Given a visitor lands on /
     When the page renders
     Then they see the caregiver-first headline "When schizophrenia touches someone you love, start here.", a plain-language supporting description, and two CTAs: filled "Start Here" (scrolls to the guide section) and outlined "Explore Research"
-    And a framed hero image of a human head in profile with a glowing neural-network brain appears in the right column (optimized WebP with a JPG fallback, preloaded as the LCP element; the studies-indexed count lives only in the stats band below)
+    And a framed hero visual appears in the right column: a rotating 3D neural-network brain animated on a canvas (a hand-rolled, dependency-free point cloud with sparkling neurons and fibers), code-split and mounted after paint, pausing when off-screen or the tab is hidden
+    And a preloaded, optimized WebP poster image (JPG fallback) paints instantly as the LCP element and serves as the reduced-motion / no-JS fallback (the studies-indexed count lives only in the stats band below)
     And the status is "completed"
 
   Scenario: Honest stats band under the hero
