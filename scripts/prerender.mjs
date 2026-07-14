@@ -58,9 +58,9 @@ async function main() {
 
     const parts = [fontPreload, head];
     if (route.path === "/") {
-      // The hero image is the LCP element on the home page — preload it.
+      // The aerial brain scene is the LCP element on the home page.
       parts.push(
-        `<link rel="preload" as="image" href="/hero-brain.webp" type="image/webp" fetchpriority="high" />`,
+        `<link rel="preload" as="image" href="/brain-aerial.svg" type="image/svg+xml" fetchpriority="high" />`,
       );
     }
     if (withData) {

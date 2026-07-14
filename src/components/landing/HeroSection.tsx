@@ -10,10 +10,13 @@ export interface HeroSectionProps {
 
 export function HeroSection({ totalArticles, lastUpdated }: HeroSectionProps) {
   return (
-    <section className="hero-band">
-      <div className="container grid gap-10 py-14 lg:grid-cols-[1.1fr_1fr] lg:gap-12 lg:py-20">
-        <div className="max-w-xl space-y-6 fade-up">
-          <h1 className="font-heading text-4xl font-semibold leading-[1.08] tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-[54px]">
+    <section className="hero-band overflow-hidden">
+      <div className="container grid items-center gap-9 py-12 lg:grid-cols-[0.86fr_1.14fr] lg:gap-8 lg:py-16 xl:grid-cols-[0.8fr_1.2fr]">
+        <div className="relative z-10 max-w-xl space-y-6 fade-up lg:py-4 xl:py-8">
+          <p className="inline-flex items-center gap-2 rounded-full border border-brand-200/80 bg-white/60 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-700 shadow-sm backdrop-blur dark:border-brand-300/20 dark:bg-white/5 dark:text-brand-200">
+            Clarity through evidence
+          </p>
+          <h1 className="font-heading text-4xl font-semibold leading-[1.08] tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-[48px] xl:text-[54px]">
             When schizophrenia touches someone you love, start here.
           </h1>
           <p className="text-lg text-slate-600 dark:text-slate-300">
@@ -39,7 +42,7 @@ export function HeroSection({ totalArticles, lastUpdated }: HeroSectionProps) {
           </div>
         </div>
 
-        <div className="flex items-center justify-center fade-up">
+        <div className="relative flex items-center justify-center fade-up lg:justify-end">
           <BrainIllustration />
         </div>
       </div>
@@ -91,4 +94,3 @@ function StatItem({
     </div>
   );
 }
-
