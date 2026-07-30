@@ -1,6 +1,17 @@
 import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ArrowRight, Globe, Microscope, Pill, Search, ShieldCheck } from "lucide-react";
+import {
+  ArrowRight,
+  BookOpenCheck,
+  Database,
+  FileCheck2,
+  Globe,
+  Microscope,
+  Pill,
+  Search,
+  ShieldCheck,
+  Stethoscope,
+} from "lucide-react";
 import { PageShell } from "@/components/layout/PageLayout";
 import { HeroSection } from "@/components/landing/HeroSection";
 import {
@@ -84,21 +95,37 @@ export function LandingPage() {
   return (
     <PageShell mainId="top">
       <HeroSection
+        categories={categories}
+        loading={loading}
         totalArticles={totalArticles}
         lastUpdated={data?.lastUpdated ?? null}
       />
+
+      <EvidenceSourceRail totalArticles={totalArticles} />
 
       <StartHereSection />
 
       <section
         id="categories"
-        aria-labelledby="categories-heading"
+        aria-labelledby="evidence-library-heading"
         className="container py-14 lg:py-16 scroll-mt-20"
       >
-        <h2 id="categories-heading" className="sr-only">
-          Research categories
-        </h2>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="max-w-2xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-700 dark:text-brand-300">
+            Evidence library
+          </p>
+          <h2
+            id="evidence-library-heading"
+            className="mt-2 font-heading text-3xl font-semibold text-slate-900 dark:text-white sm:text-4xl"
+          >
+            Follow the question that matters to you.
+          </h2>
+          <p className="mt-3 text-slate-600 dark:text-slate-300">
+            Move from plain-language context to the primary research, with the
+            strength and limits of each source kept visible.
+          </p>
+        </div>
+        <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {CATEGORY_CARDS.map((spec) => {
             const backing = spec.categoryId
               ? categoriesById.get(spec.categoryId)
@@ -123,6 +150,64 @@ export function LandingPage() {
 
       <AboutSection />
     </PageShell>
+  );
+}
+
+function EvidenceSourceRail({ totalArticles }: { totalArticles: number }) {
+  const sources = [
+    {
+      icon: Database,
+      label: "PubMed",
+      detail: `${totalArticles} primary links`,
+    },
+    {
+      icon: FileCheck2,
+      label: "Evidence syntheses",
+      detail: "Reviews + meta-analyses",
+    },
+    {
+      icon: Stethoscope,
+      label: "Clinical research",
+      detail: "Human studies flagged",
+    },
+    {
+      icon: BookOpenCheck,
+      label: "Plain-language guides",
+      detail: "Context before complexity",
+    },
+  ];
+
+  return (
+    <section
+      aria-label="Connected evidence sources"
+      className="source-rail border-y border-[#19372f]/10 bg-white/75 dark:border-white/10 dark:bg-white/[0.025]"
+    >
+      <div className="container py-6">
+        <div className="flex flex-col gap-5 lg:flex-row lg:items-center">
+          <div className="shrink-0 lg:w-44">
+            <p className="text-xs font-semibold uppercase tracking-[0.19em] text-[#397864] dark:text-[#8ad1ba]">
+              Connected by design
+            </p>
+            <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
+              Every answer keeps its trail.
+            </p>
+          </div>
+          <ul className="grid flex-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {sources.map(({ icon: Icon, label, detail }) => (
+              <li key={label} className="source-rail-item">
+                <span className="source-rail-icon">
+                  <Icon className="h-4 w-4" aria-hidden="true" />
+                </span>
+                <span>
+                  <strong>{label}</strong>
+                  <small>{detail}</small>
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
   );
 }
 

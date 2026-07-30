@@ -87,21 +87,14 @@ function AboutIllustration() {
 
   return (
     <div className="relative mx-auto h-64 w-64 sm:h-72 sm:w-72">
-      <svg
-        viewBox="0 0 240 240"
-        className="absolute inset-0 h-full w-full text-emerald-400/60 dark:text-emerald-300/40"
+      <div
+        className="absolute inset-4 rounded-full border border-dashed border-emerald-400/60 dark:border-emerald-300/40"
         aria-hidden="true"
-      >
-        <circle
-          cx="120"
-          cy="120"
-          r="100"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeDasharray="4 6"
-        />
-      </svg>
+      />
+      <div
+        className="absolute inset-[4.5rem] rounded-full border border-emerald-400/25 dark:border-emerald-300/20"
+        aria-hidden="true"
+      />
 
       <div className="absolute left-1/2 top-1/2 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-emerald-500/70 bg-white shadow-lg dark:bg-emerald-900/40">
         <Activity

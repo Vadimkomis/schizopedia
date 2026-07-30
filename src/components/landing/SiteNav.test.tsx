@@ -12,40 +12,33 @@ describe("SiteNav", () => {
     expect(brand).toHaveAttribute("href", "/");
   });
 
-  it("lists the primary category nav links", () => {
+  it("links to the primary landing-page experiences", () => {
     renderWithProviders(<SiteNav />);
 
     expect(
-      screen.getByRole("link", { name: "Diagnosis" }),
-    ).toHaveAttribute("href", "/category/diagnosis");
+      screen.getByRole("link", { name: "Ask AI" }),
+    ).toHaveAttribute("href", "/#ask");
     expect(
-      screen.getByRole("link", { name: "Treatment" }),
-    ).toHaveAttribute("href", "/category/treatment");
+      screen.getByRole("link", { name: "Guides" }),
+    ).toHaveAttribute("href", "/#start-here");
     expect(
-      screen.getByRole("link", { name: "Prevention" }),
-    ).toHaveAttribute("href", "/category/prevention");
+      screen.getByRole("link", { name: "Evidence" }),
+    ).toHaveAttribute("href", "/#categories");
   });
 
-  it("renders a donate button linking to the in-app donate page", () => {
+  it("renders a support button linking to the in-app donate page", () => {
     renderWithProviders(<SiteNav />);
 
-    const donate = screen.getByRole("link", { name: /donate/i });
-    expect(donate).toHaveAttribute("href", "/donate");
+    const support = screen.getByRole("link", { name: /support us/i });
+    expect(support).toHaveAttribute("href", "/donate");
   });
 
-  it("links the cure category from the nav", () => {
+  it("keeps the wordmark as the home affordance", () => {
     renderWithProviders(<SiteNav />);
-    expect(screen.getByRole("link", { name: "Cure" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /schizopedia home/i })).toHaveAttribute(
       "href",
-      "/category/cure",
+      "/",
     );
-  });
-
-  it("does not include a Start Here nav link (the wordmark is the home affordance)", () => {
-    renderWithProviders(<SiteNav />);
-    expect(
-      screen.queryByRole("link", { name: /start here/i }),
-    ).not.toBeInTheDocument();
   });
 
   it("toggles the mobile menu with the nav links and theme control", async () => {
@@ -60,8 +53,8 @@ describe("SiteNav", () => {
     const mobileNav = within(
       screen.getByRole("navigation", { name: "Mobile" }),
     );
-    expect(mobileNav.getByRole("link", { name: "Cure" })).toBeVisible();
-    expect(mobileNav.getByRole("link", { name: "Prevention" })).toBeVisible();
+    expect(mobileNav.getByRole("link", { name: "Ask AI" })).toBeVisible();
+    expect(mobileNav.getByRole("link", { name: "Evidence" })).toBeVisible();
     expect(
       mobileNav.getByRole("button", { name: /toggle theme/i }),
     ).toBeVisible();
@@ -80,7 +73,7 @@ describe("SiteNav", () => {
     await user.click(
       within(screen.getByRole("navigation", { name: "Mobile" })).getByRole(
         "link",
-        { name: "Diagnosis" },
+        { name: "Evidence" },
       ),
     );
     expect(

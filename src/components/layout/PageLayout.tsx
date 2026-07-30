@@ -12,7 +12,7 @@ export function PageShell({
   mainId?: string;
 }) {
   return (
-    <div className="flex min-h-screen flex-col bg-white dark:bg-[#0b1220]">
+    <div className="flex min-h-screen flex-col bg-[#f7f6f1] dark:bg-[#0b1220]">
       <SiteNav />
       <main id={mainId} className="flex-1">
         {children}

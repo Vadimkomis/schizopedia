@@ -8,7 +8,7 @@ import { getCategoryContent } from "@/lib/categoryContent";
 
 export const SITE_URL = "https://schizopedia.com";
 export const SITE_NAME = "Schizopedia";
-export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/og.png`;
 
 export interface SeoMeta {
   title: string;
@@ -59,9 +59,9 @@ export function articleJsonLd(meta: {
 }
 
 const HOME_TITLE =
-  "Schizopedia — Plain-Language Guides & Latest Schizophrenia Research";
+  "Schizopedia — AI Evidence Search & Schizophrenia Research";
 const HOME_DESCRIPTION =
-  "When schizophrenia touches someone you love, start here. Plain-language guides for families and caregivers, plus verifiable, weekly-updated research from PubMed.";
+  "Ask natural-language questions and explore source-linked schizophrenia evidence, plain-language guides, and weekly-updated research from PubMed.";
 
 function homeSeo(): SeoMeta {
   return {

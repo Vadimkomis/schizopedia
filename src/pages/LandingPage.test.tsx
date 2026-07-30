@@ -67,7 +67,15 @@ describe("LandingPage", () => {
     expect(
       screen.getByRole("heading", {
         level: 1,
-        name: /when schizophrenia touches someone you love, start here\./i,
+        name: /ask a hard question\. see the evidence clearly\./i,
+      }),
+    ).toBeVisible();
+    expect(
+      screen.getByRole("search", { name: /schizopedia evidence search/i }),
+    ).toBeVisible();
+    expect(
+      screen.getByRole("heading", {
+        name: /one question, every source in view/i,
       }),
     ).toBeVisible();
 
