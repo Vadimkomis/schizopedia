@@ -23,6 +23,14 @@ function renderAt(path: string) {
 }
 
 describe("GuidePage", () => {
+  it("returns to the homepage now that the landing guide rail is removed", () => {
+    renderAt("/guide/what-is-schizophrenia");
+    expect(screen.getByRole("link", { name: /back home/i })).toHaveAttribute(
+      "href",
+      "/",
+    );
+  });
+
   it("renders the guide title, sections, and disclaimer", () => {
     renderAt("/guide/what-is-schizophrenia");
 

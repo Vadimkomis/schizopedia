@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 
 export function ArticleCard({ article }: { article: ResearchArticle }) {
   return (
-    <li className="group rounded-2xl border border-slate-200 bg-white p-4 text-slate-700 transition hover:border-slate-300 dark:border-white/10 dark:bg-[#0f172a] dark:text-white/80 dark:hover:border-white/20">
+    <li className="group rounded-xl border border-line bg-surface p-4 text-ink-muted transition hover:border-accent/40 dark:border-line-dark dark:bg-surface-dark dark:text-ink-muted-dark dark:hover:border-accent-dark/50">
       <a
         href={article.url}
         target="_blank"
@@ -24,26 +24,26 @@ export function ArticleCard({ article }: { article: ResearchArticle }) {
             {article.studyType && (
               <Badge
                 variant="outline"
-                className="border-slate-300/70 text-slate-600 dark:border-white/20 dark:text-white/80"
+                className="border-line text-ink-muted dark:border-line-dark dark:text-ink-muted-dark"
               >
                 {article.studyType}
               </Badge>
             )}
           </div>
-          <p className="font-heading text-lg text-slate-900 group-hover:text-blue-700 dark:text-white dark:group-hover:text-blue-200">
+          <p className="font-heading text-lg text-ink group-hover:text-accent dark:text-ink-inverse dark:group-hover:text-accent-dark">
             {article.title}
           </p>
-          <p className="text-sm text-slate-600 dark:text-white/70">
+          <p className="text-sm text-ink-muted dark:text-ink-muted-dark">
             {buildArticleMeta(article)}
           </p>
-          <p className="text-sm text-slate-500 dark:text-white/60">
+          <p className="text-sm text-ink-muted dark:text-ink-muted-dark">
             {article.snippet ?? "View full article on PubMed"}
           </p>
-          <p className="rounded-xl border border-slate-200/80 bg-slate-50 px-3 py-2 text-xs uppercase tracking-[0.14em] text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-white/70">
+          <p className="rounded-xl border border-line bg-surface-subtle px-3 py-2 text-xs uppercase tracking-[0.14em] text-ink-muted dark:border-line-dark dark:bg-surface-dark-subtle dark:text-ink-muted-dark">
             {formatActionability(article.actionability)}
           </p>
         </div>
-        <ExternalLink className="ml-auto h-4 w-4 shrink-0 text-slate-400 group-hover:text-blue-700 dark:text-white/60 dark:group-hover:text-blue-200" />
+        <ExternalLink className="ml-auto h-4 w-4 shrink-0 text-ink-muted group-hover:text-accent dark:text-ink-muted-dark dark:group-hover:text-accent-dark" />
       </a>
     </li>
   );

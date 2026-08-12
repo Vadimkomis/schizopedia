@@ -14,8 +14,8 @@ export function DonatePage() {
       />
 
       <section className="container max-w-3xl space-y-8 py-12 lg:py-16">
-        <div className="rounded-3xl border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-[#0f172a] sm:p-8">
-          <p className="text-slate-600 dark:text-slate-300">
+        <div className="rounded-2xl border border-line bg-surface p-6 dark:border-line-dark dark:bg-surface-dark">
+          <p className="text-ink-muted dark:text-ink-muted-dark">
             Every study on this site is pulled straight from PubMed and
             translated into plain language for families and caregivers. There
             are no ads, no trackers, and no paywall. If Schizopedia has helped
@@ -46,7 +46,7 @@ export function DonatePage() {
           </div>
 
           {!hasProcessor && (
-            <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">
+            <p className="mt-3 text-sm text-ink-muted dark:text-ink-muted-dark">
               Online donations are launching soon. In the meantime, email us and
               we&apos;ll set it up with you directly.
             </p>
@@ -81,14 +81,14 @@ function SupportPoint({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 dark:border-white/10 dark:bg-white/5">
-      <span className="flex h-10 w-10 items-center justify-center rounded-full tint-sky">
+    <div className="rounded-xl border border-line bg-surface-subtle p-5 dark:border-line-dark dark:bg-surface-dark-subtle">
+      <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-surface-subtle text-accent dark:bg-surface-dark-subtle dark:text-accent-dark">
         <Icon className="h-5 w-5" aria-hidden="true" strokeWidth={1.75} />
       </span>
-      <h2 className="mt-3 font-heading text-base font-semibold text-slate-900 dark:text-white">
+      <h2 className="mt-3 font-heading text-base font-semibold text-ink dark:text-ink-inverse">
         {title}
       </h2>
-      <p className="mt-1 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+      <p className="mt-1 text-sm leading-relaxed text-ink-muted dark:text-ink-muted-dark">
         {children}
       </p>
     </div>

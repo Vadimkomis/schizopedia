@@ -22,15 +22,15 @@ export function EvidenceLegend() {
   return (
     <section
       aria-labelledby="evidence-legend-heading"
-      className="rounded-2xl border border-slate-200 bg-slate-50/60 p-5 dark:border-white/10 dark:bg-white/5"
+      className="rounded-2xl border border-line bg-surface-subtle p-5 dark:border-line-dark dark:bg-surface-dark-subtle"
     >
       <h2
         id="evidence-legend-heading"
-        className="font-heading text-base font-semibold text-slate-900 dark:text-white"
+        className="font-heading text-base font-semibold text-ink dark:text-ink-inverse"
       >
         How to read the evidence badges
       </h2>
-      <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
+      <p className="mt-1 text-sm text-ink-muted dark:text-ink-muted-dark">
         Every study is labeled by how much weight its findings carry, based on
         the publication type reported by PubMed.
       </p>
@@ -40,7 +40,7 @@ export function EvidenceLegend() {
             <Badge className="border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-300/30 dark:bg-blue-400/10 dark:text-blue-200">
               {level.label}
             </Badge>
-            <p className="text-sm text-slate-600 dark:text-slate-300">
+            <p className="text-sm text-ink-muted dark:text-ink-muted-dark">
               {level.description}
             </p>
           </li>

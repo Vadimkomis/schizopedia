@@ -10,15 +10,15 @@ import { TrendingUp } from "lucide-react";
 
 export function SourcesPanel({ sources }: { sources: ResearchSource[] }) {
   return (
-    <Card id="sources" className="glow-card border-slate-200 bg-white dark:border-white/10 dark:bg-[#0f172a]">
+    <Card id="sources">
       <CardHeader>
         <div className="flex flex-wrap items-center gap-3">
           <TrendingUp className="h-5 w-5 text-blue-600 dark:text-blue-300" />
           <div>
-            <CardTitle className="text-2xl text-slate-900 dark:text-white">
+            <CardTitle className="text-2xl text-ink dark:text-ink-inverse">
               Sources and verification
             </CardTitle>
-            <CardDescription className="text-slate-600 dark:text-white/80">
+            <CardDescription className="text-ink-muted dark:text-ink-muted-dark">
               We pull records from PubMed (NIH). Every card links to the
               original record so readers can verify claims and context.
             </CardDescription>
@@ -30,20 +30,20 @@ export function SourcesPanel({ sources }: { sources: ResearchSource[] }) {
           {sources.map((source) => (
             <li
               key={source.name}
-              className="flex flex-wrap items-center gap-4 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 dark:border-white/10 dark:bg-white/5 dark:text-white/80"
+              className="flex flex-wrap items-center gap-4 rounded-xl border border-line bg-surface-subtle p-5 dark:border-line-dark dark:bg-surface-dark-subtle"
             >
               <div>
-                <p className="font-medium text-slate-900 dark:text-white">
+                <p className="font-medium text-ink dark:text-ink-inverse">
                   {source.name}
                 </p>
                 {source.description && (
-                  <p className="text-slate-600 dark:text-white/70">
+                  <p className="text-ink-muted dark:text-ink-muted-dark">
                     {source.description}
                   </p>
                 )}
               </div>
               <a
-                className="ml-auto text-blue-700 transition hover:text-blue-600 dark:text-blue-300 dark:hover:text-blue-200"
+                className="ml-auto text-accent transition hover:text-accent-hover dark:text-accent-dark dark:hover:text-accent-dark-hover"
                 href={source.url}
                 target="_blank"
                 rel="noreferrer noopener"
