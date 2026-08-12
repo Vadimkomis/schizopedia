@@ -15,6 +15,8 @@ export interface EvidenceSynthesis {
   signalDetail: string;
 }
 
+export const MIN_RELEVANCE_SCORE = 3;
+
 const STOP_WORDS = new Set([
   "a",
   "about",
@@ -71,7 +73,7 @@ function queryTokens(query: string): Set<string> {
   return expanded;
 }
 
-function scoreArticle(
+function scoreArticleText(
   query: string,
   tokens: Set<string>,
   article: ResearchArticle,
@@ -94,7 +96,6 @@ function scoreArticle(
   let score = 0;
 
   if (normalizedQuery.length > 5 && title.includes(normalizedQuery)) score += 16;
-
   tokens.forEach((token) => {
     if (title.includes(token)) score += 5;
     if (snippet.includes(token)) score += 2;
@@ -102,10 +103,13 @@ function scoreArticle(
     if (categoryText.includes(token)) score += 1;
   });
 
-  if (score > 0 && article.evidenceLevel === "synthesis") score += 2;
-  if (score > 0 && article.evidenceLevel === "clinical") score += 1;
-
   return score;
+}
+
+function evidenceBonus(article: ResearchArticle): number {
+  if (article.evidenceLevel === "synthesis") return 2;
+  if (article.evidenceLevel === "clinical") return 1;
+  return 0;
 }
 
 function tidyTitle(title: string): string {
@@ -196,13 +200,17 @@ export function synthesizeEvidence(
 
   const matches = categories
     .flatMap((category) =>
-      (category.articles ?? []).map((article) => ({
-        article,
-        category: { id: category.id, title: category.title },
-        score: scoreArticle(cleanQuery, tokens, article, category),
-      })),
+      (category.articles ?? []).map((article) => {
+        const textScore = scoreArticleText(cleanQuery, tokens, article, category);
+        return {
+          article,
+          category: { id: category.id, title: category.title },
+          textScore,
+          score: textScore + evidenceBonus(article),
+        };
+      }),
     )
-    .filter((match) => match.score > 0)
+    .filter(({ textScore }) => textScore >= MIN_RELEVANCE_SCORE)
     .sort(
       (a, b) =>
         b.score - a.score ||
