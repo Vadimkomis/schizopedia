@@ -217,7 +217,8 @@ export function synthesizeEvidence(
         publishedTimestamp(b.article.published) -
           publishedTimestamp(a.article.published),
     )
-    .slice(0, limit);
+    .slice(0, Math.min(limit, 3))
+    .map(({ article, category, score }) => ({ article, category, score }));
 
   return {
     answer: buildAnswer(cleanQuery, matches),

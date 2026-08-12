@@ -138,7 +138,7 @@ describe("synthesizeEvidence", () => {
     ]);
   });
 
-  it("returns no more than three qualified matches", () => {
+  it("returns no more than three qualified matches even above the default limit", () => {
     const articles = Array.from({ length: 4 }, (_, index) => ({
       id: String(index),
       title: `Cognitive training study ${index}`,
@@ -147,9 +147,32 @@ describe("synthesizeEvidence", () => {
 
     const result = synthesizeEvidence("cognitive training", [
       { id: "treatment", title: "Treatment", summary: "Care.", articles },
-    ]);
+    ], 9);
 
     expect(result.matches).toHaveLength(3);
+  });
+
+  it("returns only the public evidence match fields", () => {
+    const result = synthesizeEvidence("cognitive training", [
+      {
+        id: "treatment",
+        title: "Treatment",
+        summary: "Care.",
+        articles: [
+          {
+            id: "study",
+            title: "Cognitive training study",
+            url: "https://pubmed.ncbi.nlm.nih.gov/study/",
+          },
+        ],
+      },
+    ]);
+
+    expect(Object.keys(result.matches[0] ?? {}).sort()).toEqual([
+      "article",
+      "category",
+      "score",
+    ]);
   });
 
   it("describes clinical-only evidence without claiming causation", () => {
