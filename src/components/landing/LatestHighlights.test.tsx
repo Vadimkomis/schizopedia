@@ -21,6 +21,7 @@ const categories: ResearchCategory[] = [
         title: "Newest diagnosis article",
         url: "https://pubmed.ncbi.nlm.nih.gov/2/",
         published: "2026-03-12",
+        snippet: `${"A".repeat(220)} beyond the excerpt limit`,
       },
     ],
   },
@@ -34,6 +35,7 @@ const categories: ResearchCategory[] = [
         title: "Middle treatment article",
         url: "https://pubmed.ncbi.nlm.nih.gov/3/",
         published: "2024-06-01",
+        snippet: "A treatment study excerpt.",
       },
     ],
   },
@@ -58,7 +60,8 @@ describe("LatestHighlights", () => {
       <LatestHighlights categories={[]} loading={true} />,
     );
 
-    expect(container.querySelectorAll(".animate-pulse").length).toBe(3);
+    expect(screen.getByText(/loading latest studies/i)).toBeVisible();
+    expect(container.querySelectorAll('li[aria-hidden="true"]')).toHaveLength(3);
   });
 
   it("shows empty message when no articles exist and not loading", () => {
@@ -72,8 +75,19 @@ describe("LatestHighlights", () => {
     );
 
     expect(
-      screen.getByText(/no articles available/i),
+      screen.getByText(/no studies are available yet/i),
     ).toBeVisible();
+  });
+
+  it("renders each study as a source-linked text row with category, date, and excerpt", () => {
+    renderWithRouter(<LatestHighlights categories={categories} loading={false} />);
+
+    const link = screen.getByRole("link", { name: "Newest diagnosis article" });
+    expect(link).toHaveAttribute("href", "https://pubmed.ncbi.nlm.nih.gov/2/");
+    expect(link).toHaveAttribute("target", "_blank");
+    expect(link).toHaveAttribute("rel", "noreferrer noopener");
+    expect(screen.getByText(/Diagnosis · Mar 12, 2026/)).toBeVisible();
+    expect(screen.getByText(`${"A".repeat(220)}…`)).toBeVisible();
   });
 });
 
