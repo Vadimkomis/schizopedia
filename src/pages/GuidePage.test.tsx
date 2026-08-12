@@ -35,7 +35,9 @@ describe("GuidePage", () => {
     expect(
       screen.getByRole("heading", { level: 2, name: /the short version/i }),
     ).toBeVisible();
-    expect(screen.getByText(/not medical advice/i)).toBeVisible();
+    expect(
+      within(screen.getByRole("main")).getByText(/not medical advice/i),
+    ).toBeVisible();
     expect(screen.getByText(/6 min read/i)).toBeVisible();
   });
 
