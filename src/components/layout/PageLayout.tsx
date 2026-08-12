@@ -12,7 +12,7 @@ export function PageShell({
   mainId?: string;
 }) {
   return (
-    <div className="flex min-h-screen flex-col bg-[#f7f6f1] dark:bg-[#0b1220]">
+    <div className="flex min-h-screen flex-col bg-canvas text-ink dark:bg-canvas-dark dark:text-ink-inverse">
       <SiteNav />
       <main id={mainId} className="flex-1">
         {children}
@@ -46,28 +46,28 @@ export function PageHero({
       <div className="container py-12 lg:py-16">
         <Link
           to={backTo}
-          className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-700 transition hover:text-brand-800 dark:text-brand-300 dark:hover:text-brand-200"
+          className="inline-flex items-center gap-1.5 text-sm font-medium text-accent transition hover:text-accent-hover dark:text-accent-dark dark:hover:text-accent-dark-hover"
         >
           <ArrowLeft className="h-4 w-4" aria-hidden="true" />
           {backLabel}
         </Link>
         <h1
           className={cn(
-            "mt-4 font-heading text-4xl font-semibold leading-tight text-slate-900 dark:text-white sm:text-5xl",
+            "mt-4 font-heading text-4xl font-semibold leading-tight text-ink dark:text-ink-inverse sm:text-5xl",
             titleClassName,
           )}
         >
           {title}
         </h1>
         {description && (
-          <p className="mt-3 max-w-2xl text-lg text-slate-600 dark:text-slate-300">
+          <p className="mt-3 max-w-2xl text-lg text-ink-muted dark:text-ink-muted-dark">
             {description}
           </p>
         )}
         {meta && (
           <p
             className={cn(
-              "mt-5 text-sm text-slate-500 dark:text-slate-400",
+              "mt-5 text-sm text-ink-muted dark:text-ink-muted-dark",
               metaClassName,
             )}
           >
