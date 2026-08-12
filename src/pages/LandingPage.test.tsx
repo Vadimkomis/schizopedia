@@ -67,17 +67,17 @@ describe("LandingPage", () => {
     expect(
       screen.getByRole("heading", {
         level: 1,
-        name: /ask a hard question\. see the evidence clearly\./i,
+        name: /what would you like to understand\?/i,
       }),
     ).toBeVisible();
     expect(
       screen.getByRole("search", { name: /schizopedia evidence search/i }),
     ).toBeVisible();
     expect(
-      screen.getByRole("heading", {
+      screen.queryByRole("heading", {
         name: /one question, every source in view/i,
       }),
-    ).toBeVisible();
+    ).not.toBeInTheDocument();
 
     // Start-here guide cards
     expect(

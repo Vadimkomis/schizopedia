@@ -25,8 +25,8 @@ const payload: ResearchPayload = {
 describe("entry-server render", () => {
   it("renders the landing page content and head into HTML strings", async () => {
     const { html, head } = await render("/", payload);
-    expect(html).toMatch(/ask a hard question/i);
-    expect(html).toMatch(/ask schizopedia evidence search/i);
+    expect(html).toMatch(/what would you like to understand\?/i);
+    expect(html).toMatch(/schizopedia evidence search/i);
     expect(head).toContain("<title>");
     expect(head).toContain('rel="canonical"');
   });
