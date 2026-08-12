@@ -36,70 +36,78 @@ const categories: ResearchCategory[] = [
   },
 ];
 
-function renderHero(totalArticles = 30, lastUpdated: string | null = "2026-06-01T09:00:00Z") {
+function renderHero(
+  props: Partial<React.ComponentProps<typeof HeroSection>> = {},
+) {
   return renderWithRouter(
-    <HeroSection
-      categories={categories}
-      totalArticles={totalArticles}
-      lastUpdated={lastUpdated}
-    />,
+    <HeroSection categories={categories} loading={false} error={null} {...props} />,
   );
 }
 
 describe("HeroSection", () => {
-  it("renders the primary headline and evidence search", () => {
+  it("starts with one evidence-search action and no answer", () => {
     renderHero();
 
     expect(
-      screen.getByRole("heading", {
-        name: /ask a hard question\. see the evidence clearly\./i,
-      }),
+      screen.getByRole("heading", { name: /what would you like to understand/i }),
+    ).toBeVisible();
+    expect(
+      screen.getByText(/independent · source-linked · updated weekly/i),
     ).toBeVisible();
     expect(
       screen.getByRole("search", { name: /schizopedia evidence search/i }),
     ).toBeVisible();
-    expect(screen.getByRole("button", { name: /synthesize/i })).toBeVisible();
-  });
-
-  it("shows the indexed studies count in the stats band", () => {
-    renderHero(18);
-    expect(screen.getAllByText("18").length).toBeGreaterThan(0);
+    expect(screen.getByRole("button", { name: /search evidence/i })).toBeDisabled();
+    expect(screen.queryByText(/evidence for “/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/studies in the live index/i)).not.toBeInTheDocument();
     expect(
-      screen.getAllByText(/studies in the live index/i).length,
-    ).toBeGreaterThan(0);
+      screen.queryByText(/one question, every source in view/i),
+    ).not.toBeInTheDocument();
   });
 
-  it("shows honest refresh stats instead of a synthetic progress metric", () => {
-    renderHero(18);
-    expect(screen.getByText(/automatic pubmed refresh/i)).toBeVisible();
-    expect(screen.getByText(/linked to primary sources/i)).toBeVisible();
-    expect(screen.queryByText(/research progress/i)).not.toBeInTheDocument();
-  });
-
-  it("synthesizes a new question and keeps the matching citation visible", async () => {
+  it("renders a matching inline answer and leaves it visible while editing", async () => {
     const user = userEvent.setup();
     renderHero();
+    const field = screen.getByRole("textbox");
+    await user.type(field, "medication adherence{Enter}");
 
-    await user.type(
-      screen.getByRole("textbox", {
-        name: /ask a question about schizophrenia research/i,
-      }),
-      "What helps with antipsychotic weight gain?",
-    );
-    await user.click(screen.getByRole("button", { name: /synthesize/i }));
+    const heading = screen.getByRole("heading", {
+      name: /evidence for “medication adherence”/i,
+    });
+    expect(heading).toHaveFocus();
+    expect(
+      screen.getByRole("link", { name: /medication adherence in community care/i }),
+    ).toHaveAttribute("href", "https://pubmed.ncbi.nlm.nih.gov/adherence/");
 
-    expect(
-      screen.getByRole("heading", {
-        name: /what helps with antipsychotic weight gain/i,
-      }),
-    ).toBeVisible();
-    expect(
-      screen.getByRole("link", { name: /weight reduction for people/i }),
-    ).toHaveAttribute("href", "https://pubmed.ncbi.nlm.nih.gov/weight/");
+    await user.clear(field);
+    await user.type(field, "family support");
+    expect(heading).toBeVisible();
   });
 
-  it("falls back to a pending label when the feed has not synced", () => {
-    renderHero(0, null);
-    expect(screen.getByText(/pending sync/i)).toBeVisible();
+  it("moves focus after resubmitting the same question", async () => {
+    const user = userEvent.setup();
+    renderHero();
+    const field = screen.getByRole("textbox");
+    await user.type(field, "medication adherence{Enter}");
+    await user.click(field);
+    expect(field).toHaveFocus();
+    await user.keyboard("{Enter}");
+    expect(
+      screen.getByRole("heading", {
+        name: /evidence for “medication adherence”/i,
+      }),
+    ).toHaveFocus();
+  });
+
+  it("disables the form while the index is loading", () => {
+    renderHero({ loading: true });
+    expect(screen.getByRole("button", { name: /loading index/i })).toBeDisabled();
+  });
+
+  it("keeps browse guidance visible when the feed fails", () => {
+    renderHero({ error: "network failed" });
+    expect(screen.getByText(/search index unavailable/i)).toBeVisible();
+    expect(screen.getByRole("button", { name: /search evidence/i })).toBeDisabled();
+    expect(screen.getByText(/browse topics below/i)).toBeVisible();
   });
 });
