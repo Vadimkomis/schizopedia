@@ -9,27 +9,27 @@ describe("SiteFooter", () => {
     expect(screen.getByText(/knowledge today\. better tomorrows\./i)).toBeVisible();
   });
 
-  it("links privacy and terms pages", () => {
+  it("renders the compact footer link set", () => {
     renderWithRouter(<SiteFooter />);
-    expect(screen.getByRole("link", { name: /privacy/i })).toHaveAttribute("href", "/privacy");
-    expect(
-      screen.getByRole("link", { name: /terms & conditions/i }),
-    ).toHaveAttribute("href", "/terms");
-  });
 
-  it("links the donate page", () => {
-    renderWithRouter(<SiteFooter />);
-    expect(screen.getByRole("link", { name: /donate/i })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /^guides$/i })).toHaveAttribute(
+      "href",
+      "/guide/what-is-schizophrenia",
+    );
+    expect(screen.getByRole("link", { name: /^prevalence$/i })).toHaveAttribute(
+      "href",
+      "/prevalence",
+    );
+    expect(screen.getByRole("link", { name: /^donate$/i })).toHaveAttribute(
       "href",
       "/donate",
     );
-  });
-
-  it("links the worldwide prevalence page", () => {
-    renderWithRouter(<SiteFooter />);
+    expect(screen.getByRole("link", { name: /privacy/i })).toHaveAttribute("href", "/privacy");
+    expect(screen.getByRole("link", { name: /^terms$/i })).toHaveAttribute("href", "/terms");
+    expect(screen.getByRole("navigation", { name: "Footer" })).toBeVisible();
     expect(
-      screen.getByRole("link", { name: /worldwide data/i }),
-    ).toHaveAttribute("href", "/prevalence");
+      screen.getByText(/educational information, not medical advice/i),
+    ).toBeVisible();
   });
 
   it("no longer renders an email subscribe field", () => {

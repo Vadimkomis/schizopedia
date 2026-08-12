@@ -12,24 +12,25 @@ describe("SiteNav", () => {
     expect(brand).toHaveAttribute("href", "/");
   });
 
-  it("links to the primary landing-page experiences", () => {
+  it("links to the compact primary destinations", () => {
     renderWithProviders(<SiteNav />);
 
-    expect(
-      screen.getByRole("link", { name: "Ask AI" }),
-    ).toHaveAttribute("href", "/#ask");
+    expect(screen.getByRole("link", { name: "Browse" })).toHaveAttribute(
+      "href",
+      "/#topics",
+    );
     expect(
       screen.getByRole("link", { name: "Guides" }),
-    ).toHaveAttribute("href", "/#start-here");
+    ).toHaveAttribute("href", "/guide/what-is-schizophrenia");
     expect(
-      screen.getByRole("link", { name: "Evidence" }),
-    ).toHaveAttribute("href", "/#categories");
+      screen.queryByRole("link", { name: /ask ai|evidence|research/i }),
+    ).not.toBeInTheDocument();
   });
 
   it("renders a support button linking to the in-app donate page", () => {
     renderWithProviders(<SiteNav />);
 
-    const support = screen.getByRole("link", { name: /support us/i });
+    const support = screen.getByRole("link", { name: /^support$/i });
     expect(support).toHaveAttribute("href", "/donate");
   });
 
@@ -53,8 +54,8 @@ describe("SiteNav", () => {
     const mobileNav = within(
       screen.getByRole("navigation", { name: "Mobile" }),
     );
-    expect(mobileNav.getByRole("link", { name: "Ask AI" })).toBeVisible();
-    expect(mobileNav.getByRole("link", { name: "Evidence" })).toBeVisible();
+    expect(mobileNav.getByRole("link", { name: "Browse" })).toBeVisible();
+    expect(mobileNav.getByRole("link", { name: "Guides" })).toBeVisible();
     expect(
       mobileNav.getByRole("button", { name: /toggle theme/i }),
     ).toBeVisible();
@@ -73,7 +74,7 @@ describe("SiteNav", () => {
     await user.click(
       within(screen.getByRole("navigation", { name: "Mobile" })).getByRole(
         "link",
-        { name: "Evidence" },
+        { name: "Guides" },
       ),
     );
     expect(

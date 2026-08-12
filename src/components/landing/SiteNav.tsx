@@ -1,25 +1,23 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Heart, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import { DONATE_PATH } from "@/lib/links";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { label: "Ask AI", to: "/#ask" },
-  { label: "Guides", to: "/#start-here" },
-  { label: "Evidence", to: "/#categories" },
-  { label: "Research", to: "/#highlights" },
+  { label: "Browse", to: "/#topics" },
+  { label: "Guides", to: "/guide/what-is-schizophrenia" },
 ];
 
 const navLinkClass =
-  "text-sm font-medium text-slate-600 transition hover:text-brand-700 dark:text-slate-300 dark:hover:text-brand-200";
+  "text-sm font-medium text-ink-muted transition hover:text-accent dark:text-ink-muted-dark dark:hover:text-accent-dark";
 
 export function SiteNav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-[#19372f]/10 bg-[#fbfaf6]/90 backdrop-blur-xl dark:border-white/10 dark:bg-[#0b1220]/90">
+    <header className="sticky top-0 z-40 border-b border-line bg-surface/95 backdrop-blur dark:border-line-dark dark:bg-surface-dark/95">
       <div className="container flex h-[72px] items-center justify-between gap-4">
         <Link
           to="/"
@@ -51,11 +49,9 @@ export function SiteNav() {
         <div className="flex items-center gap-2 sm:gap-3">
           <Link
             to={DONATE_PATH}
-            className="inline-flex items-center gap-2 rounded-full bg-[#17362d] px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-[#245444] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 dark:bg-brand-500 dark:hover:bg-brand-400 sm:px-4"
+            className="inline-flex items-center justify-center rounded-xl bg-accent px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-accent-hover focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 dark:bg-accent-dark dark:text-canvas-dark dark:hover:bg-accent-dark-hover dark:focus-visible:ring-accent-dark"
           >
-            <Heart className="h-4 w-4" aria-hidden="true" />
-            <span className="hidden sm:inline">Support us</span>
-            <span className="sm:hidden">Support</span>
+            Support
           </Link>
           <ThemeToggle className="hidden md:inline-flex" />
           <button
@@ -63,7 +59,7 @@ export function SiteNav() {
             onClick={() => setMenuOpen((open) => !open)}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
-            className="inline-flex items-center justify-center rounded-full border border-[#19372f]/15 bg-white p-2 text-slate-700 transition hover:border-brand-300 hover:bg-brand-50 dark:border-white/20 dark:bg-white/10 dark:text-white dark:hover:border-brand-300/50 dark:hover:bg-brand-400/10 md:hidden"
+            className="inline-flex items-center justify-center rounded-xl border border-line bg-surface p-2 text-ink-muted transition hover:bg-surface-subtle dark:border-line-dark dark:bg-surface-dark dark:text-ink-muted-dark dark:hover:bg-surface-dark-subtle md:hidden"
           >
             {menuOpen ? (
               <X className="h-5 w-5" aria-hidden="true" />
@@ -77,7 +73,7 @@ export function SiteNav() {
       {menuOpen && (
         <nav
           aria-label="Mobile"
-          className="border-t border-[#19372f]/10 bg-[#fbfaf6] dark:border-white/10 dark:bg-[#0b1220] md:hidden"
+          className="border-t border-line bg-surface dark:border-line-dark dark:bg-surface-dark md:hidden"
         >
           <div className="container flex flex-col gap-1 py-3">
             {navItems.map((item) => (
@@ -91,7 +87,7 @@ export function SiteNav() {
               </Link>
             ))}
             <div className="flex items-center justify-between rounded-lg px-2 py-2.5">
-              <span className="text-base font-medium text-slate-600 dark:text-slate-300">
+              <span className="text-base font-medium text-ink-muted dark:text-ink-muted-dark">
                 Theme
               </span>
               <ThemeToggle />
