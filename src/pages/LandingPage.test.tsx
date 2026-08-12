@@ -49,6 +49,7 @@ function renderPage() {
 }
 
 beforeEach(() => {
+  delete globalThis.__RESEARCH__;
   vi.spyOn(globalThis, "fetch").mockResolvedValue({
     ok: true,
     json: () => Promise.resolve(payload),
@@ -56,6 +57,7 @@ beforeEach(() => {
 });
 
 afterEach(() => {
+  delete globalThis.__RESEARCH__;
   vi.restoreAllMocks();
 });
 
@@ -110,5 +112,15 @@ describe("LandingPage", () => {
     expect(
       screen.getByText(/knowledge today\. better tomorrows\./i),
     ).toBeVisible();
+  });
+
+  it("shows unavailable-search guidance when the research feed fails", async () => {
+    vi.mocked(globalThis.fetch).mockRejectedValueOnce(new Error("Network error"));
+    renderPage();
+
+    await waitFor(() =>
+      expect(screen.getByText(/search index unavailable/i)).toBeVisible(),
+    );
+    expect(screen.getByRole("button", { name: /search evidence/i })).toBeDisabled();
   });
 });

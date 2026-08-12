@@ -71,7 +71,7 @@ const CATEGORY_CARDS: CategoryCardSpec[] = [
 ];
 
 export function LandingPage() {
-  const { data, loading } = useResearchData();
+  const { data, loading, error } = useResearchData();
   const { hash } = useLocation();
 
   useEffect(() => {
@@ -97,8 +97,7 @@ export function LandingPage() {
       <HeroSection
         categories={categories}
         loading={loading}
-        totalArticles={totalArticles}
-        lastUpdated={data?.lastUpdated ?? null}
+        error={error}
       />
 
       <EvidenceSourceRail totalArticles={totalArticles} />
