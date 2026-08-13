@@ -5,17 +5,19 @@
  * screenshots to screenshots/ for human review.
  *
  * Usage: node scripts/visualCheck.mjs [baseUrl]
+ *        pnpm run visual:check -- [baseUrl]
  *        (defaults to http://localhost:5173)
  */
 import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
 import { chromium } from "playwright";
+import { resolveVisualCheckBaseUrl } from "./visualCheckArgs.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const OUT_DIR = path.join(ROOT, "screenshots");
-const BASE_URL = process.argv[2] ?? "http://localhost:5173";
+const BASE_URL = resolveVisualCheckBaseUrl(process.argv.slice(2));
 
 const ROUTES = [
   { id: "landing", path: "/" },
