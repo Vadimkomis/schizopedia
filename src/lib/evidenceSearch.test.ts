@@ -109,6 +109,47 @@ describe("synthesizeEvidence", () => {
     expect(result.directMatch).toBe(false);
   });
 
+  it("does not qualify an article from category text alone", () => {
+    const result = synthesizeEvidence("housing policy services", [
+      {
+        id: "housing-policy",
+        title: "Housing Policy",
+        summary: "Housing policy services research.",
+        articles: [
+          {
+            id: "unrelated",
+            title: "Nutrition outcomes in outpatient care",
+            url: "https://pubmed.ncbi.nlm.nih.gov/unrelated/",
+          },
+        ],
+      },
+    ]);
+
+    expect(result.matches).toHaveLength(0);
+    expect(result.directMatch).toBe(false);
+  });
+
+  it("does not combine one weak snippet hit with category matches to qualify an article", () => {
+    const result = synthesizeEvidence("psychosis community services", [
+      {
+        id: "community-services",
+        title: "Community Services",
+        summary: "Community services research.",
+        articles: [
+          {
+            id: "weak-category-match",
+            title: "Longitudinal outcomes",
+            snippet: "Psychosis is mentioned once.",
+            url: "https://pubmed.ncbi.nlm.nih.gov/weak-category-match/",
+          },
+        ],
+      },
+    ]);
+
+    expect(result.matches).toHaveLength(0);
+    expect(result.directMatch).toBe(false);
+  });
+
   it("breaks equal relevance scores by newest publication", () => {
     const result = synthesizeEvidence("cognitive training", [
       {
@@ -138,6 +179,40 @@ describe("synthesizeEvidence", () => {
     ]);
   });
 
+  it("uses category relevance to order articles only after each article qualifies", () => {
+    const result = synthesizeEvidence("cognitive housing", [
+      {
+        id: "treatment",
+        title: "Treatment",
+        summary: "Intervention research.",
+        articles: [
+          {
+            id: "input-first",
+            title: "Cognitive outcomes study",
+            url: "https://pubmed.ncbi.nlm.nih.gov/input-first/",
+          },
+        ],
+      },
+      {
+        id: "housing",
+        title: "Housing",
+        summary: "Housing research.",
+        articles: [
+          {
+            id: "category-ranked",
+            title: "Cognitive outcomes study",
+            url: "https://pubmed.ncbi.nlm.nih.gov/category-ranked/",
+          },
+        ],
+      },
+    ]);
+
+    expect(result.matches.map(({ article }) => article.id)).toEqual([
+      "category-ranked",
+      "input-first",
+    ]);
+  });
+
   it("returns no more than three qualified matches even above the default limit", () => {
     const articles = Array.from({ length: 4 }, (_, index) => ({
       id: String(index),
@@ -150,6 +225,22 @@ describe("synthesizeEvidence", () => {
     ], 9);
 
     expect(result.matches).toHaveLength(3);
+  });
+
+  it("treats a negative result limit as zero", () => {
+    const articles = Array.from({ length: 5 }, (_, index) => ({
+      id: String(index),
+      title: `Cognitive training study ${index}`,
+      url: `https://pubmed.ncbi.nlm.nih.gov/${index}/`,
+    }));
+
+    const result = synthesizeEvidence(
+      "cognitive training",
+      [{ id: "treatment", title: "Treatment", summary: "Care.", articles }],
+      -1,
+    );
+
+    expect(result.matches).toHaveLength(0);
   });
 
   it("returns only the public evidence match fields", () => {
@@ -194,6 +285,34 @@ describe("synthesizeEvidence", () => {
     ]);
 
     expect(result.signal).toBe("Clinical signal");
+    expect(result.signalDetail).toMatch(/human clinical source/i);
+    expect(result.signalDetail).not.toMatch(/observational/i);
     expect(result.answer).toMatch(/cannot prove cause and effect/i);
+  });
+
+  it("describes a randomized trial as a single-study clinical signal", () => {
+    const result = synthesizeEvidence("relapse prevention", [
+      {
+        id: "treatment",
+        title: "Treatment",
+        summary: "Care.",
+        articles: [
+          {
+            id: "randomized-trial",
+            title: "Relapse prevention outcomes in a randomized trial",
+            url: "https://pubmed.ncbi.nlm.nih.gov/randomized-trial/",
+            studyType: "Randomized controlled trial",
+            evidenceLevel: "clinical",
+          },
+        ],
+      },
+    ]);
+
+    expect(result.signal).toBe("Clinical signal");
+    expect(result.signalDetail).toMatch(/human clinical source/i);
+    expect(result.signalDetail).not.toMatch(/observational/i);
+    expect(result.answer).toMatch(/single study/i);
+    expect(result.answer).toMatch(/should not guide treatment decisions/i);
+    expect(result.answer).not.toMatch(/observational/i);
   });
 });

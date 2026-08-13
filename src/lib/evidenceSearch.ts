@@ -77,7 +77,6 @@ function scoreArticleText(
   query: string,
   tokens: Set<string>,
   article: ResearchArticle,
-  category: ResearchCategory,
 ): number {
   const title = normalize(article.title);
   const snippet = normalize(article.snippet ?? "");
@@ -91,7 +90,6 @@ function scoreArticleText(
       .filter(Boolean)
       .join(" "),
   );
-  const categoryText = normalize(`${category.id} ${category.title} ${category.summary}`);
   const normalizedQuery = normalize(query);
   let score = 0;
 
@@ -100,6 +98,16 @@ function scoreArticleText(
     if (title.includes(token)) score += 5;
     if (snippet.includes(token)) score += 2;
     if (metadata.includes(token)) score += 2;
+  });
+
+  return score;
+}
+
+function scoreCategoryText(tokens: Set<string>, category: ResearchCategory): number {
+  const categoryText = normalize(`${category.id} ${category.title} ${category.summary}`);
+  let score = 0;
+
+  tokens.forEach((token) => {
     if (categoryText.includes(token)) score += 1;
   });
 
@@ -122,6 +130,32 @@ function firstCompleteSentence(snippet?: string): string | null {
   const cleaned = snippet.replace(/\s+/g, " ").trim();
   const match = cleaned.match(/^(.{45,260}?[.!?])(?:\s|$)/);
   return match?.[1] ?? null;
+}
+
+function clinicalCaution(studyType?: string): string {
+  const normalizedStudyType = normalize(studyType ?? "");
+  const isObservational = [
+    "observational",
+    "cohort",
+    "case-control",
+    "case control",
+    "cross-sectional",
+    "cross sectional",
+  ].some((design) => normalizedStudyType.includes(design));
+
+  if (isObservational) {
+    return "It offers a clinical signal, but observational findings cannot prove cause and effect.";
+  }
+
+  const isTrial = ["trial", "randomized", "randomised"].some((design) =>
+    normalizedStudyType.includes(design),
+  );
+
+  if (isTrial) {
+    return "It offers a clinical signal from a trial, but a single study should not guide treatment decisions on its own.";
+  }
+
+  return "It offers a clinical signal from a single study, but one source should not guide treatment decisions on its own.";
 }
 
 function evidenceSignal(matches: EvidenceMatch[]): Pick<
@@ -151,7 +185,7 @@ function evidenceSignal(matches: EvidenceMatch[]): Pick<
   if (clinicalCount > 0) {
     return {
       signal: "Clinical signal",
-      signalDetail: `${clinicalCount} human observational source${clinicalCount === 1 ? "" : "s"} in the evidence set`,
+      signalDetail: `${clinicalCount} human clinical source${clinicalCount === 1 ? "" : "s"} in the evidence set`,
     };
   }
   return {
@@ -174,7 +208,7 @@ function buildAnswer(query: string, matches: EvidenceMatch[]): string {
     return `${leadSentence}${excerpt ? ` ${excerpt}` : ""} Because this is synthesis-level evidence, it is a useful starting point for a clinician conversation—not a reason to change care on its own.`;
   }
   if (lead.evidenceLevel === "clinical") {
-    return `${leadSentence}${excerpt ? ` ${excerpt}` : ""} It offers a clinical signal, but observational findings cannot prove cause and effect.`;
+    return `${leadSentence}${excerpt ? ` ${excerpt}` : ""} ${clinicalCaution(lead.studyType)}`;
   }
   return `${leadSentence}${excerpt ? ` ${excerpt}` : ""} The available match is exploratory, so treat it as an active research direction rather than settled guidance.`;
 }
@@ -186,6 +220,7 @@ export function synthesizeEvidence(
 ): EvidenceSynthesis {
   const cleanQuery = query.trim();
   const tokens = queryTokens(cleanQuery);
+  const boundedLimit = Math.max(0, Math.min(limit, 3));
 
   if (!cleanQuery || tokens.size === 0) {
     return {
@@ -201,23 +236,24 @@ export function synthesizeEvidence(
   const matches = categories
     .flatMap((category) =>
       (category.articles ?? []).map((article) => {
-        const textScore = scoreArticleText(cleanQuery, tokens, article, category);
+        const articleTextScore = scoreArticleText(cleanQuery, tokens, article);
+        const categoryScore = scoreCategoryText(tokens, category);
         return {
           article,
           category: { id: category.id, title: category.title },
-          textScore,
-          score: textScore + evidenceBonus(article),
+          articleTextScore,
+          score: articleTextScore + categoryScore + evidenceBonus(article),
         };
       }),
     )
-    .filter(({ textScore }) => textScore >= MIN_RELEVANCE_SCORE)
+    .filter(({ articleTextScore }) => articleTextScore >= MIN_RELEVANCE_SCORE)
     .sort(
       (a, b) =>
         b.score - a.score ||
         publishedTimestamp(b.article.published) -
           publishedTimestamp(a.article.published),
     )
-    .slice(0, Math.min(limit, 3))
+    .slice(0, boundedLimit)
     .map(({ article, category, score }) => ({ article, category, score }));
 
   return {
