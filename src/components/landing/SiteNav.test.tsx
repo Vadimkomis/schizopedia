@@ -45,12 +45,15 @@ describe("SiteNav", () => {
   it("toggles the mobile menu with the nav links and theme control", async () => {
     const user = userEvent.setup();
     renderWithProviders(<SiteNav />);
+    const menuButton = screen.getByRole("button", { name: /open menu/i });
 
     expect(
       screen.queryByRole("navigation", { name: "Mobile" }),
     ).not.toBeInTheDocument();
+    expect(menuButton).toHaveAttribute("aria-expanded", "false");
 
-    await user.click(screen.getByRole("button", { name: /open menu/i }));
+    await user.click(menuButton);
+    expect(menuButton).toHaveAttribute("aria-expanded", "true");
     const mobileNav = within(
       screen.getByRole("navigation", { name: "Mobile" }),
     );
@@ -61,6 +64,7 @@ describe("SiteNav", () => {
     ).toBeVisible();
 
     await user.click(screen.getByRole("button", { name: /close menu/i }));
+    expect(menuButton).toHaveAttribute("aria-expanded", "false");
     expect(
       screen.queryByRole("navigation", { name: "Mobile" }),
     ).not.toBeInTheDocument();

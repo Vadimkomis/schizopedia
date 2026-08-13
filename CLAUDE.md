@@ -26,8 +26,9 @@
 
 ```
 src/
-  App.tsx                            # ThemeProvider + BrowserRouter routes
-  hooks/useResearchData.ts           # Fetches /data/research.json
+  App.tsx                            # BrowserRouter client wrapper
+  AppShell.tsx                       # ThemeProvider + lazy shared routes
+  hooks/useResearchData.ts           # Reads embedded data or fetches /data/research.json
   lib/evidenceSearch.ts              # Deterministic local scoring and summary
   lib/format.ts                      # formatDateTime, formatAuthors, buildArticleMeta
   lib/topics.ts                      # Shared category destinations
@@ -78,13 +79,19 @@ public/data/research.json            # Copy served at /data/research.json
 ## Routing
 
 - `/` → `LandingPage`
-- `/category/:id` → `CategoryPage` (valid ids: `diagnosis`, `treatment`, `prevention`)
+- `/category/:id` → `CategoryPage` (valid ids: `diagnosis`, `treatment`, `prevention`, `cure`)
+- `/guide/:id` → `GuidePage` (valid ids: `what-is-schizophrenia`, `early-warning-signs`, `getting-help`, `treatment-explained`, `caring-for-yourself`)
+- `/prevalence` → `PrevalencePage`
+- `/donate` → `DonatePage`
+- `/privacy` → `PrivacyPage`
+- `/terms` → `TermsPage`
 - Unknown paths redirect to `/`
 
 ## Data Flow
 
 1. `scripts/fetchResearch.mjs` queries PubMed and writes to `data/research.json` + `public/data/research.json`
-2. At runtime, pages call `useResearchData()` which fetches `/data/research.json`
-3. `LandingPage` passes the loaded categories and feed state to `HeroSection` and `LatestHighlights`; a failed feed disables search while static topic routes remain usable.
-4. `HeroSection` submits trimmed questions to `synthesizeEvidence()` entirely in memory and renders `EvidenceAnswer` inline; questions are not sent or persisted.
-5. `LatestHighlights` selects the three newest articles across loaded categories; category pages retain their existing fallback-data behavior.
+2. The prerenderer embeds research data on the landing and category routes; `useResearchData()` reads it synchronously so hydrated prerendered pages do not fetch.
+3. When embedded data is absent, `useResearchData()` fetches `/data/research.json` and exposes loading, data, and error states.
+4. `LandingPage` passes the loaded categories and feed state to `HeroSection` and `LatestHighlights`; a failed feed disables search while static topic routes remain usable.
+5. `HeroSection` submits trimmed questions to `synthesizeEvidence()` entirely in memory and renders `EvidenceAnswer` inline; questions are not sent or persisted.
+6. `LatestHighlights` selects the three newest articles across loaded categories; category pages retain their existing fallback-data behavior.

@@ -144,13 +144,14 @@ Feature: Data loading and resilience
   Scenario: Fetch the research feed on page load
     Given a visitor opens the landing or a category page
     When the page mounts
-    Then useResearchData fetches /data/research.json with a cache-busting query param and exposes loading, data, and error states
+    Then useResearchData reads embedded prerender data synchronously without fetching when it is available
+    And otherwise it fetches /data/research.json and exposes loading, data, and error states
     And the status is "completed"
 
   Scenario: Handle category and landing feed failures honestly
     Given research.json is missing, empty, or fails to load
     When a category page needs research or the landing page needs search data
-    Then category pages use the built-in FALLBACK_CATEGORIES (Diagnosis, Treatment, Prevention) and DEFAULT_SOURCES (PubMed) so their research UI still renders
+    Then category pages use the built-in FALLBACK_CATEGORIES (Diagnosis, Treatment, Prevention, Cure Research) and DEFAULT_SOURCES (PubMed) so their research UI still renders
     And the landing page disables evidence search with an unavailable message while static topic routes remain usable
     And the status is "completed"
 
@@ -202,7 +203,7 @@ Feature: SEO
   Scenario: Sitemap and robots
     Given crawlers need to discover every page
     When `pnpm build` runs
-    Then dist/sitemap.xml is generated from the canonical route list (home, five guides, four categories including cure, donate, privacy, terms) and public/robots.txt references it
+    Then dist/sitemap.xml is generated from the canonical route list (home, five guides, four categories including cure, prevalence, donate, privacy, terms) and public/robots.txt references it
     And the status is "completed"
 
   Scenario: Static hosting on Cloudflare (Workers static assets)
@@ -237,7 +238,7 @@ Feature: Global prevalence
 Feature: Support / donations
 
   Scenario: In-app donate page never dead-ends
-    Given the Donate button in the nav and footer routes to /donate
+    Given the Support button in the nav and Donate link in the footer both route to /donate
     When a visitor opens the donate page
     Then a "Support Schizopedia" page explains the site is free, ad-free, and privacy-respecting, and offers a working action: a "Donate now" button when a processor URL (VITE_DONATE_URL) is configured, otherwise a "Get in touch to contribute" mailto with a "launching soon" note — so no click leads to a 404
     And the status is "completed"
