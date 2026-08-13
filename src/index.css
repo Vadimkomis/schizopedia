@@ -60,17 +60,6 @@ body {
   background: #192638;
 }
 
-/* Retained for active secondary-route icons until Task 10 migrates them. */
-.tint-sky {
-  background-color: #eff6ff;
-  color: #1d4ed8;
-}
-
-.dark .tint-sky {
-  background-color: rgba(59, 130, 246, 0.16);
-  color: #93c5fd;
-}
-
 :focus-visible {
   outline: 2px solid #2563eb;
   outline-offset: 3px;

@@ -149,10 +149,17 @@ Feature: Data loading and resilience
     And the status is "completed"
 
   Scenario: Handle category and landing feed failures honestly
-    Given research.json is missing, empty, or fails to load
+    Given research.json is missing or fails to load
     When a category page needs research or the landing page needs search data
     Then category pages use the built-in FALLBACK_CATEGORIES (Diagnosis, Treatment, Prevention, Cure Research) and DEFAULT_SOURCES (PubMed) so their research UI still renders
     And the landing page disables evidence search with an unavailable message while static topic routes remain usable
+    And the status is "completed"
+
+  Scenario: Handle an empty successful landing feed honestly
+    Given research.json loads successfully with an empty categories array
+    When the landing page renders and a visitor enters a non-empty question
+    Then evidence search remains available and submission shows the honest no-match state
+    And static topic routes remain usable while the latest-research section reports that no studies are available
     And the status is "completed"
 
 Feature: Site chrome
@@ -250,13 +257,5 @@ Feature: Legal pages
     When a visitor clicks either link
     Then dedicated /privacy and /terms pages are shown with a no-tracking privacy policy and education-only terms including a crisis-line notice
     And the status is "completed"
-
-Feature: Planned
-
-  Scenario: Deliver the weekly email digest
-    Given the subscribe UI is live but no email provider is connected
-    When an email provider account (e.g. Buttondown) is created and wired to the form
-    Then submitted addresses are stored with the provider and a weekly digest of newly fetched studies is delivered every Monday
-    And the status is "planned"
 
 ```
