@@ -21,6 +21,8 @@ const ROUTES = [
   { id: "landing", path: "/" },
   { id: "category-treatment", path: "/category/treatment" },
   { id: "guide-warning-signs", path: "/guide/early-warning-signs" },
+  { id: "prevalence", path: "/prevalence" },
+  { id: "donate", path: "/donate" },
   { id: "privacy", path: "/privacy" },
   { id: "terms", path: "/terms" },
 ];
@@ -29,6 +31,8 @@ const VIEWPORTS = [
   { id: "desktop", width: 1440, height: 900 },
   { id: "mobile", width: 375, height: 812 },
 ];
+
+const THEMES = ["light", "dark"];
 
 const failures = [];
 
@@ -72,7 +76,7 @@ async function checkNav(page, viewport) {
   await menuButton.click();
   const firstLink = page
     .getByRole("navigation", { name: "Mobile" })
-    .getByRole("link", { name: "Research" });
+    .getByRole("link", { name: "Browse" });
   if (!(await firstLink.isVisible().catch(() => false))) {
     return "Mobile menu did not reveal the nav links.";
   }
@@ -84,38 +88,57 @@ async function main() {
   await fs.mkdir(OUT_DIR, { recursive: true });
   const browser = await chromium.launch();
 
-  for (const viewport of VIEWPORTS) {
-    const context = await browser.newContext({
-      viewport: { width: viewport.width, height: viewport.height },
-    });
-    const page = await context.newPage();
-
-    for (const route of ROUTES) {
-      const url = `${BASE_URL}${route.path}`;
-      await page.goto(url, { waitUntil: "networkidle" });
-
-      const overflow = await findOverflowingElements(page);
-      if (overflow.scrollWidth > overflow.viewportWidth + 1) {
-        failures.push(
-          `[${viewport.id}] ${route.path} overflows horizontally ` +
-            `(${overflow.scrollWidth}px content in ${overflow.viewportWidth}px viewport). ` +
-            `Widest offenders: ${overflow.offenders
-              .map((o) => `<${o.tag} class="${o.class}"> right=${o.right}`)
-              .join(" | ")}`,
-        );
-      }
-
-      if (route.id === "landing") {
-        const navProblem = await checkNav(page, viewport);
-        if (navProblem) failures.push(`[${viewport.id}] ${navProblem}`);
-      }
-
-      await page.screenshot({
-        path: path.join(OUT_DIR, `${route.id}-${viewport.id}.png`),
-        fullPage: true,
+  for (const theme of THEMES) {
+    for (const viewport of VIEWPORTS) {
+      const context = await browser.newContext({
+        viewport: { width: viewport.width, height: viewport.height },
+        colorScheme: theme,
       });
+      await context.addInitScript(
+        ({ selectedTheme }) => {
+          localStorage.setItem("schizopedia-theme", selectedTheme);
+        },
+        { selectedTheme: theme },
+      );
+
+      const page = await context.newPage();
+
+      for (const route of ROUTES) {
+        const url = `${BASE_URL}${route.path}`;
+        await page.goto(url, { waitUntil: "networkidle" });
+
+        const overflow = await findOverflowingElements(page);
+        if (overflow.scrollWidth > overflow.viewportWidth + 1) {
+          failures.push(
+            `[${theme}/${viewport.id}] ${route.path} overflows horizontally ` +
+              `(${overflow.scrollWidth}px content in ${overflow.viewportWidth}px viewport). ` +
+              `Widest offenders: ${overflow.offenders
+                .map(
+                  (offender) =>
+                    `<${offender.tag} class="${offender.class}"> right=${offender.right}`,
+                )
+                .join(" | ")}`,
+          );
+        }
+
+        if (route.id === "landing") {
+          const navProblem = await checkNav(page, viewport);
+          if (navProblem) {
+            failures.push(`[${theme}/${viewport.id}] ${navProblem}`);
+          }
+        }
+
+        await page.screenshot({
+          path: path.join(
+            OUT_DIR,
+            `${route.id}-${theme}-${viewport.id}.png`,
+          ),
+          fullPage: true,
+        });
+      }
+
+      await context.close();
     }
-    await context.close();
   }
 
   await browser.close();
@@ -128,7 +151,7 @@ async function main() {
     return;
   }
   console.log(
-    `Visual check passed: ${ROUTES.length} routes × ${VIEWPORTS.length} viewports, no overflow, nav OK ✅`,
+    `Visual check passed: ${ROUTES.length} routes × ${VIEWPORTS.length} viewports × ${THEMES.length} themes, no overflow, nav OK ✅`,
   );
   console.log(`Screenshots saved to ${path.relative(ROOT, OUT_DIR)}/`);
 }

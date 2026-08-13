@@ -9,6 +9,13 @@ describe("resolveSeo", () => {
     expect(meta.jsonLd).toBeTruthy();
   });
 
+  it("describes the homepage as source-linked evidence search without an AI claim", () => {
+    const meta = resolveSeo("/");
+    expect(meta.title).toMatch(/evidence search/i);
+    expect(meta.title).not.toMatch(/\bAI\b/i);
+    expect(meta.description).toMatch(/source-linked/i);
+  });
+
   it("returns guide metadata for a known guide", () => {
     const meta = resolveSeo("/guide/early-warning-signs");
     expect(meta.title).toMatch(/early warning signs/i);

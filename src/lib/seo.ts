@@ -58,10 +58,9 @@ export function articleJsonLd(meta: {
   };
 }
 
-const HOME_TITLE =
-  "Schizopedia — AI Evidence Search & Schizophrenia Research";
+const HOME_TITLE = "Schizopedia — Evidence Search & Schizophrenia Research";
 const HOME_DESCRIPTION =
-  "Ask natural-language questions and explore source-linked schizophrenia evidence, plain-language guides, and weekly-updated research from PubMed.";
+  "Search cautious, source-linked summaries of curated schizophrenia research and explore weekly-updated PubMed studies and plain-language guides.";
 
 function homeSeo(): SeoMeta {
   return {

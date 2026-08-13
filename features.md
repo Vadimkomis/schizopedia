@@ -47,63 +47,27 @@ Feature: Research data pipeline
 
 Feature: Landing page
 
-  Scenario: Hero section with primary CTAs
+  Scenario: Search-first evidence hero
     Given a visitor lands on /
     When the page renders
-    Then they see the caregiver-first headline "When schizophrenia touches someone you love, start here.", a plain-language supporting description, and two CTAs: filled "Start Here" (scrolls to the guide section) and outlined "Explore Research"
-    And a framed hero visual appears in the right column: a rotating 3D neural-network brain animated on a canvas (a hand-rolled, dependency-free point cloud with sparkling neurons and fibers), code-split and mounted after paint, pausing when off-screen or the tab is hidden
-    And a preloaded, optimized WebP poster image (JPG fallback) paints instantly as the LCP element and serves as the reduced-motion / no-JS fallback (the studies-indexed count lives only in the stats band below)
+    Then the only primary action is a labeled evidence question field and disabled "Search evidence" button
+    And no answer, brain artwork, evidence network, stats, source rail, or suggestion chips render before submission
     And the status is "completed"
 
-  Scenario: Honest stats band under the hero
-    Given research data has loaded
-    When the hero stats band renders
-    Then it shows real, verifiable numbers only: peer-reviewed studies indexed, weekly automatic PubMed refresh, 100% linked to primary sources, and the last-refreshed timestamp (no synthetic "research progress" percentage)
+  Scenario: Deterministic inline evidence results
+    Given the curated PubMed index has loaded
+    When a visitor submits a relevant plain-language question
+    Then a cautious stored-field summary and at most three numbered PubMed citations expand below the form
+    And weak or absent matches show an honest no-match state with four topic links
+    And the question never leaves or persists on the device
     And the status is "completed"
 
-  Scenario: Start-here guide cards
-    Given a visitor with no scientific background lands on /
-    When the start-here section renders (directly below the hero)
-    Then five guide cards are shown in reading order (What it is, Warning signs, Getting help, Treatment, For caregivers), each with an icon, guide number, reading time, title, description, and a link to /guide/:id
+  Scenario: Compact topic and latest-study sections
+    Given a visitor browses below the search
+    When the page renders
+    Then four compact category links and the three newest source-linked studies appear before the footer
+    And no start-here, prevalence teaser, or about section appears on the homepage
     And the status is "completed"
-
-  Scenario: Four category entry cards
-    Given a visitor views the category grid
-    When the section renders
-    Then four cards are shown: Cure Research, Diagnosis, Treatment, and Prevention, each with a pastel circular icon, title, description, and "Learn more →" link
-    And all four cards deep-link to their /category/:id detail pages (including /category/cure)
-    And the status is "completed"
-
-  Scenario: Latest research highlights
-    Given research data has loaded
-    When the highlights section renders
-    Then the three most recently published articles across all categories are shown as cards with a gradient placeholder header, category chip (Neuroscience / Imaging / Biomarkers), published date, title, truncated abstract, and "Read summary →" link to PubMed
-    And while loading without any data, three skeleton cards are displayed instead
-    And the status is "completed"
-
-  Scenario: About section
-    Given a visitor scrolls to the about block
-    When the section renders
-    Then a mint-tinted rounded card shows the "About Schizopedia" eyebrow, the headline "Making Research Accessible. Empowering Minds.", a mission paragraph, an orbital brain illustration, and three value props (Evidence-Based, Accessible for All, Independent & Trusted)
-    And the status is "completed"
-
-  Scenario: Smooth-scroll to in-page sections
-    Given a visitor follows a hash link such as /#categories or /#about
-    When the landing page loads or the hash changes
-    Then the matching section is smoothly scrolled into view
-    And the status is "completed"
-
-  Scenario: Site footer
-    Given a visitor reaches the footer
-    When it renders
-    Then the Schizopedia wordmark, tagline "Knowledge today. Better tomorrows.", and Donate / Privacy / Terms links are visible
-    And the status is "completed"
-
-  Scenario: Email subscribe removed pre-launch
-    Given no email delivery provider is wired up yet
-    When the landing page and footer render
-    Then no email subscribe field or subscribe band is shown anywhere (removed to avoid collecting addresses that go nowhere)
-    And the status is "deprecated"
 
 Feature: Caregiver guides
 
@@ -183,10 +147,11 @@ Feature: Data loading and resilience
     Then useResearchData fetches /data/research.json with a cache-busting query param and exposes loading, data, and error states
     And the status is "completed"
 
-  Scenario: Fall back to default categories and sources
+  Scenario: Handle category and landing feed failures honestly
     Given research.json is missing, empty, or fails to load
-    When a page needs categories or sources
-    Then the built-in FALLBACK_CATEGORIES (Diagnosis, Treatment, Prevention) and DEFAULT_SOURCES (PubMed) are used so the UI still renders
+    When a category page needs research or the landing page needs search data
+    Then category pages use the built-in FALLBACK_CATEGORIES (Diagnosis, Treatment, Prevention) and DEFAULT_SOURCES (PubMed) so their research UI still renders
+    And the landing page disables evidence search with an unavailable message while static topic routes remain usable
     And the status is "completed"
 
 Feature: Site chrome
@@ -194,14 +159,14 @@ Feature: Site chrome
   Scenario: Sticky top navigation
     Given a visitor is on any route
     When they scroll
-    Then a sticky white/translucent nav persists with the Schizopedia wordmark (links to / as the home affordance), Cure/Diagnosis/Treatment/Prevention links, a filled Donate button (routes to the in-app /donate page), and an icon-only theme toggle on desktop
-    And on mobile the links collapse behind a hamburger menu button that toggles a panel with the nav links and theme toggle
+    Then a sticky surface nav persists with the Schizopedia wordmark, Browse, Guides, a theme toggle, and a filled Support link to /donate
+    And on mobile Browse, Guides, and the theme toggle collapse behind a hamburger menu while Support remains visible
     And the status is "completed"
 
   Scenario: Dark/light theme toggle
     Given a visitor clicks the theme toggle
     When the theme changes
-    Then the preference is persisted to localStorage and every surface (hero band, cards, illustrations, gradients) adapts
+    Then the preference is persisted to localStorage and the semantic backgrounds, cards, text, links, and controls adapt
     And the status is "completed"
 
 Feature: Content safety
@@ -217,7 +182,7 @@ Feature: Accessibility
   Scenario: Semantic landmarks and hidden decorations
     Given assistive-tech users browse the site
     When they navigate
-    Then the page uses landmark regions (header, main, footer), headings flow 1→2→3, decorative icons and illustrations are aria-hidden, and the highlight card provides a meaningful aria-label for its "Read summary" link
+    Then the page uses landmark regions (header, main, footer), headings flow 1→2→3, decorative icons are aria-hidden, and source-linked study titles have meaningful accessible names
     And the status is "completed"
 
 Feature: SEO
@@ -264,7 +229,7 @@ Feature: Global prevalence
 
   Scenario: Schizophrenia around the world
     Given a visitor wants to know how common schizophrenia is
-    When they open /prevalence (linked from the footer "Worldwide data" and a landing teaser)
+    When they open /prevalence from the footer
     Then the page leads with the WHO global figure (about 1 in 300 people / ~24 million / ~0.32%) with a linked source, then shows modelled age-standardized prevalence estimates by country as a sorted bar list credited to IHME Global Burden of Disease, with a caveat that prevalence is strikingly uniform worldwide and that incidence varies more than prevalence
     And the data lives in data/prevalence.json (validated by unit tests) so it can be corrected and expanded
     And the status is "completed"
@@ -287,21 +252,10 @@ Feature: Legal pages
 
 Feature: Planned
 
-  Scenario: Search across articles
-    Given a visitor wants to find a specific topic
-    When they use a future search input
-    Then articles across categories are filtered by keyword
-    And the status is "planned"
-
   Scenario: Deliver the weekly email digest
     Given the subscribe UI is live but no email provider is connected
     When an email provider account (e.g. Buttondown) is created and wired to the form
     Then submitted addresses are stored with the provider and a weekly digest of newly fetched studies is delivered every Monday
     And the status is "planned"
 
-  Scenario: Real imagery on highlight cards
-    Given placeholder gradients are acceptable but not ideal
-    When per-article image URLs are added to data/research.json
-    Then HighlightCard renders the photo with the gradient as fallback
-    And the status is "planned"
 ```
