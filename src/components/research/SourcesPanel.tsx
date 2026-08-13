@@ -11,7 +11,7 @@ import { TrendingUp } from "lucide-react";
 export function SourcesPanel({ sources }: { sources: ResearchSource[] }) {
   return (
     <Card id="sources">
-      <CardHeader>
+      <CardHeader className="px-6 pt-6">
         <div className="flex flex-wrap items-center gap-3">
           <TrendingUp className="h-5 w-5 text-blue-600 dark:text-blue-300" />
           <div>
@@ -25,7 +25,7 @@ export function SourcesPanel({ sources }: { sources: ResearchSource[] }) {
           </div>
         </div>
       </CardHeader>
-      <CardContent className="gap-4">
+      <CardContent className="gap-4 px-6 pb-6">
         <ul className="space-y-4">
           {sources.map((source) => (
             <li
