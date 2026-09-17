@@ -74,7 +74,7 @@ describe("LandingPage", () => {
 
     await waitFor(() => expect(screen.getByText("Recent treatment advance")).toBeVisible());
     expect(screen.getByText("Recent diagnosis advance")).toBeVisible();
-    expect(screen.getByText(/knowledge today\. better tomorrows\./i)).toBeVisible();
+    expect(screen.getByRole("navigation", { name: "Footer" })).toBeVisible();
 
     expect(screen.queryByText(/one question, every source in view/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/new to all of this/i)).not.toBeInTheDocument();

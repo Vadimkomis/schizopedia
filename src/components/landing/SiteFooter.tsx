@@ -15,12 +15,6 @@ export function SiteFooter() {
       <div className="container flex flex-col gap-5 py-8 md:flex-row md:items-center md:justify-between">
         <div>
           <p className="font-heading text-xl font-semibold text-ink dark:text-ink-inverse">Schizopedia</p>
-          <p className="mt-1 text-sm text-ink-muted dark:text-ink-muted-dark">
-            Knowledge today. Better tomorrows.
-          </p>
-          <p className="mt-1 text-xs text-ink-muted dark:text-ink-muted-dark">
-            Educational information, not medical advice.
-          </p>
         </div>
 
         <nav aria-label="Footer" className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-ink-muted dark:text-ink-muted-dark">

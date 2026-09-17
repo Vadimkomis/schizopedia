@@ -4,9 +4,9 @@ import { SiteFooter } from "./SiteFooter";
 import { renderWithRouter } from "@/test/render";
 
 describe("SiteFooter", () => {
-  it("renders the tagline", () => {
+  it("renders the site name", () => {
     renderWithRouter(<SiteFooter />);
-    expect(screen.getByText(/knowledge today\. better tomorrows\./i)).toBeVisible();
+    expect(screen.getByText("Schizopedia")).toBeVisible();
   });
 
   it("renders the compact footer link set", () => {
@@ -27,9 +27,6 @@ describe("SiteFooter", () => {
     expect(screen.getByRole("link", { name: /privacy/i })).toHaveAttribute("href", "/privacy");
     expect(screen.getByRole("link", { name: /^terms$/i })).toHaveAttribute("href", "/terms");
     expect(screen.getByRole("navigation", { name: "Footer" })).toBeVisible();
-    expect(
-      screen.getByText(/educational information, not medical advice/i),
-    ).toBeVisible();
   });
 
   it("no longer renders an email subscribe field", () => {
