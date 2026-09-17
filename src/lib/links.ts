@@ -1,21 +1,19 @@
 /**
  * Support / donation configuration.
  *
- * The Donate button always routes to the in-app `/donate` page (so it never
- * dead-ends on a 404). To enable a real outbound donation, set the
- * `VITE_DONATE_URL` env var to a live processor link (Stripe payment link,
- * Ko-fi, Open Collective, GitHub Sponsors, …) at build time — the donate page
- * then shows a "Donate now" button pointing to it. Until then it offers a
- * contact route so no click leads nowhere.
+ * The Donate button routes to `/donate`, which uses Schizopedia's public
+ * Stripe Payment Link. Set `VITE_DONATE_URL` at build time to override the
+ * checkout, or set it to an empty string to use the email fallback.
  */
 export const DONATE_PATH = "/donate";
 
 export const SUPPORT_EMAIL = "info@myclok.com";
 
-/** The configured outbound donation URL, or "" when none is set. Read at call
- *  time (not import time) so the value is env-driven and testable. */
+const STRIPE_PAYMENT_LINK = "https://buy.stripe.com/aFa7sNfjQ86C1vcaXJaR200";
+
+/** Read at call time so deployment overrides remain testable. */
 export function externalDonateUrl(): string {
-  return import.meta.env.VITE_DONATE_URL ?? "";
+  return import.meta.env.VITE_DONATE_URL ?? STRIPE_PAYMENT_LINK;
 }
 
 export function supportMailto(): string {

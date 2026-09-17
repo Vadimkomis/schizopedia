@@ -8,7 +8,7 @@ import { getCategoryContent } from "@/lib/categoryContent";
 
 export const SITE_URL = "https://schizopedia.com";
 export const SITE_NAME = "Schizopedia";
-export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/og.png`;
 
 export interface SeoMeta {
   title: string;
@@ -58,10 +58,9 @@ export function articleJsonLd(meta: {
   };
 }
 
-const HOME_TITLE =
-  "Schizopedia — Plain-Language Guides & Latest Schizophrenia Research";
+const HOME_TITLE = "Schizopedia — Evidence Search & Schizophrenia Research";
 const HOME_DESCRIPTION =
-  "When schizophrenia touches someone you love, start here. Plain-language guides for families and caregivers, plus verifiable, weekly-updated research from PubMed.";
+  "Search cautious, source-linked summaries of curated schizophrenia research and explore weekly-updated PubMed studies and plain-language guides.";
 
 function homeSeo(): SeoMeta {
   return {
@@ -138,7 +137,7 @@ export function resolveSeo(pathname: string): SeoMeta {
     return {
       title: "Support Schizopedia — Donate",
       description:
-        "Schizopedia is free, ad-free, and collects no personal data. Reader support keeps the plain-language schizophrenia guides and research current.",
+        "Schizopedia is free to read, ad-free, and requires no account. Reader support keeps the plain-language schizophrenia guides and research current.",
       path: "/donate",
       type: "website",
     };
@@ -147,7 +146,7 @@ export function resolveSeo(pathname: string): SeoMeta {
     return {
       title: "Privacy Policy",
       description:
-        "Schizopedia collects no personal data, uses no advertising trackers, and requires no account.",
+        "How Schizopedia handles browsing data, email messages, and contributions. No account required. No advertising trackers.",
       path: "/privacy",
       type: "website",
     };

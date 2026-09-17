@@ -18,8 +18,8 @@ export function GuidePage() {
   return (
     <PageShell>
       <PageHero
-        backLabel="All guides"
-        backTo="/#start-here"
+        backLabel="Back home"
+        backTo="/"
         title={guide.title}
         titleClassName="max-w-3xl"
         description={guide.description}
@@ -33,7 +33,7 @@ export function GuidePage() {
       />
 
       <article className="container max-w-3xl space-y-10 py-12 lg:py-16">
-        <p className="rounded-2xl border border-slate-200 bg-slate-50 px-5 py-4 text-sm text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
+        <p className="rounded-xl border border-line bg-surface-subtle px-5 py-4 text-sm text-ink-muted dark:border-line-dark dark:bg-surface-dark-subtle dark:text-ink-muted-dark">
           This guide is for learning and preparing questions — it is not
           medical advice, and it can&apos;t replace an assessment by a licensed
           clinician.
@@ -45,7 +45,7 @@ export function GuidePage() {
 
         <nav
           aria-label="Guide navigation"
-          className="flex flex-col gap-3 border-t border-slate-200 pt-8 dark:border-white/10 sm:flex-row sm:justify-between"
+          className="flex flex-col gap-3 border-t border-line pt-8 dark:border-line-dark sm:flex-row sm:justify-between"
         >
           {previous ? (
             <Link
@@ -76,19 +76,19 @@ export function GuidePage() {
 function GuideSectionBlock({ section }: { section: GuideSection }) {
   return (
     <section className="space-y-4">
-      <h2 className="font-heading text-2xl font-semibold text-slate-900 dark:text-white">
+      <h2 className="font-heading text-2xl font-semibold text-ink dark:text-ink-inverse">
         {section.heading}
       </h2>
       {section.paragraphs.map((paragraph) => (
         <p
           key={paragraph.slice(0, 40)}
-          className="leading-relaxed text-slate-700 dark:text-slate-300"
+          className="leading-relaxed text-ink-muted dark:text-ink-muted-dark"
         >
           {paragraph}
         </p>
       ))}
       {section.bullets && (
-        <ul className="list-disc space-y-2 pl-6 text-slate-700 marker:text-brand-500 dark:text-slate-300">
+        <ul className="list-disc space-y-2 pl-6 text-ink-muted marker:text-accent dark:text-ink-muted-dark dark:marker:text-accent-dark">
           {section.bullets.map((bullet) => (
             <li key={bullet.slice(0, 40)} className="leading-relaxed">
               {bullet}

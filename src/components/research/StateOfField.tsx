@@ -16,18 +16,18 @@ export function StateOfField({ paragraphs, citations }: StateOfFieldProps) {
   return (
     <section
       aria-labelledby="state-of-field-heading"
-      className="rounded-3xl border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-[#0f172a] sm:p-8"
+      className="rounded-2xl border border-line bg-surface p-6 dark:border-line-dark dark:bg-surface-dark sm:p-8"
     >
-      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-700 dark:text-brand-300">
+      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent dark:text-accent-dark">
         Where things stand
       </p>
       <h2
         id="state-of-field-heading"
-        className="mt-2 font-heading text-2xl font-semibold text-slate-900 dark:text-white sm:text-3xl"
+        className="mt-2 font-heading text-2xl font-semibold text-ink dark:text-ink-inverse sm:text-3xl"
       >
         The state of the research right now
       </h2>
-      <div className="mt-4 space-y-4 text-slate-600 dark:text-slate-300">
+      <div className="mt-4 space-y-4 text-ink-muted dark:text-ink-muted-dark">
         {paragraphs.map((text, i) => (
           <p key={i} className="leading-relaxed">
             {text}
@@ -36,8 +36,8 @@ export function StateOfField({ paragraphs, citations }: StateOfFieldProps) {
       </div>
 
       {citations.length > 0 && (
-        <div className="mt-6 border-t border-slate-200 pt-5 dark:border-white/10">
-          <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400">
+        <div className="mt-6 border-t border-line pt-5 dark:border-line-dark">
+          <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-muted dark:text-ink-muted-dark">
             Documented by
           </h3>
           <ul className="mt-3 space-y-2">
@@ -47,15 +47,15 @@ export function StateOfField({ paragraphs, citations }: StateOfFieldProps) {
                   href={article.url}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="group inline-flex items-start gap-2 text-sm text-slate-700 hover:text-brand-700 dark:text-slate-300 dark:hover:text-brand-200"
+                  className="group inline-flex items-start gap-2 text-sm text-ink-muted hover:text-accent dark:text-ink-muted-dark dark:hover:text-accent-dark"
                 >
                   <ExternalLink
-                    className="mt-0.5 h-3.5 w-3.5 shrink-0 text-slate-400 group-hover:text-brand-700 dark:group-hover:text-brand-200"
+                    className="mt-0.5 h-3.5 w-3.5 shrink-0 text-ink-muted group-hover:text-accent dark:text-ink-muted-dark dark:group-hover:text-accent-dark"
                     aria-hidden="true"
                   />
                   <span>
                     <span className="font-medium">{article.title}</span>
-                    <span className="text-slate-500 dark:text-slate-400">
+                    <span className="text-ink-muted dark:text-ink-muted-dark">
                       {" — "}
                       {formatAuthors(article.authors)}
                       {article.journal ? `, ${article.journal}` : ""}

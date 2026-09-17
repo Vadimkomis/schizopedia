@@ -12,61 +12,59 @@ describe("SiteNav", () => {
     expect(brand).toHaveAttribute("href", "/");
   });
 
-  it("lists the primary category nav links", () => {
+  it("links to the compact primary destinations", () => {
     renderWithProviders(<SiteNav />);
 
+    expect(screen.getByRole("link", { name: "Browse" })).toHaveAttribute(
+      "href",
+      "/#topics",
+    );
     expect(
-      screen.getByRole("link", { name: "Diagnosis" }),
-    ).toHaveAttribute("href", "/category/diagnosis");
+      screen.getByRole("link", { name: "Guides" }),
+    ).toHaveAttribute("href", "/guide/what-is-schizophrenia");
     expect(
-      screen.getByRole("link", { name: "Treatment" }),
-    ).toHaveAttribute("href", "/category/treatment");
-    expect(
-      screen.getByRole("link", { name: "Prevention" }),
-    ).toHaveAttribute("href", "/category/prevention");
+      screen.queryByRole("link", { name: /ask ai|evidence|research/i }),
+    ).not.toBeInTheDocument();
   });
 
-  it("renders a donate button linking to the in-app donate page", () => {
+  it("renders a Donate button linking to the in-app donate page", () => {
     renderWithProviders(<SiteNav />);
 
-    const donate = screen.getByRole("link", { name: /donate/i });
+    const donate = screen.getByRole("link", { name: /^donate$/i });
     expect(donate).toHaveAttribute("href", "/donate");
   });
 
-  it("links the cure category from the nav", () => {
+  it("keeps the wordmark as the home affordance", () => {
     renderWithProviders(<SiteNav />);
-    expect(screen.getByRole("link", { name: "Cure" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /schizopedia home/i })).toHaveAttribute(
       "href",
-      "/category/cure",
+      "/",
     );
-  });
-
-  it("does not include a Start Here nav link (the wordmark is the home affordance)", () => {
-    renderWithProviders(<SiteNav />);
-    expect(
-      screen.queryByRole("link", { name: /start here/i }),
-    ).not.toBeInTheDocument();
   });
 
   it("toggles the mobile menu with the nav links and theme control", async () => {
     const user = userEvent.setup();
     renderWithProviders(<SiteNav />);
+    const menuButton = screen.getByRole("button", { name: /open menu/i });
 
     expect(
       screen.queryByRole("navigation", { name: "Mobile" }),
     ).not.toBeInTheDocument();
+    expect(menuButton).toHaveAttribute("aria-expanded", "false");
 
-    await user.click(screen.getByRole("button", { name: /open menu/i }));
+    await user.click(menuButton);
+    expect(menuButton).toHaveAttribute("aria-expanded", "true");
     const mobileNav = within(
       screen.getByRole("navigation", { name: "Mobile" }),
     );
-    expect(mobileNav.getByRole("link", { name: "Cure" })).toBeVisible();
-    expect(mobileNav.getByRole("link", { name: "Prevention" })).toBeVisible();
+    expect(mobileNav.getByRole("link", { name: "Browse" })).toBeVisible();
+    expect(mobileNav.getByRole("link", { name: "Guides" })).toBeVisible();
     expect(
       mobileNav.getByRole("button", { name: /toggle theme/i }),
     ).toBeVisible();
 
     await user.click(screen.getByRole("button", { name: /close menu/i }));
+    expect(menuButton).toHaveAttribute("aria-expanded", "false");
     expect(
       screen.queryByRole("navigation", { name: "Mobile" }),
     ).not.toBeInTheDocument();
@@ -80,7 +78,7 @@ describe("SiteNav", () => {
     await user.click(
       within(screen.getByRole("navigation", { name: "Mobile" })).getByRole(
         "link",
-        { name: "Diagnosis" },
+        { name: "Guides" },
       ),
     );
     expect(

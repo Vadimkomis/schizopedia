@@ -37,8 +37,16 @@ Each article card includes:
 ```bash
 pnpm install
 pnpm dev
+pnpm typecheck
 pnpm test
 ```
+
+## Contributions
+
+The Donate page uses Schizopedia's public Stripe Payment Link from
+`src/lib/links.ts`. No Stripe API keys are needed. To override the link, set
+`VITE_DONATE_URL` at build time; an explicitly empty value enables the email
+fallback.
 
 ## Data refresh
 

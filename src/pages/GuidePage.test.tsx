@@ -23,6 +23,14 @@ function renderAt(path: string) {
 }
 
 describe("GuidePage", () => {
+  it("returns to the homepage now that the landing guide rail is removed", () => {
+    renderAt("/guide/what-is-schizophrenia");
+    expect(screen.getByRole("link", { name: /back home/i })).toHaveAttribute(
+      "href",
+      "/",
+    );
+  });
+
   it("renders the guide title, sections, and disclaimer", () => {
     renderAt("/guide/what-is-schizophrenia");
 
@@ -35,7 +43,9 @@ describe("GuidePage", () => {
     expect(
       screen.getByRole("heading", { level: 2, name: /the short version/i }),
     ).toBeVisible();
-    expect(screen.getByText(/not medical advice/i)).toBeVisible();
+    expect(
+      within(screen.getByRole("main")).getByText(/not medical advice/i),
+    ).toBeVisible();
     expect(screen.getByText(/6 min read/i)).toBeVisible();
   });
 

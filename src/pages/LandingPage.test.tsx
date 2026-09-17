@@ -1,4 +1,4 @@
-import { screen, waitFor } from "@testing-library/react";
+import { screen, waitFor, within } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { LandingPage } from "./LandingPage";
 import { renderWithProviders } from "@/test/render";
@@ -49,6 +49,7 @@ function renderPage() {
 }
 
 beforeEach(() => {
+  globalThis.__RESEARCH__ = null;
   vi.spyOn(globalThis, "fetch").mockResolvedValue({
     ok: true,
     json: () => Promise.resolve(payload),
@@ -56,51 +57,38 @@ beforeEach(() => {
 });
 
 afterEach(() => {
+  globalThis.__RESEARCH__ = undefined;
   vi.restoreAllMocks();
 });
 
 describe("LandingPage", () => {
-  it("renders hero, four category cards, highlights, and footer", async () => {
+  it("renders search, four topics, latest studies, and footer only", async () => {
     renderPage();
 
-    // Hero
     expect(
-      screen.getByRole("heading", {
-        level: 1,
-        name: /when schizophrenia touches someone you love, start here\./i,
-      }),
+      screen.getByRole("heading", { level: 1, name: /what would you like to understand/i }),
     ).toBeVisible();
+    expect(screen.getByRole("heading", { level: 2, name: /^topics$/i })).toBeVisible();
+    const topics = within(screen.getByRole("region", { name: /^topics$/i }));
+    expect(topics.getAllByRole("link")).toHaveLength(4);
 
-    // Start-here guide cards
-    expect(
-      screen.getByRole("heading", {
-        name: /new to all of this\? you're in the right place\./i,
-      }),
-    ).toBeVisible();
-
-    // Four category cards (Cure + 3 from data)
-    expect(
-      screen.getByRole("heading", { level: 3, name: /cure research/i }),
-    ).toBeVisible();
-    expect(
-      screen.getByRole("heading", { level: 3, name: /^diagnosis$/i }),
-    ).toBeVisible();
-    expect(
-      screen.getByRole("heading", { level: 3, name: /^treatment$/i }),
-    ).toBeVisible();
-    expect(
-      screen.getByRole("heading", { level: 3, name: /^prevention$/i }),
-    ).toBeVisible();
-
-    // After fetch resolves, highlights render real titles
-    await waitFor(() =>
-      expect(screen.getByText("Recent treatment advance")).toBeVisible(),
-    );
+    await waitFor(() => expect(screen.getByText("Recent treatment advance")).toBeVisible());
     expect(screen.getByText("Recent diagnosis advance")).toBeVisible();
+    expect(screen.getByText(/knowledge today\. better tomorrows\./i)).toBeVisible();
 
-    // Footer tagline
-    expect(
-      screen.getByText(/knowledge today\. better tomorrows\./i),
-    ).toBeVisible();
+    expect(screen.queryByText(/one question, every source in view/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/new to all of this/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/making research accessible/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/around the world/i)).not.toBeInTheDocument();
+  });
+
+  it("keeps topics usable when the research feed fails", async () => {
+    vi.mocked(globalThis.fetch).mockRejectedValueOnce(new Error("offline"));
+    renderPage();
+
+    expect(await screen.findByText(/search index unavailable/i)).toBeVisible();
+    expect(screen.getByRole("button", { name: /search evidence/i })).toBeDisabled();
+    expect(screen.getByRole("link", { name: /cure research/i })).toBeVisible();
+    expect(screen.getByText(/no studies are available yet/i)).toBeVisible();
   });
 });

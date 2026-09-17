@@ -26,22 +26,26 @@
 
 ```
 src/
-  App.tsx                            # ThemeProvider + BrowserRouter routes
-  hooks/useResearchData.ts           # Fetches /data/research.json
+  App.tsx                            # BrowserRouter client wrapper
+  AppShell.tsx                       # ThemeProvider + lazy shared routes
+  hooks/useResearchData.ts           # Reads embedded data or fetches /data/research.json
+  lib/evidenceSearch.ts              # Deterministic local scoring and summary
   lib/format.ts                      # formatDateTime, formatAuthors, buildArticleMeta
+  lib/topics.ts                      # Shared category destinations
   lib/types.ts                       # Research types
   lib/utils.ts                       # cn() utility
   pages/
-    LandingPage.tsx                  # / — hero + category grid + highlights + about + footer
+    LandingPage.tsx                  # / — search + topics + latest studies
     CategoryPage.tsx                 # /category/:id — per-category article list
   components/landing/
-    SiteNav.tsx                      # Sticky top nav with wordmark + theme toggle
-    HeroSection.tsx                  # Hero band with CTAs, brain illustration, metric tiles
-    CategoryIconCard.tsx             # Pastel-tint icon card (Cure / Diagnosis / Treatment / Prevention)
-    LatestHighlights.tsx             # Picks 3 most recent articles; exports formatPublishedShort
-    HighlightCard.tsx                # Gradient-header article card
-    AboutSection.tsx                 # Teal "About" block with value props
-    SiteFooter.tsx                   # Wordmark, legal links, donate CTA
+    HeroSection.tsx                  # Search hero and last submitted result state
+    EvidenceSearchForm.tsx           # Accessible local question form
+    EvidenceAnswer.tsx               # Focused inline summary/no-match state
+    EvidenceCitationList.tsx         # Numbered PubMed sources
+    BrowseTopics.tsx                 # Four compact category routes
+    LatestHighlights.tsx             # Three newest studies as text rows
+    SiteNav.tsx                      # Minimal nav + theme toggle
+    SiteFooter.tsx                   # Education framing + compact route links
   components/research/
     ArticleCard.tsx                  # Single article item (used by CategoryPage)
     SafetyPanel.tsx                  # Educational-use disclaimer (used by CategoryPage)
@@ -75,13 +79,19 @@ public/data/research.json            # Copy served at /data/research.json
 ## Routing
 
 - `/` → `LandingPage`
-- `/category/:id` → `CategoryPage` (valid ids: `diagnosis`, `treatment`, `prevention`)
+- `/category/:id` → `CategoryPage` (valid ids: `diagnosis`, `treatment`, `prevention`, `cure`)
+- `/guide/:id` → `GuidePage` (valid ids: `what-is-schizophrenia`, `early-warning-signs`, `getting-help`, `treatment-explained`, `caring-for-yourself`)
+- `/prevalence` → `PrevalencePage`
+- `/donate` → `DonatePage`
+- `/privacy` → `PrivacyPage`
+- `/terms` → `TermsPage`
 - Unknown paths redirect to `/`
 
 ## Data Flow
 
 1. `scripts/fetchResearch.mjs` queries PubMed and writes to `data/research.json` + `public/data/research.json`
-2. At runtime, pages call `useResearchData()` which fetches `/data/research.json`
-3. `LandingPage` derives a "Latest Highlights" set (top 3 by published date across categories) and populates the 3 data-backed category cards (Diagnosis / Treatment / Prevention); `Cure Research` is a static card
-4. `CategoryPage` renders a single category's articles using `ArticleCard`, with `SafetyPanel` + `SourcesPanel`
-5. If data is null or empty, fallback categories from `constants.ts` are used
+2. The prerenderer embeds research data on the landing and category routes; `useResearchData()` reads it synchronously so hydrated prerendered pages do not fetch.
+3. When embedded data is absent, `useResearchData()` fetches `/data/research.json` and exposes loading, data, and error states.
+4. `LandingPage` passes the loaded categories and feed state to `HeroSection` and `LatestHighlights`; a failed feed disables search while static topic routes remain usable.
+5. `HeroSection` submits trimmed questions to `synthesizeEvidence()` entirely in memory and renders `EvidenceAnswer` inline; questions are not sent or persisted.
+6. `LatestHighlights` selects the three newest articles across loaded categories; category pages retain their existing fallback-data behavior.

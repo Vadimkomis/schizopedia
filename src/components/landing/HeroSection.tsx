@@ -1,96 +1,92 @@
-import { Link } from "react-router-dom";
-import { BookOpen, FlaskConical } from "lucide-react";
-import { BrainIllustration } from "@/components/landing/BrainIllustration";
-import { formatDateTime } from "@/lib/format";
+import { useRef, useState } from "react";
+import { BookOpen } from "lucide-react";
+import { EvidenceAnswer } from "./EvidenceAnswer";
+import { EvidenceSearchForm } from "./EvidenceSearchForm";
+import {
+  synthesizeEvidence,
+  type EvidenceSynthesis,
+} from "@/lib/evidenceSearch";
+import type { ResearchCategory } from "@/lib/types";
 
 export interface HeroSectionProps {
-  totalArticles: number;
-  lastUpdated?: string | null;
+  categories: ResearchCategory[];
+  loading?: boolean;
+  error?: string | null;
 }
 
-export function HeroSection({ totalArticles, lastUpdated }: HeroSectionProps) {
+interface SubmittedEvidence {
+  id: number;
+  query: string;
+  synthesis: EvidenceSynthesis;
+}
+
+export function HeroSection({
+  categories,
+  loading = false,
+  error = null,
+}: HeroSectionProps) {
+  const [submitted, setSubmitted] = useState<SubmittedEvidence | null>(null);
+  const nextSubmissionId = useRef(0);
+
+  const handleSubmit = (query: string) => {
+    nextSubmissionId.current += 1;
+    setSubmitted({
+      id: nextSubmissionId.current,
+      query,
+      synthesis: synthesizeEvidence(query, categories),
+    });
+  };
+
   return (
-    <section className="hero-band overflow-hidden">
-      <div className="container grid items-center gap-9 py-12 lg:grid-cols-[0.86fr_1.14fr] lg:gap-8 lg:py-16 xl:grid-cols-[0.8fr_1.2fr]">
-        <div className="relative z-10 max-w-xl space-y-6 fade-up lg:py-4 xl:py-8">
-          <p className="inline-flex items-center gap-2 rounded-full border border-brand-200/80 bg-white/60 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-700 shadow-sm backdrop-blur dark:border-brand-300/20 dark:bg-white/5 dark:text-brand-200">
-            Clarity through evidence
+    <section
+      id="ask"
+      aria-labelledby="search-heading"
+      className="bg-surface dark:bg-canvas-dark"
+    >
+      <div className="mx-auto max-w-[1200px] px-5 pb-10 pt-14 sm:px-8 sm:pt-20 lg:px-12 lg:pt-28">
+        <div className="text-center">
+          <p className="inline-flex items-center gap-2 rounded-full bg-surface-subtle px-3 py-1.5 text-[11px] font-medium text-accent dark:bg-surface-dark-subtle dark:text-accent-dark sm:text-xs">
+            <BookOpen className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+            Independent · source-linked · updated weekly
           </p>
-          <h1 className="font-heading text-4xl font-semibold leading-[1.08] tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-[48px] xl:text-[54px]">
-            When schizophrenia touches someone you love, start here.
+          <h1
+            id="search-heading"
+            className="mx-auto mt-5 max-w-4xl font-heading text-4xl font-normal leading-[1.15] tracking-tight text-ink dark:text-ink-inverse sm:text-5xl lg:text-[3.25rem]"
+          >
+            What would you like to understand?
           </h1>
-          <p className="text-lg text-slate-600 dark:text-slate-300">
-            Plain-language guides and the latest peer-reviewed research —
-            written for caregivers, families, and friends. No scientific
-            background needed.
-          </p>
-          <div className="flex flex-wrap items-center gap-3 pt-2">
-            <Link
-              to="/#start-here"
-              className="inline-flex items-center gap-2 rounded-xl bg-brand-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2"
-            >
-              <BookOpen className="h-4 w-4" aria-hidden="true" />
-              Start Here
-            </Link>
-            <Link
-              to="/#highlights"
-              className="inline-flex items-center gap-2 rounded-xl border border-brand-600 bg-white px-5 py-3 text-sm font-semibold text-brand-700 transition hover:bg-brand-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 dark:bg-transparent dark:text-brand-200 dark:hover:bg-brand-900/30"
-            >
-              <FlaskConical className="h-4 w-4" aria-hidden="true" />
-              Explore Research
-            </Link>
-          </div>
         </div>
 
-        <div className="relative flex items-center justify-center fade-up lg:justify-end">
-          <BrainIllustration />
+        <div className="mt-8 sm:mt-10">
+          <EvidenceSearchForm
+            loading={loading}
+            disabled={Boolean(error)}
+            onSubmit={handleSubmit}
+          />
+          <p className="mx-auto mt-5 max-w-2xl text-center text-sm leading-6 text-ink-muted dark:text-ink-muted-dark">
+            Search plain-language summaries of curated schizophrenia research,
+            with every result linked back to PubMed.
+          </p>
+          {error && (
+            <p
+              role="status"
+              className="mt-3 text-sm text-ink-muted dark:text-ink-muted-dark"
+            >
+              <strong className="text-ink dark:text-ink-inverse">
+                Search index unavailable.
+              </strong>{" "}
+              Browse topics below while the source data reconnects.
+            </p>
+          )}
+          {submitted && (
+            <EvidenceAnswer
+              key={submitted.id}
+              query={submitted.query}
+              synthesis={submitted.synthesis}
+            />
+          )}
         </div>
       </div>
-
-      <HeroStats totalArticles={totalArticles} lastUpdated={lastUpdated} />
     </section>
-  );
-}
-
-function HeroStats({ totalArticles, lastUpdated }: HeroSectionProps) {
-  return (
-    <dl className="container grid grid-cols-2 gap-6 border-t border-slate-200/70 py-8 dark:border-white/10 md:grid-cols-4">
-      <StatItem
-        value={String(totalArticles)}
-        label="Peer-reviewed studies indexed"
-      />
-      <StatItem value="Weekly" label="Automatic PubMed refresh" />
-      <StatItem value="100%" label="Linked to primary sources" />
-      <StatItem
-        value={lastUpdated ? formatDateTime(lastUpdated) : "Pending sync…"}
-        label="Last refreshed"
-        compact
-      />
-    </dl>
-  );
-}
-
-function StatItem({
-  value,
-  label,
-  compact = false,
-}: {
-  value: string;
-  label: string;
-  compact?: boolean;
-}) {
-  return (
-    <div className="flex flex-col gap-1">
-      <dt className="order-2 text-sm text-slate-500 dark:text-slate-400">
-        {label}
-      </dt>
-      <dd
-        className={`order-1 font-heading font-semibold text-slate-900 dark:text-white ${
-          compact ? "text-base" : "text-3xl"
-        }`}
-      >
-        {value}
-      </dd>
-    </div>
   );
 }

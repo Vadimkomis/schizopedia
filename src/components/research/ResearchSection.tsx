@@ -24,17 +24,17 @@ export function ResearchSection({
   return (
     <section aria-labelledby={headingId} className="scroll-mt-20">
       <div className="flex items-start gap-3">
-        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full tint-sky">
+        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-surface-subtle text-accent dark:bg-surface-dark-subtle dark:text-accent-dark">
           <Icon className="h-5 w-5" aria-hidden="true" strokeWidth={1.75} />
         </span>
         <div>
           <h2
             id={headingId}
-            className="font-heading text-2xl font-semibold text-slate-900 dark:text-white"
+            className="font-heading text-2xl font-semibold text-ink dark:text-ink-inverse"
           >
             {title}
           </h2>
-          <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
+          <p className="mt-1 text-sm text-ink-muted dark:text-ink-muted-dark">
             {description}
           </p>
         </div>
@@ -47,7 +47,7 @@ export function ResearchSection({
           ))}
         </ol>
       ) : (
-        <p className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 px-6 py-4 text-sm text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
+        <p className="mt-6 rounded-xl border border-line bg-surface-subtle px-6 py-4 text-sm text-ink-muted dark:border-line-dark dark:bg-surface-dark-subtle dark:text-ink-muted-dark">
           {emptyLabel}
         </p>
       )}

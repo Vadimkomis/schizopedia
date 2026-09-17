@@ -3,141 +3,76 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: light;
-}
-
-.dark {
-  color-scheme: dark;
-}
+:root { color-scheme: light; }
+.dark { color-scheme: dark; }
 
 body {
-  @apply bg-white text-slate-900 antialiased;
-  min-height: 100vh;
+  @apply min-h-screen bg-canvas text-ink antialiased;
 }
 
 .dark body {
-  @apply bg-[#0b1220] text-slate-100;
+  @apply bg-canvas-dark text-ink-inverse;
 }
 
-#root {
-  min-height: 100vh;
+#root { min-height: 100vh; }
+
+::selection {
+  background: rgba(37, 99, 235, 0.22);
+  color: #162033;
 }
 
-/* --- Hero gradient band --- */
+.dark ::selection {
+  background: rgba(120, 169, 255, 0.3);
+  color: #eef4fb;
+}
+
+.brand-glyph {
+  position: relative;
+  display: inline-flex;
+  width: 1.75rem;
+  height: 1.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.55rem;
+  background: #005b96;
+}
+
+.brand-glyph span {
+  position: absolute;
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 0 0 2px #005b96;
+}
+
+.brand-glyph span:nth-child(1) { transform: translate(-0.34rem, 0.2rem); }
+.brand-glyph span:nth-child(2) { transform: translate(0.34rem, 0.2rem); }
+.brand-glyph span:nth-child(3) { transform: translateY(-0.34rem); }
+
 .hero-band {
-  background: linear-gradient(
-    180deg,
-    #f0f6ff 0%,
-    #eaf1ff 45%,
-    #eef4ff 100%
-  );
+  border-bottom: 1px solid #dce3ec;
+  background: #f1f5f9;
 }
 
 .dark .hero-band {
-  background: linear-gradient(
-    180deg,
-    #0f1a2e 0%,
-    #0d1628 60%,
-    #0b1220 100%
-  );
+  border-bottom-color: #2a3a4f;
+  background: #192638;
 }
 
-/* --- Soft atmospheric light around the aerial brain diorama --- */
-.brain-glow {
-  background:
-    radial-gradient(circle at 48% 48%, rgba(255, 255, 255, 0.95), transparent 52%),
-    radial-gradient(circle at 30% 72%, rgba(244, 114, 182, 0.16), transparent 58%),
-    radial-gradient(circle at 74% 30%, rgba(124, 92, 255, 0.16), transparent 56%);
-}
-
-.dark .brain-glow {
-  background:
-    radial-gradient(circle at 50% 48%, rgba(148, 163, 184, 0.22), transparent 52%),
-    radial-gradient(circle at 30% 72%, rgba(244, 114, 182, 0.13), transparent 58%),
-    radial-gradient(circle at 74% 30%, rgba(124, 92, 255, 0.22), transparent 56%);
-}
-
-/* --- Pastel icon tints for category cards --- */
-.tint-mint {
-  background-color: #ecfdf5;
-  color: #047857;
-}
-.tint-sky {
-  background-color: #eff6ff;
-  color: #1d4ed8;
-}
-.tint-violet {
-  background-color: #f5f3ff;
-  color: #6d28d9;
-}
-.tint-emerald {
-  background-color: #ecfdf5;
-  color: #065f46;
-}
-
-.dark .tint-mint {
-  background-color: rgba(16, 185, 129, 0.14);
-  color: #6ee7b7;
-}
-.dark .tint-sky {
-  background-color: rgba(59, 130, 246, 0.16);
-  color: #93c5fd;
-}
-.dark .tint-violet {
-  background-color: rgba(139, 92, 246, 0.16);
-  color: #c4b5fd;
-}
-.dark .tint-emerald {
-  background-color: rgba(5, 150, 105, 0.18);
-  color: #6ee7b7;
-}
-
-/* --- Highlight card gradient placeholders (no photo required) --- */
-.highlight-gradient-neuro {
-  background:
-    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.35), transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.25), transparent 45%),
-    linear-gradient(135deg, #0b1e4a 0%, #1e3a8a 50%, #3b82f6 100%);
-}
-.highlight-gradient-scan {
-  background:
-    radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.3), transparent 40%),
-    radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.2), transparent 45%),
-    linear-gradient(135deg, #0f172a 0%, #1e40af 60%, #60a5fa 100%);
-}
-.highlight-gradient-lab {
-  background:
-    radial-gradient(circle at 25% 75%, rgba(255, 255, 255, 0.35), transparent 40%),
-    radial-gradient(circle at 75% 25%, rgba(255, 255, 255, 0.2), transparent 45%),
-    linear-gradient(135deg, #0e7490 0%, #0891b2 50%, #67e8f9 100%);
-}
-
-/* --- Stagger fade-in for hero children --- */
-@keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-up {
-  animation: fade-up 500ms ease both;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .fade-up {
-    animation: none;
-  }
-}
-
-/* --- Focus ring override for light background --- */
 :focus-visible {
   outline: 2px solid #2563eb;
   outline-offset: 3px;
   border-radius: 4px;
+}
+
+.dark :focus-visible { outline-color: #78a9ff; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

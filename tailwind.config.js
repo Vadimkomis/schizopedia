@@ -22,6 +22,26 @@ export default {
     },
     extend: {
       colors: {
+        canvas: { DEFAULT: "#f7f9fc", dark: "#0d1522" },
+        surface: {
+          DEFAULT: "#ffffff",
+          subtle: "#f1f5f9",
+          dark: "#141f30",
+          "dark-subtle": "#192638",
+        },
+        ink: {
+          DEFAULT: "#162033",
+          inverse: "#eef4fb",
+          muted: "#5f6b7a",
+          "muted-dark": "#a5b2c2",
+        },
+        line: { DEFAULT: "#dce3ec", dark: "#2a3a4f" },
+        accent: {
+          DEFAULT: "#005b96",
+          hover: "#004874",
+          dark: "#78a9ff",
+          "dark-hover": "#9bbfff",
+        },
         brand: {
           50: "#eff6ff",
           100: "#dbeafe",
@@ -34,19 +54,13 @@ export default {
           800: "#1e40af",
           900: "#1e3a8a",
         },
-        teal: {
-          surface: "#edf7f4",
-          border: "#c7e3da",
-        },
       },
       fontFamily: {
         sans: ["'Public Sans Variable'", "'Public Sans'", ...fontFamily.sans],
         heading: ["'Newsreader Variable'", "'Newsreader'", ...fontFamily.serif],
       },
       boxShadow: {
-        card: "0 1px 2px rgba(15, 23, 42, 0.03), 0 2px 8px rgba(15, 23, 42, 0.04)",
-        "card-hover":
-          "0 4px 10px rgba(15, 23, 42, 0.05), 0 16px 36px rgba(15, 23, 42, 0.08)",
+        card: "0 1px 2px rgba(15, 23, 42, 0.04)",
       },
     },
   },
