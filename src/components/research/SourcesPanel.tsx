@@ -13,7 +13,7 @@ export function SourcesPanel({ sources }: { sources: ResearchSource[] }) {
     <Card id="sources">
       <CardHeader className="px-6 pt-6">
         <div className="flex flex-wrap items-center gap-3">
-          <TrendingUp className="h-5 w-5 text-blue-600 dark:text-blue-300" />
+          <TrendingUp className="h-5 w-5 text-accent dark:text-accent-dark" />
           <div>
             <CardTitle className="text-2xl text-ink dark:text-ink-inverse">
               Sources and verification

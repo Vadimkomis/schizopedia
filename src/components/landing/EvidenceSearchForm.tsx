@@ -36,14 +36,14 @@ export function EvidenceSearchForm({
       role="search"
       aria-label="Schizopedia evidence search"
       onSubmit={handleSubmit}
-      className="flex items-center gap-2 rounded-[2rem] border border-line bg-surface p-2.5 shadow-[0_6px_30px_rgba(15,23,42,0.09)] transition focus-within:border-accent focus-within:ring-2 focus-within:ring-accent dark:border-line-dark dark:bg-surface-dark dark:focus-within:border-accent-dark dark:focus-within:ring-accent-dark sm:gap-4 sm:rounded-[2.5rem] sm:p-3 sm:pl-5"
+      className="flex items-center gap-2 rounded-[2rem] border border-line-strong bg-surface p-2.5 shadow-[0_6px_30px_rgba(0,0,0,0.09)] transition focus-within:border-accent focus-within:ring-2 focus-within:ring-accent dark:border-line-dark dark:bg-surface-dark dark:focus-within:border-accent-dark dark:focus-within:ring-accent-dark sm:gap-4 sm:rounded-[2.5rem] sm:p-3 sm:pl-5"
     >
       <label htmlFor="evidence-question" className="sr-only">
         Ask a question about schizophrenia research
       </label>
       <span className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-full bg-surface-subtle dark:bg-surface-dark-subtle sm:inline-flex">
         <Search
-          className="h-5 w-5 text-accent dark:text-accent-dark"
+          className="h-5 w-5 text-ink-muted dark:text-ink-muted-dark"
           aria-hidden="true"
         />
       </span>
@@ -61,7 +61,7 @@ export function EvidenceSearchForm({
         type="submit"
         aria-label={loading ? "Loading index…" : "Search evidence"}
         disabled={!canSubmit}
-        className="min-h-11 shrink-0 rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-white transition hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-60 dark:bg-accent-dark dark:text-canvas-dark dark:hover:bg-accent-dark-hover sm:px-7 sm:text-base"
+        className="min-h-11 shrink-0 rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-white transition hover:bg-accent-hover disabled:cursor-not-allowed disabled:hover:bg-accent dark:bg-accent-dark dark:text-canvas-dark dark:hover:bg-accent-dark-hover dark:disabled:hover:bg-accent-dark sm:px-7 sm:text-base"
       >
         {loading ? "Loading…" : "Search"}
       </button>

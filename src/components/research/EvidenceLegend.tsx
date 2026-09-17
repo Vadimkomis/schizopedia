@@ -37,7 +37,7 @@ export function EvidenceLegend() {
       <ul className="mt-4 grid gap-4 md:grid-cols-3">
         {LEVELS.map((level) => (
           <li key={level.label} className="space-y-1.5">
-            <Badge className="border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-300/30 dark:bg-blue-400/10 dark:text-blue-200">
+            <Badge className="border-brand-200 bg-brand-50 text-accent dark:border-brand-300/30 dark:bg-brand-400/10 dark:text-accent-dark">
               {level.label}
             </Badge>
             <p className="text-sm text-ink-muted dark:text-ink-muted-dark">

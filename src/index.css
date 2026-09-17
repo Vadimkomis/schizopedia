@@ -17,13 +17,11 @@ body {
 #root { min-height: 100vh; }
 
 ::selection {
-  background: rgba(37, 99, 235, 0.22);
-  color: #162033;
+  @apply bg-brand-100 text-ink;
 }
 
 .dark ::selection {
-  background: rgba(120, 169, 255, 0.3);
-  color: #eef4fb;
+  @apply bg-accent-dark/30 text-ink-inverse;
 }
 
 .brand-glyph {
@@ -34,7 +32,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 0.55rem;
-  background: #005b96;
+  background: theme("colors.accent.DEFAULT");
 }
 
 .brand-glyph span {
@@ -43,7 +41,7 @@ body {
   height: 0.3rem;
   border-radius: 999px;
   background: #ffffff;
-  box-shadow: 0 0 0 2px #005b96;
+  box-shadow: 0 0 0 2px theme("colors.accent.DEFAULT");
 }
 
 .brand-glyph span:nth-child(1) { transform: translate(-0.34rem, 0.2rem); }
@@ -51,22 +49,20 @@ body {
 .brand-glyph span:nth-child(3) { transform: translateY(-0.34rem); }
 
 .hero-band {
-  border-bottom: 1px solid #dce3ec;
-  background: #f1f5f9;
+  @apply border-b border-line bg-surface-subtle;
 }
 
 .dark .hero-band {
-  border-bottom-color: #2a3a4f;
-  background: #192638;
+  @apply border-line-dark bg-surface-dark-subtle;
 }
 
 :focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid theme("colors.accent.DEFAULT");
   outline-offset: 3px;
   border-radius: 4px;
 }
 
-.dark :focus-visible { outline-color: #78a9ff; }
+.dark :focus-visible { outline-color: theme("colors.accent.dark"); }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

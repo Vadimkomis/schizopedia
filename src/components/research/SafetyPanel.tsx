@@ -9,10 +9,10 @@ import { AlertTriangle } from "lucide-react";
 
 export function SafetyPanel() {
   return (
-    <Card id="read-first" className="border-blue-200 dark:border-blue-300/30">
+    <Card id="read-first" className="border-brand-200 dark:border-brand-300/30">
       <CardHeader className="px-6 pt-6">
         <div className="flex items-start gap-3">
-          <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-blue-600 dark:text-blue-300" />
+          <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-accent dark:text-accent-dark" />
           <div>
             <CardTitle className="text-xl text-ink dark:text-ink-inverse">
               Read this first

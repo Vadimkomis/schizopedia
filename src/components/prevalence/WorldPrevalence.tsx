@@ -37,8 +37,8 @@ export function WorldPrevalence() {
         </a>
       </p>
 
-      <div className="flex items-start gap-3 rounded-xl border border-blue-200 bg-blue-50 p-4 text-sm text-ink-muted dark:border-blue-300/30 dark:bg-blue-400/10 dark:text-ink-muted-dark">
-        <Info className="mt-0.5 h-5 w-5 shrink-0 text-blue-700 dark:text-blue-300" aria-hidden="true" />
+      <div className="flex items-start gap-3 rounded-xl border border-brand-200 bg-brand-50 p-4 text-sm text-ink-muted dark:border-brand-300/30 dark:bg-brand-400/10 dark:text-ink-muted-dark">
+        <Info className="mt-0.5 h-5 w-5 shrink-0 text-accent dark:text-accent-dark" aria-hidden="true" />
         <p>{estimatesSource.note}</p>
       </div>
 
