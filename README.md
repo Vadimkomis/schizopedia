@@ -37,6 +37,7 @@ Each article card includes:
 ```bash
 pnpm install
 pnpm dev
+pnpm typecheck
 pnpm test
 ```
 

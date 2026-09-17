@@ -37,8 +37,8 @@ export default {
         },
         line: { DEFAULT: "#dce3ec", dark: "#2a3a4f" },
         accent: {
-          DEFAULT: "#2563eb",
-          hover: "#1d4ed8",
+          DEFAULT: "#005b96",
+          hover: "#004874",
           dark: "#78a9ff",
           "dark-hover": "#9bbfff",
         },

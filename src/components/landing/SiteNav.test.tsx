@@ -27,11 +27,11 @@ describe("SiteNav", () => {
     ).not.toBeInTheDocument();
   });
 
-  it("renders a support button linking to the in-app donate page", () => {
+  it("renders a Donate button linking to the in-app donate page", () => {
     renderWithProviders(<SiteNav />);
 
-    const support = screen.getByRole("link", { name: /^support$/i });
-    expect(support).toHaveAttribute("href", "/donate");
+    const donate = screen.getByRole("link", { name: /^donate$/i });
+    expect(donate).toHaveAttribute("href", "/donate");
   });
 
   it("keeps the wordmark as the home affordance", () => {

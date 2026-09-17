@@ -17,6 +17,8 @@ jobs:
         with:
           version: 10
           run_install: true
+      - name: Check types
+        run: pnpm run typecheck
       - name: Run tests
         run: pnpm test
       - name: Build site

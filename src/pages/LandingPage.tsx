@@ -22,9 +22,13 @@ export function LandingPage() {
 
   return (
     <PageShell mainId="top">
-      <HeroSection categories={categories} loading={loading} error={error} />
-      <BrowseTopics />
-      <LatestHighlights categories={categories} loading={loading} />
+      <div className="bg-surface dark:bg-canvas-dark">
+        <div className="pb-20 sm:pb-28 lg:min-h-[calc(100svh-7rem)]">
+          <HeroSection categories={categories} loading={loading} error={error} />
+          <BrowseTopics />
+        </div>
+        <LatestHighlights categories={categories} loading={loading} />
+      </div>
     </PageShell>
   );
 }

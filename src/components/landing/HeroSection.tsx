@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { BookOpen } from "lucide-react";
 import { EvidenceAnswer } from "./EvidenceAnswer";
 import { EvidenceSearchForm } from "./EvidenceSearchForm";
 import {
@@ -40,31 +41,32 @@ export function HeroSection({
     <section
       id="ask"
       aria-labelledby="search-heading"
-      className="border-b border-line bg-canvas dark:border-line-dark dark:bg-canvas-dark"
+      className="bg-surface dark:bg-canvas-dark"
     >
-      <div className="container max-w-3xl py-16 sm:py-20 lg:py-24">
+      <div className="mx-auto max-w-[1200px] px-5 pb-10 pt-14 sm:px-8 sm:pt-20 lg:px-12 lg:pt-28">
         <div className="text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent dark:text-accent-dark">
+          <p className="inline-flex items-center gap-2 rounded-full bg-surface-subtle px-3 py-1.5 text-[11px] font-medium text-accent dark:bg-surface-dark-subtle dark:text-accent-dark sm:text-xs">
+            <BookOpen className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
             Independent · source-linked · updated weekly
           </p>
           <h1
             id="search-heading"
-            className="mt-4 font-heading text-4xl font-semibold leading-tight text-ink dark:text-ink-inverse sm:text-5xl"
+            className="mx-auto mt-5 max-w-4xl font-heading text-4xl font-normal leading-[1.15] tracking-tight text-ink dark:text-ink-inverse sm:text-5xl lg:text-[3.25rem]"
           >
             What would you like to understand?
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-ink-muted dark:text-ink-muted-dark sm:text-lg">
-            Search plain-language summaries of curated schizophrenia research,
-            with every result linked back to PubMed.
-          </p>
         </div>
 
-        <div className="mt-8">
+        <div className="mt-8 sm:mt-10">
           <EvidenceSearchForm
             loading={loading}
             disabled={Boolean(error)}
             onSubmit={handleSubmit}
           />
+          <p className="mx-auto mt-5 max-w-2xl text-center text-sm leading-6 text-ink-muted dark:text-ink-muted-dark">
+            Search plain-language summaries of curated schizophrenia research,
+            with every result linked back to PubMed.
+          </p>
           {error && (
             <p
               role="status"
