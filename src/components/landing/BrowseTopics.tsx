@@ -40,7 +40,7 @@ export function BrowseTopics() {
                 className="group block rounded-lg"
               >
                 <div className="flex min-h-12 items-center gap-3">
-                  <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-accent transition group-hover:bg-brand-100 dark:bg-accent-dark/10 dark:text-accent-dark">
+                  <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-accent transition group-hover:bg-brand-100 dark:bg-accent-dark/10 dark:text-accent-dark dark:group-hover:bg-accent-dark/20">
                     <Icon className="h-5 w-5" strokeWidth={1.6} aria-hidden="true" />
                   </span>
                   <h3 className="text-base font-semibold leading-6 text-ink transition group-hover:text-accent dark:text-ink-inverse dark:group-hover:text-accent-dark">
