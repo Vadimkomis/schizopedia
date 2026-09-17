@@ -21,14 +21,9 @@ export function SiteNav() {
       <div className="grid h-24 grid-cols-[1fr_auto] items-center gap-3 px-4 sm:px-8 md:h-28 md:grid-cols-[1fr_auto_1fr] lg:px-16 xl:px-20">
         <Link
           to="/"
-          className="group inline-flex w-fit items-center gap-2 text-ink transition hover:text-accent dark:text-ink-inverse dark:hover:text-accent-dark sm:gap-2.5"
+          className="inline-flex w-fit items-center text-ink transition hover:text-accent dark:text-ink-inverse dark:hover:text-accent-dark"
           aria-label="Schizopedia home"
         >
-          <span className="brand-glyph" aria-hidden="true">
-            <span />
-            <span />
-            <span />
-          </span>
           <span className="font-heading text-xl font-semibold tracking-tight sm:text-3xl">
             Schizopedia
           </span>
