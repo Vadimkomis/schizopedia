@@ -2,12 +2,11 @@ import { LegalLayout, LegalSection } from "@/components/legal/LegalLayout";
 
 export function PrivacyPage() {
   return (
-    <LegalLayout title="Privacy Policy" updated="June 10, 2026">
+    <LegalLayout title="Privacy Policy" updated="September 17, 2026">
       <LegalSection heading="What we collect">
         <p>
-          Schizopedia does not require an account and does not collect, store,
-          or sell personal information. We do not use advertising trackers or
-          third-party analytics cookies.
+          Browsing Schizopedia does not require an account. We do not use
+          advertising trackers or third-party analytics cookies on this site.
         </p>
       </LegalSection>
 
@@ -19,12 +18,31 @@ export function PrivacyPage() {
         </p>
       </LegalSection>
 
+      <LegalSection heading="Contributions">
+        <p>
+          Online contributions, when available, are processed on Stripe&apos;s
+          website. Stripe collects the information needed to process your
+          payment and may share contribution records and contact details with
+          us. We use these details to manage contributions and support requests.
+          Payment details are entered on Stripe&apos;s website.
+        </p>
+        <p>
+          Stripe may also collect device and usage information under its{" "}
+          <a
+            href="https://stripe.com/privacy"
+            className="text-brand-700 underline dark:text-brand-300"
+          >
+            Privacy Policy
+          </a>
+          .
+        </p>
+      </LegalSection>
+
       <LegalSection heading="External links">
         <p>
           Articles link to PubMed (a service of the U.S. National Library of
-          Medicine). If you choose to donate, that may take you to a third-party
-          payment provider. Once you leave Schizopedia, those sites&apos; own
-          privacy policies apply.
+          Medicine). Once you leave Schizopedia, those sites&apos; own privacy
+          policies apply.
         </p>
       </LegalSection>
 
@@ -37,6 +55,10 @@ export function PrivacyPage() {
       </LegalSection>
 
       <LegalSection heading="Contact">
+        <p>
+          If you email us, we receive your email address and the information
+          you include so we can respond to your request.
+        </p>
         <p>
           Questions about this policy? Email{" "}
           <a

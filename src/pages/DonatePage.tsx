@@ -10,7 +10,7 @@ export function DonatePage() {
     <PageShell>
       <PageHero
         title="Support Schizopedia"
-        description="Schizopedia is free, ad-free, and collects no personal data. Reader support keeps it that way."
+        description="Schizopedia is free to read, ad-free, and requires no account. Reader support keeps it that way."
       />
 
       <section className="container max-w-3xl space-y-8 py-12 lg:py-16">

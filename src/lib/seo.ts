@@ -137,7 +137,7 @@ export function resolveSeo(pathname: string): SeoMeta {
     return {
       title: "Support Schizopedia — Donate",
       description:
-        "Schizopedia is free, ad-free, and collects no personal data. Reader support keeps the plain-language schizophrenia guides and research current.",
+        "Schizopedia is free to read, ad-free, and requires no account. Reader support keeps the plain-language schizophrenia guides and research current.",
       path: "/donate",
       type: "website",
     };
@@ -146,7 +146,7 @@ export function resolveSeo(pathname: string): SeoMeta {
     return {
       title: "Privacy Policy",
       description:
-        "Schizopedia collects no personal data, uses no advertising trackers, and requires no account.",
+        "How Schizopedia handles browsing data, email messages, and contributions. No account required. No advertising trackers.",
       path: "/privacy",
       type: "website",
     };
