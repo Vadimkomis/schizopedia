@@ -146,18 +146,20 @@ It must never infer a diagnosis, recommend starting or stopping treatment, claim
 
 ## Visual system
 
-The design uses Schizopedia-specific tokens influenced by contemporary clinical-reference interfaces:
+The palette follows the supplied Doximity reference, updated for the September 17 launch:
 
 | Role | Light | Dark |
 |---|---|---|
-| Page background | `#f7f9fc` | `#0d1522` |
+| Page background | `#ffffff` | `#0d1522` |
 | Primary surface | `#ffffff` | `#141f30` |
-| Secondary surface | `#f1f5f9` | `#192638` |
-| Primary text | `#162033` | `#eef4fb` |
-| Muted text | `#5f6b7a` | `#a5b2c2` |
-| Border | `#dce3ec` | `#2a3a4f` |
-| Accent | `#2563eb` | `#78a9ff` |
-| Accent hover | `#1d4ed8` | `#9bbfff` |
+| Secondary surface | `#f6f7fb` | `#192638` |
+| Primary text | `#000000` | `#eef4fb` |
+| Muted text | `#585858` | `#a5b2c2` |
+| Border | `#dedede` | `#2a3a4f` |
+| Accent | `#00538a` | `#9bc1df` |
+| Accent hover | `#00436f` | `#bed8ec` |
+
+Light-mode icon tiles use `#eef3fb`. The search field uses a stronger `#949494` border for contrast against white.
 
 Public Sans remains the interface and body face. Newsreader remains available for the wordmark and restrained editorial headings. The redesign does not add font packages.
 
@@ -214,7 +216,7 @@ After reference checks, remove unused brain-only code and assets, including obso
 - Move focus to the answer heading only after an intentional submission.
 - Expose result changes with `aria-live="polite"`.
 - Ensure text, borders, focus indicators, and controls satisfy WCAG AA contrast in both themes.
-- Respect system color preference on first visit and persist explicit user choice.
+- Default to the reference's light appearance on first visit and retain saved theme choices.
 - Avoid animation that is required to understand state.
 
 ## SEO and prerendering

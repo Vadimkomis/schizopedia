@@ -13,12 +13,12 @@ export function ArticleCard({ article }: { article: ResearchArticle }) {
         className="flex items-start gap-3 text-left"
       >
         <span
-          className="mt-1 block h-2 w-2 rounded-full bg-blue-500"
+          className="mt-1 block h-2 w-2 rounded-full bg-accent dark:bg-accent-dark"
           aria-hidden="true"
         />
         <div className="space-y-1">
           <div className="flex flex-wrap items-center gap-2">
-            <Badge className="border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-300/30 dark:bg-blue-400/10 dark:text-blue-200">
+            <Badge className="border-brand-200 bg-brand-50 text-accent dark:border-brand-300/30 dark:bg-brand-400/10 dark:text-accent-dark">
               {formatEvidenceLevel(article.evidenceLevel)}
             </Badge>
             {article.studyType && (
