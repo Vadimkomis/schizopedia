@@ -8,6 +8,18 @@ afterEach(() => {
 });
 
 describe("DonatePage", () => {
+  it("uses Schizopedia's Stripe checkout without deployment-specific configuration", () => {
+    vi.stubEnv("VITE_DONATE_URL", undefined);
+
+    renderWithProviders(<DonatePage />);
+
+    expect(screen.getByRole("link", { name: /donate now/i })).toHaveAttribute(
+      "href",
+      "https://buy.stripe.com/aFa7sNfjQ86C1vcaXJaR200",
+    );
+    expect(screen.queryByText(/launching soon/i)).not.toBeInTheDocument();
+  });
+
   it("shows a working contact CTA when no payment processor is configured", () => {
     vi.stubEnv("VITE_DONATE_URL", "");
 

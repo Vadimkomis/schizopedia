@@ -20,7 +20,7 @@ export function PrivacyPage() {
 
       <LegalSection heading="Contributions">
         <p>
-          Online contributions, when available, are processed on Stripe&apos;s
+          Online contributions are processed on Stripe&apos;s
           website. Stripe collects the information needed to process your
           payment and may share contribution records and contact details with
           us. We use these details to manage contributions and support requests.
