@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-26T15:31:52.858Z",
+  "lastUpdated": "2026-11-02T18:53:30.930Z",
   "categories": [
     {
       "id": "diagnosis",
@@ -7,176 +7,176 @@
       "summary": "Learn about innovative tools and biomarkers improving early and accurate diagnosis.",
       "articles": [
         {
-          "id": "42928360",
-          "title": "Indirect moxibustion therapy improves insomnia and associated symptoms in patients with schizophrenia.",
-          "journal": "Trials",
-          "published": "2026 Jul 29",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42928360/",
+          "id": "42966190",
+          "title": "RXR-PPAR-γ axis dysregulation and executive dysfunction in first-episode schizophrenia and bipolar I disorder: An exploratory study.",
+          "journal": "Asian journal of psychiatry",
+          "published": "2026 Oct 24",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42966190/",
           "authors": [
-            "Cai J",
-            "Wu M",
+            "Liou YJ",
+            "Hsu JW",
+            "Bai YM",
+            "Chen LC",
+            "Tsai SJ"
+          ],
+          "snippet": "Dysregulation of the retinoid X receptor (RXR)-peroxisome proliferator-activated receptor-&#x3b3; (PPAR-&#x3b3;) axis has been implicated in severe mental disorders, including schizophrenia and bipolar I disorder. Whether this dysregulation is pre...",
+          "studyType": "Peer-reviewed study",
+          "evidenceLevel": "exploratory",
+          "actionability": "learn"
+        },
+        {
+          "id": "42965024",
+          "title": "Imaginative absorption in schizophrenia: a phenomenological case series and comparison with maladaptive daydreaming.",
+          "journal": "International journal of clinical and health psychology : IJCHP",
+          "published": "2026 Jul-Sep",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42965024/",
+          "authors": [
+            "Pietkiewicz IJ",
+            "Tomalski R"
+          ],
+          "snippet": "Some individuals diagnosed with schizophrenia report vivid, immersive inner scenarios that may resemble maladaptive daydreaming (MD). However, the organisation, psychological functions, and relationships of such experiences with psychotic phenomen...",
+          "studyType": "Peer-reviewed study",
+          "evidenceLevel": "exploratory",
+          "actionability": "learn"
+        },
+        {
+          "id": "42964564",
+          "title": "Time Estimation and Production Performance in Schizophrenia: Associations With Depressive Symptoms.",
+          "journal": "Psychiatry and clinical psychopharmacology",
+          "published": "2026 Aug",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42964564/",
+          "authors": [
+            "Paltun SC",
+            "Kızılsert A",
+            "Akkaya YM",
+            "Aslan M",
+            "Ergelen M"
+          ],
+          "snippet": "Background: Time perception, which has been conceptualized as a distinct sensory modality in some models, has been investigated in various psychiatric disorders. There is evidence suggesting impairments in time perception tasks among individuals d...",
+          "studyType": "Peer-reviewed study",
+          "evidenceLevel": "exploratory",
+          "actionability": "learn"
+        },
+        {
+          "id": "42964528",
+          "title": "Temperament and Insight in Offender and Non-Offender Patients with Schizophrenia in Türkiye.",
+          "journal": "Psychiatry and clinical psychopharmacology",
+          "published": "2026 Jun",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42964528/",
+          "authors": [
+            "Çatlı B",
+            "Çakmak IB",
+            "Gürkan Ş",
+            "Tatlıdil Yaylacı E",
+            "Kaya H"
+          ],
+          "snippet": "Offending behavior in individuals with schizophrenia reflects complex interactions extending beyond psychotic symptoms alone. Affective temperament and insight, particularly insight related to treatment compliance, may be relevant to offending-rel...",
+          "studyType": "Peer-reviewed study",
+          "evidenceLevel": "exploratory",
+          "actionability": "learn"
+        },
+        {
+          "id": "42963368",
+          "title": "Identification of fluid endocannabinoid and sphingolipid biomarkers in schizophrenia. A machine learning approach toward clinical value.",
+          "journal": "Molecular psychiatry",
+          "published": "2026 Oct 30",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42963368/",
+          "authors": [
+            "Hoffmann AE",
+            "Allwright M",
+            "Guennewig B",
+            "Rohleder C",
+            "Jieu B"
+          ],
+          "snippet": "Schizophrenia (SCZ) diagnosis relies on subjective clinical evaluation, with symptoms often overlapping between psychiatric conditions, hindering early intervention, and creating an&#xa0;urgent need for objective, accessible biomarkers. Lipids, es...",
+          "studyType": "Peer-reviewed study",
+          "evidenceLevel": "exploratory",
+          "actionability": "learn"
+        },
+        {
+          "id": "42960983",
+          "title": "Neuroanatomical Subtypes of Schizophrenia Reveal Divergent Atrophy Trajectories and Distinct Associations with Long-Term Clozapine Use.",
+          "journal": "Schizophrenia bulletin",
+          "published": "2026 Oct 27",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42960983/",
+          "authors": [
+            "Chang X",
+            "Jiang Y",
+            "Lin BD",
+            "Xiang S",
             "Zhang J"
           ],
-          "snippet": "To evaluate the efficacy of low-dose dexzopiclone combined with Indirect moxibustion (IM), compared with sham Indirect moxibustion (SIM), on sleep quality (PSQI) and quality of life (SQLS) in patients with schizophrenia and comorbid insomnia. This...",
-          "studyType": "Randomized controlled trial",
-          "evidenceLevel": "clinical",
-          "actionability": "discuss_with_clinician"
-        },
-        {
-          "id": "42926310",
-          "title": "Moving towards evidence-based screening and investigations in first episode psychosis: A commentary on the ANZJP GRADE Schizophrenia Guidelines.",
-          "journal": "The Australian and New Zealand journal of psychiatry",
-          "published": "2026 Oct 24",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42926310/",
-          "authors": [
-            "Chalmers K",
-            "Laurie K",
-            "Nitz M",
-            "Debattista J",
-            "Parker S"
-          ],
-          "snippet": "Physical health assessment and investigations are important considerations during the first episode of psychosis. These activities support diagnostic clarification, monitoring for iatrogenic harms and opportunistic screening to limit the multimorb...",
+          "snippet": "Schizophrenia is a heterogeneous disorder, and biology-informed stratification may provide insights into individual differences in disease course and treatment response. We hypothesized that neuroimaging-based subtyping could reveal biologically d...",
           "studyType": "Peer-reviewed study",
           "evidenceLevel": "exploratory",
           "actionability": "learn"
         },
         {
-          "id": "42925955",
-          "title": "Serum metabolic characteristics and potential biomarkers of first-episode schizophrenia: An exploratory machine learning-based metabolomics study.",
-          "journal": "Progress in neuro-psychopharmacology & biological psychiatry",
-          "published": "2026 Oct 24",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42925955/",
-          "authors": [
-            "Peng XQ",
-            "Liu B",
-            "Meng W",
-            "Huang J",
-            "Zhang Q"
-          ],
-          "snippet": "Metabolomics studies in first-episode schizophrenia (FES) remain limited and heterogeneous. This study aimed to characterize the serum metabolomic profile of FES, identify metabolic biomarkers, and develop machine learning-based predictive models....",
-          "studyType": "Peer-reviewed study",
-          "evidenceLevel": "exploratory",
-          "actionability": "learn"
-        },
-        {
-          "id": "42923238",
-          "title": "Usability of digital medicine systems in patients with schizophrenia or schizoaffective disorder.",
-          "journal": "Frontiers in psychiatry",
+          "id": "42959242",
+          "title": "Redox compromise as an early, modifiable entry point in schizophrenia: a staging framework for early intervention.",
+          "journal": "Frontiers in neuroscience",
           "published": "2026",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42923238/",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42959242/",
           "authors": [
-            "Kishimoto T",
-            "Takano H",
-            "Kanzaka R",
-            "Tachimori H",
-            "Oi H"
+            "Lado LA",
+            "Misir A"
           ],
-          "snippet": "To assess the usability and performance of digital medication management systems (DMS) for patients with stable ambulatory schizophrenia and schizoaffective disorder. This prospective, interventional study comprised a screening phase (up to 4 week...",
+          "snippet": "Schizophrenia is understood as a disorder of dopamine signaling and is treated with dopamine receptor antagonists. These drugs reduce hallucinations and delusions but leave cognitive impairment, negative symptoms and functional decline largely unt...",
           "studyType": "Peer-reviewed study",
           "evidenceLevel": "exploratory",
           "actionability": "learn"
         },
         {
-          "id": "42922018",
-          "title": "Metabolic biomarker levels before and after initiation of GLP-1 receptor agonist treatment among individuals with schizophrenia: interrupted time-series analysis.",
-          "journal": "The British journal of psychiatry : the journal of mental science",
-          "published": "2026 Oct 23",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42922018/",
+          "id": "42957389",
+          "title": "Retinal Neurovascular Structure in Colombian Patients With Early-Course Schizophrenia Spectrum Disorders.",
+          "journal": "Revista Colombiana de psiquiatria",
+          "published": "2026 Jul-Sep",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42957389/",
           "authors": [
-            "Mikkelsen NB",
-            "Ørberg A",
-            "Østergaard SD",
-            "Rohde C"
+            "González-Díaz JM",
+            "Zamora DC",
+            "Vallejo A",
+            "Rodríguez FJ",
+            "Belalcázar-Rey S"
           ],
-          "snippet": "Randomised controlled trials have demonstrated that treatment with glucagon-like peptide-1 receptor agonists (GLP-1RAs) reduces body weight, waist circumference and haemoglobin A1c (HbA1c) levels in patients with schizophrenia. However, because of...",
-          "studyType": "Peer-reviewed study",
-          "evidenceLevel": "exploratory",
-          "actionability": "learn"
-        },
-        {
-          "id": "42920855",
-          "title": "Cognitive remediation in schizophrenia: efficacy and role of neuroplasticity in \"top-down\" and \"bottom-up\" mechanisms-a randomized, double-blind, treatment-as-usual-controlled study protocol.",
-          "journal": "Frontiers in psychiatry",
-          "published": "2026",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42920855/",
-          "authors": [
-            "Cifuentes JI",
-            "Orellana C",
-            "Tello D",
-            "Ramírez C",
-            "Prieto C"
-          ],
-          "snippet": "Schizophrenia is characterized by positive, negative and cognitive symptoms, including different degrees of impairment in several neurocognitive domains, such as executive function, processing speed, learning and memory, which impact a patient&#xb...",
-          "studyType": "Peer-reviewed study",
-          "evidenceLevel": "exploratory",
-          "actionability": "learn"
-        },
-        {
-          "id": "42919187",
-          "title": "Accelerated brain aging associated with executive deficits in adolescence and early adulthood among individuals with schizophrenia and genetic high risk.",
-          "journal": "BMC psychiatry",
-          "published": "2026 Jul 28",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42919187/",
-          "authors": [
-            "Deng C",
-            "Wu P",
-            "Kong L",
-            "Zhou Y",
-            "Wang Z"
-          ],
-          "snippet": "Abnormal brain development and cognitive function are present in adolescence and early adulthood of schizophrenia (SZ). However, it is still unclear whether these developmental abnormalities and cognitive deficits occur in adolescence and early ad...",
-          "studyType": "Peer-reviewed study",
-          "evidenceLevel": "exploratory",
-          "actionability": "learn"
-        },
-        {
-          "id": "42914713",
-          "title": "From gut to brain: A longitudinal assessment of intestinal permeability and immune activation markers in early-stage schizophrenia Spectrum disorders.",
-          "journal": "Schizophrenia research",
-          "published": "2026 Oct 23",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42914713/",
-          "authors": [
-            "Jakob L",
-            "Mahayri TM",
-            "Koutrouli IRA",
-            "Kekrtová K",
-            "Nováková D"
-          ],
-          "snippet": "Schizophrenia spectrum disorders (SSD) have been linked to immune dysregulation and altered intestinal barrier function, although findings across studies remain inconsistent. The present study investigated circulating markers of intestinal permeab...",
+          "snippet": "Previous studies have suggested that the neurovascular structure of the retina is affected in schizophrenia spectrum disorders (SSD). However, no research has investigated this in Colombian patients. This cross-sectional study explores whether ind...",
           "studyType": "Observational study",
           "evidenceLevel": "clinical",
           "actionability": "learn"
         },
         {
-          "id": "42914485",
-          "title": "Disorder of Basic Selfhood in the Schizophrenia Spectrum: A Novel Phenotype.",
-          "journal": "The Psychiatric clinics of North America",
-          "published": "2026 Dec",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42914485/",
+          "id": "42952622",
+          "title": "Examining the links between vitamin C and schizophrenia spectrum disorders: a systematic review and meta-analysis on circulating levels and supplementation outcomes.",
+          "journal": "Frontiers in nutrition",
+          "published": "2026",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42952622/",
           "authors": [
-            "Parnas J",
-            "Sandsten KE"
+            "Suresh G",
+            "Chengaiyan JG",
+            "Dabaghzadeh F",
+            "Ahmad F"
           ],
-          "snippet": "This article conceptualizes schizophrenia as a disorder of subjectivity centered on disturbances of basic self. Drawing on phenomenological resources, clinical work and clinical research, it argues that anomalous self-experiences is a core and def...",
-          "studyType": "Review",
+          "snippet": "Schizophrenia (SCZ) is a debilitating psychiatric condition characterized by psychotic symptoms such as hallucinations, delusions, and disorganized thought. Recent evidence suggests its association with deficiency of various micronutrients. Vitami...",
+          "studyType": "Systematic review",
           "evidenceLevel": "synthesis",
           "actionability": "discuss_with_clinician"
         },
         {
-          "id": "42910853",
-          "title": "An Automated Framework Using Magnetic Resonance Imaging Feature Masking and Support Vector Machine for Schizophrenia Classification.",
-          "journal": "Journal of visualized experiments : JoVE",
-          "published": "2026 Oct 21",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42910853/",
+          "id": "42951689",
+          "title": "Efficacy of Personalizing Cognitive Remediation for Schizophrenia by Targeting Impairments in Early Auditory Processing.",
+          "journal": "Schizophrenia bulletin",
+          "published": "2026 Oct 27",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42951689/",
           "authors": [
-            "Liu J",
-            "Fu C",
-            "Liu L"
+            "Medalia A",
+            "Saperstein AM",
+            "Javitt DC",
+            "Qian M"
           ],
-          "snippet": "Automated classification of schizophrenia can improve the quality of life for people with schizophrenia and reduce social costs. At present, however, the usual standards for diagnosing mental illnesses are still based on the subjective assessment ...",
-          "studyType": "Peer-reviewed study",
-          "evidenceLevel": "exploratory",
-          "actionability": "learn"
+          "snippet": "Early auditory processing (EAP) deficits are common but not universal in schizophrenia, are linked to impairments in higher cognitive functions and when improved are associated with downstream cognitive improvements. Assessment of baseline EAP tra...",
+          "studyType": "Randomized controlled trial",
+          "evidenceLevel": "clinical",
+          "actionability": "discuss_with_clinician"
         }
       ]
     },
@@ -186,141 +186,108 @@
       "summary": "Explore emerging therapies, medications, and approaches improving quality of life.",
       "articles": [
         {
-          "id": "42929078",
-          "title": "Prescribing psychostimulants for persons with schizophrenia spectrum disorders and attention-deficit hyperactivity disorder: practice with little guidance.",
-          "journal": "BJPsych open",
-          "published": "2026 Oct 26",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42929078/",
+          "id": "42969656",
+          "title": "Mechanisms and Outcomes of User-Led Online Peer-to-Peer Support for Individuals With Schizophrenia: A Netnographic Study in Japan.",
+          "journal": "The International journal of social psychiatry",
+          "published": "2026 Nov 2",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42969656/",
           "authors": [
-            "Simpson AIF",
-            "Picco CZD",
-            "Agid O",
-            "Jones RM"
+            "Tomizawa R",
+            "Minakawa S"
           ],
-          "snippet": "Psychostimulant prescribing for individuals with comorbid attention-deficit hyperactivity disorder and schizophrenia spectrum disorders appears increasingly common despite limited evidence to guide the practice. This commentary highlights diagnost...",
+          "snippet": "Social networking services are increasingly used by individuals with mental illnesses to share experiences and provide mutual support. However, information about how people with schizophrenia engage in these online spaces and how their participati...",
           "studyType": "Peer-reviewed study",
           "evidenceLevel": "exploratory",
           "actionability": "learn"
         },
         {
-          "id": "42928838",
-          "title": "Cariprazine Augmentation and Sustained Remission of Physical Aggression in Clozapine-Treated Treatment-Resistant Schizophrenia: A Case Report.",
-          "journal": "Case reports in psychiatry",
+          "id": "42964522",
+          "title": "Schizophrenia Multitarget Therapy: Rapamycin Coordinates PI3K-AKT/mTOR Signaling with Cytokine Networks.",
+          "journal": "Psychiatry and clinical psychopharmacology",
+          "published": "2026 Jun",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42964522/",
+          "authors": [
+            "Guo H",
+            "Wang M",
+            "Li R",
+            "Zhang Y",
+            "Ma X"
+          ],
+          "snippet": "Rapamycin (RAPA) is an inhibitor of the mammalian target of rapamycin (mTOR) that may modulate neuropsychiatric conditions. The global prevalence of psychiatric disorders is increasing due to growing socioeconomic stressors. Despite the promising ...",
+          "studyType": "Peer-reviewed study",
+          "evidenceLevel": "exploratory",
+          "actionability": "learn"
+        },
+        {
+          "id": "42964098",
+          "title": "Resilience and clinical recovery in first-episode schizophrenia: a 10-year longitudinal study of clinically recovered, non-recovered, and healthy control participants.",
+          "journal": "Frontiers in psychiatry",
           "published": "2026",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42928838/",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42964098/",
           "authors": [
-            "Leijala J",
-            "Mustonen A"
+            "Torgalsbøen AK",
+            "Mohn C",
+            "Larøi F",
+            "Czajkowski N"
           ],
-          "snippet": "Persistent aggression may occur in treatment-resistant schizophrenia (TRS) despite long-term clozapine treatment and multiple augmentation strategies. We describe a male patient in his sixties with a decades-long history of schizophrenia who requi...",
-          "studyType": "Peer-reviewed study",
-          "evidenceLevel": "exploratory",
+          "snippet": "Research on resilience in clinical recovery following first-episode schizophrenia (FES) remains limited, and few longitudinal studies achieve sufficient retention to capture long-term trajectories. To address this, the Oslo Schizophrenia Recovery ...",
+          "studyType": "Observational study",
+          "evidenceLevel": "clinical",
           "actionability": "learn"
         },
         {
-          "id": "42928192",
-          "title": "Performance and response time in emotion recognition and mentalizing measures in patients with schizophrenia.",
-          "journal": "BMC psychiatry",
-          "published": "2026 Jul 28",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42928192/",
+          "id": "42963905",
+          "title": "Effect of Blonanserin on Neurotrophic Factors in Patients With Non-Responsive First-Episode Schizophrenia Treated With Early Risperidone Monotherapy-A Randomized Controlled Trial.",
+          "journal": "International journal of methods in psychiatric research",
+          "published": "2026 Dec",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42963905/",
           "authors": [
-            "Ruiz-Toca A",
-            "Hernández-Gómez A",
-            "Andrade-González N",
-            "Fernández-Aragón C",
-            "Stiles BJ"
+            "Wei Y",
+            "Liu Y",
+            "Cai L",
+            "Li J",
+            "Zheng D"
           ],
-          "snippet": "Schizophrenia is associated with marked impairments in social cognition, particularly in emotion recognition and mentalizing. Although these deficits have been extensively documented, most studies rely on static, highly controlled measures and foc...",
-          "studyType": "Peer-reviewed study",
-          "evidenceLevel": "exploratory",
-          "actionability": "learn"
-        },
-        {
-          "id": "42926541",
-          "title": "Multiscale Network Disruption of Auditory-Language Circuits Underlying Auditory Hallucinations in Schizophrenia.",
-          "journal": "bioRxiv : the preprint server for biology",
-          "published": "2026 Oct 6",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42926541/",
-          "authors": [
-            "Murphy AC",
-            "Martinez A",
-            "Chen Y",
-            "Avissar M",
-            "Yalçınkaya BH"
-          ],
-          "snippet": "Auditory verbal hallucinations (AVH) are among the most disabling symptoms of schizophrenia, yet the network-level mechanisms linking auditory dysfunction to hallucination severity remain poorly characterized, limiting targeted therapeutic develop...",
-          "studyType": "Peer-reviewed study",
-          "evidenceLevel": "exploratory",
-          "actionability": "learn"
-        },
-        {
-          "id": "42925811",
-          "title": "Efficacy and safety of GLP-1 receptor agonists in patients with schizophrenia spectrum disorders treated with antipsychotics: a systematic review and meta-analysis.",
-          "journal": "European neuropsychopharmacology : the journal of the European College of Neuropsychopharmacology",
-          "published": "2026 Oct 24",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42925811/",
-          "authors": [
-            "Gędek A",
-            "Modrzejewski S",
-            "Polański K",
-            "Waśniewska L",
-            "Molero P"
-          ],
-          "snippet": "Weight gain and impaired glucose metabolism are common complications of antipsychotic treatment in schizophrenia spectrum disorders (SSD). While beneficial in other populations, the efficacy and safety of glucagon-like peptide-1 receptor agonists ...",
-          "studyType": "Systematic review",
-          "evidenceLevel": "synthesis",
+          "snippet": "To investigate the efficacy of Blonanserin in patients with schizophrenia who were refractory to Risperidone monotherapy and its effects on various neurotrophic factors. A total of 120 patients with first-episode schizophrenia who were hospitalize...",
+          "studyType": "Randomized controlled trial",
+          "evidenceLevel": "clinical",
           "actionability": "discuss_with_clinician"
         },
         {
-          "id": "42925631",
-          "title": "Delay in clozapine initiation and subsequent treatment response in schizophrenia spectrum disorders: a systematic review.",
+          "id": "42963350",
+          "title": "Implementation strategies for digital relapse prevention in schizophrenia identified during a randomized controlled trial.",
+          "journal": "NPJ digital medicine",
+          "published": "2026 Oct 30",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42963350/",
+          "authors": [
+            "Hiller S",
+            "Prietzel K",
+            "Shehata M",
+            "Sikorová SN",
+            "Bakstein E"
+          ],
+          "snippet": "Digital mental health technologies hold promise, yet their integration into routine care remains challenging. This study reports findings from an implementation workshop conducted midway through an ongoing multi-site randomized controlled trial (R...",
+          "studyType": "Randomized controlled trial",
+          "evidenceLevel": "clinical",
+          "actionability": "discuss_with_clinician"
+        },
+        {
+          "id": "42962479",
+          "title": "Verbal learning and its impact on symptoms in adolescents with schizophrenia.",
           "journal": "Psychiatry research",
-          "published": "2026 Oct 15",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42925631/",
+          "published": "2026 Oct 26",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42962479/",
           "authors": [
-            "Muñoz-Albero C",
-            "Garralda-Puig M",
-            "Fonseca F",
-            "Guinart D",
-            "Martin-Subero M"
+            "Ulloa RE",
+            "Vega DG",
+            "Díaz R",
+            "Apiquian R",
+            "Mayer PA"
           ],
-          "snippet": "Clozapine remains the gold standard treatment for treatment-resistant schizophrenia (TRS), yet its initiation is frequently delayed for years, potentially contributing to irreversible clinical and functional deterioration. A previous systematic re...",
-          "studyType": "Systematic review",
-          "evidenceLevel": "synthesis",
-          "actionability": "discuss_with_clinician"
-        },
-        {
-          "id": "42925258",
-          "title": "Total cost of care for long-acting injectable antipsychotics for schizophrenia: Pharmacy vs medical benefit.",
-          "journal": "Journal of managed care & specialty pharmacy",
-          "published": "2026 Nov",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42925258/",
-          "authors": [
-            "Rogers B",
-            "Olmsted A",
-            "Mo M"
-          ],
-          "snippet": "Schizophrenia is a disabling mental illness affecting more than 2.8 million people in the United States. Long-acting injectable antipsychotics (LAIs) require less frequent dosing and may provide a more favorable treatment option over short-acting ...",
+          "snippet": "Verbal learning develops substantially during adolescence and is consistently impaired in schizophrenia. Despite the severity of cognitive deficits in early-onset schizophrenia (EOS), verbal learning has not been systematically examined in adolesc...",
           "studyType": "Peer-reviewed study",
           "evidenceLevel": "exploratory",
           "actionability": "learn"
-        },
-        {
-          "id": "42924238",
-          "title": "Lithium Carbonate as Treatment for Paliperidone Long-Acting Injection-Induced Leukopenia and Neutropenia in a Patient With Schizophrenia: A Case Report.",
-          "journal": "Cureus",
-          "published": "2026 Sep",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42924238/",
-          "authors": [
-            "Alnabelsi M",
-            "Elsayed L",
-            "Arman M",
-            "Alkot A"
-          ],
-          "snippet": "Schizophrenia is a chronic psychiatric disorder characterized by disturbances in thought processes, perception, emotional responsiveness, and social functioning. Second&#x2011;generation antipsychotics, including clozapine, risperidone, olanzapine...",
-          "studyType": "Case report",
-          "evidenceLevel": "exploratory",
-          "actionability": "emerging_only"
         }
       ]
     },
@@ -330,145 +297,92 @@
       "summary": "Stay informed on research focused on reducing risk factors and promoting brain health.",
       "articles": [
         {
-          "id": "42904941",
-          "title": "Assessing the effects of supplementation of vitamins on schizophrenia using Mendelian randomization analysis.",
-          "journal": "The Journal of international medical research",
-          "published": "2026 Oct",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42904941/",
+          "id": "42966433",
+          "title": "A mechanistic analysis of primary neurons from a maternal immune activation model of schizophrenia reveals complex I dysfunction and mitochondrial-driven neurodevelopmental deficits.",
+          "journal": "Brain, behavior, and immunity",
+          "published": "2026 Oct 31",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42966433/",
           "authors": [
-            "Fu X",
-            "Zhao Q",
-            "Baranova A",
-            "Cao H",
-            "Liu Y"
+            "Siena A",
+            "Araujo VC",
+            "Ribeiro MR",
+            "Souza E Silva LF",
+            "Robledo-Montaña J"
           ],
-          "snippet": "ObjectiveVitamins are essential for human health and the prevention of diseases. They play an important role in maintaining brain function and mental health, especially in patients with schizophrenia. We aimed to evaluate the potential effects of ...",
+          "snippet": "Maternal immune activation (MIA) is a major environmental risk factor for schizophrenia, yet the early neuronal mechanisms linking embryonic immune challenges to neurodevelopmental disruption remain poorly defined. Here, we provide a detailed mech...",
           "studyType": "Peer-reviewed study",
           "evidenceLevel": "exploratory",
           "actionability": "learn"
         },
         {
-          "id": "42900769",
-          "title": "From Protective Factors to Mechanisms: Charting the Neurobiology of Schizophrenia Resilience.",
+          "id": "42951685",
+          "title": "Risk Indicator Aggregation and Cluster Stability Across Developmental Domains from Early to Middle Childhood in Children at Familial High-Risk of Schizophrenia or Bipolar Disorder and Population-Based Controls.",
           "journal": "Schizophrenia bulletin",
-          "published": "2026 Aug 20",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42900769/",
+          "published": "2026 Oct 27",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42951685/",
           "authors": [
-            "Bittner RA",
-            "Barnes-Scheufler CV",
-            "Reif A",
-            "Qubad M"
+            "Krantz MF",
+            "Hoffmann AG",
+            "Hemager N",
+            "Gregersen M",
+            "Weye N"
           ],
-          "snippet": "Elucidating the neurobiological and psychological mechanisms that promote resilience to the adverse effects of schizophrenia's genetic and environmental risk architecture may reveal new avenues for advancing treatment and prevention. Identificatio...",
-          "studyType": "Review",
-          "evidenceLevel": "synthesis",
-          "actionability": "discuss_with_clinician"
-        },
-        {
-          "id": "42894640",
-          "title": "Functional Disability Among People with Schizophrenia in East Africa: A Systematic Review with Evidence Predominantly from Ethiopia.",
-          "journal": "Neuropsychiatric disease and treatment",
-          "published": "2026",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42894640/",
-          "authors": [
-            "Ndunguru ER",
-            "Vivalya BMN",
-            "Posite CM",
-            "Usman CO",
-            "Muhidin HA"
-          ],
-          "snippet": "Schizophrenia causes substantial impairment in social, occupational, family, and everyday functioning. East African evidence is dispersed across disability scales, quality-of-life measures, employment outcomes, longitudinal studies, rehabilitation...",
-          "studyType": "Systematic review",
-          "evidenceLevel": "synthesis",
-          "actionability": "discuss_with_clinician"
-        },
-        {
-          "id": "42892069",
-          "title": "Polygenic risk for schizophrenia predicting age-specific fluctuations in depressive symptoms: Findings from the Young Finns Study.",
-          "journal": "Schizophrenia research",
-          "published": "2026 Oct 17",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42892069/",
-          "authors": [
-            "Lavonius V",
-            "Lyytikäinen LP",
-            "Sormunen E",
-            "Kähönen M",
-            "Hietala J"
-          ],
-          "snippet": "A well-established connection exists between psychoses and depression, with one presentation being depressive symptoms before psychosis. However, the predictive power of preceding affective symptoms is reported to be low, raising the question whet...",
-          "studyType": "Peer-reviewed study",
-          "evidenceLevel": "exploratory",
+          "snippet": "Children of parents with schizophrenia or bipolar disorder are at increased risk of developing a mental disorder, including psychosis. While domain-specific developmental risk indicators have been identified, studies examining the accumulated risk...",
+          "studyType": "Observational study",
+          "evidenceLevel": "clinical",
           "actionability": "learn"
         },
         {
-          "id": "42887148",
-          "title": "Effects of visual remediation on contour integration performance in schizophrenia spectrum disorders.",
+          "id": "42950689",
+          "title": "Cognitive training combined with aerobic exercise improves negative symptoms in recent-onset schizophrenia: Results from a 12-month randomized trial.",
           "journal": "Schizophrenia research",
-          "published": "2026 Oct 16",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42887148/",
+          "published": "2026 Oct 28",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42950689/",
           "authors": [
-            "Kaiser KA",
-            "Thompson JL",
-            "Butler PD",
-            "Ahmed AO",
-            "Seitz AR"
+            "Ventura J",
+            "Subotnik KL",
+            "McEwen SC",
+            "Whelan FG",
+            "Casaus LR"
           ],
-          "snippet": "Impairments in visual processing, including difficulties in perceptual organization, are well documented in schizophrenia and related serious mental illnesses. These impairments are thought to contribute to reductions in higher-order cognition and...",
-          "studyType": "Peer-reviewed study",
-          "evidenceLevel": "exploratory",
-          "actionability": "learn"
-        },
-        {
-          "id": "42879192",
-          "title": "Neuronavigated dual-target transcranial magnetic stimulation for schizophrenia negative symptoms.",
-          "journal": "Brain : a journal of neurology",
-          "published": "2026 Oct 15",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42879192/",
-          "authors": [
-            "Wei Y",
-            "Wang J",
-            "Tang X",
-            "Qian Z",
-            "Xu L"
-          ],
-          "snippet": "Negative symptoms in schizophrenia severely impair function and quality of life, yet respond poorly to current therapies. This multicenter, randomized, double-blind, sham-controlled trial aimed to investigate the efficacy of neuronavigated dual-ta...",
+          "snippet": "Negative symptoms are often considered as a core feature of schizophrenia. High initial severity levels are predictive of poor clinical outcomes, and negative symptoms are often considered notoriously difficult to treat. However, some research ind...",
           "studyType": "Randomized controlled trial",
           "evidenceLevel": "clinical",
           "actionability": "discuss_with_clinician"
         },
         {
-          "id": "42877043",
-          "title": "Timely outpatient follow-up and readmission risk in schizophrenia.",
-          "journal": "Frontiers in psychiatry",
-          "published": "2026",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42877043/",
+          "id": "42950658",
+          "title": "MEG-based neural biomarkers and AI for early schizophrenia identification.",
+          "journal": "Psychiatry research. Neuroimaging",
+          "published": "2026 Oct 24",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42950658/",
           "authors": [
-            "Jeong JW",
-            "Yoo H",
-            "Park HK"
+            "Dehesh T",
+            "Sharini H",
+            "Solouki L",
+            "Jahani Y",
+            "Nabizadeh AH"
           ],
-          "snippet": "Timely outpatient follow-up after psychiatric hospitalization has been proposed as a key strategy to reduce readmission; however, evidence in patients with first-admission schizophrenia remains limited. Using the Korean National Health Insurance C...",
+          "snippet": "Early schizophrenia detection is vital for timely intervention, and magnetoencephalography (MEG) offers a promising tool for capturing subtle neurophysiological disruptions. However, machine learning (ML) performance in psychiatric diagnosis depen...",
           "studyType": "Peer-reviewed study",
           "evidenceLevel": "exploratory",
           "actionability": "learn"
         },
         {
-          "id": "42877038",
-          "title": "Correction: Is it possible to prevent excessive synaptic pruning in schizophrenia? Possibilities and limitations.",
-          "journal": "Frontiers in synaptic neuroscience",
-          "published": "2026",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/42877038/",
+          "id": "42942491",
+          "title": "The LAI-Oral Antipsychotic Efficacy-Effectiveness Paradox in Schizophrenia.",
+          "journal": "Medicina (Kaunas, Lithuania)",
+          "published": "2026 Oct 10",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42942491/",
           "authors": [
-            "Pawlak A",
-            "Stefanowicz J",
-            "Kotkowska Z",
-            "Gabryelska A",
-            "Sochal M"
+            "Stoychev K",
+            "Begum S",
+            "Nazar S"
           ],
-          "snippet": "[This corrects the article DOI: 10.3389/fnsyn.2025.1656232.].",
-          "studyType": "Peer-reviewed study",
-          "evidenceLevel": "exploratory",
-          "actionability": "learn"
+          "snippet": "Background and Objectives: Long-acting injectable (LAI) antipsychotics are associated with reduced hospitalization and relapse in real-world observational studies of schizophrenia; however, randomized controlled trials (RCTs) demonstrate no statis...",
+          "studyType": "Review",
+          "evidenceLevel": "synthesis",
+          "actionability": "discuss_with_clinician"
         }
       ]
     }
